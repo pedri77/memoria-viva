@@ -1,0 +1,38 @@
+{
+  "id": "doc-gaceta-1931-12-10",
+  "title": "Gaceta de Madrid n.º 344, 10 de diciembre de 1931: Constitución de la República Española",
+  "title_original": "Gaceta de Madrid. Núm. 344",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 344, 10/12/1931, págs. 1578 y siguientes",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1931/12/10/pdfs/GMD-1931-344.pdf",
+  "date": "1931-12-10",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana",
+    "plc-madrid"
+  ],
+  "summary": "Texto de la Constitución aprobada por las Cortes Constituyentes, fechada en el Palacio de las Cortes el 9 de diciembre de 1931.",
+  "context": "Publicación oficial del texto constitucional.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-14",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-14"
+}

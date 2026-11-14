@@ -1,0 +1,31 @@
+{
+  "id": "doc-mapspainhist-censos",
+  "title": "mapSpainHist: límites municipales históricos de España 1900-2001 y censos 1842-2011 (fichero censos.csv, v1.0.0)",
+  "document_type": "tabla_estadistica",
+  "source_ids": [
+    "F033"
+  ],
+  "custodian": "Zenodo (depósito de Pau Vall-Prat)",
+  "canonical_url": "https://doi.org/10.5281/zenodo.23663208",
+  "date": "2026",
+  "date_precision": "anio",
+  "summary": "Población de hecho y de derecho y hogares por municipio en cada censo, con la asignación de cada municipio a su provincia histórica. Compilado a partir de los censos del INE.",
+  "context": "Base de datos académica derivada de los censos oficiales. Contrastada con la aplicación del INE en 3 municipios y 3 censos sin diferencias.",
+  "text_origin": "transcripcion_validada",
+  "rights": {
+    "status": "cc_by",
+    "action": "almacenar",
+    "attribution": "Vall-Prat, P. mapSpainHist (Zenodo, CC BY 4.0)",
+    "evidence_url": "https://zenodo.org/records/23663208",
+    "checked_at": "2026-11-14"
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Generado por scripts/etl/mapspainhist.py; contraste puntual con INE en 3 municipios."
+  },
+  "consulted_at": "2026-11-14"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "evt-1936-07-19-decretos-sublevacion",
+  "title": "Primeros decretos del Gobierno de la República frente a la sublevación militar",
+  "event_type": "militar",
+  "start_date": "1936-07-19",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana",
+    "plc-madrid"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "El 19 de julio de 1936 el Gobierno de la República anula por decreto la declaración del estado de guerra en todas las plazas de la Península, Marruecos, Baleares y Canarias donde se hubiera dictado.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1936-07-19",
+          "locator": "pág. 723"
+        }
+      ]
+    },
+    {
+      "text": "El mismo día declara disueltas las unidades del Ejército que toman parte en el «movimiento insurreccional» y licenciadas las tropas cuyos mandos «se han colocado frente a la legalidad republicana».",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1936-07-19",
+          "locator": "pág. 724"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "wikidata": "Q2436825"
+}

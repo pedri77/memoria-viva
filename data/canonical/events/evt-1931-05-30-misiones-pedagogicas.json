@@ -1,0 +1,42 @@
+{
+  "id": "evt-1931-05-30-misiones-pedagogicas",
+  "title": "Creación del Patronato de Misiones Pedagógicas",
+  "event_type": "educativo",
+  "start_date": "1931-05-30",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La Gaceta de Madrid del 30 de mayo de 1931 publica el decreto que crea el Patronato de Misiones Pedagógicas, dependiente del Ministerio de Instrucción Pública.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1931-05-30",
+          "locator": "págs. 1033-1034"
+        }
+      ]
+    },
+    {
+      "text": "Según el decreto, su fin es difundir la cultura general, la orientación docente moderna y la educación ciudadana en aldeas, villas y lugares, con atención especial a la población rural.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1931-05-30",
+          "locator": "sumario, pág. 1"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "wikidata": "Q6018462"
+}

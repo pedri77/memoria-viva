@@ -1,0 +1,38 @@
+{
+  "id": "doc-gaceta-1936-07-19",
+  "title": "Gaceta de Madrid n.º 201, 19 de julio de 1936: nuevo Gobierno y decretos del Ministerio de la Guerra frente a la sublevación",
+  "title_original": "Gaceta de Madrid. Núm. 201",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 201, 19/07/1936, págs. 721-724",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1936/07/19/pdfs/GMD-1936-201.pdf",
+  "date": "1936-07-19",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana",
+    "plc-madrid"
+  ],
+  "summary": "Publica la dimisión y el nombramiento de ministros y, del Ministerio de la Guerra, un decreto que anula la declaración del estado de guerra en todas las plazas de la Península, Marruecos, Baleares y Canarias donde se haya dictado (pág. 723), otro que declara disueltas todas las unidades del Ejército que toman parte en el movimiento insurreccional y otro que declara licenciadas las tropas cuyos cuadros de mando se han colocado frente a la legalidad republicana (pág. 724). Decretos fechados en Madrid el 19 de julio de 1936.",
+  "context": "Fuente oficial del Gobierno de la República en las primeras horas de la sublevación. Acredita las medidas adoptadas, no su eficacia.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-14",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-14"
+}

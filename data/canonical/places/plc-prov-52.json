@@ -1,0 +1,20 @@
+{
+  "id": "plc-prov-52",
+  "canonical_name": "Melilla",
+  "place_type": "municipio",
+  "parent_id": "plc-espana",
+  "ine_code": "52",
+  "geometry_ref": "provincias_1930.geojson#cod_unit=52",
+  "geometry_precision": "exacta",
+  "source_ids": [
+    "F033"
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Ceuta y Melilla no eran provincias en 1930; los censos las recogen aparte. Se tratan como unidades propias para no perder población."
+  }
+}

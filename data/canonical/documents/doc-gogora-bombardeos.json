@@ -1,0 +1,32 @@
+{
+  "id": "doc-gogora-bombardeos",
+  "title": "Bombardeos de la Guerra Civil en Euskadi (base de datos de Gogora, Open Data Euskadi)",
+  "document_type": "tabla_estadistica",
+  "source_ids": [
+    "F040"
+  ],
+  "custodian": "Gogora, Instituto de la Memoria, la Convivencia y los Derechos Humanos (Gobierno Vasco)",
+  "canonical_url": "https://opendata.euskadi.eus/catalogo/-/bombardeos-de-la-guerra-civil-en-euskadi/",
+  "date": "2017-12-26",
+  "date_precision": "dia",
+  "summary": "197 localidades bombardeadas en Euskadi durante la guerra, con número de bombardeos, fechas, bando atacante, descripción y fuentes (partes de operaciones, archivos italianos y británicos, prensa de la época).",
+  "context": "Compilación institucional del Gobierno Vasco a partir de fuentes primarias de ambos bandos y de prensa. Incluye bombardeos de la aviación sublevada (la gran mayoría) y de la republicana. Las cifras de víctimas son estimaciones de la propia base o de las fuentes que cita.",
+  "text_origin": "ninguno",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Gogora / Open Data Euskadi",
+    "evidence_url": "https://opendata.euskadi.eus/catalogo/-/bombardeos-de-la-guerra-civil-en-euskadi/",
+    "checked_at": "2026-11-14",
+    "note": "Licencia de la ficha no legible sin JavaScript; pendiente de verificar (Open Data Euskadi suele publicar con CC BY 4.0). Mientras, solo enlace y paráfrasis."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-14"
+}

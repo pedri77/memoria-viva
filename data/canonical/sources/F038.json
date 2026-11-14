@@ -1,0 +1,12 @@
+{
+  "id": "F038",
+  "name": "Hispana OAI-PMH (agregador del Ministerio de Cultura)",
+  "url": "https://hispana.mcu.es/i18n/oai/oai_hispana.mcu.es.do",
+  "priority": "P0",
+  "status": "researched",
+  "license": "Por registro (`dc:rights`)",
+  "access": "OAI-PMH 200 [V]; OAI-PMH 200 [V]",
+  "years": "multiperiodo",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

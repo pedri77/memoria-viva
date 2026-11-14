@@ -1,0 +1,41 @@
+{
+  "id": "evt-1936-09-17-bombardeos-vitoria",
+  "title": "Bombardeos aéreos republicanos de Vitoria",
+  "event_type": "violencia",
+  "start_date": "1936-09-17",
+  "date_precision": "intervalo",
+  "place_ids": [
+    "plc-mun-01059"
+  ],
+  "spatial_precision": "municipio",
+  "claims": [
+    {
+      "text": "Según la base de datos de bombardeos de Gogora, la aviación republicana bombardeó Vitoria en 10 ocasiones entre el 17 de septiembre de 1936 y el 29 de mayo de 1937, con daños en fábricas, cuarteles de Caballería y la estación del Norte.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gogora-bombardeos",
+          "locator": "fila «Vitoria-Gasteiz»"
+        }
+      ]
+    },
+    {
+      "text": "La base de datos indica que no hay información concreta sobre el número de víctimas.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gogora-bombardeos",
+          "locator": "fila «Vitoria-Gasteiz»"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  }
+}

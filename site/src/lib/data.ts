@@ -7,6 +7,7 @@ export const sources = load(import.meta.glob("../../../data/canonical/sources/*.
   .sort((a, b) => a.id.localeCompare(b.id));
 export const places = load(import.meta.glob("../../../data/canonical/places/*.json", { eager: true }));
 export const documents = load(import.meta.glob("../../../data/canonical/documents/*.json", { eager: true }));
+export const indicators = load(import.meta.glob("../../../data/canonical/indicators/*.json", { eager: true }));
 export const events = load(import.meta.glob("../../../data/canonical/events/*.json", { eager: true }))
   .sort((a, b) => a.start_date.localeCompare(b.start_date));
 

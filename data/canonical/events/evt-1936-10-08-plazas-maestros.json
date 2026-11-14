@@ -1,0 +1,31 @@
+{
+  "id": "evt-1936-10-08-plazas-maestros",
+  "title": "Ley de creación de 5.300 plazas de maestros y maestras",
+  "event_type": "educativo",
+  "start_date": "1936-10-08",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La Gaceta del 8 de octubre de 1936 publica la ley que aprueba la creación de 5.300 plazas de maestros y maestras con destino a escuelas nacionales, autorizada por decreto de 28 de febrero de 1936, a partir del 1 de octubre.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1936-10-08",
+          "locator": "págs. 234-235"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  }
+}

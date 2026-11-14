@@ -1,0 +1,20 @@
+{
+  "id": "plc-prov-11",
+  "canonical_name": "Cádiz",
+  "place_type": "provincia",
+  "parent_id": "plc-espana",
+  "ine_code": "11",
+  "geometry_ref": "provincias_1930.geojson#cod_unit=11",
+  "geometry_precision": "exacta",
+  "source_ids": [
+    "F033"
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Generado por scripts/etl/mapspainhist.py; contraste puntual con INE en 3 municipios."
+  }
+}

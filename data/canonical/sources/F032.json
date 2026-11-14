@@ -1,0 +1,12 @@
+{
+  "id": "F032",
+  "name": "Atlas Electoral de la Segunda República (UPF: Rodon, Vall-Prat, Martín Álvarez)",
+  "url": "https://doi.org/10.34810/DATA3274",
+  "priority": "P0",
+  "status": "researched",
+  "license": "CC BY-NC-SA 4.0 (DataCite, verificado 14-11-2026)",
+  "access": "Descarga manual del dataset en CORA por una persona, o paquete R `spain2Rep`; Descarga manual del dataset en CORA por una persona, o paquete R `spain2Rep`",
+  "years": "1931, 1933, 1936 (1936 completo; 1933 y 1931 en curso según README)",
+  "risks": "licencia no comercial: los datos derivados heredan NC y SA",
+  "checked_at": "2026-11-14"
+}

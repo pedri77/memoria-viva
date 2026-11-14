@@ -1,0 +1,12 @@
+{
+  "id": "F049",
+  "name": "IISG Amsterdam (CNT, FAI, SIA, FIJL; 2.000 fotos CNT)",
+  "url": "https://iisg.amsterdam/en/collections/using/machine-access",
+  "priority": "P1",
+  "status": "researched",
+  "license": "Metadatos CC0 [S]; objetos según depositante",
+  "access": "OAI-PMH 200 [V]; SRU responde (0 resultados para «spain civil war», revisar sintaxis CQL) [V]; OAI-PMH 200 [V]; SRU responde (0 resultados para «spain civil war», revisar sintaxis CQL) [V]",
+  "years": "1931-1939",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

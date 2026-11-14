@@ -1,0 +1,12 @@
+{
+  "id": "F046",
+  "name": "Nomes e Voces",
+  "url": "https://vitimas.nomesevoces.net",
+  "priority": "P1",
+  "status": "candidate",
+  "license": "CC BY-NC [S]",
+  "access": "CSV [V 200]; CSV [V 200]",
+  "years": "1936-1939",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "F045",
+  "name": "Cartografía de la desaparición forzada en Andalucía",
+  "url": "https://andalucia.desaparicionforzada.com",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "Bases PDDL 1.0, datos CC BY 4.0, mapas CC BY-NC-SA [S]",
+  "access": "SHP, GPKG, CSV; SHP, GPKG, CSV",
+  "years": "1936-1951",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

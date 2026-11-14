@@ -1,0 +1,31 @@
+{
+  "id": "evt-1931-06-23-plazas-maestros",
+  "title": "Creación de 7.000 plazas de maestros y maestras",
+  "event_type": "educativo",
+  "start_date": "1931-06-23",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "Un decreto de 23 de junio de 1931 autoriza al Ministerio de Instrucción Pública a crear, a partir del 1 de julio, 7.000 plazas de maestros y maestras con destino a las escuelas nacionales.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1931-06-24",
+          "locator": "págs. 1612-1613"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  }
+}

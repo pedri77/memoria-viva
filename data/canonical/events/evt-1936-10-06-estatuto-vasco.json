@@ -1,0 +1,35 @@
+{
+  "id": "evt-1936-10-06-estatuto-vasco",
+  "title": "Ley del Estatuto Vasco",
+  "event_type": "legislativo",
+  "start_date": "1936-10-07",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana",
+    "plc-prov-01",
+    "plc-prov-20",
+    "plc-prov-48"
+  ],
+  "spatial_precision": "region",
+  "claims": [
+    {
+      "text": "La Gaceta de Madrid del 7 de octubre de 1936 publica la ley relativa al Estatuto Vasco.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1936-10-07",
+          "locator": "págs. 211-214"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "wikidata": "Q4895036"
+}

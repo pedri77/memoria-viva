@@ -1,0 +1,31 @@
+{
+  "id": "evt-1936-10-07-expropiacion-fincas",
+  "title": "Decreto de expropiación de fincas rústicas de quienes intervinieron en la sublevación",
+  "event_type": "economico",
+  "start_date": "1936-10-07",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "Un decreto de 7 de octubre de 1936 acuerda la expropiación sin indemnización y a favor del Estado de las fincas rústicas pertenecientes el 18 de julio a personas que hubieran intervenido directa o indirectamente en el movimiento insurreccional contra la República.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1936-10-08",
+          "locator": "págs. 236-237"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  }
+}

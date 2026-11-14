@@ -1,0 +1,12 @@
+{
+  "id": "F036",
+  "name": "Memoria de Madrid · Publicaciones periódicas de la Guerra Civil",
+  "url": "https://datos.madrid.es/dataset/215863-0-memoria-de-madrid-publicaciones-periodicas-de-la-guerra-civil",
+  "priority": "P0",
+  "status": "researched",
+  "license": "CC BY 4.0 [V]",
+  "access": "CSV/XLSX/RDF vía CKAN [V]; CSV/XLSX/RDF vía CKAN [V]",
+  "years": "1936-1939 (619)",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

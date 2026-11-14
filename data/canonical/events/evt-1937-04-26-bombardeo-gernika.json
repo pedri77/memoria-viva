@@ -1,0 +1,54 @@
+{
+  "id": "evt-1937-04-26-bombardeo-gernika",
+  "title": "Bombardeo de Gernika",
+  "event_type": "violencia",
+  "start_date": "1937-04-26",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-mun-48046"
+  ],
+  "spatial_precision": "municipio",
+  "claims": [
+    {
+      "text": "Según la base de datos de bombardeos de Gogora, la aviación del bando sublevado, con aviones alemanes e italianos, bombardeó Gernika el 26 de abril de 1937 con bombas explosivas e incendiarias; más del 90 % de los edificios sufrió daños.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gogora-bombardeos",
+          "locator": "fila «Gernika»"
+        }
+      ]
+    },
+    {
+      "text": "Un informe del Gobierno Vasco de junio de 1937 habló de 1.654 muertos y 889 heridos.",
+      "kind": "estimacion",
+      "evidence": [
+        {
+          "document_id": "doc-gogora-bombardeos",
+          "locator": "fila «Gernika»"
+        }
+      ],
+      "attributed_to": "Gobierno Vasco, informe de junio de 1937, citado por Gogora"
+    },
+    {
+      "text": "Gogora cifra hoy las víctimas en más de dos mil. Otras estimaciones historiográficas son sensiblemente inferiores; la cifra sigue en debate.",
+      "kind": "estimacion",
+      "evidence": [
+        {
+          "document_id": "doc-gogora-bombardeos",
+          "locator": "fila «Gernika»"
+        }
+      ],
+      "attributed_to": "Gogora, Instituto de la Memoria del Gobierno Vasco"
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "wikidata": "Q170351"
+}

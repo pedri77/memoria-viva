@@ -1,0 +1,53 @@
+cod_unit,nom,n_mun,area_km2
+01,Araba/Álava,77,3038
+02,Albacete,86,14941
+03,Alicante/Alacant,140,5831
+04,Almería,103,8797
+05,Avila,270,8060
+06,Badajoz,163,21797
+07,Balears (Illes),65,5000
+08,Barcelona,308,7745
+09,Burgos,503,14276
+10,Cáceres,225,19891
+11,Cádiz,41,7460
+12,Castellón/Castelló,141,6673
+13,Ciudad Real,97,19842
+14,Córdoba,75,13801
+15,Coruña (A),95,7961
+16,Cuenca,291,17162
+17,Girona,249,5928
+18,Granada,201,12673
+19,Guadalajara,408,12228
+20,Gipuzkoa,89,1983
+21,Huelva,77,10144
+22,Huesca,357,15644
+23,Jaén,99,13517
+24,León,236,15591
+25,Lleida,320,12185
+26,Rioja (La),183,5051
+27,Lugo,66,9864
+28,Madrid,196,8031
+29,Málaga,101,7329
+30,Murcia,42,11339
+31,Navarra,267,10393
+32,Ourense,94,7279
+33,Asturias,78,10604
+34,Palencia,250,8085
+35,Palmas (Las),36,4084
+36,Pontevedra,64,4499
+37,Salamanca,386,12368
+38,Santa Cruz de Tenerife,54,3398
+39,Cantabria,102,5333
+40,Segovia,276,6928
+41,Sevilla,102,14052
+42,Soria,348,10316
+43,Tarragona,185,6326
+44,Teruel,282,14820
+45,Toledo,206,15392
+46,Valencia/València,264,10797
+47,Valladolid,236,8110
+48,Bizkaia,115,2215
+49,Zamora,306,10567
+50,Zaragoza,305,17293
+51,Ceuta,1,19
+52,Melilla,1,13

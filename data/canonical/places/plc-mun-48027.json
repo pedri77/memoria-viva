@@ -1,0 +1,24 @@
+{
+  "id": "plc-mun-48027",
+  "canonical_name": "Durango",
+  "place_type": "municipio",
+  "parent_id": "plc-prov-48",
+  "ine_code": "48027",
+  "centroid": [
+    -2.6521,
+    43.1799
+  ],
+  "geometry_ref": "municipios_1930#cod_ine=48027",
+  "geometry_precision": "centroide",
+  "source_ids": [
+    "F033"
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  }
+}

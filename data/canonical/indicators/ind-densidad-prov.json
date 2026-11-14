@@ -1,0 +1,1114 @@
+{
+  "id": "ind-densidad-prov",
+  "concept": "Densidad de población de hecho por provincia",
+  "definition": "Población de hecho dividida por la superficie de la provincia.",
+  "unit": "habitantes por km²",
+  "method": "Población de hecho / superficie (km²) calculada sobre los límites provinciales de 1930 de mapSpainHist. Se usa la misma superficie para los tres censos.",
+  "source_ids": [
+    "F033",
+    "F010"
+  ],
+  "comparability_notes": "Suma de las cifras municipales de cada censo agrupadas por la provincia a la que pertenecía el municipio ese año. Puede diferir ligeramente de los totales provinciales impresos en los volúmenes del censo. Los censos de 1920 y 1930 se hicieron el 31 de diciembre; el de 1940, el 31 de diciembre de 1940, tras la guerra, con desplazamientos, exilio y mortalidad que afectan a la comparación. La superficie es la de los límites de 1930 calculada sobre geometría digital; error estimado inferior al 0,2 % frente a la superficie oficial.",
+  "observations": [
+    {
+      "place_id": "plc-prov-01",
+      "period": "1920",
+      "value": 32.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 85 municipios"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1920",
+      "value": 19.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 84 municipios"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1920",
+      "value": 87.8,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 138 municipios"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1920",
+      "value": 40.7,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 103 municipios"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1920",
+      "value": 26.0,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 269 municipios"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1920",
+      "value": 29.6,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 162 municipios"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1920",
+      "value": 67.8,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 61 municipios"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1920",
+      "value": 174.2,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 314 municipios"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1920",
+      "value": 23.6,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 507 municipios"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1920",
+      "value": 20.6,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 221 municipios"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1920",
+      "value": 68.7,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 41 municipios"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1920",
+      "value": 46.0,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 140 municipios"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1920",
+      "value": 21.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 96 municipios"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1920",
+      "value": 41.0,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 75 municipios"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1920",
+      "value": 89.0,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 96 municipios"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1920",
+      "value": 16.4,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 288 municipios"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1920",
+      "value": 54.9,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 247 municipios"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1920",
+      "value": 45.3,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 204 municipios"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1920",
+      "value": 16.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 398 municipios"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1920",
+      "value": 130.4,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 90 municipios"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1920",
+      "value": 32.6,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 77 municipios"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1920",
+      "value": 16.0,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 362 municipios"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1920",
+      "value": 43.8,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 98 municipios"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1920",
+      "value": 26.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 235 municipios"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1920",
+      "value": 25.8,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 324 municipios"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1920",
+      "value": 38.2,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 183 municipios"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1920",
+      "value": 47.6,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 64 municipios"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1920",
+      "value": 132.9,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 195 municipios"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1920",
+      "value": 75.6,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 102 municipios"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1920",
+      "value": 56.3,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 42 municipios"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1920",
+      "value": 31.7,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 269 municipios"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1920",
+      "value": 56.7,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 97 municipios"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1920",
+      "value": 70.1,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 79 municipios"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1920",
+      "value": 23.7,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 250 municipios"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1920",
+      "value": 50.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 38 municipios"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1920",
+      "value": 118.6,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 62 municipios"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1920",
+      "value": 26.0,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 386 municipios"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1920",
+      "value": 74.0,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 53 municipios"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1920",
+      "value": 61.4,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 102 municipios"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1920",
+      "value": 24.1,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 275 municipios"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1920",
+      "value": 50.1,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 101 municipios"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1920",
+      "value": 14.7,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 345 municipios"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1920",
+      "value": 56.1,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 185 municipios"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1920",
+      "value": 17.0,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 279 municipios"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1920",
+      "value": 28.8,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 206 municipios"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1920",
+      "value": 85.8,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 263 municipios"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1920",
+      "value": 34.6,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 237 municipios"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1920",
+      "value": 184.9,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 120 municipios"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1920",
+      "value": 25.2,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 300 municipios"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1920",
+      "value": 28.6,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 305 municipios"
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1920",
+      "value": 1853.6,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 1 municipios"
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1920",
+      "value": 3859.2,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1920, 1 municipios"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1930",
+      "value": 34.3,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 77 municipios"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1930",
+      "value": 22.3,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 86 municipios"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1930",
+      "value": 93.6,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 140 municipios"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1930",
+      "value": 38.8,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 103 municipios"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1930",
+      "value": 27.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 270 municipios"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1930",
+      "value": 32.2,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 163 municipios"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1930",
+      "value": 73.1,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 65 municipios"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1930",
+      "value": 232.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 308 municipios"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1930",
+      "value": 24.9,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 503 municipios"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1930",
+      "value": 22.6,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 225 municipios"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1930",
+      "value": 68.1,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 41 municipios"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1930",
+      "value": 46.3,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 141 municipios"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1930",
+      "value": 24.8,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 97 municipios"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1930",
+      "value": 48.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 75 municipios"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1930",
+      "value": 96.4,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 95 municipios"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1930",
+      "value": 18.0,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 291 municipios"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1930",
+      "value": 54.9,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 249 municipios"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1930",
+      "value": 50.8,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 201 municipios"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1930",
+      "value": 16.7,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 408 municipios"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1930",
+      "value": 152.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 89 municipios"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1930",
+      "value": 35.0,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 77 municipios"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1930",
+      "value": 15.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 357 municipios"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1930",
+      "value": 49.9,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 99 municipios"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1930",
+      "value": 28.3,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 236 municipios"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1930",
+      "value": 25.8,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 320 municipios"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1930",
+      "value": 40.3,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 183 municipios"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1930",
+      "value": 47.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 66 municipios"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1930",
+      "value": 172.3,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 196 municipios"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1930",
+      "value": 83.7,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 101 municipios"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1930",
+      "value": 56.9,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 42 municipios"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1930",
+      "value": 33.3,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 267 municipios"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1930",
+      "value": 58.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 94 municipios"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1930",
+      "value": 74.7,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 78 municipios"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1930",
+      "value": 25.7,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 250 municipios"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1930",
+      "value": 61.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 36 municipios"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1930",
+      "value": 126.3,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 64 municipios"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1930",
+      "value": 27.4,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 386 municipios"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1930",
+      "value": 89.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 54 municipios"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1930",
+      "value": 68.3,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 102 municipios"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1930",
+      "value": 25.1,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 276 municipios"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1930",
+      "value": 57.3,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 102 municipios"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1930",
+      "value": 15.1,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 348 municipios"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1930",
+      "value": 55.4,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 185 municipios"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1930",
+      "value": 17.1,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 282 municipios"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1930",
+      "value": 31.8,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 206 municipios"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1930",
+      "value": 96.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 264 municipios"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1930",
+      "value": 37.2,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 236 municipios"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1930",
+      "value": 219.1,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 115 municipios"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1930",
+      "value": 26.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 306 municipios"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1930",
+      "value": 31.0,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 305 municipios"
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1930",
+      "value": 2663.9,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 1 municipios"
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1930",
+      "value": 4816.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1930, 1 municipios"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1940",
+      "value": 37.2,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 77 municipios"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1940",
+      "value": 25.1,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 86 municipios"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1940",
+      "value": 104.2,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 140 municipios"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1940",
+      "value": 40.9,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 103 municipios"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1940",
+      "value": 29.1,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 268 municipios"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1940",
+      "value": 34.1,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 162 municipios"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1940",
+      "value": 81.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 65 municipios"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1940",
+      "value": 249.4,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 311 municipios"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1940",
+      "value": 26.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 505 municipios"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1940",
+      "value": 25.7,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 224 municipios"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1940",
+      "value": 80.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 42 municipios"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1940",
+      "value": 46.8,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 141 municipios"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1940",
+      "value": 26.7,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 98 municipios"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1940",
+      "value": 55.2,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 75 municipios"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1940",
+      "value": 110.9,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 94 municipios"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1940",
+      "value": 19.4,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 291 municipios"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1940",
+      "value": 54.4,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 251 municipios"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1940",
+      "value": 58.2,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 201 municipios"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1940",
+      "value": 16.8,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 407 municipios"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1940",
+      "value": 167.3,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 88 municipios"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1940",
+      "value": 36.1,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 78 municipios"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1940",
+      "value": 14.8,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 355 municipios"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1940",
+      "value": 55.7,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 101 municipios"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1940",
+      "value": 31.6,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 235 municipios"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1940",
+      "value": 24.4,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 320 municipios"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1940",
+      "value": 43.8,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 182 municipios"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1940",
+      "value": 52.0,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 67 municipios"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1940",
+      "value": 196.7,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 196 municipios"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1940",
+      "value": 92.4,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 101 municipios"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1940",
+      "value": 63.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 42 municipios"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1940",
+      "value": 35.6,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 266 municipios"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1940",
+      "value": 63.0,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 94 municipios"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1940",
+      "value": 78.9,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 78 municipios"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1940",
+      "value": 26.9,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 249 municipios"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1940",
+      "value": 78.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 35 municipios"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1940",
+      "value": 142.6,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 64 municipios"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1940",
+      "value": 31.6,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 386 municipios"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1940",
+      "value": 105.9,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 54 municipios"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1940",
+      "value": 73.8,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 102 municipios"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1940",
+      "value": 27.3,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 276 municipios"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1940",
+      "value": 68.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 102 municipios"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1940",
+      "value": 15.5,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 347 municipios"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1940",
+      "value": 53.6,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 182 municipios"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1940",
+      "value": 15.7,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 282 municipios"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1940",
+      "value": 31.2,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 206 municipios"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1940",
+      "value": 116.4,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 264 municipios"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1940",
+      "value": 41.0,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 235 municipios"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1940",
+      "value": 230.8,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 115 municipios"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1940",
+      "value": 28.3,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 307 municipios"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1940",
+      "value": 34.4,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 305 municipios"
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1940",
+      "value": 3111.3,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 1 municipios"
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1940",
+      "value": 5937.8,
+      "document_id": "doc-mapspainhist-censos",
+      "locator": "censos.csv, censo 1940, 1 municipios"
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Generado por scripts/etl/mapspainhist.py; contraste puntual con INE en 3 municipios."
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "id": "evt-1933-10-10-disolucion-cortes",
+  "title": "Disolución de las Cortes Constituyentes y convocatoria de elecciones generales",
+  "event_type": "electoral",
+  "start_date": "1933-10-10",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La Gaceta del 10 de octubre de 1933 publica el decreto que declara disueltas las Cortes Constituyentes.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1933-10-10",
+          "locator": "págs. 251-252"
+        }
+      ]
+    },
+    {
+      "text": "Otro decreto del mismo número fija las elecciones generales a Cortes para el domingo 19 de noviembre de 1933.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1933-10-10",
+          "locator": "sumario"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  }
+}

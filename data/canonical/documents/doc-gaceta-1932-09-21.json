@@ -1,0 +1,41 @@
+{
+  "id": "doc-gaceta-1932-09-21",
+  "title": "Gaceta de Madrid n.º 265, 21 de septiembre de 1932: Estatuto de Cataluña y Ley de Reforma Agraria",
+  "title_original": "Gaceta de Madrid. Núm. 265",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 265, 21/09/1932, págs. 2090-2102",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1932/09/21/pdfs/GMD-1932-265.pdf",
+  "date": "1932-09-21",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana",
+    "plc-prov-08",
+    "plc-prov-17",
+    "plc-prov-25",
+    "plc-prov-43"
+  ],
+  "summary": "Publica la ley relativa al Estatuto de Cataluña (págs. 2090-2094) y la ley relativa a la Reforma Agraria (págs. 2095-2102), ambas firmadas en San Sebastián el 15 de septiembre de 1932.",
+  "context": "Publicación oficial de dos leyes aprobadas por las Cortes Constituyentes.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-14",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-14"
+}

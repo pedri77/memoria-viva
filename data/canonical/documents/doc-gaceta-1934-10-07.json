@@ -1,0 +1,42 @@
+{
+  "id": "doc-gaceta-1934-10-07",
+  "title": "Gaceta de Madrid n.º 280, 7 de octubre de 1934: declaración del estado de guerra en todo el territorio de la República",
+  "title_original": "Gaceta de Madrid. Núm. 280",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 280, 07/10/1934, págs. 194",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1934/10/07/pdfs/GMD-1934-280.pdf",
+  "date": "1934-10-07",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana",
+    "plc-prov-33",
+    "plc-prov-08",
+    "plc-prov-17",
+    "plc-prov-25",
+    "plc-prov-43"
+  ],
+  "summary": "Decreto de la Presidencia del Consejo de Ministros que declara el estado de guerra en todo el territorio de la República, precedido de una nota del Gobierno que cita los sucesos de Asturias y la proclamación del «Estat Català» por el presidente de la Generalidad.",
+  "context": "Fuente oficial del Gobierno: presenta los hechos según su versión y su calificación («los mal aconsejados»). No es una descripción neutral de los sucesos.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-14",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-14"
+}

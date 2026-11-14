@@ -1,0 +1,12 @@
+{
+  "id": "F034",
+  "name": "Resultats electorals de la Segona República a Catalunya per municipis (Generalitat)",
+  "url": "https://analisi.transparenciacatalunya.cat/d/x8yr-e7bz",
+  "priority": "P1",
+  "status": "researched",
+  "license": "Términos de uso gencat [V «See Terms of Use»]",
+  "access": "API Socrata CSV/JSON [V]; API Socrata CSV/JSON [V]",
+  "years": "1931-1936",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

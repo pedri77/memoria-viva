@@ -1,0 +1,12 @@
+{
+  "id": "F035",
+  "name": "Resultados Segunda República en Euskadi",
+  "url": "https://hauteskundeak.euskadi.eus",
+  "priority": "P1",
+  "status": "candidate",
+  "license": "Open Data Euskadi [S]",
+  "access": "CSV; CSV",
+  "years": "1931, 1933, 1936",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "doc-gaceta-1933-10-10",
+  "title": "Gaceta de Madrid n.º 283, 10 de octubre de 1933: disolución de las Cortes Constituyentes y convocatoria de elecciones",
+  "title_original": "Gaceta de Madrid. Núm. 283",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 283, 10/10/1933, págs. 251-252",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1933/10/10/pdfs/GMD-1933-283.pdf",
+  "date": "1933-10-10",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Decreto que declara disueltas las Cortes Constituyentes (págs. 251-252) y otro que dispone que las elecciones generales a Cortes se celebren el domingo 19 de noviembre.",
+  "context": "Publicación oficial. La paginación de la Gaceta se reinicia cada trimestre.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-14",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-14"
+}

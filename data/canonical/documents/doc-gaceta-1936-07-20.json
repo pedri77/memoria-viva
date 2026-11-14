@@ -1,0 +1,38 @@
+{
+  "id": "doc-gaceta-1936-07-20",
+  "title": "Gaceta de Madrid n.º 202, 20 de julio de 1936: dimisión de Diego Martínez Barrio y nombramiento de José Giral como Presidente del Consejo de Ministros",
+  "title_original": "Gaceta de Madrid. Núm. 202",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 202, 20/07/1936, págs. 739",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1936/07/20/pdfs/GMD-1936-202.pdf",
+  "date": "1936-07-20",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana",
+    "plc-madrid"
+  ],
+  "summary": "Decreto que admite la dimisión de Diego Martínez Barrio como Presidente del Consejo de Ministros y otro que nombra a José Giral Pereira (pág. 739).",
+  "context": "Publicación oficial. Martínez Barrio había sido nombrado el 19 de julio (Gaceta n.º 201).",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-14",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-14"
+}

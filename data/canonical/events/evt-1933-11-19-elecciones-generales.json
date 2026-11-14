@@ -1,0 +1,32 @@
+{
+  "id": "evt-1933-11-19-elecciones-generales",
+  "title": "Elecciones generales a Cortes de 1933",
+  "event_type": "electoral",
+  "start_date": "1933-11-19",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "Un decreto publicado en la Gaceta del 10 de octubre de 1933 dispone que las elecciones generales a Cortes se celebren el domingo 19 de noviembre de 1933.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1933-10-10",
+          "locator": "sumario"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "wikidata": "Q3132158"
+}

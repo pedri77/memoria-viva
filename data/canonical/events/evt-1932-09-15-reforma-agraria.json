@@ -1,0 +1,41 @@
+{
+  "id": "evt-1932-09-15-reforma-agraria",
+  "title": "Ley de Reforma Agraria",
+  "event_type": "legislativo",
+  "start_date": "1932-09-15",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La ley relativa a la Reforma Agraria se firma en San Sebastián el 15 de septiembre de 1932 y se publica en la Gaceta del 21 de septiembre.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1932-09-21",
+          "locator": "págs. 2095-2102"
+        }
+      ]
+    },
+    {
+      "text": "La ley encarga su aplicación a un Instituto de Reforma Agraria, con juntas provinciales.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1932-09-21",
+          "locator": "págs. 2095-2096"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  }
+}

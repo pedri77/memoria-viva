@@ -1,0 +1,12 @@
+{
+  "id": "F041",
+  "name": "Víctimas mortales de la guerra civil en Euskadi (Gogora)",
+  "url": "https://opendata.euskadi.eus/contenidos/ds_general/victimas_guerra_civil/",
+  "priority": "P1",
+  "status": "candidate",
+  "license": "CC BY 4.0 [S]",
+  "access": "JSON/XML/XLSX [V 200]; JSON/XML/XLSX [V 200]",
+  "years": "1936-...",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

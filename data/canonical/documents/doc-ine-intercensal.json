@@ -1,0 +1,32 @@
+{
+  "id": "doc-ine-intercensal",
+  "title": "INE · Alteraciones de los municipios en los Censos de Población desde 1842",
+  "document_type": "tabla_estadistica",
+  "source_ids": [
+    "F010"
+  ],
+  "custodian": "Instituto Nacional de Estadística",
+  "canonical_url": "https://www.ine.es/intercensal/",
+  "date": "1842",
+  "date_end": "2021",
+  "date_precision": "intervalo",
+  "summary": "Aplicación oficial con la población de hecho y de derecho de cada municipio en todos los censos. Se usa para contrastar los datos de mapSpainHist.",
+  "context": "Fuente oficial. Las cifras municipales pueden no sumar exactamente los totales provinciales publicados en los volúmenes de cada censo.",
+  "text_origin": "ninguno",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: INE",
+    "evidence_url": "https://www.ine.es/ss/Satellite?L=es_ES&c=Page&cid=1254735849170&p=1254735849170&pagename=Ayuda%2FINELayout",
+    "checked_at": "2026-11-14"
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Generado por scripts/etl/mapspainhist.py; contraste puntual con INE en 3 municipios."
+  },
+  "consulted_at": "2026-11-14"
+}

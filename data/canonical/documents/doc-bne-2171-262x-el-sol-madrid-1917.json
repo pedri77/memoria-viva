@@ -1,0 +1,38 @@
+{
+  "id": "doc-bne-2171-262x-el-sol-madrid-1917",
+  "title": "El Sol (Madrid. 1917) (cabecera de prensa, Hemeroteca Digital BNE)",
+  "title_original": "El Sol (Madrid. 1917)",
+  "document_type": "prensa",
+  "source_ids": [
+    "F007"
+  ],
+  "custodian": "Biblioteca Nacional de España, Hemeroteca Digital",
+  "signature": "ISSN 2171-262X",
+  "canonical_url": "https://hemerotecadigital.bne.es/texts/2171-262X-el-sol-madrid-1917.zip",
+  "date": "1917-11-29",
+  "date_end": "1939-03-27",
+  "date_precision": "intervalo",
+  "place_ids": [
+    "plc-prov-28"
+  ],
+  "summary": "Cabecera publicada entre 1917 y 1939 con texto completo (OCR) descargable en la Hemeroteca Digital. Ámbito: Madrid. Idioma: spa.",
+  "context": "La prensa refleja la línea de su empresa o partido y la censura de cada momento; no valida por sí sola los hechos que narra. La BNE solo ofrece texto completo de cabeceras en dominio público: faltan grandes diarios del periodo (ABC, Ya, Informaciones, Mundo Obrero, La Vanguardia, Arriba España), así que esta colección no es representativa.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "cc_by",
+    "action": "enlazar",
+    "attribution": "Biblioteca Nacional de España, «Hemeroteca digital. Texto completo» (datos.gob.es, CC BY 4.0)",
+    "evidence_url": "https://datos.gob.es/catalogo/ea0019768-hemeroteca-digital-texto-completo1",
+    "checked_at": "2026-11-14",
+    "note": "Metadatos y texto completo con CC BY 4.0. El servidor de la BNE bloquea clientes automáticos: el enlace es para lectores humanos."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Generado desde el CSV oficial de la BNE (scripts/etl/bne_cabeceras.py)."
+  },
+  "consulted_at": "2026-11-14"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "F033",
+  "name": "mapSpainHist · Historical municipal boundaries of Spain 1900-2001 (Vall-Prat)",
+  "url": "https://doi.org/10.5281/zenodo.23663208",
+  "priority": "P0",
+  "status": "pilot",
+  "license": "CC BY 4.0 (API de Zenodo, verificado 14-11-2026)",
+  "access": "GeoPackage 103 MB, TopoJSON 6,5 MB, CSV; GeoPackage 103 MB, TopoJSON 6,5 MB, CSV",
+  "years": "1900-2001 (incluye 1930)",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

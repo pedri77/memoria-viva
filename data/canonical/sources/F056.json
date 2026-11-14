@@ -1,0 +1,12 @@
+{
+  "id": "F056",
+  "name": "Wikidata · eventos de la Guerra Civil",
+  "url": "https://query.wikidata.org",
+  "priority": "P0",
+  "status": "researched",
+  "license": "CC0",
+  "access": "SPARQL [V]: 120 entidades con `part of` Guerra Civil (Q10859); SPARQL [V]: 120 entidades con `part of` Guerra Civil (Q10859)",
+  "years": "1931-1939",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

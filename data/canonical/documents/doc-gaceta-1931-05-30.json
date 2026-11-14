@@ -1,0 +1,37 @@
+{
+  "id": "doc-gaceta-1931-05-30",
+  "title": "Gaceta de Madrid n.º 150, 30 de mayo de 1931: decreto que crea el Patronato de Misiones Pedagógicas",
+  "title_original": "Gaceta de Madrid. Núm. 150",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 150, 30/05/1931, págs. 1033-1034",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1931/05/30/pdfs/GMD-1931-150.pdf",
+  "date": "1931-05-30",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Decreto que crea, dependiente del Ministerio de Instrucción Pública, un Patronato de Misiones Pedagógicas para difundir la cultura general, la orientación docente moderna y la educación ciudadana en aldeas, villas y lugares, con atención a la población rural.",
+  "context": "Disposición del Gobierno provisional. Acredita la creación del organismo, no su actividad posterior.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-14",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-14"
+}

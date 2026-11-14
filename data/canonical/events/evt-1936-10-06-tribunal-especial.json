@@ -1,0 +1,32 @@
+{
+  "id": "evt-1936-10-06-tribunal-especial",
+  "title": "Creación en Madrid de un Tribunal especial de responsabilidades civiles",
+  "event_type": "politico",
+  "start_date": "1936-10-07",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana",
+    "plc-madrid"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La Gaceta del 7 de octubre de 1936 publica el decreto que crea en Madrid un Tribunal especial para exigir las responsabilidades civiles derivadas de los delitos de rebelión, sedición, contra la seguridad del Estado, traición y espionaje, y las de quienes hubieran participado en el «movimiento rebelde».",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1936-10-07",
+          "locator": "págs. 215-216"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  }
+}

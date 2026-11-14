@@ -1,0 +1,32 @@
+{
+  "id": "evt-1933-06-03-congregaciones",
+  "title": "Ley de Confesiones y Congregaciones Religiosas",
+  "event_type": "legislativo",
+  "start_date": "1933-06-03",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La Gaceta de Madrid del 3 de junio de 1933 publica la ley relativa a Confesiones y Congregaciones Religiosas.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1933-06-03",
+          "locator": "págs. 1651-1653"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "wikidata": "Q91117278"
+}

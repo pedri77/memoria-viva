@@ -3,34 +3,120 @@
   "$id": "https://memoria-viva/schemas/event.schema.json",
   "title": "Acontecimiento",
   "type": "object",
-  "required": ["id", "title", "event_type", "start_date", "date_precision", "place_ids", "claims", "review"],
+  "required": [
+    "id",
+    "title",
+    "event_type",
+    "start_date",
+    "date_precision",
+    "place_ids",
+    "claims",
+    "review"
+  ],
   "additionalProperties": false,
   "properties": {
-    "id": { "$ref": "common.schema.json#/$defs/id" },
-    "title": { "type": "string" },
-    "event_type": { "enum": ["politico", "legislativo", "electoral", "militar", "violencia", "social", "economico", "cultural", "educativo"] },
-    "start_date": { "$ref": "common.schema.json#/$defs/fecha_iso" },
-    "end_date": { "$ref": "common.schema.json#/$defs/fecha_iso" },
-    "date_precision": { "$ref": "common.schema.json#/$defs/precision" },
-    "place_ids": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/id" }, "minItems": 1 },
-    "spatial_precision": { "enum": ["punto", "municipio", "provincia", "region", "estatal"] },
+    "id": {
+      "$ref": "common.schema.json#/$defs/id"
+    },
+    "title": {
+      "type": "string"
+    },
+    "event_type": {
+      "enum": [
+        "politico",
+        "legislativo",
+        "electoral",
+        "militar",
+        "violencia",
+        "social",
+        "economico",
+        "cultural",
+        "educativo"
+      ]
+    },
+    "start_date": {
+      "$ref": "common.schema.json#/$defs/fecha_iso"
+    },
+    "end_date": {
+      "$ref": "common.schema.json#/$defs/fecha_iso"
+    },
+    "date_precision": {
+      "$ref": "common.schema.json#/$defs/precision"
+    },
+    "place_ids": {
+      "type": "array",
+      "items": {
+        "$ref": "common.schema.json#/$defs/id"
+      },
+      "minItems": 1
+    },
+    "spatial_precision": {
+      "enum": [
+        "punto",
+        "municipio",
+        "provincia",
+        "region",
+        "estatal"
+      ]
+    },
     "claims": {
       "type": "array",
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["text", "kind", "evidence"],
+        "required": [
+          "text",
+          "kind",
+          "evidence"
+        ],
         "additionalProperties": false,
         "properties": {
-          "text": { "type": "string" },
-          "kind": { "enum": ["hecho", "documento", "interpretacion", "estimacion"] },
-          "attributed_to": { "type": "string", "description": "obligatorio si kind es interpretacion o estimacion" },
-          "evidence": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/evidence" }, "minItems": 1 }
+          "text": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "hecho",
+              "documento",
+              "interpretacion",
+              "estimacion"
+            ]
+          },
+          "attributed_to": {
+            "type": "string",
+            "description": "obligatorio si kind es interpretacion o estimacion"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "common.schema.json#/$defs/evidence"
+            },
+            "minItems": 1
+          }
         },
-        "if": { "properties": { "kind": { "enum": ["interpretacion", "estimacion"] } } },
-        "then": { "required": ["attributed_to"] }
+        "if": {
+          "properties": {
+            "kind": {
+              "enum": [
+                "interpretacion",
+                "estimacion"
+              ]
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "attributed_to"
+          ]
+        }
       }
     },
-    "review": { "$ref": "common.schema.json#/$defs/review" }
+    "review": {
+      "$ref": "common.schema.json#/$defs/review"
+    },
+    "wikidata": {
+      "type": "string",
+      "pattern": "^Q\\d+$"
+    }
   }
 }

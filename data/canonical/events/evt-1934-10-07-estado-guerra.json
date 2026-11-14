@@ -1,0 +1,47 @@
+{
+  "id": "evt-1934-10-07-estado-guerra",
+  "title": "Declaración del estado de guerra en todo el territorio de la República",
+  "event_type": "politico",
+  "start_date": "1934-10-07",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana",
+    "plc-prov-33",
+    "plc-prov-08",
+    "plc-prov-17",
+    "plc-prov-25",
+    "plc-prov-43"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La Gaceta del 7 de octubre de 1934 publica el decreto que declara el estado de guerra en todo el territorio de la República.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1934-10-07",
+          "locator": "pág. 194"
+        }
+      ]
+    },
+    {
+      "text": "La nota del Gobierno que lo acompaña justifica la medida por los sucesos de Asturias y por la proclamación del «Estat Català» por el presidente de la Generalidad.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1934-10-07",
+          "locator": "pág. 194"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "wikidata": "Q16782534"
+}

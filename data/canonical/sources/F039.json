@@ -1,0 +1,12 @@
+{
+  "id": "F039",
+  "name": "Europeana · dataset Newspapers Spain (BNE)",
+  "url": "https://api.europeana.eu",
+  "priority": "P0",
+  "status": "researched",
+  "license": "CC BY-NC-SA 4.0 [V]",
+  "access": "Search API + manifiesto IIIF [V]; Search API + manifiesto IIIF [V]",
+  "years": "1931-1939: 21.693",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

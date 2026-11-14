@@ -5,7 +5,7 @@
   "priority": "P0",
   "status": "researched",
   "license": "condiciones de reutilización AEBOE (licencia tipo 27-06-2024)",
-  "access": "formulario web; incluye Gaceta de la República y BOE de Burgos; API de sumarios no cubre el periodo (19360718 → 404)",
+  "access": "robots.txt prohíbe /buscar/gazeta.php? y /datos/pdfs/; permitido /gazeta/dias/AAAA/MM/DD/pdfs/ (ejemplar completo); API de sumarios no cubre el periodo (19360718 → 404)",
   "years": "1661-1959 (texto OCR 1836-1959); API solo desde 09-1960",
   "risks": "OCR automático",
   "checked_at": "2026-11-14"

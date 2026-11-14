@@ -1,0 +1,12 @@
+{
+  "id": "F058",
+  "name": "Francisco Villamil · Data resources for Spain",
+  "url": "https://franvillamil.com/data_spain.html",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "Cada fuente con su licencia; scripts propios [S]",
+  "access": "CSV y R; CSV y R",
+  "years": "1930-1942",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

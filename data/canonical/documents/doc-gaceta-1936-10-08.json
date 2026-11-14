@@ -1,0 +1,37 @@
+{
+  "id": "doc-gaceta-1936-10-08",
+  "title": "Gaceta de Madrid n.º 282, 8 de octubre de 1936: ley de 5.300 plazas de maestros y decreto de expropiación de fincas rústicas",
+  "title_original": "Gaceta de Madrid. Núm. 282",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 282, 08/10/1936, págs. 234-237",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1936/10/08/pdfs/GMD-1936-282.pdf",
+  "date": "1936-10-08",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Publica la ley que aprueba la autorización del decreto de 28 de febrero de 1936 para crear 5.300 plazas de maestros y maestras a partir del 1 de octubre (págs. 234-235) y el decreto, fechado el 7 de octubre de 1936, que acuerda la expropiación sin indemnización y a favor del Estado de las fincas rústicas pertenecientes el 18 de julio a personas que hubieran intervenido directa o indirectamente en el movimiento insurreccional contra la República (págs. 236-237).",
+  "context": "Fuente oficial del Gobierno de la República en guerra. Acredita las normas, no su aplicación efectiva.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-14",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-14"
+}

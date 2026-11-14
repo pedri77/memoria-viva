@@ -1,0 +1,36 @@
+---
+import Base from "../layouts/Base.astro";
+import { indicators, places, byId, url } from "../lib/data";
+const fmt = (v: number | null, unit: string) =>
+  v === null ? "sin dato" : unit.startsWith("habitantes") ? v.toLocaleString("es-ES", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : v.toLocaleString("es-ES");
+const ordered = [...indicators].sort((a, b) => a.id.localeCompare(b.id));
+---
+<Base title="Datos" description="Series censales por provincia 1920, 1930 y 1940, con método y advertencias de comparabilidad.">
+  <h1>Datos</h1>
+  <p>Series por provincia de los censos de 1920, 1930 y 1940. Cada tabla indica de dónde sale cada cifra y qué limita la comparación. Datos descargables en <a href={url("/data/v1/indicators.json")}>JSON</a>.</p>
+  {ordered.map((ind) => {
+    const periods = [...new Set(ind.observations.map((o: any) => o.period))].sort();
+    const rows = [...new Set(ind.observations.map((o: any) => o.place_id))].map((pid: any) => ({
+      pid, name: byId(places, pid)?.canonical_name ?? pid,
+      vals: periods.map((p) => ind.observations.find((o: any) => o.place_id === pid && o.period === p)?.value ?? null),
+    })).sort((a, b) => a.name.localeCompare(b.name, "es"));
+    return (
+      <section class="card" id={ind.id}>
+        <h2>{ind.concept}</h2>
+        <p>{ind.definition} Unidad: {ind.unit}.</p>
+        <details>
+          <summary>Método y advertencias</summary>
+          <p><strong>Método:</strong> {ind.method}</p>
+          <p><strong>Comparabilidad:</strong> {ind.comparability_notes}</p>
+        </details>
+        <div class="table-wrap">
+          <table>
+            <caption class="meta">{ind.concept} ({ind.unit})</caption>
+            <thead><tr><th scope="col">Provincia</th>{periods.map((p) => <th scope="col" style="text-align:right">{p}</th>)}</tr></thead>
+            <tbody>{rows.map((r) => <tr><th scope="row" style="font-weight:400">{r.name}</th>{r.vals.map((v) => <td style="text-align:right">{fmt(v, ind.unit)}</td>)}</tr>)}</tbody>
+          </table>
+        </div>
+      </section>
+    );
+  })}
+</Base>

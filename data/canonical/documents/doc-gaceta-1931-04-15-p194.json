@@ -3,13 +3,17 @@
   "title": "Gaceta de Madrid n.º 105, 15 de abril de 1931, págs. 194-195: designación del Presidente del Gobierno provisional y primeros nombramientos de ministros",
   "title_original": "Gaceta de Madrid. Núm. 105",
   "document_type": "disposicion",
-  "source_ids": ["F015"],
+  "source_ids": [
+    "F015"
+  ],
   "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
-  "signature": "Gaceta de Madrid, núm. 105, 15/04/1931, págs. 194-195",
-  "canonical_url": "https://www.boe.es/datos/pdfs/BOE//1931/105/A00194-00195.pdf",
+  "signature": "Gaceta de Madrid, núm. 105, 15/04/1931, págs. 194-195 (ejemplar completo)",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1931/04/15/pdfs/GMD-1931-105.pdf",
   "date": "1931-04-15",
   "date_precision": "dia",
-  "place_ids": ["plc-madrid"],
+  "place_ids": [
+    "plc-madrid"
+  ],
   "summary": "El Comité de las fuerzas políticas coaligadas designa a Niceto Alcalá-Zamora y Torres Presidente del Gobierno provisional de la República (firmado en Madrid el 14 de abril de 1931). Siguen decretos de nombramiento de ministros, entre ellos Manuel Azaña (Guerra), Francisco Largo Caballero (Trabajo) y Santiago Casares Quiroga (Marina).",
   "context": "Diario oficial del Estado. Publica las disposiciones del nuevo Gobierno provisional el día siguiente a la proclamación. Fuente oficial: acredita el acto jurídico, no describe por sí sola los acontecimientos en la calle.",
   "text_origin": "ocr_automatico",
@@ -21,6 +25,13 @@
     "checked_at": "2026-11-14",
     "note": "Reutilización permitida según las condiciones de la AEBOE; en el MVP se enlaza al PDF oficial."
   },
-  "review": { "status": "borrador", "date": "2026-11-14", "by": ["autor"], "note": "Texto comprobado sobre el PDF oficial el 14-11-2026." },
+  "review": {
+    "status": "borrador",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Texto comprobado sobre el PDF oficial el 14-11-2026."
+  },
   "consulted_at": "2026-11-14"
 }

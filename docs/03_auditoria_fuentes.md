@@ -57,6 +57,7 @@
 - **Colección histórica Gazeta:** 1661-1959, unos 1.470.000 documentos, texto OCR buscable de 1836 a 1959. Incluye la «Gaceta de la República» y el «Boletín Oficial del Estado» de Burgos: las dos administraciones del periodo de guerra.
 - **Licencia:** condiciones de reutilización de la AEBOE (licencia tipo aprobada el 27-06-2024).
 - **Decisión:** P0 como fuente de referencias normativas curadas a mano.
+- **Corrección (14-11-2026, tras el informe 05):** esta auditoría leyó solo el principio del `robots.txt` de boe.es y concluyó que no bloqueaba la búsqueda. Es falso: prohíbe `/buscar/gazeta.php?` y `/datos/pdfs/`. Durante la auditoría se hicieron por error una búsqueda y una descarga de PDF en esas rutas. Desde entonces el proyecto solo usa la ruta permitida de ejemplares completos (`/gazeta/dias/AAAA/MM/DD/pdfs/GMD-AAAA-NNN.pdf`) con peticiones espaciadas, y el comprobador de enlaces respeta `robots.txt`. El BOE de Burgos (1936-1939) no tiene ruta permitida sin buscador: queda para búsqueda manual o solicitud a la AEBOE.
 
 ## Puntuación de preparación técnica (fórmula del §III.7)
 

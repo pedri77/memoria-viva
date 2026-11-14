@@ -1,0 +1,43 @@
+{
+  "id": "evt-1931-12-09-constitucion",
+  "title": "Aprobación de la Constitución de la República Española",
+  "event_type": "legislativo",
+  "start_date": "1931-12-09",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana",
+    "plc-madrid"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "Las Cortes Constituyentes aprueban la Constitución de la República Española, fechada en el Palacio de las Cortes el 9 de diciembre de 1931.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1931-12-10",
+          "locator": "pág. 1578"
+        }
+      ]
+    },
+    {
+      "text": "La Gaceta de Madrid publica el texto al día siguiente, 10 de diciembre de 1931.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1931-12-10",
+          "locator": "pág. 1578"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "wikidata": "Q2745432"
+}

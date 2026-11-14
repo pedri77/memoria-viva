@@ -1,0 +1,37 @@
+{
+  "id": "doc-gaceta-1933-06-03",
+  "title": "Gaceta de Madrid n.º 154, 3 de junio de 1933: Ley de Confesiones y Congregaciones Religiosas",
+  "title_original": "Gaceta de Madrid. Núm. 154",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 154, 03/06/1933, págs. 1651-1653",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1933/06/03/pdfs/GMD-1933-154.pdf",
+  "date": "1933-06-03",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Publica la ley relativa a Confesiones y Congregaciones Religiosas (págs. 1651-1653).",
+  "context": "Publicación oficial de una ley aprobada por las Cortes Constituyentes.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-14",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-14"
+}

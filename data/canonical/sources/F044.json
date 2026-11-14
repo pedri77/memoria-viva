@@ -1,0 +1,12 @@
+{
+  "id": "F044",
+  "name": "Fosas comunes de la Guerra Civil (Junta de Andalucía)",
+  "url": "https://juntadeandalucia.es/datosabiertos/portal/dataset/fosas-comunes-de-la-guerra-civil",
+  "priority": "P1",
+  "status": "researched",
+  "license": "CC BY 4.0 [V]",
+  "access": "CSV/JSON [V]; CSV/JSON [V]",
+  "years": "1936-...",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

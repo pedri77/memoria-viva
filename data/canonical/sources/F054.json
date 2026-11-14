@@ -1,0 +1,12 @@
+{
+  "id": "F054",
+  "name": "HIPGDAC-ES · rejillas de población histórica (Goerlich)",
+  "url": "https://doi.org/10.5281/zenodo.13916658",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "Datos en Zenodo, licencia del depósito por confirmar; artículo CC BY-NC-ND [S]",
+  "access": "GeoTIFF/GPKG; GeoTIFF/GPKG",
+  "years": "1900-2021 (incluye 1930 y 1940)",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}
