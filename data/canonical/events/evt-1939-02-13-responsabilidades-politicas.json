@@ -1,0 +1,32 @@
+{
+  "id": "evt-1939-02-13-responsabilidades-politicas",
+  "title": "Ley de Responsabilidades Políticas",
+  "event_type": "politico",
+  "start_date": "1939-02-13",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "El BOE de 13 de febrero de 1939, núm. 44, publica en sus páginas 824 a 847 la Ley de Responsabilidades Políticas, de la Jefatura del Estado.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1939-1451",
+          "locator": "págs. 824 a 847"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado (solo PDF en ruta vetada a robots); pendiente de lectura humana."
+  },
+  "wikidata": "Q3816909"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "evt-1937-04-20-decreto-unificacion",
+  "title": "Decreto de unificación de Falange Española y los requetés",
+  "event_type": "politico",
+  "start_date": "1937-04-20",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "El BOE de 20 de abril de 1937 publica el Decreto núm. 255, que dispone que Falange Española y Requetés se integren, bajo la Jefatura del Jefe del Estado, en una sola entidad política de carácter nacional.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1937-3746",
+          "locator": "págs. 1033 a 1034"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado (solo PDF en ruta vetada a robots); pendiente de lectura humana."
+  },
+  "wikidata": "Q5390265"
+}

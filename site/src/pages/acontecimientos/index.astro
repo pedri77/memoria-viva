@@ -6,7 +6,7 @@ const years = [...new Set(events.map((e) => e.start_date.slice(0, 4)))].sort();
 ---
 <Base index={false} title="Cronología" description="Cronología documentada 1931-1939: cada acontecimiento con su fuente.">
   <h1>Cronología</h1>
-  <p class="meta">Solo aparecen acontecimientos con evidencia documental revisada. La cronología crecerá fase a fase; por ahora predominan las fuentes oficiales de la República porque el BOE de Burgos aún no está incorporado.</p>
+  <p class="meta">Solo aparecen acontecimientos con evidencia documental revisada. La cronología crecerá fase a fase. Las disposiciones de la zona sublevada (BOE de Burgos) se recogen a partir de su título oficial; las de la República, con su texto leído en la Gaceta.</p>
   <form class="filtros" aria-controls="crono">
     <label>Año <select id="c-year"><option value="">Todos</option>{years.map((y) => <option>{y}</option>)}</select></label>
     <label>Tipo <select id="c-type"><option value="">Todos</option>{Object.entries(TYPE_LABEL).map(([k, v]) => <option value={k}>{v}</option>)}</select></label>

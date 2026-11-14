@@ -1,0 +1,31 @@
+{
+  "id": "evt-1938-01-31-administracion-central",
+  "title": "Ley de organización de la Administración Central del Estado",
+  "event_type": "politico",
+  "start_date": "1938-01-31",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "El BOE de 31 de enero de 1938 publica la «Ley organizando la Administración Central del Estado», del Gobierno del Estado.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1938-1406",
+          "locator": "págs. 5514 a 5515"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado (solo PDF en ruta vetada a robots); pendiente de lectura humana."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "doc-boe-a-1939-1451",
+  "title": "BOE n.º 44, 13 de febrero de 1939: Ley de Responsabilidades Políticas",
+  "title_original": "Ley de Responsabilidades Políticas.",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado",
+  "signature": "BOE-A-1939-1451 · «Boletín Oficial del Estado», núm. 44, 13 de febrero de 1939, págs. 824 a 847 · Jefatura del Estado",
+  "canonical_url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1939-1451",
+  "date": "1939-02-13",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Disposición de Jefatura del Estado publicada en el BOE núm. 44 de 13 de febrero de 1939, págs. 824 a 847: «Ley de Responsabilidades Políticas».",
+  "context": "Boletín Oficial del Estado editado en Burgos por las autoridades de la zona sublevada desde el 2 de octubre de 1936. Acredita las normas que dictaban esas autoridades, no su aplicación ni sus efectos.",
+  "text_origin": "ninguno",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-14",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza a la ficha oficial."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado (solo PDF en ruta vetada a robots); pendiente de lectura humana."
+  },
+  "consulted_at": "2026-11-14"
+}

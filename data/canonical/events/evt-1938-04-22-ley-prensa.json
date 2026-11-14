@@ -1,0 +1,31 @@
+{
+  "id": "evt-1938-04-22-ley-prensa",
+  "title": "Ley de Prensa de 1938",
+  "event_type": "cultural",
+  "start_date": "1938-04-22",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La Ley de Prensa está fechada el 22 de abril de 1938; el BOE del 24 de abril la publica de nuevo, rectificada, por un error en su publicación del día anterior.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1938-4796",
+          "locator": "págs. 6938 a 6940"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado (solo PDF en ruta vetada a robots); pendiente de lectura humana."
+  }
+}

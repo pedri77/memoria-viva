@@ -37,8 +37,8 @@ const draft = s.review.status !== "aprobado";
           ))}
           {sc.editorial_note && <p class="nota-ed"><strong>Nota editorial.</strong> {sc.editorial_note}</p>}
           <ol class="fuentes" aria-label={`Fuentes de «${sc.heading}»`}>
-            {sc.claims.map((c: any) => c.docs.map((e: any) => (
-              <li id={`nota-${c.n}`} value={c.n}>
+            {sc.claims.map((c: any) => c.docs.map((e: any, k: number) => (
+              <li id={k === 0 ? `nota-${c.n}` : `nota-${c.n}-${k + 1}`} value={c.n}>
                 <a href={url(`/documentos/${e.document_id}/`)}>{e.d?.title}</a>{e.locator ? `, ${e.locator}` : ""}.
                 {" "}<a href={e.d?.canonical_url} rel="noopener">Original</a> · <a href={`#ref-${c.n}`} aria-label={`Volver a la afirmación ${c.n}`}>↑</a>
               </li>

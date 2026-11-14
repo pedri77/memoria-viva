@@ -1,0 +1,32 @@
+{
+  "id": "evt-1938-03-10-fuero-trabajo",
+  "title": "Fuero del Trabajo",
+  "event_type": "social",
+  "start_date": "1938-03-10",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "El BOE de 10 de marzo de 1938 publica el decreto que aprueba el Fuero del Trabajo formulado por el Consejo Nacional de Falange Española Tradicionalista y de las J.O.N.S.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1938-3093",
+          "locator": "págs. 6178 a 6181"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado (solo PDF en ruta vetada a robots); pendiente de lectura humana."
+  },
+  "wikidata": "Q3028296"
+}

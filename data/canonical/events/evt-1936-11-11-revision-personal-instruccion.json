@@ -1,0 +1,41 @@
+{
+  "id": "evt-1936-11-11-revision-personal-instruccion",
+  "title": "Decreto de revisión del personal de Instrucción Pública en la zona sublevada",
+  "event_type": "educativo",
+  "start_date": "1936-11-11",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "El BOE de Burgos del 11 de noviembre de 1936 publica el Decreto núm. 66, que dispone «se lleve a cabo una revisión total en el personal de Instrucción Pública, por medio de las Comisiones que se crean».",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1936-9694",
+          "locator": "págs. 153 a 153"
+        }
+      ]
+    },
+    {
+      "text": "El mismo número publica una orden de la Presidencia de la Junta Técnica del Estado que dicta las reglas para aplicar ese decreto.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1936-9705",
+          "locator": "págs. 156 a 157"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado (solo PDF en ruta vetada a robots); pendiente de lectura humana."
+  }
+}

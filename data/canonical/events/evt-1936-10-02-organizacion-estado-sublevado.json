@@ -1,0 +1,31 @@
+{
+  "id": "evt-1936-10-02-organizacion-estado-sublevado",
+  "title": "Primera organización administrativa del Estado en la zona sublevada",
+  "event_type": "politico",
+  "start_date": "1936-10-02",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "El primer número del Boletín Oficial del Estado editado en Burgos, de 2 de octubre de 1936, publica en sus páginas 1 y 2 la «Ley estableciendo la organización administrativa a que ha de ajustarse la nueva estructura del Estado».",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1936-9134",
+          "locator": "págs. 1 a 2"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado (solo PDF en ruta vetada a robots); pendiente de lectura humana."
+  }
+}
