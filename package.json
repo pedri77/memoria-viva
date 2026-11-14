@@ -10,7 +10,8 @@
     "check:links": "node scripts/checks/check-links.mjs",
     "dev": "astro dev --root site",
     "build": "npm run validate && astro build --root site && pagefind --site dist",
-    "preview": "astro preview --root site"
+    "preview": "astro preview --root site",
+    "test:retirada": "node scripts/checks/test-retirada.mjs"
   },
   "devDependencies": {
     "ajv": "^8.20.0",

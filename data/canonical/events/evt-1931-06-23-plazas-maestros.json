@@ -18,6 +18,17 @@
           "locator": "págs. 1612-1613"
         }
       ]
+    },
+    {
+      "text": "Según los informes de la Inspección que cita el preámbulo, existían en España 35.716 escuelas unitarias y secciones de graduada, y harían falta 27.151 más para atender a la población escolar.",
+      "kind": "estimacion",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1931-06-24",
+          "locator": "preámbulo, pág. 1612"
+        }
+      ],
+      "attributed_to": "Gobierno provisional de la República, a partir de los informes de las inspecciones provinciales de Primera enseñanza"
     }
   ],
   "review": {

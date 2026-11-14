@@ -1,0 +1,11 @@
+---
+import Base from "../layouts/Base.astro";
+import { url } from "../lib/data";
+const { o } = Astro.props;
+---
+<Base title="Contenido retirado" index={false} description="Este contenido se ha retirado.">
+  <h1>Contenido retirado</h1>
+  <p class="card">La ficha «{o.title ?? o.canonical_name ?? o.id}» se retiró el {o.review.date}.</p>
+  <p><strong>Motivo:</strong> {o.review.note}</p>
+  <p class="meta">El historial se conserva en el repositorio público. Ver el <a href={url("/cambios/")}>registro de cambios</a>.</p>
+</Base>

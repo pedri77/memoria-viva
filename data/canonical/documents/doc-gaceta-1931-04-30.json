@@ -1,0 +1,41 @@
+{
+  "id": "doc-gaceta-1931-04-30",
+  "title": "Gaceta de Madrid n.º 120, 30 de abril de 1931: decreto sobre el uso del catalán en las escuelas primarias",
+  "title_original": "Gaceta de Madrid. Núm. 120",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 120, 30/04/1931, págs. 413-414",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1931/04/30/pdfs/GMD-1931-120.pdf",
+  "date": "1931-04-30",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana",
+    "plc-prov-08",
+    "plc-prov-17",
+    "plc-prov-25",
+    "plc-prov-43"
+  ],
+  "summary": "Decreto que deroga las disposiciones dictadas contra el uso del catalán en las escuelas primarias, dispone que en las escuelas maternales y de párvulos la enseñanza se dé exclusivamente en la lengua materna, castellana o catalana, e igualmente en las primarias, y que en estas se enseñe a los alumnos catalanes, a partir de los ocho años, el conocimiento y la práctica de la lengua española (págs. 413-414).",
+  "context": "Disposición del Gobierno provisional. El preámbulo justifica la medida por el principio pedagógico de la enseñanza en la lengua materna y por la reparación de las medidas de la Dictadura contra el catalán.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-14",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-14"
+}

@@ -1,14 +1,19 @@
 // Carga los datos canónicos en tiempo de build. Fuente de verdad: data/canonical/.
 type Json = Record<string, any>;
-const load = (mods: Record<string, unknown>) =>
+const loadAll = (mods: Record<string, unknown>) =>
   Object.values(mods).map((m: any) => (m.default ?? m) as Json);
+// Los objetos retirados no se publican en listados, JSON ni búsqueda; su URL muestra un aviso.
+export const retired: Record<string, Json[]> = {};
+const load = (mods: Record<string, unknown>, kind = "otros") =>
+  loadAll(mods).filter((o) => (o.review?.status === "retirado" ? ((retired[kind] ??= []).push(o), false) : true));
 
-export const sources = load(import.meta.glob("../../../data/canonical/sources/*.json", { eager: true }))
+export const sources = load(import.meta.glob("../../../data/canonical/sources/*.json", { eager: true }), "sources")
   .sort((a, b) => a.id.localeCompare(b.id));
-export const places = load(import.meta.glob("../../../data/canonical/places/*.json", { eager: true }));
-export const documents = load(import.meta.glob("../../../data/canonical/documents/*.json", { eager: true }));
-export const indicators = load(import.meta.glob("../../../data/canonical/indicators/*.json", { eager: true }));
-export const events = load(import.meta.glob("../../../data/canonical/events/*.json", { eager: true }))
+export const places = load(import.meta.glob("../../../data/canonical/places/*.json", { eager: true }), "places");
+export const documents = load(import.meta.glob("../../../data/canonical/documents/*.json", { eager: true }), "documents");
+export const stories = load(import.meta.glob("../../../data/canonical/stories/*.json", { eager: true }), "stories");
+export const indicators = load(import.meta.glob("../../../data/canonical/indicators/*.json", { eager: true }), "indicators");
+export const events = load(import.meta.glob("../../../data/canonical/events/*.json", { eager: true }), "events")
   .sort((a, b) => a.start_date.localeCompare(b.start_date));
 
 export const byId = <T extends Json>(list: T[], id: string) => list.find((x) => x.id === id);

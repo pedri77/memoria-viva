@@ -1,0 +1,101 @@
+---
+import Base from "../../layouts/Base.astro";
+import { stories, documents, byId, url } from "../../lib/data";
+import { svgProvincias } from "../../lib/atlas";
+export function getStaticPaths() {
+  return stories.map((s) => ({ params: { slug: s.id.replace("story-", "") }, props: { s } }));
+}
+const { s } = Astro.props;
+const svg = svgProvincias(420);
+const KIND: Record<string, string> = { documento: "Según el documento", hecho: "Hecho documentado", interpretacion: "Interpretación", estimacion: "Estimación" };
+let n = 0;
+const scenes = s.scenes.map((sc: any) => ({
+  ...sc,
+  claims: sc.claims.map((c: any) => ({ ...c, n: ++n, docs: c.evidence.map((e: any) => ({ ...e, d: byId(documents, e.document_id) })) })),
+  codes: (sc.place_ids ?? []).map((p: string) => p.replace("plc-prov-", "")),
+}));
+const draft = s.review.status !== "aprobado";
+---
+<Base title={s.title} description={s.summary}>
+  <p class="meta"><a href={url("/historias/")}>Historias</a> · {s.period}</p>
+  <h1>{s.title}</h1>
+  {draft && <p class="aviso" role="note"><strong>Borrador en revisión.</strong> Cada afirmación está comprobada sobre su documento, pero la narrativa aún no ha pasado la revisión de dos especialistas. <a href={url("/metodologia/#correcciones")}>Cómo notificar un error</a>.</p>}
+  <p class="entradilla">{s.summary}</p>
+
+  <div class="historia">
+    <div class="escenas">
+      {scenes.map((sc: any) => (
+        <section class="escena" id={sc.id} data-codes={sc.codes.join(",")} aria-labelledby={`h-${sc.id}`}>
+          {sc.date_label && <p class="meta">{sc.date_label}</p>}
+          <h2 id={`h-${sc.id}`}>{sc.heading}</h2>
+          {sc.intro && <p class="intro">{sc.intro}</p>}
+          {sc.claims.map((c: any) => (
+            <p>
+              {c.kind !== "documento" && <span class="tag">{KIND[c.kind]}</span>}{" "}
+              {c.text}{c.attributed_to && <span class="meta"> (según {c.attributed_to})</span>}<sup><a href={`#nota-${c.n}`} id={`ref-${c.n}`} aria-label={`Fuente ${c.n}`}>{c.n}</a></sup>
+            </p>
+          ))}
+          {sc.editorial_note && <p class="nota-ed"><strong>Nota editorial.</strong> {sc.editorial_note}</p>}
+          <ol class="fuentes" aria-label={`Fuentes de «${sc.heading}»`}>
+            {sc.claims.map((c: any) => c.docs.map((e: any) => (
+              <li id={`nota-${c.n}`} value={c.n}>
+                <a href={url(`/documentos/${e.document_id}/`)}>{e.d?.title}</a>{e.locator ? `, ${e.locator}` : ""}.
+                {" "}<a href={e.d?.canonical_url} rel="noopener">Original</a> · <a href={`#ref-${c.n}`} aria-label={`Volver a la afirmación ${c.n}`}>↑</a>
+              </li>
+            )))}
+          </ol>
+          {sc.event_ids?.length > 0 && <p class="meta">En la cronología: {sc.event_ids.map((id: string, i: number) => <>{i > 0 && " · "}<a href={url(`/acontecimientos/${id}/`)}>ficha</a></>)}</p>}
+        </section>
+      ))}
+      <section class="escena" id="lagunas" aria-labelledby="h-lagunas" data-codes="">
+        <h2 id="h-lagunas">Lo que esta historia todavía no cuenta</h2>
+        <ul>{s.gaps.map((g: string) => <li>{g}</li>)}</ul>
+        <p class="meta">La ausencia de un tema aquí no significa que no ocurriera: significa que aún no está documentado en este proyecto.</p>
+      </section>
+    </div>
+    <aside class="lateral" aria-hidden="true">
+      <div class="pegajoso">
+        <svg viewBox={`0 0 ${svg.width} ${svg.height}`} class="mini">
+          {svg.paths.map((p) => <path d={p.d} data-code={p.code} />)}
+        </svg>
+        <p class="meta" id="lat-txt">España, provincias de 1930.</p>
+      </div>
+    </aside>
+  </div>
+  <p class="meta">Revisión: {s.review.status}, {s.review.date}. {s.review.note}</p>
+</Base>
+<style is:global>
+  .aviso { border-left: 4px solid var(--accent); background: var(--surface); padding: 12px 16px; }
+  .entradilla { font-size: 1.1rem; }
+  .historia { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 32px; }
+  .escena { padding: 24px 0 40px; border-bottom: 1px solid var(--line); }
+  .escena .intro { font-style: italic; color: var(--muted); }
+  .escena sup a { text-decoration: none; padding: 0 2px; }
+  .fuentes { font-size: .88rem; color: var(--muted); padding-left: 20px; }
+  .nota-ed { font-size: .92rem; background: var(--surface); padding: 10px 14px; border-radius: 4px; }
+  .lateral .pegajoso { position: sticky; top: 24px; }
+  .mini { width: 100%; height: auto; }
+  .mini path { fill: var(--line); stroke: var(--bg); stroke-width: .6; transition: fill .3s; }
+  .mini path.on { fill: var(--accent); }
+  .mini.todas path { fill: #7FA3B8; }
+  @media (prefers-reduced-motion: reduce) { .mini path { transition: none; } }
+  @media (max-width: 800px) { .historia { grid-template-columns: 1fr; } .lateral { display: none; } }
+</style>
+<script>
+  const paths = [...document.querySelectorAll<SVGPathElement>(".mini path")];
+  const mini = document.querySelector(".mini")!;
+  const txt = document.getElementById("lat-txt")!;
+  function show(codes: string[], heading: string) {
+    mini.classList.toggle("todas", codes.length === 0);
+    for (const p of paths) p.classList.toggle("on", codes.includes(p.dataset.code!));
+    txt.textContent = codes.length ? `${heading}: provincias citadas en la escena` : `${heading}: ámbito estatal o sin lugar concreto`;
+  }
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) {
+      const el = e.target as HTMLElement;
+      const codes = (el.dataset.codes || "").split(",").filter(Boolean);
+      show(codes, el.querySelector("h2")?.textContent ?? "");
+    }
+  }, { rootMargin: "-40% 0px -55% 0px" });
+  document.querySelectorAll(".escena").forEach((s) => io.observe(s));
+</script>

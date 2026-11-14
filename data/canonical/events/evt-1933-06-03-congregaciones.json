@@ -10,12 +10,32 @@
   "spatial_precision": "estatal",
   "claims": [
     {
-      "text": "La Gaceta de Madrid del 3 de junio de 1933 publica la ley relativa a Confesiones y Congregaciones Religiosas.",
+      "text": "La Gaceta de Madrid del 3 de junio de 1933 publica la ley relativa a Confesiones y Congregaciones Religiosas, firmada el 2 de junio.",
       "kind": "documento",
       "evidence": [
         {
           "document_id": "doc-gaceta-1933-06-03",
           "locator": "págs. 1651-1653"
+        }
+      ]
+    },
+    {
+      "text": "Su artículo 30 dispone que las órdenes y congregaciones religiosas no podrán dedicarse al ejercicio de la enseñanza, salvo la destinada a la formación de sus propios miembros, y encarga a la inspección del Estado impedir que sostengan colegios por medio de seglares interpuestos.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1933-06-03",
+          "locator": "art. 30, págs. 1652-1653"
+        }
+      ]
+    },
+    {
+      "text": "Una disposición transitoria fija el cese de esa enseñanza el 1 de octubre siguiente para toda clase de enseñanzas, excepto la primaria, que terminará el 31 de diciembre.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1933-06-03",
+          "locator": "disposiciones transitorias, pág. 1653"
         }
       ]
     }

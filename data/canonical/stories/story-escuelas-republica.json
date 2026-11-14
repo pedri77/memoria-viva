@@ -1,0 +1,106 @@
+{
+  "id": "story-escuelas-republica",
+  "title": "Las escuelas de la República, 1931-1936",
+  "summary": "Qué dicen las normas publicadas en la Gaceta sobre la escuela entre la proclamación de la República y la guerra: el diagnóstico de 1931, la lengua y la religión en el aula, las Misiones Pedagógicas, la Constitución, la ley de congregaciones de 1933 y las plazas de maestros de 1936. Es una historia de normas, no de su aplicación.",
+  "period": "1931-1936",
+  "scenes": [
+    {
+      "id": "diagnostico",
+      "heading": "¿Cuántas escuelas faltaban?",
+      "date_label": "Junio de 1931",
+      "intro": "Antes de legislar, el Gobierno provisional pidió a la Inspección un recuento. Sus cifras son las del propio Gobierno y conviene leerlas como tales.",
+      "claims": [
+        { "text": "Según los informes de la Inspección que recoge el preámbulo de un decreto de 23 de junio de 1931, existían en España 35.716 escuelas unitarias y secciones de graduada, y harían falta 27.151 más para atender a la población escolar.",
+          "kind": "estimacion", "attributed_to": "Gobierno provisional de la República, a partir de los informes de las inspecciones provinciales de Primera enseñanza",
+          "evidence": [ { "document_id": "doc-gaceta-1931-06-24", "locator": "preámbulo, pág. 1612" } ] },
+        { "text": "Ese mismo decreto autoriza al Ministerio de Instrucción Pública a crear, a partir del 1 de julio de 1931, 7.000 plazas de maestros y maestras con destino a las escuelas nacionales.",
+          "kind": "documento",
+          "evidence": [ { "document_id": "doc-gaceta-1931-06-24", "locator": "págs. 1612-1613" } ] }
+      ],
+      "event_ids": ["evt-1931-06-23-plazas-maestros"]
+    },
+    {
+      "id": "lengua-religion",
+      "heading": "Lengua y religión en el aula",
+      "date_label": "Abril y mayo de 1931",
+      "intro": "En sus primeras semanas, el Gobierno provisional dictó dos decretos que tocaban lo que se enseñaba y en qué lengua.",
+      "claims": [
+        { "text": "Un decreto publicado el 30 de abril de 1931 deroga las disposiciones contra el uso del catalán en las escuelas primarias y dispone que en las escuelas maternales, de párvulos y primarias se enseñe en la lengua materna, castellana o catalana, y que a partir de los ocho años se enseñe a los alumnos catalanes el conocimiento y la práctica de la lengua española.",
+          "kind": "documento",
+          "evidence": [ { "document_id": "doc-gaceta-1931-04-30", "locator": "págs. 413-414" } ] },
+        { "text": "Un decreto de 6 de mayo de 1931 dispone que la instrucción religiosa no será obligatoria en las escuelas primarias ni en los demás centros del Ministerio; los alumnos cuyos padres lo pidan seguirán recibiéndola, y si el maestro no desea darla se confiará a sacerdotes que quieran encargarse de ella de forma voluntaria y gratuita.",
+          "kind": "documento",
+          "evidence": [ { "document_id": "doc-gaceta-1931-05-09", "locator": "arts. 1 a 3, pág. 620" } ] }
+      ],
+      "event_ids": ["evt-1931-04-30-catalan-escuelas", "evt-1931-05-06-religion-voluntaria"],
+      "place_ids": ["plc-prov-08", "plc-prov-17", "plc-prov-25", "plc-prov-43"]
+    },
+    {
+      "id": "misiones",
+      "heading": "Las Misiones Pedagógicas",
+      "date_label": "Mayo de 1931",
+      "intro": "La escuela no era el único lugar donde el nuevo régimen quiso llevar la enseñanza.",
+      "claims": [
+        { "text": "La Gaceta del 30 de mayo de 1931 publica el decreto que crea el Patronato de Misiones Pedagógicas, dependiente del Ministerio de Instrucción Pública.",
+          "kind": "documento",
+          "evidence": [ { "document_id": "doc-gaceta-1931-05-30", "locator": "págs. 1033-1034" } ] },
+        { "text": "Según el decreto, su fin es difundir la cultura general, la orientación docente moderna y la educación ciudadana en aldeas, villas y lugares, con atención especial a la población rural.",
+          "kind": "documento",
+          "evidence": [ { "document_id": "doc-gaceta-1931-05-30", "locator": "sumario y págs. 1033-1034" } ] }
+      ],
+      "event_ids": ["evt-1931-05-30-misiones-pedagogicas"]
+    },
+    {
+      "id": "constitucion",
+      "heading": "La escuela en la Constitución",
+      "date_label": "Diciembre de 1931",
+      "intro": "Las Cortes Constituyentes llevaron la enseñanza al texto constitucional.",
+      "claims": [
+        { "text": "El artículo 48 de la Constitución de 9 de diciembre de 1931 declara que el servicio de la cultura es atribución esencial del Estado, prestado mediante instituciones educativas enlazadas por el sistema de la escuela unificada, y que la enseñanza primaria será gratuita y obligatoria.",
+          "kind": "documento",
+          "evidence": [ { "document_id": "doc-gaceta-1931-12-10", "locator": "art. 48, pág. 1582" } ] },
+        { "text": "El mismo artículo establece que los maestros, profesores y catedráticos de la enseñanza oficial son funcionarios públicos y reconoce la libertad de cátedra.",
+          "kind": "documento",
+          "evidence": [ { "document_id": "doc-gaceta-1931-12-10", "locator": "art. 48, pág. 1582" } ] }
+      ],
+      "event_ids": ["evt-1931-12-09-constitucion"]
+    },
+    {
+      "id": "congregaciones",
+      "heading": "Las congregaciones religiosas y la enseñanza",
+      "date_label": "Junio de 1933",
+      "intro": "La ley de 1933 sobre confesiones y congregaciones religiosas tuvo consecuencias directas para muchos colegios.",
+      "claims": [
+        { "text": "El artículo 30 de la Ley de Confesiones y Congregaciones Religiosas, de 2 de junio de 1933, dispone que las órdenes y congregaciones religiosas no podrán dedicarse al ejercicio de la enseñanza, salvo la destinada a la formación de sus propios miembros.",
+          "kind": "documento",
+          "evidence": [ { "document_id": "doc-gaceta-1933-06-03", "locator": "art. 30, págs. 1652-1653" } ] },
+        { "text": "Una disposición transitoria fija el cese de esa enseñanza el 1 de octubre de 1933 para toda clase de enseñanzas, excepto la primaria, que debía terminar el 31 de diciembre.",
+          "kind": "documento",
+          "evidence": [ { "document_id": "doc-gaceta-1933-06-03", "locator": "disposiciones transitorias, pág. 1653" } ] }
+      ],
+      "event_ids": ["evt-1933-06-03-congregaciones"],
+      "editorial_note": "Esta narrativa todavía no recoge cómo se recibió la ley ni hasta qué punto se aplicó tras las elecciones de noviembre de 1933. Se incorporará con fuentes de distintas tendencias."
+    },
+    {
+      "id": "guerra",
+      "heading": "Maestros en guerra",
+      "date_label": "Octubre de 1936",
+      "intro": "La creación de plazas continuó en la zona republicana ya iniciada la guerra.",
+      "claims": [
+        { "text": "La Gaceta del 8 de octubre de 1936 publica la ley que aprueba la creación de 5.300 plazas de maestros y maestras con destino a escuelas nacionales, autorizada por un decreto de 28 de febrero de 1936, con efectos desde el 1 de octubre.",
+          "kind": "documento",
+          "evidence": [ { "document_id": "doc-gaceta-1936-10-08", "locator": "págs. 234-235" } ] }
+      ],
+      "event_ids": ["evt-1936-10-08-plazas-maestros"],
+      "editorial_note": "Las disposiciones sobre enseñanza de la zona sublevada, publicadas en el Boletín Oficial de Burgos, no están incorporadas todavía. Sin ellas, esta escena solo muestra una de las dos administraciones del periodo."
+    }
+  ],
+  "gaps": [
+    "Las normas sobre enseñanza de la zona sublevada (1936-1939), publicadas en el Boletín Oficial de Burgos, no se han podido incorporar todavía.",
+    "Solo hay normas, no su aplicación: cuántas escuelas se construyeron y cuántos maestros se nombraron de verdad necesita otras fuentes (estadísticas del Ministerio, archivos provinciales).",
+    "Las disposiciones del periodo 1934-1935 sobre enseñanza no están documentadas aquí.",
+    "Falta la alfabetización por provincia del censo de 1930, pendiente de transcribir de INEbase Historia.",
+    "Faltan voces de la época: prensa profesional y de distintas tendencias (por ejemplo, la Revista de Escuelas Normales, disponible en la Hemeroteca Digital)."
+  ],
+  "review": { "status": "revision", "date": "2026-11-14", "by": ["autor"], "note": "Borrador. Cada afirmación comprobada sobre el PDF de la Gaceta. Pendiente de dos revisores con formación en historia contemporánea." }
+}

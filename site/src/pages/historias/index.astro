@@ -1,0 +1,15 @@
+---
+import Base from "../../layouts/Base.astro";
+import { stories, url } from "../../lib/data";
+---
+<Base title="Historias" index={false} description="Narrativas documentadas: cada afirmación enlaza a su fuente.">
+  <h1>Historias</h1>
+  <p>Recorridos guiados por un tema. Cada afirmación enlaza al documento que la sostiene y cada historia dice lo que todavía no cubre.</p>
+  {stories.map((s) => (
+    <article class="card">
+      <h2><a href={url(`/historias/${s.id.replace("story-", "")}/`)}>{s.title}</a></h2>
+      <p>{s.summary}</p>
+      <p class="meta">{s.scenes.length} escenas · {s.review.status === "aprobado" ? `revisada por ${s.reviewers.join(" y ")}` : "borrador en revisión"}</p>
+    </article>
+  ))}
+</Base>

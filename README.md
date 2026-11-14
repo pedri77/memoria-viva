@@ -2,7 +2,7 @@
 
 Atlas y archivo documental de la historia contemporánea de España. Piloto: Segunda República y Guerra Civil (1931-1939). Cada afirmación publicada enlaza a la fuente que la sostiene, con su fecha, su lugar, su grado de certeza y sus condiciones de reutilización.
 
-**Estado:** fase F2 (MVP web): atlas, cronología, datos, búsqueda y versión sin WebGL. Ver `docs/04_roadmap.md`.
+**Estado:** fase F3: primera narrativa publicada como borrador en revisión; atlas, cronología, datos y búsqueda operativos. Ver `docs/04_roadmap.md`.
 
 ## Estructura
 

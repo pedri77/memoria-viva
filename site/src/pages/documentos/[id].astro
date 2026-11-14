@@ -1,13 +1,16 @@
 ---
 import Base from "../../layouts/Base.astro";
+import Retirado from "../../components/Retirado.astro";
+import { retired } from "../../lib/data";
 import { documents, events, sources, places, byId, url, RIGHTS_LABEL, PRECISION_LABEL } from "../../lib/data";
 export function getStaticPaths() {
-  return documents.map((d) => ({ params: { id: d.id }, props: { d: d } }));
+  return [...(retired.documents ?? []).map((o) => ({ params: { id: o.id }, props: { d: o, retiredObj: true } })), ...documents.map((d) => ({ params: { id: d.id }, props: { d: d } }))];
 }
 const { d } = Astro.props;
 const related = events.filter((e) => e.claims.some((c: any) => c.evidence.some((ev: any) => ev.document_id === d.id)));
 const cite = `${d.custodian}. ${d.signature ?? d.title}. ${d.canonical_url} [consulta: ${d.consulted_at}]. Ficha: España: Memoria Viva, ${d.id}.`;
 ---
+{Astro.props.retiredObj ? <Retirado o={Astro.props.d} /> : <>
 <Base title={d.title} description={d.summary}>
   <span hidden data-pagefind-filter="tipo">Documento</span>
   <p class="meta"><a href={url("/documentos/")}>Archivo</a></p>
@@ -32,3 +35,4 @@ const cite = `${d.custodian}. ${d.signature ?? d.title}. ${d.canonical_url} [con
   {related.length > 0 && <section><h2>Acontecimientos que cita</h2><ul>{related.map((e) => <li><a href={url(`/acontecimientos/${e.id}/`)}>{e.title}</a></li>)}</ul></section>}
   <section><h2>Citar esta ficha</h2><p class="card meta">{cite}</p></section>
 </Base>
+</>}

@@ -70,6 +70,15 @@ Obras de autores fallecidos después de 1946 (carteles, fotografías, artículos
 
 Las narrativas necesitan dos revisores con formación en historia contemporánea (`reviewers`, mínimo 2, lo exige el esquema).
 
-## 8. Correcciones
+## 8. Retirada
+
+1. Se cambia `review.status` a `retirado`, con la fecha y el motivo en `review.note` (obligatorio: el validador lo exige).
+2. Si otro objeto publicado cita el retirado, la validación falla: hay que corregirlo o retirarlo también.
+3. Al compilar, el objeto desaparece de listados, JSON público y búsqueda; su URL muestra un aviso con el motivo, y la retirada figura en el registro de cambios.
+4. El historial se conserva en git. Si la retirada es por datos personales sensibles, además se valora reescribir el historial.
+
+Prueba automática: `npm run test:retirada` (también en CI).
+
+## 9. Correcciones
 
 Formulario público (issue de GitHub). Respuesta razonada en el propio issue. Cada corrección es un commit que cita el número del issue. No se publican datos de quien comunica el error.

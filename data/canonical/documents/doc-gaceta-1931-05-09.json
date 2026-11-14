@@ -1,0 +1,37 @@
+{
+  "id": "doc-gaceta-1931-05-09",
+  "title": "Gaceta de Madrid n.º 129, 9 de mayo de 1931: decreto que hace voluntaria la instrucción religiosa",
+  "title_original": "Gaceta de Madrid. Núm. 129",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 129, 09/05/1931, págs. 619-620",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1931/05/09/pdfs/GMD-1931-129.pdf",
+  "date": "1931-05-09",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Decreto de 6 de mayo de 1931 que dispone que la instrucción religiosa no será obligatoria en las escuelas primarias ni en los demás centros dependientes del Ministerio de Instrucción Pública. Los alumnos cuyos padres lo deseen la seguirán recibiendo; si el maestro declara su deseo de no darla, se confiará a sacerdotes que voluntaria y gratuitamente quieran encargarse de ella (págs. 619-620).",
+  "context": "Disposición del Gobierno provisional.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-14",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-14"
+}

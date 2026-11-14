@@ -1,0 +1,41 @@
+{
+  "id": "evt-1931-05-06-religion-voluntaria",
+  "title": "La instrucción religiosa deja de ser obligatoria en la escuela",
+  "event_type": "educativo",
+  "start_date": "1931-05-06",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "Un decreto de 6 de mayo de 1931 dispone que la instrucción religiosa no será obligatoria en las escuelas primarias ni en los demás centros dependientes del Ministerio de Instrucción Pública.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1931-05-09",
+          "locator": "art. 1, pág. 620"
+        }
+      ]
+    },
+    {
+      "text": "Los alumnos cuyos padres lo pidan seguirán recibiéndola; si el maestro no desea darla, se confiará a sacerdotes que quieran encargarse de ella de forma voluntaria y gratuita.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1931-05-09",
+          "locator": "arts. 2 y 3, pág. 620"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  }
+}

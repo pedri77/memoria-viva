@@ -3,27 +3,166 @@
   "$id": "https://memoria-viva/schemas/story.schema.json",
   "title": "Narrativa",
   "type": "object",
-  "required": ["slug", "title", "summary", "scenes", "reviewers", "review"],
+  "required": [
+    "id",
+    "title",
+    "summary",
+    "period",
+    "scenes",
+    "gaps",
+    "review"
+  ],
   "additionalProperties": false,
   "properties": {
-    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
-    "title": { "type": "string" },
-    "summary": { "type": "string" },
+    "id": {
+      "type": "string",
+      "pattern": "^story-[a-z0-9-]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "period": {
+      "type": "string"
+    },
     "scenes": {
-      "type": "array", "minItems": 1,
+      "type": "array",
+      "minItems": 1,
       "items": {
-        "type": "object", "required": ["id", "text", "event_ids"], "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "heading",
+          "claims"
+        ],
+        "additionalProperties": false,
         "properties": {
-          "id": { "type": "string" },
-          "text": { "type": "string" },
-          "event_ids": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/id" } },
-          "document_ids": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/id" } },
-          "map": { "type": "object" },
-          "editorial_note": { "type": "string" }
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "heading": {
+            "type": "string"
+          },
+          "date_label": {
+            "type": "string"
+          },
+          "intro": {
+            "type": "string",
+            "description": "texto de transición sin afirmaciones de hecho"
+          },
+          "claims": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "text",
+                "kind",
+                "evidence"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "text": {
+                  "type": "string"
+                },
+                "kind": {
+                  "enum": [
+                    "hecho",
+                    "documento",
+                    "interpretacion",
+                    "estimacion"
+                  ]
+                },
+                "attributed_to": {
+                  "type": "string",
+                  "description": "obligatorio si kind es interpretacion o estimacion"
+                },
+                "evidence": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "common.schema.json#/$defs/evidence"
+                  },
+                  "minItems": 1
+                }
+              },
+              "if": {
+                "properties": {
+                  "kind": {
+                    "enum": [
+                      "interpretacion",
+                      "estimacion"
+                    ]
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "attributed_to"
+                ]
+              }
+            }
+          },
+          "event_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "common.schema.json#/$defs/id"
+            }
+          },
+          "place_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "common.schema.json#/$defs/id"
+            },
+            "description": "provincias a resaltar en el mapa de la escena"
+          },
+          "editorial_note": {
+            "type": "string"
+          }
         }
       }
     },
-    "reviewers": { "type": "array", "items": { "type": "string" }, "minItems": 2 },
-    "review": { "$ref": "common.schema.json#/$defs/review" }
+    "gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "description": "lo que la narrativa no cubre todavía y por qué"
+    },
+    "reviewers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "review": {
+      "$ref": "common.schema.json#/$defs/review"
+    }
+  },
+  "if": {
+    "properties": {
+      "review": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "const": "aprobado"
+          }
+        }
+      }
+    }
+  },
+  "then": {
+    "required": [
+      "reviewers"
+    ],
+    "properties": {
+      "reviewers": {
+        "type": "array",
+        "minItems": 2
+      }
+    }
   }
 }

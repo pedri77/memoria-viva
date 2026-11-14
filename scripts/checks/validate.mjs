@@ -44,7 +44,17 @@ for (const [kind, schema] of Object.entries(KINDS)) {
   }
 }
 
-const need = (f, kind, id) => { if (!data[kind].has(id)) errors.push(`${f}: referencia rota a ${kind}/${id}`); };
+const need = (f, kind, id) => {
+  if (!data[kind].has(id)) return errors.push(`${f}: referencia rota a ${kind}/${id}`);
+  const target = data[kind].get(id);
+  const [k, oid] = f.split("/");
+  const source = data[k]?.get(oid);
+  if (target.review?.status === "retirado" && source?.review?.status !== "retirado")
+    errors.push(`${f}: cita ${kind}/${id}, que está retirado; retira o corrige también este objeto`);
+};
+// Toda retirada debe explicar el motivo
+for (const kind of Object.keys(data)) for (const [id, o] of data[kind])
+  if (o.review?.status === "retirado" && !o.review.note) errors.push(`${kind}/${id}: retirado sin motivo en review.note`);
 for (const [id, o] of data.places) {
   o.source_ids.forEach((s) => need(`places/${id}`, "sources", s));
   if (o.parent_id) need(`places/${id}`, "places", o.parent_id);
@@ -65,7 +75,11 @@ for (const [id, o] of data.indicators) {
   o.observations.forEach((ob) => { need(`indicators/${id}`, "places", ob.place_id); need(`indicators/${id}`, "documents", ob.document_id); });
 }
 for (const [id, o] of data.stories) {
-  o.scenes.forEach((s) => { s.event_ids.forEach((e) => need(`stories/${id}`, "events", e)); (s.document_ids ?? []).forEach((d) => need(`stories/${id}`, "documents", d)); });
+  o.scenes.forEach((s) => {
+    (s.event_ids ?? []).forEach((e) => need(`stories/${id}`, "events", e));
+    (s.place_ids ?? []).forEach((p) => need(`stories/${id}`, "places", p));
+    s.claims.forEach((c) => c.evidence.forEach((e) => need(`stories/${id}`, "documents", e.document_id)));
+  });
 }
 
 const counts = Object.entries(data).map(([k, m]) => `${k}=${m.size}`).join(" ");

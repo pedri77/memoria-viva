@@ -1,8 +1,10 @@
 ---
 import Base from "../../layouts/Base.astro";
+import Retirado from "../../components/Retirado.astro";
+import { retired } from "../../lib/data";
 import { places, events, documents, indicators, byId, url, PRECISION_LABEL } from "../../lib/data";
 export function getStaticPaths() {
-  return places.map((p) => ({ params: { id: p.id }, props: { p } }));
+  return [...(retired.places ?? []).map((o) => ({ params: { id: o.id }, props: { p: o, retiredObj: true } })), ...places.map((p) => ({ params: { id: p.id }, props: { p } }))];
 }
 const { p } = Astro.props;
 const code = p.ine_code ?? "";
@@ -18,6 +20,7 @@ const rows = indicators.map((i) => ({
 })).filter((r) => r.obs.some(Boolean));
 const parent = p.parent_id ? byId(places, p.parent_id) : null;
 ---
+{Astro.props.retiredObj ? <Retirado o={Astro.props.p} /> : <>
 <Base title={p.canonical_name} description={`Ficha de ${p.canonical_name}: datos censales, acontecimientos y documentos.`}>
   <span hidden data-pagefind-filter="tipo">Lugar</span>
   <p class="meta">{parent && <><a href={url(`/lugares/${parent.id}/`)}>{parent.canonical_name}</a> › </>}{p.place_type}</p>
@@ -50,3 +53,4 @@ const parent = p.parent_id ? byId(places, p.parent_id) : null;
     {docs.length > 50 && <p class="meta">Y {docs.length - 50} más en el <a href={url("/documentos/")}>archivo</a>.</p>}
   </section>
 </Base>
+</>}
