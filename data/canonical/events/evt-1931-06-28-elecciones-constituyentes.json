@@ -28,6 +28,16 @@
           "locator": "págs. 1174-1175"
         }
       ]
+    },
+    {
+      "text": "Según el Atlas Electoral de la Segunda República, en la primera vuelta la Conjunción republicano-socialista fue la candidatura más votada en 28 de las 63 circunscripciones y la coalición de republicanos de izquierda y socialistas en otras 12; las derechas lo fueron en 2.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-atlas-electoral",
+          "locator": "circunscripciones, 1931, variable first_platform"
+        }
+      ]
     }
   ],
   "review": {

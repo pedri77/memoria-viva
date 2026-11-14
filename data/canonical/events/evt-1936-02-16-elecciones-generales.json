@@ -1,0 +1,42 @@
+{
+  "id": "evt-1936-02-16-elecciones-generales",
+  "title": "Elecciones generales a Cortes de 1936",
+  "event_type": "electoral",
+  "start_date": "1936-02-16",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "Según el Atlas Electoral de la Segunda República, la primera vuelta de las elecciones generales se celebró el 16 de febrero de 1936.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-atlas-electoral",
+          "locator": "variable date, 1936"
+        }
+      ]
+    },
+    {
+      "text": "En esa primera vuelta, la coalición de izquierdas (Frente Popular) fue la candidatura más votada en 34 de las 60 circunscripciones, la coalición de derechas en 23, las candidaturas del PNV en 2 y el centro en 1.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-atlas-electoral",
+          "locator": "circunscripciones, 1936, variable first_platform"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "wikidata": "Q3586943"
+}

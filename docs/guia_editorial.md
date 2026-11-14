@@ -47,6 +47,7 @@ Fosas, lugares de ejecución, centros de detención: como mucho, nivel municipio
 | `rights.status` | Qué se puede hacer |
 |---|---|
 | `public_domain`, `cc0`, `cc_by`, `cc_by_sa` | almacenar y mostrar con atribución |
+| `cc_by_nc`, `cc_by_nc_sa` | almacenar y mostrar con atribución mientras el proyecto no tenga uso comercial; lo derivado de un `nc_sa` hereda esa licencia y se indica junto al dato |
 | `reuse_conditions` | enlazar y citar; reproducir solo si las condiciones lo permiten expresamente |
 | `link_only` | solo enlace |
 | `restricted` | solo la referencia, sin enlace a imagen |

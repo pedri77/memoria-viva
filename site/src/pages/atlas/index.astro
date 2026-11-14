@@ -7,18 +7,31 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 <Base index={false} title="Atlas" description="Atlas de España 1931-1939: provincias de 1930, censos y acontecimientos documentados.">
   <h1>Atlas 1931-1939</h1>
-  <p class="meta">Límites provinciales y municipales de 1930. Canarias aparece desplazada en un recuadro. Los colores muestran datos del censo elegido, no del año del selector. <a href={url("/atlas/tabla/")}>Versión sin mapa interactivo</a>.</p>
+  <p class="meta">Límites de 1930. Canarias aparece desplazada en un recuadro. Los colores muestran la capa elegida (censo o elección), no el año del selector de acontecimientos. <a href={url("/atlas/tabla/")}>Versión sin mapa interactivo</a>.</p>
 
   <form class="controls" id="controls" aria-label="Controles del atlas">
     <label>Año de los acontecimientos
       <input type="range" id="year" min="1930" max="1939" step="1" value="1930" aria-valuetext="Todos los años" />
       <output id="year-out" for="year">Todos</output>
     </label>
-    <label>Indicador
+    <label>Capa
+      <select id="capa">
+        <option value="censo">Censos por provincia</option>
+        <option value="circ">Elecciones por circunscripción</option>
+        <option value="emuni">Elecciones por municipio</option>
+      </select>
+    </label>
+    <label data-capa="censo">Indicador
       <select id="ind">{data.inds.map((i) => <option value={i.id}>{i.concept}</option>)}</select>
     </label>
-    <label>Censo
+    <label data-capa="censo">Censo
       <select id="censo">{CENSOS.map((c) => <option value={c} selected={c === "1930"}>{c}</option>)}</select>
+    </label>
+    <label data-capa="circ emuni" hidden>Elección
+      <select id="eleccion"><option value="1931">28-06-1931</option><option value="1933">19-11-1933</option><option value="1936" selected>16-02-1936</option></select>
+    </label>
+    <label data-capa="emuni" hidden>Variable
+      <select id="evar"><option value="fp">Candidatura más votada</option><option value="part">Participación</option></select>
     </label>
     <label class="check"><input type="checkbox" id="munis" /> Municipios de 1930</label>
   </form>
@@ -30,6 +43,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     </aside>
   </div>
   <div id="legend" class="legend" aria-hidden="true"></div>
+  <p id="aviso-elec" class="meta" hidden>Elecciones: <a href="https://doi.org/10.34810/DATA3274">Atlas Electoral de la Segunda República</a> (Rodon, Vall-Prat y Martín Álvarez), primera vuelta, licencia CC BY-NC-SA 4.0. Los bloques son una clasificación de sus autores. En el mapa municipal, muchos municipios pequeños pesan visualmente más que pocas ciudades grandes: más superficie no significa más votos. Las elecciones de 1931 solo tienen datos por circunscripción.</p>
   <p id="nowebgl" class="card" hidden>Tu navegador no puede mostrar el mapa interactivo (necesita WebGL). Usa la <a href={url("/atlas/tabla/")}>versión sin mapa interactivo</a>, con la misma información.</p>
 
   <section aria-labelledby="lista-h">
@@ -44,6 +58,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   .controls { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: end; margin: 16px 0; }
   .controls label { display: grid; gap: 4px; font-size: .9rem; color: var(--muted); }
   .controls .check { display: flex; align-items: center; gap: 8px; }
+  .controls [hidden] { display: none !important; }
   .controls select, .controls input[type="range"] { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 4px 6px; min-height: 36px; max-width: 100%; }
   .atlas { display: grid; grid-template-columns: 1fr 360px; gap: 16px; }
   #map { height: 560px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
@@ -68,6 +83,18 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   const D = JSON.parse(document.getElementById("atlas-data")!.textContent!);
   const $ = (id: string) => document.getElementById(id)!;
   const yearEl = $("year") as HTMLInputElement, indEl = $("ind") as HTMLSelectElement;
+  const capaEl = $("capa") as HTMLSelectElement, elecEl = $("eleccion") as HTMLSelectElement, evarEl = $("evar") as HTMLSelectElement;
+  // Paleta categórica (Paul Tol, apta para daltonismo), sin la convención rojo/azul.
+  const BLOC_COLOR: Record<string, string> = {
+    broad_republican_socialist_coalition: "#EE7733", left_wing_republican_socialist_coalition: "#CC3311", republican_socialist_coalition: "#EE3377",
+    center_right_republican_platforms: "#DDCC77", left_wing_republican_platforms: "#009988", socialist_platforms: "#882255",
+    communist_and_other_lw_platforms: "#AA4499", left_wing_regionalist_platforms: "#44AA99", right_wing_regionalist_platforms: "#88CCEE",
+    right_wing_platforms: "#332288", left_coalition: "#CC6677", right_coalition: "#117733", centrist_platforms: "#DDAA33",
+    basque_nat_coal: "#999933", other: "#BBBBBB", blank_and_null: "#DDDDDD",
+  };
+  let BLOQUES: Record<string, { label: string; desc: string }> = {};
+  // Referencias propias a los GeoJSON cargados (MapLibre 6 no expone los datos de la fuente).
+  let provData: any = null, muniData: any = null;
   const censoEl = $("censo") as HTMLSelectElement, munisEl = $("munis") as HTMLInputElement;
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const dark = () => matchMedia("(prefers-color-scheme: dark)").matches && document.documentElement.dataset.theme !== "light";
@@ -82,13 +109,18 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   if (q.get("year")) yearEl.value = q.get("year")!;
   if (q.get("ind")) indEl.value = q.get("ind")!;
   if (q.get("censo")) censoEl.value = q.get("censo")!;
+  if (q.get("capa")) capaEl.value = q.get("capa")!;
+  if (q.get("eleccion")) elecEl.value = q.get("eleccion")!;
+  if (q.get("evar")) evarEl.value = q.get("evar")!;
   munisEl.checked = q.get("munis") === "1";
   let selected = q.get("sel") ?? "";
 
   function syncUrl() {
     const p = new URLSearchParams();
     if (yearEl.value !== "1930") p.set("year", yearEl.value);
-    p.set("ind", indEl.value); p.set("censo", censoEl.value);
+    p.set("capa", capaEl.value);
+    if (capaEl.value === "censo") { p.set("ind", indEl.value); p.set("censo", censoEl.value); }
+    else { p.set("eleccion", elecEl.value); if (capaEl.value === "emuni") p.set("evar", evarEl.value); }
     if (munisEl.checked) p.set("munis", "1");
     if (selected) p.set("sel", selected);
     history.replaceState(null, "", `${location.pathname}?${p}`);
@@ -138,11 +170,20 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     if (b) { showEvent(b.dataset.ev!); $("panel").focus?.(); }
   });
 
+  function legendBlocs(codes: string[], titulo: string) {
+    $("legend").innerHTML = `<span>${titulo}:</span>` + codes.map((c) => `<span title="${esc(BLOQUES[c]?.desc ?? "")}"><i style="background:${BLOC_COLOR[c] ?? "#999"}"></i>${esc(BLOQUES[c]?.label ?? c)}</span>`).join("") + `<span><i style="background:#999999"></i>sin datos</span><span><i style="background:#FFFFFF;border:2.5px solid #17232F;border-radius:50%"></i>acontecimiento</span>`;
+  }
+  function legendRamp(b: number[], titulo: string, unit: string) {
+    const ramp = dark() ? RAMP_D : RAMP_L;
+    const lab = [`< ${nf(b[0], unit)}`, `${nf(b[0], unit)} a ${nf(b[1], unit)}`, `${nf(b[1], unit)} a ${nf(b[2], unit)}`, `${nf(b[2], unit)} a ${nf(b[3], unit)}`, `≥ ${nf(b[3], unit)}`];
+    $("legend").innerHTML = `<span>${titulo}:</span>` + ramp.map((c, i) => `<span><i style="background:${c}"></i>${lab[i]}</span>`).join("") + `<span><i style="background:#999999"></i>sin datos</span>`;
+  }
+  const quint = (vals: number[]) => { const v = vals.filter((x) => x != null).sort((a, b) => a - b); return [0.2, 0.4, 0.6, 0.8].map((q) => v[Math.floor(q * (v.length - 1))]); };
   function legend(b: number[]) {
     const ramp = dark() ? RAMP_D : RAMP_L;
     const unit = D.inds.find((i: any) => i.id === indEl.value).unit;
     const lab = [`< ${nf(b[0], unit)}`, `${nf(b[0], unit)} a ${nf(b[1], unit)}`, `${nf(b[1], unit)} a ${nf(b[2], unit)}`, `${nf(b[2], unit)} a ${nf(b[3], unit)}`, `≥ ${nf(b[3], unit)}`];
-    $("legend").innerHTML = `<span>Censo de ${censoEl.value} · ${unit}:</span>` + ramp.map((c, i) => `<span><i style="background:${c}"></i>${lab[i]}</span>`).join("") + `<span><i style="background:var(--accent);border-radius:50%"></i>acontecimiento</span>`;
+    $("legend").innerHTML = `<span>Censo de ${censoEl.value} · ${unit}:</span>` + ramp.map((c, i) => `<span><i style="background:${c}"></i>${lab[i]}</span>`).join("") + `<span><i style="background:#FFFFFF;border:2.5px solid #17232F;border-radius:50%"></i>acontecimiento</span>`;
   }
 
   // Mapa
@@ -157,12 +198,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
       container: "map",
       style: { version: 8, sources: {}, layers: [{ id: "bg", type: "background", paint: { "background-color": dark() ? "#1F2E3C" : "#FBF8F1" } }] },
       bounds: [[-13.2, 34.3], [4.6, 44.0]], fitBoundsOptions: { padding: 12 },
-      attributionControl: { compact: true, customAttribution: "Límites y censos: mapSpainHist (Vall-Prat, CC BY 4.0) · INE" },
+      attributionControl: { compact: true, customAttribution: "Límites y censos: mapSpainHist (Vall-Prat, CC BY 4.0) · INE · Elecciones: Atlas Electoral (Rodon, Vall-Prat, Martín Álvarez, CC BY-NC-SA 4.0)" },
       dragRotate: false, pitchWithRotate: false,
     });
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
     map.on("load", async () => {
-      const prov = await fetch(href("/data/v1/provincias_1930.geojson")).then((r) => r.json());
+      const prov = provData = await fetch(href("/data/v1/provincias_1930.geojson")).then((r) => r.json());
       for (const f of prov.features) {
         const code = f.properties.cod_unit;
         f.properties.v = D.prov[code]?.ind[indEl.value]?.[censoEl.value] ?? null;
@@ -175,8 +216,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
       map!.addSource("inset", { type: "geojson", data: { type: "Feature", properties: {}, geometry: { type: "LineString", coordinates: [[-12.6, 34.8], [-6.9, 34.8], [-6.9, 36.6], [-12.6, 36.6], [-12.6, 34.8]] } } });
       map!.addLayer({ id: "inset", type: "line", source: "inset", paint: { "line-color": dark() ? "#A9ABA7" : "#4F5A63", "line-width": 1, "line-dasharray": [3, 2] } });
       map!.addSource("ev", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
-      map!.addLayer({ id: "ev", type: "circle", source: "ev", paint: { "circle-radius": 7, "circle-color": dark() ? "#D9958D" : "#8D423C", "circle-stroke-color": "#FFFFFF", "circle-stroke-width": 1.5 } });
-      applyChoropleth(); applyEvents();
+      map!.addLayer({ id: "ev", type: "circle", source: "ev", paint: { "circle-radius": 6, "circle-color": "#FFFFFF", "circle-stroke-color": "#17232F", "circle-stroke-width": 2.5 } });
+      applyChoropleth(); applyEvents(); if (capaEl.value !== "censo") applyCapa();
       map!.on("click", "ev", (e: any) => { const id = e.features?.[0]?.properties?.id; if (id) showEvent(id); });
       map!.on("click", "prov-fill", (e: any) => {
         if (map!.queryRenderedFeatures(e.point, { layers: ["ev"] }).length) return;
@@ -197,6 +238,82 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     if ("requestIdleCallback" in window) (window as any).requestIdleCallback(go, { timeout: 1500 }); else setTimeout(go, 200);
   }
 
+  let RESUMEN: any = null;
+  async function loadBloques() {
+    if (!Object.keys(BLOQUES).length) [BLOQUES, RESUMEN] = await Promise.all([
+      fetch(href("/data/v1/elecciones_bloques.json")).then((r) => r.json()),
+      fetch(href("/data/v1/elecciones_resumen.json")).then((r) => r.json())]);
+  }
+  const byLabel = (a: string, b: string) => (BLOQUES[a]?.label ?? a).localeCompare(BLOQUES[b]?.label ?? b, "es");
+  async function showCirc() {
+    await loadBloques();
+    const y = elecEl.value;
+    const urlC = href(`/data/v1/circunscripciones_${y}.geojson`);
+    if (map.getSource("circ")) map.getSource("circ").setData(urlC);
+    else {
+      map.addSource("circ", { type: "geojson", data: urlC });
+      map.addLayer({ id: "circ-fill", type: "fill", source: "circ", paint: { "fill-opacity": 0.9 } }, "prov-line");
+      map.addLayer({ id: "circ-line", type: "line", source: "circ", paint: { "line-color": dark() ? "#0F1820" : "#FFFFFF", "line-width": 0.8 } }, "ev");
+      map.on("click", "circ-fill", (e: any) => {
+        if (map.queryRenderedFeatures(e.point, { layers: ["ev"] }).length) return;
+        const p = e.features?.[0]?.properties; if (p) showCircPanel(p);
+      });
+    }
+    map.setPaintProperty("circ-fill", "fill-color", ["match", ["get", "fp"], ...Object.entries(BLOC_COLOR).flat(), "#999999"]);
+    legendBlocs([...RESUMEN[y].circ_bloques].sort(byLabel), `Candidatura más votada por circunscripción, ${y}`);
+  }
+  function showCircPanel(p: any) {
+    const electos = typeof p.electos === "string" ? JSON.parse(p.electos) : p.electos ?? {};
+    const filas = Object.entries(electos).sort((a: any, b: any) => b[1] - a[1]).map(([b, n]) => `<tr><th scope="row" style="font-weight:400">${esc(BLOQUES[b]?.label ?? b)}</th><td style="text-align:right">${n}</td></tr>`).join("");
+    const suma = Object.values(electos).reduce((a: number, b: any) => a + Number(b), 0);
+    selected = ""; syncUrl();
+    $("panel").innerHTML = `<p class="meta">Circunscripción · elecciones de ${elecEl.value} · primera vuelta</p><h2>${esc(p.nombre)}</h2>
+      <p>Candidatura más votada: <strong>${esc(BLOQUES[p.fp]?.label ?? p.fp ?? "sin dato")}</strong><br><span class="meta">${esc(BLOQUES[p.fp]?.desc ?? "")}</span></p>
+      <p>Participación: ${p.part != null ? `${nf(Number(p.part), "habitantes")} %` : "sin dato"} · Escaños: ${p.escanos ?? "sin dato"}</p>
+      ${filas ? `<h3>Electos en primera vuelta</h3><div class="table-wrap"><table><tbody>${filas}</tbody></table></div>` : ""}
+      ${p.aviso === "mayoria_distinta" ? `<p class="meta"><strong>Aviso:</strong> el bloque más votado según el Atlas no coincide con el que obtuvo la mayoría de escaños. Puede deberse al método con que el Atlas calcula el voto por bloque (ver su libro de códigos). Se muestra tal como lo publica la fuente.</p>` : ""}
+      ${suma < Number(p.escanos) ? `<p class="meta">${suma === 0 ? "Ningún escaño se decidió en primera vuelta" : `Se decidieron ${suma} de ${p.escanos} escaños en primera vuelta`}: la circunscripción fue a segunda vuelta o el dato no consta.</p>` : ""}
+      <p class="meta">Fuente: <a href="https://doi.org/10.34810/DATA3274">Atlas Electoral de la Segunda República</a>, CC BY-NC-SA 4.0.</p>`;
+  }
+  async function showEmuni() {
+    await loadBloques();
+    if (elecEl.value === "1931") elecEl.value = "1933";
+    const y = elecEl.value;
+    if (!map.getSource("emuni")) {
+      map.addSource("emuni", { type: "geojson", data: href("/data/v1/municipios_1930_elecciones.geojson") });
+      map.addLayer({ id: "emuni-fill", type: "fill", source: "emuni", paint: { "fill-opacity": 0.95 } }, "prov-line");
+      map.on("click", "emuni-fill", (e: any) => {
+        const p = e.features?.[0]?.properties; if (!p) return;
+        const yy = elecEl.value, fp = p[`e${yy}`], part = p[`p${yy}`];
+        selected = ""; syncUrl();
+        $("panel").innerHTML = `<p class="meta">Municipio · elecciones de ${yy} · primera vuelta</p><h2>${esc(p.nombre)}</h2>
+          <p>Candidatura más votada: <strong>${esc(BLOQUES[fp]?.label ?? "sin dato")}</strong></p>
+          <p>Participación: ${part != null && part !== "null" ? `${nf(Number(part), "habitantes")} %` : "sin dato"}</p>
+          <p class="meta">Fuente: Atlas Electoral de la Segunda República, CC BY-NC-SA 4.0.</p>`;
+      });
+    }
+    if (evarEl.value === "fp") {
+      map.setPaintProperty("emuni-fill", "fill-color", ["match", ["coalesce", ["get", `e${y}`], "none"], ...Object.entries(BLOC_COLOR).flat(), "#999999"]);
+      legendBlocs([...RESUMEN[y].muni_bloques].sort(byLabel), `Candidatura más votada por municipio, ${y}`);
+    } else {
+      const b = RESUMEN[y].muni_part_cortes, ramp = dark() ? RAMP_D : RAMP_L;
+      map.setPaintProperty("emuni-fill", "fill-color", ["case", ["==", ["get", `p${y}`], null], "#999999", ["step", ["get", `p${y}`], ramp[0], b[0], ramp[1], b[1], ramp[2], b[2], ramp[3], b[3], ramp[4]]]);
+      legendRamp(b, `Participación por municipio, ${y}`, "%");
+    }
+  }
+  function applyCapa() {
+    const c = capaEl.value;
+    document.querySelectorAll<HTMLElement>("[data-capa]").forEach((el) => { el.hidden = !el.dataset.capa!.split(" ").includes(c); });
+    $("aviso-elec").hidden = c === "censo";
+    (elecEl.querySelector('option[value="1931"]') as HTMLOptionElement).disabled = c === "emuni";
+    if (!map) return;
+    const vis = (id: string, on: boolean) => map.getLayer(id) && map.setLayoutProperty(id, "visibility", on ? "visible" : "none");
+    vis("prov-fill", c === "censo"); vis("circ-fill", c === "circ"); vis("circ-line", c === "circ"); vis("emuni-fill", c === "emuni");
+    if (c === "censo") applyChoropleth();
+    else if (c === "circ") showCirc().then(() => { vis("circ-fill", true); vis("circ-line", true); });
+    else showEmuni().then(() => vis("emuni-fill", true));
+  }
+
   let selCode = "";
   function selectProv(code: string) {
     if (!map) return;
@@ -207,9 +324,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   function applyChoropleth() {
     const b = breaks(); legend(b);
     if (!map?.getSource("prov")) return;
-    const src = map.getSource("prov");
-    const data = (src as any)._data;
-    if (data?.features) { for (const f of data.features) f.properties.v = D.prov[f.properties.cod_unit]?.ind[indEl.value]?.[censoEl.value] ?? null; src.setData(data); }
+    for (const f of provData.features) f.properties.v = D.prov[f.properties.cod_unit]?.ind[indEl.value]?.[censoEl.value] ?? null;
+    map.getSource("prov").setData(provData);
     const ramp = dark() ? RAMP_D : RAMP_L;
     map.setPaintProperty("prov-fill", "fill-color", ["case", ["==", ["get", "v"], null], "#999999",
       ["step", ["get", "v"], ramp[0], b[0], ramp[1], b[1], ramp[2], b[2], ramp[3], b[3], ramp[4]]]);
@@ -224,12 +340,15 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   }
 
   let munisLoaded = false;
+  let muniPromise: Promise<void> | null = null;
+  function ensureMuniSource() {
+    return (muniPromise ??= fetch(href("/data/v1/municipios_1930.geojson")).then((r) => r.json()).then((m) => { muniData = m; map.addSource("muni", { type: "geojson", data: m }); }));
+  }
   async function loadMunis() {
     if (!map) return;
     if (!munisLoaded) {
       munisLoaded = true;
-      const m = await fetch(href("/data/v1/municipios_1930.geojson")).then((r) => r.json());
-      map.addSource("muni", { type: "geojson", data: m });
+      await ensureMuniSource();
       map.addLayer({ id: "muni-line", type: "line", source: "muni", minzoom: 5.5, paint: { "line-color": dark() ? "#3A4B5B" : "#D6BE94", "line-width": 0.4 } }, "prov-line");
       map.addLayer({ id: "muni-hit", type: "fill", source: "muni", minzoom: 5.5, paint: { "fill-opacity": 0 } }, "prov-line");
       const pop = new maplibregl.Popup({ closeButton: false, closeOnClick: false });
@@ -251,5 +370,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   indEl.addEventListener("change", () => { applyChoropleth(); syncUrl(); });
   censoEl.addEventListener("change", () => { applyChoropleth(); syncUrl(); });
   munisEl.addEventListener("change", () => { loadMunis(); syncUrl(); });
-  updateYearLabel(); renderList(); if (!map) legend(breaks());
+  capaEl.addEventListener("change", () => { applyCapa(); syncUrl(); });
+  elecEl.addEventListener("change", () => { applyCapa(); syncUrl(); });
+  evarEl.addEventListener("change", () => { applyCapa(); syncUrl(); });
+  updateYearLabel(); renderList();
+  document.querySelectorAll<HTMLElement>("[data-capa]").forEach((el) => { el.hidden = !el.dataset.capa!.split(" ").includes(capaEl.value); });
+  $("aviso-elec").hidden = capaEl.value === "censo";
+  if (!map) legend(breaks());
 </script>

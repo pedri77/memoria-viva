@@ -1,0 +1,61 @@
+{
+ "1931": {
+  "circunscripciones": 63,
+  "mas_votado": {
+   "left_wing_republican_socialist_coalition": 12,
+   "broad_republican_socialist_coalition": 28,
+   "left_wing_republican_platforms": 3,
+   "left_wing_regionalist_platforms": 4,
+   "right_wing_platforms": 2,
+   "center_right_republican_platforms": 7,
+   "socialist_platforms": 4,
+   "right_wing_regionalist_platforms": 3
+  },
+  "electos_primera_vuelta": {
+   "left_wing_republican_socialist_coalition": 73,
+   "right_wing_platforms": 32,
+   "broad_republican_socialist_coalition": 191,
+   "left_wing_republican_platforms": 27,
+   "center_right_republican_platforms": 50,
+   "socialist_platforms": 25,
+   "right_wing_regionalist_platforms": 17,
+   "left_wing_regionalist_platforms": 38,
+   "other": 3
+  }
+ },
+ "1933": {
+  "circunscripciones": 60,
+  "mas_votado": {
+   "right_wing_regionalist_platforms": 6,
+   "right_wing_platforms": 33,
+   "center_right_republican_platforms": 10,
+   "left_wing_regionalist_platforms": 3,
+   "socialist_platforms": 5,
+   "communist_and_other_lw_platforms": 1,
+   "left_wing_republican_socialist_coalition": 2
+  },
+  "electos_primera_vuelta": {
+   "right_wing_regionalist_platforms": 41,
+   "right_wing_platforms": 205,
+   "socialist_platforms": 25,
+   "center_right_republican_platforms": 74,
+   "left_wing_regionalist_platforms": 24,
+   "left_wing_republican_socialist_coalition": 7
+  }
+ },
+ "1936": {
+  "circunscripciones": 60,
+  "mas_votado": {
+   "right_coalition": 23,
+   "left_coalition": 34,
+   "basque_nat_coal": 2,
+   "centrist_platforms": 1
+  },
+  "electos_primera_vuelta": {
+   "left_coalition": 256,
+   "right_coalition": 182,
+   "centrist_platforms": 13,
+   "basque_nat_coal": 2
+  }
+ }
+}

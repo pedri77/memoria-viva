@@ -67,3 +67,17 @@ export function svgProvincias(width = 640) {
   });
   return { width, height, paths };
 }
+
+// Resultados por circunscripción (Atlas Electoral, CC BY-NC-SA 4.0) para la versión sin WebGL.
+import c1931 from "../../public/data/v1/circunscripciones_1931.geojson?raw";
+import c1933 from "../../public/data/v1/circunscripciones_1933.geojson?raw";
+import c1936 from "../../public/data/v1/circunscripciones_1936.geojson?raw";
+import bloquesRaw from "../../public/data/v1/elecciones_bloques.json?raw";
+export const BLOQUES: Record<string, { label: string; desc: string }> = JSON.parse(bloquesRaw);
+export function eleccionesCirc() {
+  const out: Record<string, any[]> = {};
+  for (const [y, raw] of [["1931", c1931], ["1933", c1933], ["1936", c1936]] as const) {
+    out[y] = JSON.parse(raw).features.map((f: any) => f.properties).sort((a: any, b: any) => a.nombre.localeCompare(b.nombre, "es"));
+  }
+  return out;
+}

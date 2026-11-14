@@ -1,6 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
-import { atlasData, svgProvincias, TYPE_LABEL } from "../../lib/atlas";
+import { atlasData, svgProvincias, TYPE_LABEL, eleccionesCirc, BLOQUES } from "../../lib/atlas";
 import { url } from "../../lib/data";
 const { events, prov, inds } = atlasData();
 const svg = svgProvincias(640);
@@ -11,6 +11,8 @@ const cls = (v: number | null) => (v == null ? -1 : br.filter((b) => v >= b).len
 const fmt = (v: number) => v.toLocaleString("es-ES", { maximumFractionDigits: 1 });
 const years = [...new Set(events.flatMap((e) => { const r = []; for (let y = e.y0; y <= e.y1; y++) r.push(y); return r; }))].sort();
 const unit = inds.find((i) => i.id === IND)!.unit;
+const elec = eleccionesCirc();
+const FECHA: Record<string, string> = { "1931": "28 de junio de 1931", "1933": "19 de noviembre de 1933", "1936": "16 de febrero de 1936" };
 ---
 <Base index={false} title="Atlas sin mapa interactivo" description="Versión accesible del atlas: mapa estático de densidad de 1930 y tabla de acontecimientos.">
   <h1>Atlas sin mapa interactivo</h1>
@@ -54,6 +56,30 @@ const unit = inds.find((i) => i.id === IND)!.unit;
       </tbody>
     </table>
   </div>
+
+
+  <h2 id="elecciones">Elecciones por circunscripción (primera vuelta)</h2>
+  <p class="meta">Fuente: <a href="https://doi.org/10.34810/DATA3274">Atlas Electoral de la Segunda República</a> (Rodon, Vall-Prat y Martín Álvarez), CC BY-NC-SA 4.0. Los bloques son una clasificación de sus autores. Si una circunscripción fue a segunda vuelta, sus escaños de primera vuelta pueden faltar. En 3 de 183 casos el bloque más votado según el Atlas no coincide con el que obtuvo la mayoría de escaños; se muestra como lo publica la fuente.</p>
+  {Object.entries(elec).map(([y, rows]) => (
+    <details>
+      <summary>Elecciones del {FECHA[y]} ({rows.length} circunscripciones)</summary>
+      <div class="table-wrap">
+        <table>
+          <caption class="meta">Candidatura más votada, participación y escaños, {y}</caption>
+          <thead><tr><th scope="col">Circunscripción</th><th scope="col">Más votada</th><th scope="col" style="text-align:right">Participación</th><th scope="col" style="text-align:right">Escaños</th><th scope="col">Electos en 1.ª vuelta</th></tr></thead>
+          <tbody>{rows.map((r: any) => (
+            <tr>
+              <th scope="row" style="font-weight:400">{r.nombre}</th>
+              <td>{BLOQUES[r.fp]?.label ?? r.fp ?? "sin dato"}{r.aviso === "mayoria_distinta" && " (no coincide con la mayoría de escaños; ver nota)"}</td>
+              <td style="text-align:right">{r.part != null ? `${r.part.toLocaleString("es-ES")} %` : "sin dato"}</td>
+              <td style="text-align:right">{r.escanos ?? "sin dato"}</td>
+              <td>{Object.entries(r.electos ?? {}).map(([b, n]) => `${BLOQUES[b]?.label ?? b}: ${n}`).join("; ") || "ninguno decidido"}</td>
+            </tr>
+          ))}</tbody>
+        </table>
+      </div>
+    </details>
+  ))}
 
   <h2 id="densidades">Densidad por provincia (censo de 1930)</h2>
   <div class="table-wrap">

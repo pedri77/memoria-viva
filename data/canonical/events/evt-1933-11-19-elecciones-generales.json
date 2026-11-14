@@ -18,6 +18,16 @@
           "locator": "sumario"
         }
       ]
+    },
+    {
+      "text": "Según el Atlas Electoral de la Segunda República, en la primera vuelta las candidaturas de derechas fueron las más votadas en 33 de las 60 circunscripciones, las republicanas de centro y centro-derecha en 10 y las regionalistas de derecha en 6; las socialistas lo fueron en 5.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-atlas-electoral",
+          "locator": "circunscripciones, 1933, variable first_platform"
+        }
+      ]
     }
   ],
   "review": {

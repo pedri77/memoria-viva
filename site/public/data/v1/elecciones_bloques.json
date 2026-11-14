@@ -1,0 +1,66 @@
+{
+ "broad_republican_socialist_coalition": {
+  "label": "Conjunción republicano-socialista",
+  "desc": "Coalición de republicanos de izquierda y de centro-derecha con el PSOE (1931)."
+ },
+ "left_wing_republican_socialist_coalition": {
+  "label": "Coalición de republicanos de izquierda y socialistas",
+  "desc": "Alianza de republicanos de izquierda y PSOE (1931, 1933)."
+ },
+ "republican_socialist_coalition": {
+  "label": "Coalición republicano-socialista",
+  "desc": "Coalición de republicanos y socialistas recogida a escala municipal (1933)."
+ },
+ "center_right_republican_platforms": {
+  "label": "Republicanos de centro y centro-derecha",
+  "desc": "Candidaturas republicanas de centro y centro-derecha, solas o aliadas (1931, 1933)."
+ },
+ "left_wing_republican_platforms": {
+  "label": "Republicanos de izquierda",
+  "desc": "Republicanos de izquierda sin socialistas ni centro-derecha (1931, 1933)."
+ },
+ "socialist_platforms": {
+  "label": "Socialistas",
+  "desc": "Candidaturas del PSOE en solitario (1931, 1933)."
+ },
+ "communist_and_other_lw_platforms": {
+  "label": "Comunistas y otra izquierda obrera",
+  "desc": "PCE y otros pequeños partidos obreros de izquierda (1931, 1933)."
+ },
+ "left_wing_regionalist_platforms": {
+  "label": "Regionalistas o nacionalistas de izquierda",
+  "desc": "Cataluña, País Vasco y Galicia (1931, 1933)."
+ },
+ "right_wing_regionalist_platforms": {
+  "label": "Regionalistas o nacionalistas de derecha",
+  "desc": "Cataluña, País Vasco y Navarra (1931, 1933)."
+ },
+ "right_wing_platforms": {
+  "label": "Derechas",
+  "desc": "Coaliciones y candidaturas de derecha (1931, 1933)."
+ },
+ "left_coalition": {
+  "label": "Coalición de izquierdas (Frente Popular)",
+  "desc": "Coalición de partidos de izquierda en 1936."
+ },
+ "right_coalition": {
+  "label": "Coalición de derechas",
+  "desc": "Coalición de partidos de derecha en 1936."
+ },
+ "centrist_platforms": {
+  "label": "Centro",
+  "desc": "Republicanos de centro fuera de las dos grandes coaliciones (1936)."
+ },
+ "basque_nat_coal": {
+  "label": "Nacionalistas vascos (PNV)",
+  "desc": "Candidaturas encabezadas por el PNV (1936)."
+ },
+ "other": {
+  "label": "Otras",
+  "desc": "Pequeñas candidaturas e independientes."
+ },
+ "blank_and_null": {
+  "label": "Blancos y nulos",
+  "desc": "Votos en blanco y nulos."
+ }
+}

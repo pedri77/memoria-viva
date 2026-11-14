@@ -1,0 +1,33 @@
+{
+  "id": "doc-atlas-electoral",
+  "title": "Atlas Electoral de la Segunda República (1931-1936), v2.1",
+  "document_type": "tabla_estadistica",
+  "source_ids": [
+    "F032"
+  ],
+  "custodian": "Universitat Pompeu Fabra · CORA, Repositori de Dades de Recerca (Dataverse)",
+  "signature": "doi:10.34810/DATA3274",
+  "canonical_url": "https://doi.org/10.34810/DATA3274",
+  "date": "2026-10-13",
+  "date_precision": "dia",
+  "summary": "Resultados de las elecciones generales de 1931, 1933 y 1936 (primera vuelta): por circunscripción para las tres y por municipio para 1933 y 1936. Agrupa las candidaturas en bloques políticos sintéticos definidos por los autores.",
+  "context": "Base de datos académica de Toni Rodon, Pau Vall-Prat y Diego Martín Álvarez, compilada a partir de fuentes primarias y secundarias detalladas en su libro de códigos. Los bloques son una clasificación de los autores y sus porcentajes por bloque tienen sesgos que el propio libro de códigos advierte; por eso el atlas solo muestra el bloque más votado, la participación y los escaños de primera vuelta. El Readme del depósito fecha las elecciones de 1931 en abril; los datos usan la fecha correcta, 28 de junio de 1931.",
+  "text_origin": "transcripcion_validada",
+  "rights": {
+    "status": "cc_by_nc_sa",
+    "action": "almacenar",
+    "attribution": "Rodon, T., Vall-Prat, P. y Martín Álvarez, D. Electoral Atlas of the Spanish Second Republic (1931-1936), CORA, doi:10.34810/DATA3274 (CC BY-NC-SA 4.0)",
+    "evidence_url": "https://api.datacite.org/dois/10.34810/data3274",
+    "checked_at": "2026-11-14",
+    "note": "Licencia no comercial y compartir igual: las capas derivadas del atlas heredan CC BY-NC-SA 4.0."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-14",
+    "by": [
+      "autor"
+    ],
+    "note": "Generado por scripts/etl/atlas_electoral.py. Fechas contrastadas con la Gaceta (1931 y 1933)."
+  },
+  "consulted_at": "2026-11-14"
+}

@@ -14,4 +14,7 @@
 - `data/external/madrid/publicaciones_periodicas_guerra_civil.csv`: «memoria de Madrid. Publicaciones periódicas de la Guerra Civil», Ayuntamiento de Madrid (datos.madrid.es), CC BY 4.0.
 - «Bombardeos de la Guerra Civil en Euskadi» (Gogora, Open Data Euskadi): licencia por verificar, por eso **no** se incluye en el repositorio; las fichas solo enlazan y parafrasean.
 
+- `data/external/atlas_electoral/`: «Electoral Atlas of the Spanish Second Republic (1931-1936)», v2.1, Toni Rodon, Pau Vall-Prat y Diego Martín Álvarez (UPF), CORA (https://doi.org/10.34810/DATA3274), **CC BY-NC-SA 4.0**. Descargado por la API de Dataverse el 14-11-2026, sin modificar.
+- Derivados del anterior, también **CC BY-NC-SA 4.0** (uso no comercial y compartir igual): `site/public/data/v1/circunscripciones_*.geojson`, `elecciones_municipios.json`, `municipios_1930_elecciones.geojson`, `elecciones_resumen.json`, `elecciones_bloques.json`.
+
 Los documentos de la Gaceta de Madrid y del BOE se enlazan a www.boe.es y se reutilizan según las condiciones de la Agencia Estatal Boletín Oficial del Estado.
