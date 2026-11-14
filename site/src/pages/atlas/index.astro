@@ -1,0 +1,255 @@
+---
+import Base from "../../layouts/Base.astro";
+import { atlasData, YEARS, CENSOS, TYPE_LABEL, CANARIAS_SHIFT } from "../../lib/atlas";
+import { url } from "../../lib/data";
+const data = atlasData();
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+<Base index={false} title="Atlas" description="Atlas de España 1931-1939: provincias de 1930, censos y acontecimientos documentados.">
+  <h1>Atlas 1931-1939</h1>
+  <p class="meta">Límites provinciales y municipales de 1930. Canarias aparece desplazada en un recuadro. Los colores muestran datos del censo elegido, no del año del selector. <a href={url("/atlas/tabla/")}>Versión sin mapa interactivo</a>.</p>
+
+  <form class="controls" id="controls" aria-label="Controles del atlas">
+    <label>Año de los acontecimientos
+      <input type="range" id="year" min="1930" max="1939" step="1" value="1930" aria-valuetext="Todos los años" />
+      <output id="year-out" for="year">Todos</output>
+    </label>
+    <label>Indicador
+      <select id="ind">{data.inds.map((i) => <option value={i.id}>{i.concept}</option>)}</select>
+    </label>
+    <label>Censo
+      <select id="censo">{CENSOS.map((c) => <option value={c} selected={c === "1930"}>{c}</option>)}</select>
+    </label>
+    <label class="check"><input type="checkbox" id="munis" /> Municipios de 1930</label>
+  </form>
+
+  <div class="atlas">
+    <div id="map" role="region" aria-label="Mapa de España con provincias de 1930 y acontecimientos. Hay una lista equivalente bajo el mapa."></div>
+    <aside id="panel" class="card" aria-live="polite">
+      <p class="meta">Elige una provincia o un acontecimiento en el mapa o en la lista.</p>
+    </aside>
+  </div>
+  <div id="legend" class="legend" aria-hidden="true"></div>
+  <p id="nowebgl" class="card" hidden>Tu navegador no puede mostrar el mapa interactivo (necesita WebGL). Usa la <a href={url("/atlas/tabla/")}>versión sin mapa interactivo</a>, con la misma información.</p>
+
+  <section aria-labelledby="lista-h">
+    <h2 id="lista-h">Acontecimientos <span id="lista-year"></span></h2>
+    <ul id="lista" class="lista"></ul>
+  </section>
+
+  <script type="application/json" id="atlas-data" set:html={JSON.stringify({ ...data, base, shift: CANARIAS_SHIFT, types: TYPE_LABEL })} />
+</Base>
+
+<style is:global>
+  .controls { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: end; margin: 16px 0; }
+  .controls label { display: grid; gap: 4px; font-size: .9rem; color: var(--muted); }
+  .controls .check { display: flex; align-items: center; gap: 8px; }
+  .controls select, .controls input[type="range"] { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 4px 6px; min-height: 36px; max-width: 100%; }
+  .atlas { display: grid; grid-template-columns: 1fr 360px; gap: 16px; }
+  #map { height: 560px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+  #panel { margin: 0; max-height: 560px; overflow: auto; }
+  #panel table { font-size: .85rem; } #panel th, #panel td { padding: 4px 6px; }
+  @media (max-width: 800px) { .atlas { grid-template-columns: 1fr; } #map { height: 420px; } #panel { max-height: none; } }
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: .85rem; color: var(--muted); margin-top: 8px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend i { width: 14px; height: 14px; border-radius: 2px; display: inline-block; border: 1px solid var(--line); }
+  .lista { list-style: none; padding: 0; }
+  .lista li { margin: 6px 0; }
+  .lista button { font: inherit; text-align: left; background: none; border: 0; padding: 4px 0; color: var(--accent); text-decoration: underline; cursor: pointer; }
+  .lista button:focus-visible { outline: 3px solid var(--focus); }
+</style>
+
+<script>
+  import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?url";
+  import mlCssUrl from "maplibre-gl/dist/maplibre-gl.css?url";
+  type ML = typeof import("maplibre-gl");
+  let maplibregl: ML;
+
+  const D = JSON.parse(document.getElementById("atlas-data")!.textContent!);
+  const $ = (id: string) => document.getElementById(id)!;
+  const yearEl = $("year") as HTMLInputElement, indEl = $("ind") as HTMLSelectElement;
+  const censoEl = $("censo") as HTMLSelectElement, munisEl = $("munis") as HTMLInputElement;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const dark = () => matchMedia("(prefers-color-scheme: dark)").matches && document.documentElement.dataset.theme !== "light";
+  const RAMP_L = ["#E3EBF0", "#B4CAD7", "#7FA3B8", "#4A7591", "#1F4A66"];
+  const RAMP_D = ["#2A3B4B", "#3F6177", "#5E89A3", "#8DB3CA", "#C7DDEA"];
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]!));
+  const nf = (v: number | null, unit: string) => v == null ? "sin dato" : v.toLocaleString("es-ES", { maximumFractionDigits: unit.startsWith("habitantes") ? 1 : 0 });
+  const href = (p: string) => `${D.base}${p}`;
+
+  // Estado inicial desde la URL
+  const q = new URLSearchParams(location.search);
+  if (q.get("year")) yearEl.value = q.get("year")!;
+  if (q.get("ind")) indEl.value = q.get("ind")!;
+  if (q.get("censo")) censoEl.value = q.get("censo")!;
+  munisEl.checked = q.get("munis") === "1";
+  let selected = q.get("sel") ?? "";
+
+  function syncUrl() {
+    const p = new URLSearchParams();
+    if (yearEl.value !== "1930") p.set("year", yearEl.value);
+    p.set("ind", indEl.value); p.set("censo", censoEl.value);
+    if (munisEl.checked) p.set("munis", "1");
+    if (selected) p.set("sel", selected);
+    history.replaceState(null, "", `${location.pathname}?${p}`);
+  }
+  const year = () => Number(yearEl.value);
+  const visible = (e: any) => year() === 1930 || (e.y0 <= year() && year() <= e.y1);
+  const shift = (c: [number, number], ine?: string) =>
+    ine && ["35", "38"].includes(ine.slice(0, 2)) ? [c[0] + D.shift[0], c[1] + D.shift[1]] : c;
+
+  function breaks(): number[] {
+    const vals = Object.values(D.prov).map((p: any) => p.ind[indEl.value]?.[censoEl.value]).filter((v: any) => v != null).sort((a: number, b: number) => a - b);
+    return [0.2, 0.4, 0.6, 0.8].map((q) => vals[Math.floor(q * (vals.length - 1))]);
+  }
+
+  function renderList() {
+    const evs = D.events.filter(visible);
+    $("lista-year").textContent = year() === 1930 ? "(todos los años)" : `de ${year()}`;
+    $("lista").innerHTML = evs.length ? evs.map((e: any) =>
+      `<li><span class="meta">${e.date}${e.end ? ` a ${e.end}` : ""} · ${esc(D.types[e.type] ?? e.type)}${e.estatal ? " · ámbito estatal" : ""}</span><br><button type="button" data-ev="${e.id}">${esc(e.title)}</button></li>`).join("")
+      : `<li class="meta">No hay acontecimientos documentados para este año en esta fase. Eso no significa que no ocurriera nada.</li>`;
+  }
+
+  function showEvent(id: string) {
+    const e = D.events.find((x: any) => x.id === id); if (!e) return;
+    selected = id; syncUrl();
+    $("panel").innerHTML = `<p class="meta">${e.date}${e.end ? ` a ${e.end}` : ""} · ${esc(D.types[e.type] ?? e.type)}</p><h2>${esc(e.title)}</h2>
+      <p>${esc(e.claim)}</p>
+      ${e.doc ? `<p><a href="${e.doc.url}" rel="noopener">Abrir el documento original</a><br><span class="meta">${esc(e.doc.title)}</span></p>` : ""}
+      <p><a href="${href(`/acontecimientos/${e.id}/`)}">Ficha completa con todas las evidencias</a></p>
+      ${e.pts.length ? `<p class="meta">Lugares: ${e.pts.map((p: any) => esc(p.name)).join(", ")}</p>` : `<p class="meta">Ámbito estatal: sin punto en el mapa.</p>`}`;
+  }
+
+  function showProv(code: string) {
+    const p = D.prov[code]; if (!p) return;
+    selected = `plc-prov-${code}`; syncUrl();
+    const rows = D.inds.map((i: any) => `<tr><th scope="row" style="font-weight:400">${esc(i.short)}</th>${["1920", "1930", "1940"].map((c) => `<td style="text-align:right">${nf(p.ind[i.id]?.[c], i.unit)}</td>`).join("")}</tr>`).join("");
+    const evs = D.events.filter((e: any) => p.events.includes(e.id));
+    $("panel").innerHTML = `<h2>${esc(p.name)}</h2>${p.hist ? `<p class="meta">En 1930: ${esc(p.hist)}</p>` : ""}
+      <div class="table-wrap"><table><thead><tr><th>Indicador</th><th>1920</th><th>1930</th><th>1940</th></tr></thead><tbody>${rows}</tbody></table></div>
+      <h3>Acontecimientos con lugar en la provincia</h3>
+      ${evs.length ? `<ul>${evs.map((e: any) => `<li><a href="${href(`/acontecimientos/${e.id}/`)}">${esc(e.title)}</a></li>`).join("")}</ul>` : `<p class="meta">Ninguno documentado aún.</p>`}
+      <p><a href="${href(`/lugares/${p.id}/`)}">Ficha de la provincia</a></p>`;
+  }
+
+  $("lista").addEventListener("click", (ev) => {
+    const b = (ev.target as HTMLElement).closest("button[data-ev]") as HTMLElement | null;
+    if (b) { showEvent(b.dataset.ev!); $("panel").focus?.(); }
+  });
+
+  function legend(b: number[]) {
+    const ramp = dark() ? RAMP_D : RAMP_L;
+    const unit = D.inds.find((i: any) => i.id === indEl.value).unit;
+    const lab = [`< ${nf(b[0], unit)}`, `${nf(b[0], unit)} a ${nf(b[1], unit)}`, `${nf(b[1], unit)} a ${nf(b[2], unit)}`, `${nf(b[2], unit)} a ${nf(b[3], unit)}`, `≥ ${nf(b[3], unit)}`];
+    $("legend").innerHTML = `<span>Censo de ${censoEl.value} · ${unit}:</span>` + ramp.map((c, i) => `<span><i style="background:${c}"></i>${lab[i]}</span>`).join("") + `<span><i style="background:var(--accent);border-radius:50%"></i>acontecimiento</span>`;
+  }
+
+  // Mapa
+  let map: any = null;
+  const supported = (() => { try { const c = document.createElement("canvas"); return !!(c.getContext("webgl2") || c.getContext("webgl")); } catch { return false; } })();
+  async function initMap() {
+    const css = Object.assign(document.createElement("link"), { rel: "stylesheet", href: mlCssUrl });
+    document.head.appendChild(css);
+    maplibregl = await import("maplibre-gl");
+    maplibregl.setWorkerUrl(workerUrl);
+    map = new maplibregl.Map({
+      container: "map",
+      style: { version: 8, sources: {}, layers: [{ id: "bg", type: "background", paint: { "background-color": dark() ? "#1F2E3C" : "#FBF8F1" } }] },
+      bounds: [[-13.2, 34.3], [4.6, 44.0]], fitBoundsOptions: { padding: 12 },
+      attributionControl: { compact: true, customAttribution: "Límites y censos: mapSpainHist (Vall-Prat, CC BY 4.0) · INE" },
+      dragRotate: false, pitchWithRotate: false,
+    });
+    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+    map.on("load", async () => {
+      const prov = await fetch(href("/data/v1/provincias_1930.geojson")).then((r) => r.json());
+      for (const f of prov.features) {
+        const code = f.properties.cod_unit;
+        f.properties.v = D.prov[code]?.ind[indEl.value]?.[censoEl.value] ?? null;
+        f.id = Number(code);
+      }
+      map!.addSource("prov", { type: "geojson", data: prov });
+      map!.addLayer({ id: "prov-fill", type: "fill", source: "prov", paint: { "fill-color": "#ccc", "fill-opacity": 0.9 } });
+      map!.addLayer({ id: "prov-line", type: "line", source: "prov", paint: { "line-color": dark() ? "#0F1820" : "#FFFFFF", "line-width": ["case", ["boolean", ["feature-state", "sel"], false], 3, 0.8] } });
+      // Recuadro de Canarias (desplazada)
+      map!.addSource("inset", { type: "geojson", data: { type: "Feature", properties: {}, geometry: { type: "LineString", coordinates: [[-12.6, 34.8], [-6.9, 34.8], [-6.9, 36.6], [-12.6, 36.6], [-12.6, 34.8]] } } });
+      map!.addLayer({ id: "inset", type: "line", source: "inset", paint: { "line-color": dark() ? "#A9ABA7" : "#4F5A63", "line-width": 1, "line-dasharray": [3, 2] } });
+      map!.addSource("ev", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
+      map!.addLayer({ id: "ev", type: "circle", source: "ev", paint: { "circle-radius": 7, "circle-color": dark() ? "#D9958D" : "#8D423C", "circle-stroke-color": "#FFFFFF", "circle-stroke-width": 1.5 } });
+      applyChoropleth(); applyEvents();
+      map!.on("click", "ev", (e: any) => { const id = e.features?.[0]?.properties?.id; if (id) showEvent(id); });
+      map!.on("click", "prov-fill", (e: any) => {
+        if (map!.queryRenderedFeatures(e.point, { layers: ["ev"] }).length) return;
+        const code = e.features?.[0]?.properties?.cod_unit; if (code) { selectProv(code); showProv(code); }
+      });
+      for (const l of ["ev", "prov-fill"]) {
+        map!.on("mouseenter", l, () => (map!.getCanvas().style.cursor = "pointer"));
+        map!.on("mouseleave", l, () => (map!.getCanvas().style.cursor = ""));
+      }
+      if (munisEl.checked) loadMunis();
+      if (selected.startsWith("plc-prov-")) { const c = selected.slice(9); selectProv(c); showProv(c); }
+      else if (selected) showEvent(selected);
+    });
+  }
+  if (!supported) { $("map").hidden = true; $("nowebgl").hidden = false; }
+  else {
+    const go = () => initMap();
+    if ("requestIdleCallback" in window) (window as any).requestIdleCallback(go, { timeout: 1500 }); else setTimeout(go, 200);
+  }
+
+  let selCode = "";
+  function selectProv(code: string) {
+    if (!map) return;
+    if (selCode) map.setFeatureState({ source: "prov", id: Number(selCode) }, { sel: false });
+    selCode = code; map.setFeatureState({ source: "prov", id: Number(code) }, { sel: true });
+  }
+
+  function applyChoropleth() {
+    const b = breaks(); legend(b);
+    if (!map?.getSource("prov")) return;
+    const src = map.getSource("prov");
+    const data = (src as any)._data;
+    if (data?.features) { for (const f of data.features) f.properties.v = D.prov[f.properties.cod_unit]?.ind[indEl.value]?.[censoEl.value] ?? null; src.setData(data); }
+    const ramp = dark() ? RAMP_D : RAMP_L;
+    map.setPaintProperty("prov-fill", "fill-color", ["case", ["==", ["get", "v"], null], "#999999",
+      ["step", ["get", "v"], ramp[0], b[0], ramp[1], b[1], ramp[2], b[2], ramp[3], b[3], ramp[4]]]);
+  }
+
+  function applyEvents() {
+    renderList();
+    if (!map?.getSource("ev")) return;
+    const feats: any[] = [];
+    for (const e of D.events.filter(visible)) for (const p of e.pts) feats.push({ type: "Feature", properties: { id: e.id }, geometry: { type: "Point", coordinates: shift(p.c, p.ine) } });
+    map.getSource("ev").setData({ type: "FeatureCollection", features: feats });
+  }
+
+  let munisLoaded = false;
+  async function loadMunis() {
+    if (!map) return;
+    if (!munisLoaded) {
+      munisLoaded = true;
+      const m = await fetch(href("/data/v1/municipios_1930.geojson")).then((r) => r.json());
+      map.addSource("muni", { type: "geojson", data: m });
+      map.addLayer({ id: "muni-line", type: "line", source: "muni", minzoom: 5.5, paint: { "line-color": dark() ? "#3A4B5B" : "#D6BE94", "line-width": 0.4 } }, "prov-line");
+      map.addLayer({ id: "muni-hit", type: "fill", source: "muni", minzoom: 5.5, paint: { "fill-opacity": 0 } }, "prov-line");
+      const pop = new maplibregl.Popup({ closeButton: false, closeOnClick: false });
+      map.on("mousemove", "muni-hit", (e: any) => {
+        const p = e.features?.[0]?.properties; if (!p) return;
+        pop.setLngLat(e.lngLat).setHTML(`<strong>${esc(p.nombre)}</strong><br>Población de hecho 1930: ${p.phec1930 != null ? Number(p.phec1930).toLocaleString("es-ES") : "sin dato"}`).addTo(map!);
+      });
+      map.on("mouseleave", "muni-hit", () => pop.remove());
+    }
+    for (const l of ["muni-line", "muni-hit"]) map.setLayoutProperty(l, "visibility", munisEl.checked ? "visible" : "none");
+    if (munisEl.checked && map.getZoom() < 5.5) map.easeTo({ zoom: 6, duration: reduce ? 0 : 600 });
+  }
+
+  function updateYearLabel() {
+    const y = year(); $("year-out").textContent = y === 1930 ? "Todos" : String(y);
+    yearEl.setAttribute("aria-valuetext", y === 1930 ? "Todos los años" : String(y));
+  }
+  yearEl.addEventListener("input", () => { updateYearLabel(); applyEvents(); syncUrl(); });
+  indEl.addEventListener("change", () => { applyChoropleth(); syncUrl(); });
+  censoEl.addEventListener("change", () => { applyChoropleth(); syncUrl(); });
+  munisEl.addEventListener("change", () => { loadMunis(); syncUrl(); });
+  updateYearLabel(); renderList(); if (!map) legend(breaks());
+</script>

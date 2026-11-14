@@ -204,6 +204,14 @@ def dump(path: pathlib.Path, obj: dict) -> None:
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+# Fin de los acontecimientos con precisión «intervalo» (leído en la misma evidencia)
+END_DATES = {
+    "evt-1936-09-25-bombardeos-durango": "1937-04-29",
+    "evt-1936-09-17-bombardeos-vitoria": "1937-05-29",
+    "evt-1936-07-19-gobiernos-martinez-barrio-giral": "1936-07-20",
+}
+
+
 def claim(text, kind, doc, loc, attributed_to=None):
     c = {"text": text, "kind": kind, "evidence": [{"document_id": doc, "locator": loc}]}
     if attributed_to:
@@ -249,6 +257,8 @@ def main() -> None:
                "review": dict(REVIEW)}
         if qid:
             obj["wikidata"] = qid
+        if eid in END_DATES:
+            obj["end_date"] = END_DATES[eid]
         dump(OUT / f"events/{eid}.json", obj)
     print(f"{len(GACETAS)} documentos, {len(EVENTOS)} acontecimientos")
 

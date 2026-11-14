@@ -4,6 +4,10 @@
   "place_type": "municipio",
   "parent_id": "plc-espana",
   "ine_code": "52",
+  "centroid": [
+    -2.952,
+    35.2885
+  ],
   "geometry_ref": "provincias_1930.geojson#cod_unit=52",
   "geometry_precision": "exacta",
   "source_ids": [

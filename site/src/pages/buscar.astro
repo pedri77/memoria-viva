@@ -1,0 +1,24 @@
+---
+import Base from "../layouts/Base.astro";
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+<Base index={false} title="Buscar" description="Buscador de acontecimientos, documentos y lugares.">
+  <h1>Buscar</h1>
+  <p class="meta">Busca en acontecimientos, fichas documentales y lugares. Puedes filtrar por tipo de ficha. El buscador no lee el texto de los documentos originales, solo nuestras fichas.</p>
+  <div id="buscador"></div>
+  <noscript><p>El buscador necesita JavaScript. Puedes recorrer la <a href={`${base}/acontecimientos/`}>cronología</a> y el <a href={`${base}/documentos/`}>archivo</a>.</p></noscript>
+  <link rel="stylesheet" href={`${base}/pagefind/pagefind-ui.css`} />
+  <script is:inline define:vars={{ base }}>
+    const s = document.createElement("script");
+    s.src = `${base}/pagefind/pagefind-ui.js`;
+    s.onload = () => {
+      const q = new URLSearchParams(location.search).get("q") || "";
+      const ui = new PagefindUI({ element: "#buscador", showSubResults: false, showImages: false, resetStyles: false, baseUrl: `${base}/` });
+      if (q) ui.triggerSearch(q);
+    };
+    document.head.appendChild(s);
+  </script>
+</Base>
+<style is:global>
+  #buscador { --pagefind-ui-primary: var(--accent); --pagefind-ui-text: var(--ink); --pagefind-ui-background: var(--surface); --pagefind-ui-border: var(--line); --pagefind-ui-tag: var(--bg); --pagefind-ui-font: "Inter", system-ui, sans-serif; }
+</style>

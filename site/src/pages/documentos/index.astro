@@ -2,7 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import { documents, url, RIGHTS_LABEL } from "../../lib/data";
 ---
-<Base title="Archivo">
+<Base index={false} title="Archivo">
   <h1>Archivo</h1>
   {documents.map((d) => (
     <article class="card">

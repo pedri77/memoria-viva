@@ -88,3 +88,12 @@ Pasar a PostgreSQL+PostGIS y FastAPI (en Hetzner, UE) solo si se cumple al menos
 | ADR-006 HTR | Aplazado. Para prensa se usa el OCR de la BNE tal cual, marcado como automático. |
 | ADR-007 Registros nominativos | No en el MVP. Antes de habilitarlos: evaluación jurídica (Ley 16/1985 art. 57, LOPDGDD art. 3, Ley 20/2022) y procedimiento de retirada probado. |
 | ADR-008 RAG | No en el MVP. Criterio de activación: corpus propio publicado, modelo local, 0 citas inventadas en 100 preguntas de prueba. |
+
+## Cambios aplicados en F2 (14-11-2026)
+
+| Decisión inicial | Cambio | Motivo |
+|---|---|---|
+| PMTiles para teselas | GeoJSON simplificado con carga diferida (provincias 318 KB; municipios de 1930, 3,6 MB sin comprimir y unos 650 KB con gzip, solo si se activan) | Volumen pequeño; evita depender de tippecanoe y de un formato más. Se revisará si se añaden capas de mayor detalle. |
+| ECharts para series | Gráfico SVG propio (3 censos × hasta 6 provincias) | ECharts añadía 535 KB de JavaScript y bajaba el rendimiento de la página de datos a 66-84. Con SVG propio da 100. |
+| MapLibre cargado al abrir la página | Carga diferida (`requestIdleCallback`) y su hoja de estilos se inyecta en tiempo de ejecución | El CSS de 71 KB bloqueaba el renderizado: el rendimiento del atlas pasó de 30 a 100. |
+| Mapa base | Sin mapa base de terceros: solo límites de 1930 sobre fondo neutro | Sin dependencia de servidores de teselas ni de sus licencias. Canarias, desplazada en recuadro y avisado en la página. |

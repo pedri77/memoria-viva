@@ -4,6 +4,10 @@
   "place_type": "provincia",
   "parent_id": "plc-espana",
   "ine_code": "48",
+  "centroid": [
+    -2.7744,
+    43.2389
+  ],
   "geometry_ref": "provincias_1930.geojson#cod_unit=48",
   "geometry_precision": "exacta",
   "source_ids": [

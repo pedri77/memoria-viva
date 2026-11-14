@@ -1,7 +1,7 @@
 ---
 import { url } from "../lib/data";
-interface Props { title: string; description?: string }
-const { title, description = "Atlas y archivo documental de la historia contemporánea de España. Cada afirmación enlaza a su fuente." } = Astro.props;
+interface Props { title: string; description?: string; index?: boolean }
+const { title, index = true, description = "Atlas y archivo documental de la historia contemporánea de España. Cada afirmación enlaza a su fuente." } = Astro.props;
 ---
 <!doctype html>
 <html lang="es">
@@ -11,23 +11,27 @@ const { title, description = "Atlas y archivo documental de la historia contempo
     <title>{title} · Memoria Viva</title>
     <meta name="description" content={description} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;600&display=swap" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;600&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;600&display=swap" /></noscript>
   </head>
   <body>
     <a class="skip" href="#contenido">Saltar al contenido</a>
     <header class="site">
       <a class="logo" href={url("/")}>España: Memoria Viva</a>
       <nav aria-label="Principal">
+        <a href={url("/atlas/")}>Atlas</a>
         <a href={url("/acontecimientos/")}>Cronología</a>
         <a href={url("/documentos/")}>Archivo</a>
         <a href={url("/datos/")}>Datos</a>
         <a href={url("/fuentes/")}>Fuentes</a>
         <a href={url("/metodologia/")}>Metodología</a>
+        <a href={url("/buscar/")}>Buscar</a>
       </nav>
     </header>
-    <main id="contenido"><slot /></main>
+    <main id="contenido" data-pagefind-body={index ? "" : undefined}><slot /></main>
     <footer class="site">
-      <p>Proyecto personal en construcción (fase F1: datos de referencia). Textos y datos propios: CC BY-SA 4.0. Código: MIT. Los documentos pertenecen a sus custodios y se citan con su licencia.</p>
+      <p>Proyecto personal en construcción (fase F2: MVP web). Textos y datos propios: CC BY-SA 4.0. Código: MIT. Los documentos pertenecen a sus custodios y se citan con su licencia.</p>
       <p><a href="https://github.com/pedri77/memoria-viva/issues/new?template=correccion.yml">Notificar un error</a> · <a href="https://github.com/pedri77/memoria-viva">Código y datos</a></p>
     </footer>
   </body>

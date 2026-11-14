@@ -9,6 +9,7 @@ const related = events.filter((e) => e.claims.some((c: any) => c.evidence.some((
 const cite = `${d.custodian}. ${d.signature ?? d.title}. ${d.canonical_url} [consulta: ${d.consulted_at}]. Ficha: España: Memoria Viva, ${d.id}.`;
 ---
 <Base title={d.title} description={d.summary}>
+  <span hidden data-pagefind-filter="tipo">Documento</span>
   <p class="meta"><a href={url("/documentos/")}>Archivo</a></p>
   <h1>{d.title}</h1>
   {d.title_original && <p class="meta">Título original: {d.title_original}</p>}

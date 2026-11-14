@@ -7,9 +7,10 @@ export function getStaticPaths() {
 const { e } = Astro.props;
 ---
 <Base title={e.title}>
+  <span hidden data-pagefind-filter="tipo">Acontecimiento</span>
   <p class="meta"><a href={url("/acontecimientos/")}>Cronología</a></p>
   <h1>{e.title}</h1>
-  <p class="meta">{e.start_date}{e.end_date ? ` a ${e.end_date}` : ""} ({PRECISION_LABEL[e.date_precision]}) · {e.place_ids.map((p: string) => byId(places, p)?.canonical_name).join(", ")}</p>
+  <p class="meta">{e.start_date}{e.end_date ? ` a ${e.end_date}` : ""} ({PRECISION_LABEL[e.date_precision]}) · {e.place_ids.map((p: string, i: number) => <>{i > 0 && ", "}<a href={url(`/lugares/${p}/`)}>{byId(places, p)?.canonical_name}</a></>)}</p>
   <h2>Qué sabemos y cómo lo sabemos</h2>
   {e.claims.map((c: any) => (
     <article class="card">

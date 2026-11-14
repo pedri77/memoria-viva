@@ -4,20 +4,30 @@ import { indicators, places, byId, url } from "../lib/data";
 const fmt = (v: number | null, unit: string) =>
   v === null ? "sin dato" : unit.startsWith("habitantes") ? v.toLocaleString("es-ES", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : v.toLocaleString("es-ES");
 const ordered = [...indicators].sort((a, b) => a.id.localeCompare(b.id));
+const provs = places.filter((p) => p.id.startsWith("plc-prov-")).sort((a, b) => a.canonical_name.localeCompare(b.canonical_name, "es"));
+const series = Object.fromEntries(ordered.map((i) => [i.id, { concept: i.concept, unit: i.unit,
+  data: Object.fromEntries(provs.map((p) => [p.id, ["1920", "1930", "1940"].map((y) => i.observations.find((o: any) => o.place_id === p.id && o.period === y)?.value ?? null)])) }]));
 ---
-<Base title="Datos" description="Series censales por provincia 1920, 1930 y 1940, con método y advertencias de comparabilidad.">
+<Base index={false} title="Datos" description="Series censales por provincia 1920, 1930 y 1940, con método, advertencias de comparabilidad y descarga CSV.">
   <h1>Datos</h1>
-  <p>Series por provincia de los censos de 1920, 1930 y 1940. Cada tabla indica de dónde sale cada cifra y qué limita la comparación. Datos descargables en <a href={url("/data/v1/indicators.json")}>JSON</a>.</p>
+  <p>Series por provincia de los censos de 1920, 1930 y 1940. Cada tabla indica de dónde sale cada cifra y qué limita la comparación. Todo el conjunto en <a href={url("/data/v1/indicators.json")}>JSON</a>.</p>
+
+  <section class="card" aria-labelledby="graf-h">
+    <h2 id="graf-h">Comparar provincias</h2>
+    <form class="filtros" id="graf-form">
+      <label>Indicador <select id="g-ind">{ordered.map((i) => <option value={i.id}>{i.concept}</option>)}</select></label>
+      <label>Provincias (hasta 6) <select id="g-prov" multiple size="6">{provs.map((p) => <option value={p.id} selected={["plc-prov-28", "plc-prov-08", "plc-prov-42"].includes(p.id)}>{p.canonical_name}</option>)}</select></label>
+    </form>
+    <div id="grafico" aria-live="polite"></div>
+    <p class="meta">El censo de 1940 se hizo tras la guerra: desplazamientos, exilio y mortalidad afectan a la comparación con 1930. Los tres censos no son puntos equidistantes de una tendencia continua.</p>
+  </section>
+
   {ordered.map((ind) => {
-    const periods = [...new Set(ind.observations.map((o: any) => o.period))].sort();
-    const rows = [...new Set(ind.observations.map((o: any) => o.place_id))].map((pid: any) => ({
-      pid, name: byId(places, pid)?.canonical_name ?? pid,
-      vals: periods.map((p) => ind.observations.find((o: any) => o.place_id === pid && o.period === p)?.value ?? null),
-    })).sort((a, b) => a.name.localeCompare(b.name, "es"));
+    const rows = provs.map((p) => ({ p, vals: ["1920", "1930", "1940"].map((y) => ind.observations.find((o: any) => o.place_id === p.id && o.period === y)?.value ?? null) }));
     return (
       <section class="card" id={ind.id}>
         <h2>{ind.concept}</h2>
-        <p>{ind.definition} Unidad: {ind.unit}.</p>
+        <p>{ind.definition} Unidad: {ind.unit}. <a href={url(`/data/v1/${ind.id}.csv`)} download>Descargar CSV</a></p>
         <details>
           <summary>Método y advertencias</summary>
           <p><strong>Método:</strong> {ind.method}</p>
@@ -26,11 +36,57 @@ const ordered = [...indicators].sort((a, b) => a.id.localeCompare(b.id));
         <div class="table-wrap">
           <table>
             <caption class="meta">{ind.concept} ({ind.unit})</caption>
-            <thead><tr><th scope="col">Provincia</th>{periods.map((p) => <th scope="col" style="text-align:right">{p}</th>)}</tr></thead>
-            <tbody>{rows.map((r) => <tr><th scope="row" style="font-weight:400">{r.name}</th>{r.vals.map((v) => <td style="text-align:right">{fmt(v, ind.unit)}</td>)}</tr>)}</tbody>
+            <thead><tr><th scope="col">Provincia</th>{["1920", "1930", "1940"].map((p) => <th scope="col" style="text-align:right">{p}</th>)}</tr></thead>
+            <tbody>{rows.map((r) => <tr><th scope="row" style="font-weight:400"><a href={url(`/lugares/${r.p.id}/`)}>{r.p.canonical_name}</a></th>{r.vals.map((v) => <td style="text-align:right">{fmt(v, ind.unit)}</td>)}</tr>)}</tbody>
           </table>
         </div>
       </section>
     );
   })}
+  <script type="application/json" id="series" set:html={JSON.stringify(series)} />
 </Base>
+<style is:global>
+  .filtros { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: start; margin: 8px 0 16px; }
+  .filtros label { display: grid; gap: 4px; color: var(--muted); font-size: .9rem; }
+  .leyenda-g { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: .9rem; margin: 0 0 4px; }
+  .leyenda-g span { display: inline-flex; align-items: center; gap: 6px; }
+  .leyenda-g i { width: 14px; height: 4px; display: inline-block; }
+  .filtros select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 4px 6px; min-height: 36px; max-width: 100%; }
+</style>
+<script>
+  // Gráfico de líneas en SVG propio: 3 censos x hasta 6 provincias. Sin dependencias.
+  const S = JSON.parse(document.getElementById("series")!.textContent!);
+  const indEl = document.getElementById("g-ind") as HTMLSelectElement, provEl = document.getElementById("g-prov") as HTMLSelectElement;
+  const el = document.getElementById("grafico")!;
+  const PALETTE = ["#1F5FAD", "#B5651D", "#2E7D5B", "#7B4FA0", "#A13D63", "#5A6B7B"]; // categórica, sin connotación política
+  const names = Object.fromEntries([...provEl.options].map((o) => [o.value, o.text]));
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]!));
+  const nf = (v: number) => v.toLocaleString("es-ES", { maximumFractionDigits: 1 });
+  function niceMax(v: number) { const p = Math.pow(10, Math.floor(Math.log10(v || 1))); return Math.ceil(v / p) * p; }
+  function draw() {
+    const sel = [...provEl.selectedOptions].map((o) => o.value).slice(0, 6);
+    const s = S[indEl.value];
+    const W = Math.max(320, el.clientWidth), H = 340, L = 72, R = 16, T = 40, B = 32;
+    const all = sel.flatMap((id) => s.data[id]).filter((v: number | null) => v != null) as number[];
+    const max = niceMax(Math.max(...all, 1));
+    const x = (i: number) => L + (i * (W - L - R)) / 2;
+    const y = (v: number) => T + (H - T - B) * (1 - v / max);
+    const ticks = [0, 0.25, 0.5, 0.75, 1].map((k) => k * max);
+    let svg = `<svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" role="img" aria-label="${esc(s.concept)}: ${sel.map((id) => `${esc(names[id])} ${s.data[id].map((v: number | null) => v == null ? "sin dato" : nf(v)).join(", ")}`).join("; ")}">`;
+    svg += ticks.map((t) => `<line x1="${L}" x2="${W - R}" y1="${y(t)}" y2="${y(t)}" stroke="var(--line)"/><text x="${L - 8}" y="${y(t) + 4}" text-anchor="end" font-size="12" fill="var(--muted)">${nf(t)}</text>`).join("");
+    svg += ["1920", "1930", "1940"].map((c, i) => `<text x="${x(i)}" y="${H - 8}" text-anchor="middle" font-size="12" fill="var(--muted)">${c}</text>`).join("");
+    svg += `<text x="${L}" y="16" font-size="12" fill="var(--muted)">${esc(s.unit)}</text>`;
+    sel.forEach((id, k) => {
+      const c = PALETTE[k], d = s.data[id];
+      const pts = d.map((v: number | null, i: number) => v == null ? null : [x(i), y(v)]);
+      for (let i = 0; i < 2; i++) if (pts[i] && pts[i + 1]) svg += `<line x1="${pts[i][0]}" y1="${pts[i][1]}" x2="${pts[i + 1][0]}" y2="${pts[i + 1][1]}" stroke="${c}" stroke-width="2.5"${i === 1 ? ' stroke-dasharray="6 4"' : ""}/>`;
+      pts.forEach((p: number[] | null, i: number) => { if (p) svg += `<circle cx="${p[0]}" cy="${p[1]}" r="5" fill="${c}" stroke="var(--surface)" stroke-width="2"><title>${esc(names[id])}, ${["1920", "1930", "1940"][i]}: ${nf(d[i])}</title></circle>`; });
+    });
+    svg += "</svg>";
+    const legend = `<p class="leyenda-g">${sel.map((id, k) => `<span><i style="background:${PALETTE[k]}"></i>${esc(names[id])}</span>`).join("")}<span class="meta">Tramo 1930-1940 en discontinuo: censo de posguerra</span></p>`;
+    el.innerHTML = legend + svg;
+  }
+  indEl.addEventListener("change", draw); provEl.addEventListener("change", draw);
+  let rt: number; addEventListener("resize", () => { clearTimeout(rt); rt = window.setTimeout(draw, 150); });
+  draw();
+</script>

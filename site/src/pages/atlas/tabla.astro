@@ -1,0 +1,96 @@
+---
+import Base from "../../layouts/Base.astro";
+import { atlasData, svgProvincias, TYPE_LABEL } from "../../lib/atlas";
+import { url } from "../../lib/data";
+const { events, prov, inds } = atlasData();
+const svg = svgProvincias(640);
+const IND = "ind-densidad-prov", CENSO = "1930";
+const vals = Object.values(prov).map((p: any) => p.ind[IND]?.[CENSO]).filter((v: any) => v != null).sort((a: number, b: number) => a - b);
+const br = [0.2, 0.4, 0.6, 0.8].map((q) => vals[Math.floor(q * (vals.length - 1))]);
+const cls = (v: number | null) => (v == null ? -1 : br.filter((b) => v >= b).length);
+const fmt = (v: number) => v.toLocaleString("es-ES", { maximumFractionDigits: 1 });
+const years = [...new Set(events.flatMap((e) => { const r = []; for (let y = e.y0; y <= e.y1; y++) r.push(y); return r; }))].sort();
+const unit = inds.find((i) => i.id === IND)!.unit;
+---
+<Base index={false} title="Atlas sin mapa interactivo" description="Versión accesible del atlas: mapa estático de densidad de 1930 y tabla de acontecimientos.">
+  <h1>Atlas sin mapa interactivo</h1>
+  <p>Misma información que el <a href={url("/atlas/")}>atlas</a>, sin necesidad de WebGL. El mapa es una imagen estática; la tabla de debajo contiene todos los datos.</p>
+
+  <figure class="card">
+    <svg viewBox={`0 0 ${svg.width} ${svg.height}`} role="img" aria-labelledby="svg-t svg-d" class="mapa-svg">
+      <title id="svg-t">Densidad de población de hecho por provincia, censo de 1930</title>
+      <desc id="svg-d">Mapa de las provincias de 1930 coloreado en cinco clases de densidad. Canarias, desplazada en recuadro. Los valores exactos están en la tabla de densidades.</desc>
+      {svg.paths.map((p) => {
+        const v = prov[p.code]?.ind[IND]?.[CENSO] ?? null;
+        return <path d={p.d} class={`c${cls(v)}`}><title>{prov[p.code]?.name}: {v == null ? "sin dato" : `${fmt(v)} ${unit}`}</title></path>;
+      })}
+    </svg>
+    <figcaption class="meta">
+      Densidad (censo de 1930, {unit}): {["< " + fmt(br[0]), `${fmt(br[0])} a ${fmt(br[1])}`, `${fmt(br[1])} a ${fmt(br[2])}`, `${fmt(br[2])} a ${fmt(br[3])}`, "≥ " + fmt(br[3])].map((l, i) => <span class="ley"><i class={`c${i}`}></i>{l}</span>)}
+      · Fuente: mapSpainHist (CC BY 4.0) e INE.
+    </figcaption>
+  </figure>
+
+  <h2 id="acontecimientos">Acontecimientos</h2>
+  <form class="filtros" aria-controls="tabla-ev">
+    <label>Año <select id="f-year"><option value="">Todos</option>{years.map((y) => <option value={y}>{y}</option>)}</select></label>
+    <label>Tipo <select id="f-type"><option value="">Todos</option>{Object.entries(TYPE_LABEL).map(([k, v]) => <option value={k}>{v}</option>)}</select></label>
+    <output id="f-count" class="meta" aria-live="polite"></output>
+  </form>
+  <div class="table-wrap">
+    <table id="tabla-ev">
+      <caption class="meta">Acontecimientos documentados 1931-1939</caption>
+      <thead><tr><th scope="col">Fecha</th><th scope="col">Acontecimiento</th><th scope="col">Tipo</th><th scope="col">Lugar</th><th scope="col">Documento</th></tr></thead>
+      <tbody>
+        {events.map((e) => (
+          <tr data-y0={e.y0} data-y1={e.y1} data-type={e.type}>
+            <td>{e.date}{e.end ? ` a ${e.end}` : ""}</td>
+            <td><a href={url(`/acontecimientos/${e.id}/`)}>{e.title}</a></td>
+            <td>{TYPE_LABEL[e.type] ?? e.type}</td>
+            <td>{e.estatal ? "Ámbito estatal" : e.pts.map((p) => p.name).join(", ")}</td>
+            <td>{e.doc && <a href={e.doc.url} rel="noopener">original</a>}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="densidades">Densidad por provincia (censo de 1930)</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th scope="col">Provincia</th><th scope="col" style="text-align:right">{unit}</th></tr></thead>
+      <tbody>
+        {Object.values(prov).sort((a: any, b: any) => a.name.localeCompare(b.name, "es")).map((p: any) => (
+          <tr><th scope="row" style="font-weight:400"><a href={url(`/lugares/${p.id}/`)}>{p.name}</a></th><td style="text-align:right">{p.ind[IND]?.[CENSO] != null ? fmt(p.ind[IND][CENSO]) : "sin dato"}</td></tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</Base>
+<style is:global>
+  .mapa-svg { width: 100%; height: auto; }
+  .mapa-svg path { stroke: var(--surface); stroke-width: .6; }
+  .c-1 { fill: #999999; } .c0 { fill: #E3EBF0; } .c1 { fill: #B4CAD7; } .c2 { fill: #7FA3B8; } .c3 { fill: #4A7591; } .c4 { fill: #1F4A66; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .c0 { fill: #2A3B4B; } :root:not([data-theme="light"]) .c1 { fill: #3F6177; } :root:not([data-theme="light"]) .c2 { fill: #5E89A3; } :root:not([data-theme="light"]) .c3 { fill: #8DB3CA; } :root:not([data-theme="light"]) .c4 { fill: #C7DDEA; } }
+  .ley { display: inline-flex; align-items: center; gap: 4px; margin-right: 10px; }
+  .ley i { width: 12px; height: 12px; display: inline-block; border: 1px solid var(--line); }
+  .ley i.c0 { background: #E3EBF0; } .ley i.c1 { background: #B4CAD7; } .ley i.c2 { background: #7FA3B8; } .ley i.c3 { background: #4A7591; } .ley i.c4 { background: #1F4A66; }
+  .filtros { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: end; margin: 8px 0; }
+  .filtros label { display: grid; gap: 4px; color: var(--muted); font-size: .9rem; }
+  .filtros select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 4px 6px; min-height: 36px; max-width: 100%; }
+</style>
+<script>
+  const y = document.getElementById("f-year") as HTMLSelectElement, t = document.getElementById("f-type") as HTMLSelectElement;
+  const rows = [...document.querySelectorAll<HTMLTableRowElement>("#tabla-ev tbody tr")];
+  const out = document.getElementById("f-count")!;
+  function apply() {
+    let n = 0;
+    for (const r of rows) {
+      const okY = !y.value || (Number(r.dataset.y0) <= Number(y.value) && Number(y.value) <= Number(r.dataset.y1));
+      const okT = !t.value || r.dataset.type === t.value;
+      r.hidden = !(okY && okT); if (!r.hidden) n++;
+    }
+    out.textContent = `${n} de ${rows.length} acontecimientos`;
+  }
+  y.addEventListener("change", apply); t.addEventListener("change", apply); apply();
+</script>

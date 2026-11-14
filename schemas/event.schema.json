@@ -118,5 +118,17 @@
       "type": "string",
       "pattern": "^Q\\d+$"
     }
+  },
+  "if": {
+    "properties": {
+      "date_precision": {
+        "const": "intervalo"
+      }
+    }
+  },
+  "then": {
+    "required": [
+      "end_date"
+    ]
   }
 }

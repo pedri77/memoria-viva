@@ -1,0 +1,52 @@
+---
+import Base from "../../layouts/Base.astro";
+import { places, events, documents, indicators, byId, url, PRECISION_LABEL } from "../../lib/data";
+export function getStaticPaths() {
+  return places.map((p) => ({ params: { id: p.id }, props: { p } }));
+}
+const { p } = Astro.props;
+const code = p.ine_code ?? "";
+const inProv = (pid: string) => {
+  const q = byId(places, pid);
+  return pid === p.id || (p.place_type === "provincia" && q?.parent_id === p.id);
+};
+const evs = events.filter((e) => e.place_ids.some(inProv) && !(p.id === "plc-espana"));
+const evsAll = p.id === "plc-espana" ? events : evs;
+const docs = documents.filter((d) => (d.place_ids ?? []).some(inProv));
+const rows = indicators.map((i) => ({
+  i, obs: ["1920", "1930", "1940"].map((y) => i.observations.find((o: any) => o.place_id === p.id && o.period === y)),
+})).filter((r) => r.obs.some(Boolean));
+const parent = p.parent_id ? byId(places, p.parent_id) : null;
+---
+<Base title={p.canonical_name} description={`Ficha de ${p.canonical_name}: datos censales, acontecimientos y documentos.`}>
+  <span hidden data-pagefind-filter="tipo">Lugar</span>
+  <p class="meta">{parent && <><a href={url(`/lugares/${parent.id}/`)}>{parent.canonical_name}</a> › </>}{p.place_type}</p>
+  <h1>{p.canonical_name}</h1>
+  {p.historical_names?.length > 0 && <p class="meta">Denominación en 1930: {p.historical_names.map((h: any) => h.name).join(", ")}</p>}
+  <dl class="card">
+    {code && <><dt>Código INE</dt><dd>{code}</dd></>}
+    {p.wikidata && <><dt>Wikidata</dt><dd><a href={`https://www.wikidata.org/wiki/${p.wikidata}`}>{p.wikidata}</a></dd></>}
+    <dt>Geometría</dt><dd>{p.geometry_precision === "exacta" ? "límites de 1930 (mapSpainHist)" : p.geometry_precision === "centroide" ? "solo punto central del municipio" : "sin geometría"}</dd>
+    {p.place_type === "provincia" && <><dt>Mapa</dt><dd><a href={url(`/atlas/?sel=${p.id}`)}>Ver en el atlas</a></dd></>}
+  </dl>
+  {rows.length > 0 && (
+    <section>
+      <h2>Datos censales</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th scope="col">Indicador</th><th scope="col" style="text-align:right">1920</th><th scope="col" style="text-align:right">1930</th><th scope="col" style="text-align:right">1940</th></tr></thead>
+        <tbody>{rows.map((r) => <tr><th scope="row" style="font-weight:400"><a href={url(`/datos/#${r.i.id}`)}>{r.i.concept}</a></th>{r.obs.map((o: any) => <td style="text-align:right">{o?.value != null ? o.value.toLocaleString("es-ES") : "sin dato"}</td>)}</tr>)}</tbody>
+      </table></div>
+      <p class="meta">Fuente: mapSpainHist (CC BY 4.0), a partir de los censos del INE. Ver advertencias de comparabilidad en <a href={url("/datos/")}>Datos</a>.</p>
+    </section>
+  )}
+  <section>
+    <h2>Acontecimientos</h2>
+    {evsAll.length ? <ul>{evsAll.map((e) => <li><span class="meta">{e.start_date} ({PRECISION_LABEL[e.date_precision]})</span> · <a href={url(`/acontecimientos/${e.id}/`)}>{e.title}</a></li>)}</ul>
+      : <p class="meta">Ningún acontecimiento documentado todavía con este lugar. Eso no significa que no ocurriera nada.</p>}
+  </section>
+  <section>
+    <h2>Documentos</h2>
+    {docs.length ? <ul>{docs.slice(0, 50).map((d) => <li><a href={url(`/documentos/${d.id}/`)}>{d.title}</a></li>)}</ul> : <p class="meta">Ninguno todavía.</p>}
+    {docs.length > 50 && <p class="meta">Y {docs.length - 50} más en el <a href={url("/documentos/")}>archivo</a>.</p>}
+  </section>
+</Base>

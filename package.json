@@ -9,13 +9,19 @@
     "validate": "node scripts/checks/validate.mjs",
     "check:links": "node scripts/checks/check-links.mjs",
     "dev": "astro dev --root site",
-    "build": "npm run validate && astro build --root site",
+    "build": "npm run validate && astro build --root site && pagefind --site dist",
     "preview": "astro preview --root site"
   },
   "devDependencies": {
     "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
     "astro": "^7.4.12",
-    "mapshaper": "^0.6.121"
+    "axe-core": "^4.14.0",
+    "lighthouse": "^12.8.2",
+    "mapshaper": "^0.6.121",
+    "pagefind": "^1.6.0"
+  },
+  "dependencies": {
+    "maplibre-gl": "^6.18.0"
   }
 }

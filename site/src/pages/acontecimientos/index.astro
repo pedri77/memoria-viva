@@ -1,12 +1,52 @@
 ---
 import Base from "../../layouts/Base.astro";
 import { events, url, PRECISION_LABEL } from "../../lib/data";
+import { TYPE_LABEL } from "../../lib/atlas";
+const years = [...new Set(events.map((e) => e.start_date.slice(0, 4)))].sort();
 ---
-<Base title="Cronología">
+<Base index={false} title="Cronología" description="Cronología documentada 1931-1939: cada acontecimiento con su fuente.">
   <h1>Cronología</h1>
-  <ol>
-    {events.map((e) => (
-      <li><span class="meta">{e.start_date} ({PRECISION_LABEL[e.date_precision]})</span> · <a href={url(`/acontecimientos/${e.id}/`)}>{e.title}</a></li>
-    ))}
+  <p class="meta">Solo aparecen acontecimientos con evidencia documental revisada. La cronología crecerá fase a fase; por ahora predominan las fuentes oficiales de la República porque el BOE de Burgos aún no está incorporado.</p>
+  <form class="filtros" aria-controls="crono">
+    <label>Año <select id="c-year"><option value="">Todos</option>{years.map((y) => <option>{y}</option>)}</select></label>
+    <label>Tipo <select id="c-type"><option value="">Todos</option>{Object.entries(TYPE_LABEL).map(([k, v]) => <option value={k}>{v}</option>)}</select></label>
+    <output id="c-count" class="meta" aria-live="polite"></output>
+  </form>
+  <ol id="crono" class="crono">
+    {events.map((e) => {
+      const y0 = Number(e.start_date.slice(0, 4)), y1 = Number((e.end_date ?? e.start_date).slice(0, 4));
+      return (
+        <li data-y0={y0} data-y1={y1} data-type={e.event_type}>
+          <span class="meta">{e.start_date}{e.end_date ? ` a ${e.end_date}` : ""} ({PRECISION_LABEL[e.date_precision]}) · {TYPE_LABEL[e.event_type]}</span><br />
+          <a href={url(`/acontecimientos/${e.id}/`)}>{e.title}</a>
+          {e.spatial_precision !== "estatal" && <> · <a class="meta" href={url(`/atlas/?year=${y0}&sel=${e.id}`)}>ver en el mapa</a></>}
+        </li>
+      );
+    })}
   </ol>
 </Base>
+<style is:global>
+  .crono li { margin: 10px 0; }
+  .filtros { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: end; margin: 8px 0 16px; }
+  .filtros label { display: grid; gap: 4px; color: var(--muted); font-size: .9rem; }
+  .filtros select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 4px 6px; min-height: 36px; max-width: 100%; }
+</style>
+<script>
+  const y = document.getElementById("c-year") as HTMLSelectElement, t = document.getElementById("c-type") as HTMLSelectElement;
+  const items = [...document.querySelectorAll<HTMLLIElement>("#crono li")];
+  const out = document.getElementById("c-count")!;
+  const q = new URLSearchParams(location.search);
+  if (q.get("year")) y.value = q.get("year")!; if (q.get("tipo")) t.value = q.get("tipo")!;
+  function apply() {
+    let n = 0;
+    for (const li of items) {
+      const okY = !y.value || (Number(li.dataset.y0) <= Number(y.value) && Number(y.value) <= Number(li.dataset.y1));
+      const okT = !t.value || li.dataset.type === t.value;
+      li.hidden = !(okY && okT); if (!li.hidden) n++;
+    }
+    out.textContent = `${n} de ${items.length}`;
+    const p = new URLSearchParams(); if (y.value) p.set("year", y.value); if (t.value) p.set("tipo", t.value);
+    history.replaceState(null, "", p.toString() ? `?${p}` : location.pathname);
+  }
+  y.addEventListener("change", apply); t.addEventListener("change", apply); apply();
+</script>

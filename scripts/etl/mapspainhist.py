@@ -68,6 +68,8 @@ def main() -> None:
         derecho[y][prov] += int(r["pder"])
         nmun[y][prov] += 1
     area = {r["cod_unit"]: int(r["area_km2"]) for r in csv.DictReader((SRC / "prov_1930_areas.csv").open(encoding="utf-8"))}
+    cent = {r["cod_unit"]: [float(r["lon"]), float(r["lat"])]
+            for r in csv.DictReader((SRC / "prov_1930_centroides.csv").open(encoding="utf-8"))}
 
     # Lugares
     for code, (name, name1930) in NAMES.items():
@@ -78,6 +80,7 @@ def main() -> None:
             "place_type": "municipio" if plaza else "provincia",
             "parent_id": "plc-espana",
             "ine_code": code,
+            "centroid": cent[code],
             "geometry_ref": f"provincias_1930.geojson#cod_unit={code}",
             "geometry_precision": "exacta",
             "source_ids": ["F033"],

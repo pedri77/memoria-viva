@@ -3,7 +3,7 @@ import Base from "../layouts/Base.astro";
 import { sources } from "../lib/data";
 const ESTADO: Record<string, string> = { candidate: "candidata", researched: "auditada", permission_pending: "permiso pendiente", pilot: "en piloto", production: "en uso", blocked: "bloqueada" };
 ---
-<Base title="Fuentes" description="Registro de fuentes de España: Memoria Viva, con prioridad, estado y licencia.">
+<Base index={false} title="Fuentes" description="Registro de fuentes de España: Memoria Viva, con prioridad, estado y licencia.">
   <h1>Fuentes</h1>
   <p class="meta">Auditoría del 14-11-2026. «Prioridad» indica el orden de trabajo del piloto 1931-1939, no la importancia histórica de la institución.</p>
   <div class="table-wrap">
