@@ -1,0 +1,20 @@
+{
+  "name": "memoria-viva",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "España: Memoria Viva. Atlas y archivo documental de la historia contemporánea de España (piloto 1931-1939).",
+  "license": "MIT",
+  "scripts": {
+    "validate": "node scripts/checks/validate.mjs",
+    "check:links": "node scripts/checks/check-links.mjs",
+    "dev": "astro dev --root site",
+    "build": "npm run validate && astro build --root site",
+    "preview": "astro preview --root site"
+  },
+  "devDependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "astro": "^7.4.12"
+  }
+}

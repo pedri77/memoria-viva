@@ -1,0 +1,9 @@
+---
+import Base from "../layouts/Base.astro";
+import { events, documents, sources, url } from "../lib/data";
+---
+<Base title="Inicio">
+  <h1>Historia contemporánea de España, documento a documento</h1>
+  <p>Un atlas y archivo de la Segunda República y la Guerra Civil (1931-1939) en el que cada afirmación enlaza a la fuente que la sostiene, con su fecha, su lugar, su grado de certeza y sus condiciones de uso.</p>
+  <p class="card">El proyecto está en su fase inicial. De momento hay {events.length} acontecimiento, {documents.length} documento y {sources.length} fuentes registradas. Antes de seguir, lee <a href={url("/metodologia/")}>cómo se documenta</a>.</p>
+</Base>

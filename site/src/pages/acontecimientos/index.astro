@@ -1,0 +1,12 @@
+---
+import Base from "../../layouts/Base.astro";
+import { events, url, PRECISION_LABEL } from "../../lib/data";
+---
+<Base title="Cronología">
+  <h1>Cronología</h1>
+  <ol>
+    {events.map((e) => (
+      <li><span class="meta">{e.start_date} ({PRECISION_LABEL[e.date_precision]})</span> · <a href={url(`/acontecimientos/${e.id}/`)}>{e.title}</a></li>
+    ))}
+  </ol>
+</Base>

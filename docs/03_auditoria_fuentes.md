@@ -31,7 +31,7 @@
 
 - **Acceso web:** `hemerotecadigital.bne.es/robots.txt` contiene `User-agent: * / Disallow: /` (solo permite Googlebot y bingbot). `www.bne.es` responde 403 a clientes automáticos. **Prohibido el scraping.**
 - **Vía abierta encontrada:** la BNE publica en datos.gob.es dos conjuntos con **licencia CC BY 4.0**: «Hemeroteca digital. Texto completo» (CSV, actualizado 08-09-2026) y «Hemeroteca digital. Listado de títulos» (28-09-2026). Las distribuciones apuntan a `hemerotecadigital.bne.es/hd/es/fulltext-csv`.
-- **Pendiente:** que David confirme si la descarga de esa distribución oficial es aceptable aunque el robots.txt del host prohíba agentes. Recomendación: sí, porque es la distribución publicada para reutilización, con una sola descarga manual y sin rastreo.
+- **Resuelto (14-11-2026):** el autor aprobó una descarga única de la distribución oficial. El servidor devuelve 403 a clientes automáticos, así que se descargó desde un navegador, como haría una persona con el enlace de datos.gob.es. Fichero: `data/external/bne/hemeroteca_fulltext_2026-11-14.csv` (5.441 cabeceras; 2.097 con texto completo; 573 cubren 1931-1939 y 390 de ellas tienen ZIP de texto completo).
 - **Decisión:** prensa del piloto solo desde ese conjunto; páginas citadas con enlace al visor.
 
 ### F009 INE OpenAPI

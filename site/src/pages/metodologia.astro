@@ -1,0 +1,27 @@
+---
+import Base from "../layouts/Base.astro";
+import { url } from "../lib/data";
+---
+<Base title="Metodología" description="Cómo se documenta, qué se publica y qué no en España: Memoria Viva.">
+  <h1>Metodología</h1>
+  <h2>Principios</h2>
+  <ol>
+    <li>Cada objeto publicado identifica su fuente, su custodio, su fecha con la precisión real y sus condiciones de reutilización.</li>
+    <li>Un documento acredita lo que dice, no que lo que dice sea cierto. Cada documento se contextualiza: quién lo produjo y para qué.</li>
+    <li>Se distingue entre lo que dice un documento, un hecho contrastado, una interpretación (siempre atribuida) y una estimación.</li>
+    <li>La violencia y la represión ejercidas por los distintos actores se describen según la evidencia, distinguiendo periodos, agentes, mecanismos y carácter institucional, sin simetrías artificiales.</li>
+    <li>La ausencia de documentos no prueba la ausencia de hechos. Las lagunas se muestran.</li>
+    <li>Los datos estadísticos se publican con unidad, denominador, método y advertencias de comparabilidad. No se interpolan valores en silencio.</li>
+  </ol>
+  <h2>Qué no se publica</h2>
+  <ul>
+    <li>Nombres de víctimas, de familiares o de responsables de actos de represión. Sí se nombra a cargos públicos en el ejercicio de su cargo cuando consta en una fuente oficial.</li>
+    <li>Coordenadas exactas de fosas o de otros lugares sensibles: como mucho, el municipio.</li>
+    <li>Imágenes o textos con derechos sin autorización: se enlaza al custodio.</li>
+    <li>Contenidos generados por IA presentados como documentos, testimonios o fotografías.</li>
+  </ul>
+  <h2>Correcciones</h2>
+  <p>Cualquier error puede notificarse en <a href="https://github.com/pedri77/memoria-viva/issues/new?template=correccion.yml">el formulario de correcciones</a>. Cada corrección queda registrada en el historial público del repositorio.</p>
+  <h2>Fuentes</h2>
+  <p>El registro de fuentes, con su estado de auditoría y su licencia, está en <a href={url("/fuentes/")}>Fuentes</a>.</p>
+</Base>

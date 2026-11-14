@@ -1,0 +1,12 @@
+{
+  "id": "F028",
+  "name": "The National Archives UK",
+  "url": "https://www.nationalarchives.gov.uk/",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "Open Government Licence en metadatos",
+  "access": "Discovery API; sí (Discovery API)",
+  "years": "1931-1978",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

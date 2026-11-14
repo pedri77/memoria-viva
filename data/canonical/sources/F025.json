@@ -1,0 +1,12 @@
+{
+  "id": "F025",
+  "name": "Bibliotecas y hemerotecas regionales",
+  "url": "https://www.cultura.gob.es/",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "varias",
+  "access": "varios; varios",
+  "years": "variable",
+  "risks": "URL genérica",
+  "checked_at": "2026-11-14"
+}

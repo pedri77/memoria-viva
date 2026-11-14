@@ -1,0 +1,12 @@
+{
+  "id": "F007",
+  "name": "BNE Hemeroteca Digital",
+  "url": "https://datos.gob.es/catalogo/ea0019768-hemeroteca-digital-texto-completo1",
+  "priority": "P0",
+  "status": "researched",
+  "license": "CC BY 4.0 (datos.gob.es)",
+  "access": "robots.txt de hemerotecadigital.bne.es prohíbe agentes salvo Google/Bing; datasets en datos.gob.es: texto completo CSV y listado de títulos (actualizado 08-09-2026)",
+  "years": "1874-1978 según cabecera",
+  "risks": "OCR con errores; prensa no valida hechos",
+  "checked_at": "2026-11-14"
+}

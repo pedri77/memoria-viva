@@ -1,0 +1,13 @@
+---
+import Base from "../../layouts/Base.astro";
+import { documents, url, RIGHTS_LABEL } from "../../lib/data";
+---
+<Base title="Archivo">
+  <h1>Archivo</h1>
+  {documents.map((d) => (
+    <article class="card">
+      <h2><a href={url(`/documentos/${d.id}/`)}>{d.title}</a></h2>
+      <p class="meta">{d.date} · {d.custodian} · <span class="tag">{RIGHTS_LABEL[d.rights.status]}</span></p>
+    </article>
+  ))}
+</Base>

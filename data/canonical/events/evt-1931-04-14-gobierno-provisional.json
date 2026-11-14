@@ -1,0 +1,22 @@
+{
+  "id": "evt-1931-04-14-gobierno-provisional",
+  "title": "Proclamación de la Segunda República y formación del Gobierno provisional",
+  "event_type": "politico",
+  "start_date": "1931-04-14",
+  "date_precision": "dia",
+  "place_ids": ["plc-madrid", "plc-espana"],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "El 14 de abril de 1931 el Comité de las fuerzas políticas coaligadas designó a Niceto Alcalá-Zamora y Torres Presidente del Gobierno provisional de la República.",
+      "kind": "documento",
+      "evidence": [ { "document_id": "doc-gaceta-1931-04-15-p194", "locator": "pág. 194" } ]
+    },
+    {
+      "text": "Ese mismo día se nombraron, entre otros, a Manuel Azaña ministro de la Guerra y a Francisco Largo Caballero ministro de Trabajo.",
+      "kind": "documento",
+      "evidence": [ { "document_id": "doc-gaceta-1931-04-15-p194", "locator": "pág. 194" } ]
+    }
+  ],
+  "review": { "status": "borrador", "date": "2026-11-14", "by": ["autor"], "note": "Ejemplo F0. Falta contexto historiográfico (elecciones municipales del 12 de abril) con su propia evidencia." }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "F030",
+  "name": "Wikidata",
+  "url": "https://www.wikidata.org/",
+  "priority": "P1",
+  "status": "candidate",
+  "license": "CC0",
+  "access": "SPARQL y API; sí",
+  "years": "multiperiodo",
+  "risks": "calidad desigual: solo como identificador, nunca como evidencia",
+  "checked_at": "2026-11-14"
+}

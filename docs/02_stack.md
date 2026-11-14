@@ -14,7 +14,7 @@ El stack del documento (l.163-169, l.408-423) es razonable para una plataforma i
 
 | Capa (doc) | Veredicto | Motivo | Sustituto en el MVP |
 |---|---|---|---|
-| Next.js + TS | Cambiar | SSR y BFF sin backend no aportan; el patrón propio de David es Vite + TS (torre-osi, archipielago-cuerpo). | **Astro 7** (páginas estáticas por ficha, buen SEO, islas interactivas) o Vite 8 si se quiere una sola SPA. Recomendado: Astro, porque cada ficha necesita URL propia indexable. |
+| Next.js + TS | Cambiar | SSR y BFF sin backend no aportan; el patrón de otros proyectos del autor es Vite + TS (torre-osi, archipielago-cuerpo). | **Astro 7** (páginas estáticas por ficha, buen SEO, islas interactivas) o Vite 8 si se quiere una sola SPA. Recomendado: Astro, porque cada ficha necesita URL propia indexable. |
 | MapLibre GL + deck.gl | Mantener MapLibre, quitar deck.gl | deck.gl solo compensa con decenas de miles de puntos. | **maplibre-gl 6.18** + **pmtiles 4.5** (teselas vectoriales en un único fichero estático). |
 | D3 / ECharts | Mantener ECharts | Series con anotaciones de discontinuidad y tabla accesible. | **echarts 6.1** |
 | GSAP | Mantener | Narrativa con scroll; respetar `prefers-reduced-motion`. | **gsap 3.15** |

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://memoria-viva/schemas/document.schema.json",
+  "title": "Documento (ficha documental)",
+  "type": "object",
+  "required": ["id", "title", "document_type", "source_ids", "custodian", "canonical_url", "date", "date_precision", "rights", "review", "consulted_at"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "title": { "type": "string" },
+    "title_original": { "type": "string" },
+    "document_type": { "enum": ["disposicion", "prensa", "expediente", "fotografia", "cartel", "mapa", "tabla_estadistica", "libro", "otro"] },
+    "source_ids": { "$ref": "common.schema.json#/$defs/source_ids" },
+    "custodian": { "type": "string" },
+    "signature": { "type": "string" },
+    "canonical_url": { "type": "string", "format": "uri" },
+    "date": { "$ref": "common.schema.json#/$defs/fecha_iso" },
+    "date_end": { "$ref": "common.schema.json#/$defs/fecha_iso" },
+    "date_precision": { "$ref": "common.schema.json#/$defs/precision" },
+    "place_ids": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/id" } },
+    "summary": { "type": "string" },
+    "context": { "type": "string", "description": "autoría, finalidad y sesgos de la fuente" },
+    "text_origin": { "enum": ["ninguno", "ocr_automatico", "transcripcion_validada"] },
+    "rights": { "$ref": "common.schema.json#/$defs/rights" },
+    "review": { "$ref": "common.schema.json#/$defs/review" },
+    "consulted_at": { "$ref": "common.schema.json#/$defs/fecha_iso" }
+  }
+}

@@ -1,0 +1,25 @@
+---
+import Base from "../../layouts/Base.astro";
+import { events, documents, places, byId, url, KIND_LABEL, PRECISION_LABEL } from "../../lib/data";
+export function getStaticPaths() {
+  return events.map((e) => ({ params: { id: e.id }, props: { e: e } }));
+}
+const { e } = Astro.props;
+---
+<Base title={e.title}>
+  <p class="meta"><a href={url("/acontecimientos/")}>Cronología</a></p>
+  <h1>{e.title}</h1>
+  <p class="meta">{e.start_date}{e.end_date ? ` a ${e.end_date}` : ""} ({PRECISION_LABEL[e.date_precision]}) · {e.place_ids.map((p: string) => byId(places, p)?.canonical_name).join(", ")}</p>
+  <h2>Qué sabemos y cómo lo sabemos</h2>
+  {e.claims.map((c: any) => (
+    <article class="card">
+      <p><span class="tag">{KIND_LABEL[c.kind]}</span>{c.attributed_to && <span class="meta"> · según {c.attributed_to}</span>}</p>
+      <p>{c.text}</p>
+      <p class="meta">Evidencia: {c.evidence.map((ev: any) => {
+        const d = byId(documents, ev.document_id);
+        return <><a href={url(`/documentos/${ev.document_id}/`)}>{d?.title}</a>{ev.locator ? `, ${ev.locator}` : ""}</>;
+      })}</p>
+    </article>
+  ))}
+  {e.review.note && <p class="meta">Nota de revisión: {e.review.note}</p>}
+</Base>

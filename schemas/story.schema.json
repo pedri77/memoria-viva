@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://memoria-viva/schemas/story.schema.json",
+  "title": "Narrativa",
+  "type": "object",
+  "required": ["slug", "title", "summary", "scenes", "reviewers", "review"],
+  "additionalProperties": false,
+  "properties": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "title": { "type": "string" },
+    "summary": { "type": "string" },
+    "scenes": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["id", "text", "event_ids"], "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "text": { "type": "string" },
+          "event_ids": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/id" } },
+          "document_ids": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/id" } },
+          "map": { "type": "object" },
+          "editorial_note": { "type": "string" }
+        }
+      }
+    },
+    "reviewers": { "type": "array", "items": { "type": "string" }, "minItems": 2 },
+    "review": { "$ref": "common.schema.json#/$defs/review" }
+  }
+}

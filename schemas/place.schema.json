@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://memoria-viva/schemas/place.schema.json",
+  "title": "Lugar",
+  "type": "object",
+  "required": ["id", "canonical_name", "place_type", "source_ids", "geometry_precision", "review"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "canonical_name": { "type": "string" },
+    "historical_names": {
+      "type": "array",
+      "items": {
+        "type": "object", "required": ["name"], "additionalProperties": false,
+        "properties": { "name": { "type": "string" }, "valid_from": { "$ref": "common.schema.json#/$defs/fecha_iso" }, "valid_to": { "$ref": "common.schema.json#/$defs/fecha_iso" } }
+      }
+    },
+    "place_type": { "enum": ["estado", "region", "provincia", "municipio", "localidad", "lugar"] },
+    "parent_id": { "$ref": "common.schema.json#/$defs/id" },
+    "wikidata": { "type": "string", "pattern": "^Q\\d+$" },
+    "ine_code": { "type": "string" },
+    "centroid": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2, "description": "[lon, lat]" },
+    "geometry_ref": { "type": "string", "description": "id de la geometría en el GeoJSON de capas" },
+    "geometry_precision": { "enum": ["exacta", "aproximada", "centroide", "sin_geometria"] },
+    "sensitive": { "type": "boolean", "default": false },
+    "source_ids": { "$ref": "common.schema.json#/$defs/source_ids" },
+    "review": { "$ref": "common.schema.json#/$defs/review" }
+  }
+}

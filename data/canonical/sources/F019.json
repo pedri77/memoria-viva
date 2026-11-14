@@ -1,0 +1,12 @@
+{
+  "id": "F019",
+  "name": "Archivos municipales",
+  "url": "https://www.cultura.gob.es/cultura/archivos/bases-de-datos.html",
+  "priority": "P1",
+  "status": "candidate",
+  "license": "variable",
+  "access": "depende del municipio; convenio",
+  "years": "variable",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

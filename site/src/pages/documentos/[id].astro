@@ -1,0 +1,33 @@
+---
+import Base from "../../layouts/Base.astro";
+import { documents, events, sources, places, byId, url, RIGHTS_LABEL, PRECISION_LABEL } from "../../lib/data";
+export function getStaticPaths() {
+  return documents.map((d) => ({ params: { id: d.id }, props: { d: d } }));
+}
+const { d } = Astro.props;
+const related = events.filter((e) => e.claims.some((c: any) => c.evidence.some((ev: any) => ev.document_id === d.id)));
+const cite = `${d.custodian}. ${d.signature ?? d.title}. ${d.canonical_url} [consulta: ${d.consulted_at}]. Ficha: España: Memoria Viva, ${d.id}.`;
+---
+<Base title={d.title} description={d.summary}>
+  <p class="meta"><a href={url("/documentos/")}>Archivo</a></p>
+  <h1>{d.title}</h1>
+  {d.title_original && <p class="meta">Título original: {d.title_original}</p>}
+  <p>{d.summary}</p>
+  <p><a href={d.canonical_url} rel="noopener">Ver el documento en el custodio</a></p>
+  <section class="card" aria-labelledby="fuente">
+    <h2 id="fuente">Fuente y contexto</h2>
+    <dl>
+      <dt>Custodio</dt><dd>{d.custodian}</dd>
+      {d.signature && <><dt>Signatura</dt><dd>{d.signature}</dd></>}
+      <dt>Fecha</dt><dd>{d.date} ({PRECISION_LABEL[d.date_precision]})</dd>
+      <dt>Lugar</dt><dd>{(d.place_ids ?? []).map((p: string) => byId(places, p)?.canonical_name).join(", ") || "sin lugar"}</dd>
+      <dt>Fuente</dt><dd>{d.source_ids.map((s: string) => byId(sources, s)?.name).join(", ")}</dd>
+      <dt>Texto</dt><dd>{d.text_origin === "ocr_automatico" ? "OCR automático del custodio, sin validar" : d.text_origin === "transcripcion_validada" ? "Transcripción validada" : "Sin texto"}</dd>
+      <dt>Derechos</dt><dd>{RIGHTS_LABEL[d.rights.status]}. {d.rights.attribution} (<a href={d.rights.evidence_url} rel="noopener">condiciones</a>, revisado {d.rights.checked_at})</dd>
+      <dt>Revisión</dt><dd>{d.review.status}, {d.review.date}</dd>
+    </dl>
+    {d.context && <p><strong>Contexto:</strong> {d.context}</p>}
+  </section>
+  {related.length > 0 && <section><h2>Acontecimientos que cita</h2><ul>{related.map((e) => <li><a href={url(`/acontecimientos/${e.id}/`)}>{e.title}</a></li>)}</ul></section>}
+  <section><h2>Citar esta ficha</h2><p class="card meta">{cite}</p></section>
+</Base>

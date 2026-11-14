@@ -1,0 +1,12 @@
+{
+  "id": "F003",
+  "name": "CDMH portal víctimas y represaliados",
+  "url": "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/cdmh/bases-de-datos.html",
+  "priority": "P2",
+  "status": "blocked",
+  "license": "no declarada",
+  "access": "buscador nominal; sin descarga",
+  "years": "1936-1975",
+  "risks": "homónimos, LOPDGDD art.3, Ley 16/1985 art.57",
+  "checked_at": "2026-11-14"
+}

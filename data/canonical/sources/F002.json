@@ -1,0 +1,12 @@
+{
+  "id": "F002",
+  "name": "CDMH fondos documentales",
+  "url": "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/cdmh/fondos-documentales.html",
+  "priority": "P0",
+  "status": "researched",
+  "license": "no declarada",
+  "access": "descripciones vía PARES; sin API",
+  "years": "1931-1978",
+  "risks": "documentos producidos por la represión: contextualizar",
+  "checked_at": "2026-11-14"
+}

@@ -1,0 +1,36 @@
+name: Corrección o retirada
+description: Notifica un error, una fuente mal citada o pide retirar un contenido.
+title: "[corrección] "
+labels: ["correccion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por ayudar a corregir. No incluyas datos personales tuyos ni de terceros en este formulario: es público.
+  - type: input
+    id: ficha
+    attributes:
+      label: Ficha afectada
+      description: URL de la página o id del objeto (por ejemplo doc-gaceta-1931-04-15-p194)
+    validations:
+      required: true
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo
+      options:
+        - Error de hecho o de fecha
+        - Fuente o enlace incorrecto
+        - Interpretación sin atribuir o sesgada
+        - Derechos de autor o de imagen
+        - Petición de retirada (privacidad o familia)
+        - Otro
+    validations:
+      required: true
+  - type: textarea
+    id: detalle
+    attributes:
+      label: Qué está mal y cómo lo sabes
+      description: Aporta la referencia (archivo, signatura, publicación, página) que lo acredita.
+    validations:
+      required: true

@@ -1,0 +1,12 @@
+{
+  "id": "F008",
+  "name": "BNE Biblioteca Digital Hispánica",
+  "url": "https://bnelab.bne.es/",
+  "priority": "P1",
+  "status": "candidate",
+  "license": "CC BY 4.0 en datos.gob.es (verificar por conjunto)",
+  "access": "bdh-rd.bne.es/oai no responde como OAI; datos.bne.es SPARQL 403; conjuntos BNElab y datos.gob.es",
+  "years": "variable",
+  "risks": "antibot",
+  "checked_at": "2026-11-14"
+}

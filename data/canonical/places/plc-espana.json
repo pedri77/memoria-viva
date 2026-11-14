@@ -1,0 +1,9 @@
+{
+  "id": "plc-espana",
+  "canonical_name": "España",
+  "place_type": "estado",
+  "wikidata": "Q29",
+  "geometry_precision": "sin_geometria",
+  "source_ids": ["F030"],
+  "review": { "status": "borrador", "date": "2026-11-14", "by": ["autor"] }
+}

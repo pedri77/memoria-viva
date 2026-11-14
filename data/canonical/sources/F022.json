@@ -1,0 +1,12 @@
+{
+  "id": "F022",
+  "name": "Biblioteca Virtual de Prensa Histórica",
+  "url": "https://prensahistorica.mcu.es/",
+  "priority": "P1",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "portal; OAI-PMH por verificar",
+  "years": "variable",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

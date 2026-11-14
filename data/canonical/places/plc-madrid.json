@@ -1,0 +1,12 @@
+{
+  "id": "plc-madrid",
+  "canonical_name": "Madrid",
+  "place_type": "municipio",
+  "parent_id": "plc-espana",
+  "wikidata": "Q2807",
+  "ine_code": "28079",
+  "centroid": [-3.7038, 40.4168],
+  "geometry_precision": "centroide",
+  "source_ids": ["F010", "F030"],
+  "review": { "status": "borrador", "date": "2026-11-14", "by": ["autor"], "note": "Ejemplo F0. Falta comprobar límites municipales de 1930 en la tabla de alteraciones del INE (anexiones de 1948-1954 posteriores al piloto)." }
+}

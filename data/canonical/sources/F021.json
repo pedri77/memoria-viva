@@ -1,0 +1,12 @@
+{
+  "id": "F021",
+  "name": "Europeana",
+  "url": "https://europeana.atlassian.net/wiki/spaces/EF/pages/1627914244",
+  "priority": "P1",
+  "status": "candidate",
+  "license": "CC0 en metadatos",
+  "access": "Search, Record e IIIF APIs (clave gratuita); sí",
+  "years": "variable",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://memoria-viva/schemas/indicator.schema.json",
+  "title": "Indicador estadístico y sus observaciones",
+  "type": "object",
+  "required": ["id", "concept", "definition", "unit", "method", "source_ids", "comparability_notes", "observations", "review"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "concept": { "type": "string" },
+    "definition": { "type": "string" },
+    "unit": { "type": "string" },
+    "denominator": { "type": "string" },
+    "method": { "type": "string", "description": "cómo se obtuvo: transcripción, cálculo, etc." },
+    "source_ids": { "$ref": "common.schema.json#/$defs/source_ids" },
+    "comparability_notes": { "type": "string" },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["place_id", "period", "value", "document_id"],
+        "additionalProperties": false,
+        "properties": {
+          "place_id": { "$ref": "common.schema.json#/$defs/id" },
+          "period": { "$ref": "common.schema.json#/$defs/fecha_iso" },
+          "value": { "type": ["number", "null"] },
+          "missingness_reason": { "type": "string" },
+          "uncertainty": { "type": "string" },
+          "document_id": { "$ref": "common.schema.json#/$defs/id" },
+          "locator": { "type": "string" }
+        },
+        "if": { "properties": { "value": { "type": "null" } } },
+        "then": { "required": ["missingness_reason"] }
+      }
+    },
+    "review": { "$ref": "common.schema.json#/$defs/review" }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://memoria-viva/schemas/source.schema.json",
+  "title": "Fuente (institución o conjunto)",
+  "type": "object",
+  "required": ["id", "name", "url", "priority", "status", "license", "access", "checked_at"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "pattern": "^F\\d{3}$" },
+    "name": { "type": "string" },
+    "url": { "type": "string", "format": "uri" },
+    "priority": { "enum": ["P0", "P1", "P2"] },
+    "status": { "enum": ["candidate", "researched", "permission_pending", "pilot", "production", "blocked"] },
+    "license": { "type": "string" },
+    "access": { "type": "string" },
+    "years": { "type": "string" },
+    "risks": { "type": "string" },
+    "checked_at": { "$ref": "common.schema.json#/$defs/fecha_iso" }
+  }
+}

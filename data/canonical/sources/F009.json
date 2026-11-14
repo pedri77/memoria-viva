@@ -1,0 +1,12 @@
+{
+  "id": "F009",
+  "name": "INE INEbase / OpenAPI",
+  "url": "https://servicios.ine.es/wstempus/js/ES/OPERACIONES_DISPONIBLES",
+  "priority": "P2",
+  "status": "researched",
+  "license": "reutilización INE con cita",
+  "access": "API JSON operativa (166 operaciones); sí, pero censo 463 solo 2021; ninguna operación del periodo",
+  "years": "1981 en adelante (comprobado)",
+  "risks": "no cubre 1874-1978",
+  "checked_at": "2026-11-14"
+}

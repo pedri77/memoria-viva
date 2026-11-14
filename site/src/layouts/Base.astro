@@ -1,0 +1,70 @@
+---
+import { url } from "../lib/data";
+interface Props { title: string; description?: string }
+const { title, description = "Atlas y archivo documental de la historia contemporánea de España. Cada afirmación enlaza a su fuente." } = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} · Memoria Viva</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;600&display=swap" />
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <header class="site">
+      <a class="logo" href={url("/")}>España: Memoria Viva</a>
+      <nav aria-label="Principal">
+        <a href={url("/acontecimientos/")}>Cronología</a>
+        <a href={url("/documentos/")}>Archivo</a>
+        <a href={url("/fuentes/")}>Fuentes</a>
+        <a href={url("/metodologia/")}>Metodología</a>
+      </nav>
+    </header>
+    <main id="contenido"><slot /></main>
+    <footer class="site">
+      <p>Proyecto personal en construcción (fase F0). Textos y datos propios: CC BY-SA 4.0. Código: MIT. Los documentos pertenecen a sus custodios y se citan con su licencia.</p>
+      <p><a href="https://github.com/pedri77/memoria-viva/issues/new?template=correccion.yml">Notificar un error</a> · <a href="https://github.com/pedri77/memoria-viva">Código y datos</a></p>
+    </footer>
+  </body>
+</html>
+<style is:global>
+  :root {
+    --bg: #F0E9DB; --surface: #FBF8F1; --ink: #17232F; --muted: #4F5A63;
+    --accent: #8D423C; --line: #D6BE94; --focus: #1F5FAD;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17232F; --surface: #1F2E3C; --ink: #F0E9DB; --muted: #A9ABA7;
+      --accent: #D9958D; --line: #3A4B5B; --focus: #8AB4F8; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17232F; --surface: #1F2E3C; --ink: #F0E9DB; --muted: #A9ABA7;
+    --accent: #D9958D; --line: #3A4B5B; --focus: #8AB4F8; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 "Inter", system-ui, sans-serif; }
+  h1, h2, h3 { font-family: "Source Serif 4", Georgia, serif; line-height: 1.25; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .skip { position: absolute; left: -999px; } .skip:focus { left: 16px; top: 8px; background: var(--surface); padding: 8px; }
+  header.site, footer.site, main { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+  header.site { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; justify-content: space-between; padding-top: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .logo { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 1.25rem; color: var(--ink); text-decoration: none; }
+  nav { display: flex; flex-wrap: wrap; gap: 16px; }
+  nav a { color: var(--ink); }
+  footer.site { margin-top: 64px; padding-top: 16px; padding-bottom: 32px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
+  .meta { color: var(--muted); font-size: .9rem; }
+  .tag { display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 0 10px; font-size: .8rem; color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; font-size: .92rem; }
+  th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .table-wrap { overflow-x: auto; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; } dt { color: var(--muted); }
+  @media (max-width: 600px) { dl { grid-template-columns: 1fr; } dt { margin-top: 8px; } }
+</style>

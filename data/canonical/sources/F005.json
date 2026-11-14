@@ -1,0 +1,12 @@
+{
+  "id": "F005",
+  "name": "CDMH carteles Guerra Civil",
+  "url": "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/cdmh/bases-de-datos.html",
+  "priority": "P1",
+  "status": "candidate",
+  "license": "no declarada",
+  "access": "base de datos + PARES por signatura; sin API",
+  "years": "1936-1939",
+  "risks": "derechos de autor de cartelistas",
+  "checked_at": "2026-11-14"
+}

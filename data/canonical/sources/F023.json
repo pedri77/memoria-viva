@@ -1,0 +1,12 @@
+{
+  "id": "F023",
+  "name": "Hispana",
+  "url": "https://hispana.mcu.es/",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "portal; /oai/ devuelve 404",
+  "years": "variable",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

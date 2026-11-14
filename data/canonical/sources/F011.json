@@ -1,0 +1,12 @@
+{
+  "id": "F011",
+  "name": "CNIG cartografía antigua",
+  "url": "https://centrodedescargas.cnig.es/CentroDescargas/catalogo.do?Serie=CAANT",
+  "priority": "P0",
+  "status": "researched",
+  "license": "Orden FOM/2807/2015, compatible CC BY 4.0, uso comercial permitido",
+  "access": "descarga web por documento; JPG 250 ppp y PDF, sin georreferenciar; 1.752 ficheros",
+  "years": "1500-1900 (CartoAntigua); MTN y minutas aparte",
+  "risks": "georreferenciación propia con error declarado",
+  "checked_at": "2026-11-14"
+}

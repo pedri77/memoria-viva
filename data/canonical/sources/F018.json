@@ -1,0 +1,12 @@
+{
+  "id": "F018",
+  "name": "Archivos autonómicos",
+  "url": "http://www.mecd.gob.es/cultura-mecd/areas-cultura/archivos.html",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "heterogénea",
+  "access": "heterogéneo; heterogéneo",
+  "years": "variable",
+  "risks": "URL rota",
+  "checked_at": "2026-11-14"
+}

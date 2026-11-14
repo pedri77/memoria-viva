@@ -1,0 +1,12 @@
+{
+  "id": "F024",
+  "name": "Archivo General de la Administración",
+  "url": "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/aga/portada.html",
+  "priority": "P1",
+  "status": "candidate",
+  "license": "como F001",
+  "access": "catálogo vía PARES; sin API",
+  "years": "siglo XX",
+  "risks": "",
+  "checked_at": "2026-11-14"
+}

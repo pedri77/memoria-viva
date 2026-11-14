@@ -1,0 +1,12 @@
+{
+  "id": "F010",
+  "name": "INE censos históricos",
+  "url": "https://www.ine.es/intercensal/",
+  "priority": "P0",
+  "status": "researched",
+  "license": "reutilización INE con cita",
+  "access": "INEbase Historia (libros escaneados) y aplicación de alteraciones de municipios; PDF/imagen y tablas web; extracción manual",
+  "years": "1842-1991",
+  "risks": "transcripción manual, población de hecho/derecho",
+  "checked_at": "2026-11-14"
+}

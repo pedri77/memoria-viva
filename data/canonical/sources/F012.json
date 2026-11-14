@@ -1,0 +1,12 @@
+{
+  "id": "F012",
+  "name": "CNIG ortofotos y vuelos históricos",
+  "url": "https://centrodedescargas.cnig.es/CentroDescargas/home",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "CC BY 4.0 compatible",
+  "access": "descarga web; raster / WMS",
+  "years": "vuelo americano 1945-46 y 1956-57",
+  "risks": "fuera del piloto 1931-1939",
+  "checked_at": "2026-11-14"
+}

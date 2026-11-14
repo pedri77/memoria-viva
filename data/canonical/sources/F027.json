@@ -1,0 +1,12 @@
+{
+  "id": "F027",
+  "name": "Archives diplomatiques (Francia)",
+  "url": "https://www.diplomatie.gouv.fr/fr/archives-diplomatiques/",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "por verificar; por verificar",
+  "years": "1931-1978",
+  "risks": "URL del doc es la portada del ministerio",
+  "checked_at": "2026-11-14"
+}

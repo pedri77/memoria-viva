@@ -1,0 +1,12 @@
+{
+  "id": "F013",
+  "name": "Mapa estatal de fosas",
+  "url": "https://mptmd.gob.es/portal/memoria-democratica/mapa-de-fosas",
+  "priority": "P2",
+  "status": "blocked",
+  "license": "no declarada",
+  "access": "mapa y buscador web; registro datos.gob.es sin actualizar desde 17-12-2015; solo distribución HTML",
+  "years": "1936-1975",
+  "risks": "precisión espacial, revictimización",
+  "checked_at": "2026-11-14"
+}
