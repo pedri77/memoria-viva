@@ -1,0 +1,3548 @@
+{
+  "id": "ind-sobremortalidad-prov",
+  "concept": "Defunciones frente a 1934-1935",
+  "definition": "Fallecidos inscritos en cada provincia y año, en porcentaje de la media de 1934 y 1935 (100 = igual que antes de la guerra).",
+  "unit": "índice, media 1934-1935 = 100",
+  "denominator": "media de los fallecidos de 1934 y 1935 en la misma provincia",
+  "method": "Fallecidos del año / media de los fallecidos de 1934 y 1935 × 100, con las cifras absolutas del Anuario de 1943 (scripts/etl/ine_mortalidad_1934_1942.py). No corrige por cambios de población.",
+  "source_ids": [
+    "F010"
+  ],
+  "comparability_notes": "Los años de guerra (1936-1938) recogen solo las defunciones inscritas en el Registro Civil: faltan muchas muertes en el frente, en bombardeos y por violencia, y la inscripción en cada zona fue desigual. Las cifras de 1939 a 1942 son provisionales en la fuente. Las tasas usan la población que estimó entonces el INE. El índice no descuenta la variación de la población ni sus desplazamientos: una provincia que recibió refugiados o tropas puede subir sin que empeorase la salud de sus vecinos.",
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Generado por scripts/etl/ine_mortalidad_1934_1942.py desde la transcripción comprobada. Pendiente de segunda revisión humana."
+  },
+  "observations": [
+    {
+      "place_id": "plc-prov-01",
+      "period": "1934",
+      "value": 101.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1934",
+      "value": 99.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1934",
+      "value": 97.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1934",
+      "value": 100.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1934",
+      "value": 100.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1934",
+      "value": 104.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1934",
+      "value": 97.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1934",
+      "value": 98.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1934",
+      "value": 93.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1934",
+      "value": 103.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1934",
+      "value": 100.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1934",
+      "value": 96.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1934",
+      "value": 106.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1934",
+      "value": 104.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1934",
+      "value": 102.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1934",
+      "value": 102.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1934",
+      "value": 100.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1934",
+      "value": 103.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1934",
+      "value": 100.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1934",
+      "value": 99.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1934",
+      "value": 99.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1934",
+      "value": 101.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1934",
+      "value": 103.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1934",
+      "value": 97.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1934",
+      "value": 101.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1934",
+      "value": 97.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1934",
+      "value": 102.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1934",
+      "value": 98.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1934",
+      "value": 103.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1934",
+      "value": 98.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1934",
+      "value": 99.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1934",
+      "value": 97.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1934",
+      "value": 101.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1934",
+      "value": 96.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1934",
+      "value": 106.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1934",
+      "value": 100.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1934",
+      "value": 103.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1934",
+      "value": 101.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1934",
+      "value": 102.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1934",
+      "value": 99.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1934",
+      "value": 102.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1934",
+      "value": 96.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1934",
+      "value": 95.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1934",
+      "value": 99.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1934",
+      "value": 104.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1934",
+      "value": 99.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1934",
+      "value": 98.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1934",
+      "value": 100.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1934",
+      "value": 98.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1934",
+      "value": 96.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1934 (td=161387), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1935",
+      "value": 98.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1935",
+      "value": 100.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1935",
+      "value": 102.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1935",
+      "value": 99.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1935",
+      "value": 99.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1935",
+      "value": 95.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1935",
+      "value": 102.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1935",
+      "value": 101.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1935",
+      "value": 106.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1935",
+      "value": 96.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1935",
+      "value": 99.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1935",
+      "value": 103.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1935",
+      "value": 94.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1935",
+      "value": 95.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1935",
+      "value": 98.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1935",
+      "value": 97.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1935",
+      "value": 99.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1935",
+      "value": 96.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1935",
+      "value": 99.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1935",
+      "value": 100.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1935",
+      "value": 100.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1935",
+      "value": 98.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1935",
+      "value": 96.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1935",
+      "value": 102.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1935",
+      "value": 98.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1935",
+      "value": 102.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1935",
+      "value": 97.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1935",
+      "value": 101.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1935",
+      "value": 97.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1935",
+      "value": 101.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1935",
+      "value": 100.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1935",
+      "value": 102.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1935",
+      "value": 98.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1935",
+      "value": 103.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1935",
+      "value": 93.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1935",
+      "value": 99.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1935",
+      "value": 96.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1935",
+      "value": 99.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1935",
+      "value": 97.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1935",
+      "value": 100.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1935",
+      "value": 97.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1935",
+      "value": 103.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1935",
+      "value": 105.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1935",
+      "value": 101.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1935",
+      "value": 95.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1935",
+      "value": 100.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1935",
+      "value": 101.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1935",
+      "value": 99.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1935",
+      "value": 101.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1935",
+      "value": 103.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1935 (td=161389), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1936",
+      "value": 110.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1936",
+      "value": 100.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1936",
+      "value": 103.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1936",
+      "value": 108.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1936",
+      "value": 100.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1936",
+      "value": 109.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1936",
+      "value": 107.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1936",
+      "value": 103.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1936",
+      "value": 103.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1936",
+      "value": 102.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1936",
+      "value": 104.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1936",
+      "value": 103.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1936",
+      "value": 96.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1936",
+      "value": 100.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1936",
+      "value": 103.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1936",
+      "value": 101.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1936",
+      "value": 98.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1936",
+      "value": 109.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1936",
+      "value": 94.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1936",
+      "value": 110.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1936",
+      "value": 98.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1936",
+      "value": 99.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1936",
+      "value": 111.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1936",
+      "value": 102.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1936",
+      "value": 103.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1936",
+      "value": 122.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1936",
+      "value": 98.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1936",
+      "value": 145.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1936",
+      "value": 104.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1936",
+      "value": 106.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1936",
+      "value": 105.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1936",
+      "value": 97.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1936",
+      "value": 114.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1936",
+      "value": 96.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1936",
+      "value": 102.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1936",
+      "value": 106.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1936",
+      "value": 95.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1936",
+      "value": 102.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1936",
+      "value": 106.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1936",
+      "value": 97.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1936",
+      "value": 101.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1936",
+      "value": 99.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1936",
+      "value": 111.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1936",
+      "value": 70.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1936",
+      "value": 92.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1936",
+      "value": 103.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1936",
+      "value": 111.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1936",
+      "value": 113.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1936",
+      "value": 113.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1936",
+      "value": 133.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1936 (td=161391), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "El escaneo de la tabla de 1936 está muy dañado: varios dígitos se han fijado con la aritmética de la propia fila (varones + mujeres = total; nacidos − fallecidos = diferencia) y siempre de forma compatible con la imagen; detalle en data/external/ine_anuario1943/notas_transcripcion_1936.txt."
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1937",
+      "value": 143.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1937",
+      "value": 119.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1937",
+      "value": 128.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1937",
+      "value": 142.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1937",
+      "value": 87.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1937",
+      "value": 129.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1937",
+      "value": 97.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1937",
+      "value": 121.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1937",
+      "value": 105.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1937",
+      "value": 111.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1937",
+      "value": 106.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1937",
+      "value": 130.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1937",
+      "value": 131.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1937",
+      "value": 106.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1937",
+      "value": 110.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1937",
+      "value": 121.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1937",
+      "value": 116.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1937",
+      "value": 116.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1937",
+      "value": 120.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1937",
+      "value": 103.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1937",
+      "value": 113.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1937",
+      "value": 82.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1937",
+      "value": 153.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1937",
+      "value": 110.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1937",
+      "value": 124.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1937",
+      "value": 101.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1937",
+      "value": 105.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1937",
+      "value": 145.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1937",
+      "value": 165.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1937",
+      "value": 137.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1937",
+      "value": 108.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1937",
+      "value": 103.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1937",
+      "value": 169.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1937",
+      "value": 97.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1937",
+      "value": 117.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1937",
+      "value": 108.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1937",
+      "value": 98.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1937",
+      "value": 114.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1937",
+      "value": 179.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1937",
+      "value": 100.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1937",
+      "value": 107.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1937",
+      "value": 103.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1937",
+      "value": 133.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1937",
+      "value": 101.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1937",
+      "value": 70.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1937",
+      "value": 124.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1937",
+      "value": 104.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1937",
+      "value": 203.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1937",
+      "value": 96.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1937",
+      "value": 125.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1937 (td=161393), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1938",
+      "value": 121.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1938",
+      "value": 122.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1938",
+      "value": 145.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1938",
+      "value": 135.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1938",
+      "value": 81.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1938",
+      "value": 109.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1938",
+      "value": 118.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1938",
+      "value": 193.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1938",
+      "value": 105.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1938",
+      "value": 98.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1938",
+      "value": 101.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1938",
+      "value": 190.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1938",
+      "value": 141.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1938",
+      "value": 95.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1938",
+      "value": 109.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1938",
+      "value": 133.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1938",
+      "value": 167.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1938",
+      "value": 96.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1938",
+      "value": 97.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1938",
+      "value": 104.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1938",
+      "value": 107.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1938",
+      "value": 111.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1938",
+      "value": 151.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1938",
+      "value": 104.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1938",
+      "value": 137.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1938",
+      "value": 100.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1938",
+      "value": 105.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1938",
+      "value": 138.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1938",
+      "value": 91.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1938",
+      "value": 142.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1938",
+      "value": 113.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1938",
+      "value": 105.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1938",
+      "value": 132.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1938",
+      "value": 88.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1938",
+      "value": 98.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1938",
+      "value": 107.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1938",
+      "value": 98.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1938",
+      "value": 118.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1938",
+      "value": 125.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1938",
+      "value": 89.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1938",
+      "value": 102.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1938",
+      "value": 104.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1938",
+      "value": 211.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1938",
+      "value": 131.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1938",
+      "value": 68.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1938",
+      "value": 171.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1938",
+      "value": 104.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1938",
+      "value": 101.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1938",
+      "value": 91.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1938",
+      "value": 169.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1938 (td=161395), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1939",
+      "value": 112.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1939",
+      "value": 119.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1939",
+      "value": 130.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1939",
+      "value": 149.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1939",
+      "value": 93.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1939",
+      "value": 108.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1939",
+      "value": 109.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1939",
+      "value": 145.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1939",
+      "value": 100.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1939",
+      "value": 91.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1939",
+      "value": 103.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1939",
+      "value": 122.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1939",
+      "value": 150.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1939",
+      "value": 129.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1939",
+      "value": 112.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1939",
+      "value": 113.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1939",
+      "value": 149.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1939",
+      "value": 126.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1939",
+      "value": 109.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1939",
+      "value": 111.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1939",
+      "value": 103.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1939",
+      "value": 104.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1939",
+      "value": 146.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1939",
+      "value": 105.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1939",
+      "value": 143.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1939",
+      "value": 99.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1939",
+      "value": 112.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1939",
+      "value": 156.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1939",
+      "value": 106.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1939",
+      "value": 156.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1939",
+      "value": 110.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1939",
+      "value": 104.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1939",
+      "value": 108.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1939",
+      "value": 82.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1939",
+      "value": 94.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1939",
+      "value": 116.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1939",
+      "value": 94.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1939",
+      "value": 106.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1939",
+      "value": 110.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1939",
+      "value": 92.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1939",
+      "value": 101.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1939",
+      "value": 93.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1939",
+      "value": 140.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1939",
+      "value": 106.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1939",
+      "value": 148.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1939",
+      "value": 147.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1939",
+      "value": 100.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1939",
+      "value": 106.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1939",
+      "value": 88.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1939",
+      "value": 118.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1939 (td=161397), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1940",
+      "value": 103.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1940",
+      "value": 100.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1940",
+      "value": 106.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1940",
+      "value": 127.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1940",
+      "value": 90.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1940",
+      "value": 118.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1940",
+      "value": 108.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1940",
+      "value": 100.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1940",
+      "value": 95.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1940",
+      "value": 96.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1940",
+      "value": 103.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1940",
+      "value": 112.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1940",
+      "value": 144.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1940",
+      "value": 121.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1940",
+      "value": 109.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1940",
+      "value": 99.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1940",
+      "value": 108.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1940",
+      "value": 127.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1940",
+      "value": 119.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1940",
+      "value": 109.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1940",
+      "value": 114.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1940",
+      "value": 101.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1940",
+      "value": 139.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1940",
+      "value": 101.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1940",
+      "value": 90.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1940",
+      "value": 94.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1940",
+      "value": 104.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1940",
+      "value": 115.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1940",
+      "value": 109.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1940",
+      "value": 114.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1940",
+      "value": 104.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1940",
+      "value": 100.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1940",
+      "value": 109.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1940",
+      "value": 84.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1940",
+      "value": 100.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1940",
+      "value": 107.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1940",
+      "value": 94.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1940",
+      "value": 114.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1940",
+      "value": 104.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1940",
+      "value": 94.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1940",
+      "value": 113.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1940",
+      "value": 96.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1940",
+      "value": 102.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1940",
+      "value": 92.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1940",
+      "value": 138.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1940",
+      "value": 113.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1940",
+      "value": 97.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1940",
+      "value": 113.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1940",
+      "value": 92.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1940",
+      "value": 105.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1940 (td=161399), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1941",
+      "value": 107.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1941",
+      "value": 104.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1941",
+      "value": 117.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1941",
+      "value": 122.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1941",
+      "value": 100.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1941",
+      "value": 195.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1941",
+      "value": 109.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1941",
+      "value": 102.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1941",
+      "value": 100.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1941",
+      "value": 150.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1941",
+      "value": 170.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1941",
+      "value": 112.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1941",
+      "value": 145.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1941",
+      "value": 155.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1941",
+      "value": 129.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1941",
+      "value": 101.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1941",
+      "value": 97.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1941",
+      "value": 130.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1941",
+      "value": 105.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1941",
+      "value": 113.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1941",
+      "value": 211.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1941",
+      "value": 97.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1941",
+      "value": 138.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1941",
+      "value": 107.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1941",
+      "value": 93.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1941",
+      "value": 108.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1941",
+      "value": 114.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1941",
+      "value": 117.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1941",
+      "value": 155.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1941",
+      "value": 122.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1941",
+      "value": 108.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1941",
+      "value": 117.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1941",
+      "value": 118.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1941",
+      "value": 95.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1941",
+      "value": 115.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1941",
+      "value": 137.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1941",
+      "value": 109.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1941",
+      "value": 116.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1941",
+      "value": 118.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1941",
+      "value": 104.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1941",
+      "value": 161.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1941",
+      "value": 99.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1941",
+      "value": 109.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1941",
+      "value": 92.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1941",
+      "value": 124.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1941",
+      "value": 116.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1941",
+      "value": 112.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1941",
+      "value": 125.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1941",
+      "value": 96.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1941",
+      "value": 114.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1941 (td=161401), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1942",
+      "value": 102.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1942",
+      "value": 80.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1942",
+      "value": 93.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1942",
+      "value": 89.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1942",
+      "value": 84.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1942",
+      "value": 103.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1942",
+      "value": 105.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1942",
+      "value": 106.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1942",
+      "value": 87.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1942",
+      "value": 98.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1942",
+      "value": 115.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1942",
+      "value": 98.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1942",
+      "value": 93.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1942",
+      "value": 108.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1942",
+      "value": 98.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1942",
+      "value": 80.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1942",
+      "value": 92.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1942",
+      "value": 101.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1942",
+      "value": 88.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1942",
+      "value": 116.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1942",
+      "value": 131.8,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1942",
+      "value": 94.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1942",
+      "value": 96.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1942",
+      "value": 90.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1942",
+      "value": 86.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1942",
+      "value": 91.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1942",
+      "value": 95.1,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1942",
+      "value": 99.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1942",
+      "value": 106.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1942",
+      "value": 99.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1942",
+      "value": 97.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1942",
+      "value": 94.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1942",
+      "value": 95.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1942",
+      "value": 82.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1942",
+      "value": 104.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1942",
+      "value": 97.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1942",
+      "value": 94.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1942",
+      "value": 112.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1942",
+      "value": 104.5,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1942",
+      "value": 91.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1942",
+      "value": 117.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1942",
+      "value": 86.4,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1942",
+      "value": 100.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1942",
+      "value": 85.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1942",
+      "value": 91.6,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1942",
+      "value": 103.3,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1942",
+      "value": 96.7,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1942",
+      "value": 111.2,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1942",
+      "value": 87.9,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1942",
+      "value": 102.0,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "locator": "Anuario 1943, tabla del año 1942 (td=161403), fila de la provincia, fallecidos, cifra absoluta en total, frente a la media de 1934 y 1935",
+      "uncertainty": "Cifras provisionales según la fuente."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "missingness_reason": "Las tablas provinciales del Anuario no incluyen las posesiones del norte y costa occidental de África."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1935",
+      "value": null,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "missingness_reason": "Las tablas provinciales del Anuario no incluyen las posesiones del norte y costa occidental de África."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1936",
+      "value": null,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "missingness_reason": "Las tablas provinciales del Anuario no incluyen las posesiones del norte y costa occidental de África."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1937",
+      "value": null,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "missingness_reason": "Las tablas provinciales del Anuario no incluyen las posesiones del norte y costa occidental de África."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1938",
+      "value": null,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "missingness_reason": "Las tablas provinciales del Anuario no incluyen las posesiones del norte y costa occidental de África."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1939",
+      "value": null,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "missingness_reason": "Las tablas provinciales del Anuario no incluyen las posesiones del norte y costa occidental de África."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1940",
+      "value": null,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "missingness_reason": "Las tablas provinciales del Anuario no incluyen las posesiones del norte y costa occidental de África."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1941",
+      "value": null,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "missingness_reason": "Las tablas provinciales del Anuario no incluyen las posesiones del norte y costa occidental de África."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1942",
+      "value": null,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "missingness_reason": "Las tablas provinciales del Anuario no incluyen las posesiones del norte y costa occidental de África."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "missingness_reason": "Las tablas provinciales del Anuario no incluyen las posesiones del norte y costa occidental de África."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1935",
+      "value": null,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "missingness_reason": "Las tablas provinciales del Anuario no incluyen las posesiones del norte y costa occidental de África."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1936",
+      "value": null,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "missingness_reason": "Las tablas provinciales del Anuario no incluyen las posesiones del norte y costa occidental de África."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1937",
+      "value": null,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "missingness_reason": "Las tablas provinciales del Anuario no incluyen las posesiones del norte y costa occidental de África."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1938",
+      "value": null,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "missingness_reason": "Las tablas provinciales del Anuario no incluyen las posesiones del norte y costa occidental de África."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1939",
+      "value": null,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "missingness_reason": "Las tablas provinciales del Anuario no incluyen las posesiones del norte y costa occidental de África."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1940",
+      "value": null,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "missingness_reason": "Las tablas provinciales del Anuario no incluyen las posesiones del norte y costa occidental de África."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1941",
+      "value": null,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "missingness_reason": "Las tablas provinciales del Anuario no incluyen las posesiones del norte y costa occidental de África."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1942",
+      "value": null,
+      "document_id": "doc-ine-anuario1943-mnp",
+      "missingness_reason": "Las tablas provinciales del Anuario no incluyen las posesiones del norte y costa occidental de África."
+    }
+  ]
+}

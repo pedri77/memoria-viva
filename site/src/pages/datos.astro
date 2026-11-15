@@ -5,12 +5,14 @@ const fmt = (v: number | null, unit: string) =>
   v === null ? "sin dato" : unit.startsWith("habitantes") ? v.toLocaleString("es-ES", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : v.toLocaleString("es-ES");
 const ordered = [...indicators].sort((a, b) => a.id.localeCompare(b.id));
 const provs = places.filter((p) => p.id.startsWith("plc-prov-")).sort((a, b) => a.canonical_name.localeCompare(b.canonical_name, "es"));
-const series = Object.fromEntries(ordered.map((i) => [i.id, { concept: i.concept, unit: i.unit,
-  data: Object.fromEntries(provs.map((p) => [p.id, ["1920", "1930", "1940"].map((y) => i.observations.find((o: any) => o.place_id === p.id && o.period === y)?.value ?? null)])) }]));
+const PER = (i: any) => [...new Set(i.observations.map((o: any) => o.period as string))].sort() as string[];
+const val = (i: any, pid: string, y: string) => i.observations.find((o: any) => o.place_id === pid && o.period === y)?.value ?? null;
+const series = Object.fromEntries(ordered.map((i) => [i.id, { concept: i.concept, unit: i.unit, per: PER(i),
+  data: Object.fromEntries(provs.map((p) => [p.id, PER(i).map((y) => val(i, p.id, y))])) }]));
 ---
-<Base index={false} title="Datos" description="Series censales por provincia 1920, 1930 y 1940, con método, advertencias de comparabilidad y descarga CSV.">
+<Base index={false} title="Datos" description="Series por provincia: censos de 1920, 1930 y 1940 y series anuales, con método, advertencias de comparabilidad y descarga CSV.">
   <h1>Datos</h1>
-  <p>Series por provincia de los censos de 1920, 1930 y 1940. Cada tabla indica de dónde sale cada cifra y qué limita la comparación. Todo el conjunto en <a href={url("/data/v1/indicators.json")}>JSON</a>.</p>
+  <p>Series por provincia: las de los censos de 1920, 1930 y 1940 y las anuales del movimiento natural de la población. Cada tabla indica de dónde sale cada cifra y qué limita la comparación. Todo el conjunto en <a href={url("/data/v1/indicators.json")}>JSON</a>.</p>
 
   <section class="card" aria-labelledby="graf-h">
     <h2 id="graf-h">Comparar provincias</h2>
@@ -19,11 +21,12 @@ const series = Object.fromEntries(ordered.map((i) => [i.id, { concept: i.concept
       <label>Provincias (hasta 6) <select id="g-prov" multiple size="6">{provs.map((p) => <option value={p.id} selected={["plc-prov-28", "plc-prov-08", "plc-prov-42"].includes(p.id)}>{p.canonical_name}</option>)}</select></label>
     </form>
     <div id="grafico" aria-live="polite"></div>
-    <p class="meta">El censo de 1940 se hizo tras la guerra: desplazamientos, exilio y mortalidad afectan a la comparación con 1930. Los tres censos no son puntos equidistantes de una tendencia continua.</p>
+    <p class="meta">El eje horizontal respeta la distancia entre años. El censo de 1940 se hizo tras la guerra: desplazamientos, exilio y mortalidad afectan a la comparación con 1930, y el tramo entre censos no es una tendencia observada.</p>
   </section>
 
   {ordered.map((ind) => {
-    const rows = provs.map((p) => ({ p, vals: ["1920", "1930", "1940"].map((y) => ind.observations.find((o: any) => o.place_id === p.id && o.period === y)?.value ?? null) }));
+    const per = PER(ind);
+    const rows = provs.map((p) => ({ p, vals: per.map((y) => val(ind, p.id, y)) }));
     return (
       <section class="card" id={ind.id}>
         <h2>{ind.concept}</h2>
@@ -36,7 +39,7 @@ const series = Object.fromEntries(ordered.map((i) => [i.id, { concept: i.concept
         <div class="table-wrap">
           <table>
             <caption class="meta">{ind.concept} ({ind.unit})</caption>
-            <thead><tr><th scope="col">Provincia</th>{["1920", "1930", "1940"].map((p) => <th scope="col" style="text-align:right">{p}</th>)}</tr></thead>
+            <thead><tr><th scope="col">Provincia</th>{per.map((y) => <th scope="col" style="text-align:right">{y}</th>)}</tr></thead>
             <tbody>{rows.map((r) => <tr><th scope="row" style="font-weight:400"><a href={url(`/lugares/${r.p.id}/`)}>{r.p.canonical_name}</a></th>{r.vals.map((v) => <td style="text-align:right">{fmt(v, ind.unit)}</td>)}</tr>)}</tbody>
           </table>
         </div>
@@ -54,7 +57,7 @@ const series = Object.fromEntries(ordered.map((i) => [i.id, { concept: i.concept
   .filtros select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 4px 6px; min-height: 36px; max-width: 100%; }
 </style>
 <script>
-  // Gráfico de líneas en SVG propio: 3 censos x hasta 6 provincias. Sin dependencias.
+  // Gráfico de líneas en SVG propio: los años de cada indicador x hasta 6 provincias. Sin dependencias.
   const S = JSON.parse(document.getElementById("series")!.textContent!);
   const indEl = document.getElementById("g-ind") as HTMLSelectElement, provEl = document.getElementById("g-prov") as HTMLSelectElement;
   const el = document.getElementById("grafico")!;
@@ -69,21 +72,23 @@ const series = Object.fromEntries(ordered.map((i) => [i.id, { concept: i.concept
     const W = Math.max(320, el.clientWidth), H = 340, L = 72, R = 16, T = 40, B = 32;
     const all = sel.flatMap((id) => s.data[id]).filter((v: number | null) => v != null) as number[];
     const max = niceMax(Math.max(...all, 1));
-    const x = (i: number) => L + (i * (W - L - R)) / 2;
+    const yrs = s.per.map(Number), y0 = yrs[0], y1 = yrs[yrs.length - 1];
+    const x = (i: number) => y1 === y0 ? (L + W - R) / 2 : L + ((yrs[i] - y0) * (W - L - R)) / (y1 - y0);
+    const salto = (i: number) => yrs[i + 1] - yrs[i] > 1 && yrs[i + 1] >= 1940;
     const y = (v: number) => T + (H - T - B) * (1 - v / max);
     const ticks = [0, 0.25, 0.5, 0.75, 1].map((k) => k * max);
     let svg = `<svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" role="img" aria-label="${esc(s.concept)}: ${sel.map((id) => `${esc(names[id])} ${s.data[id].map((v: number | null) => v == null ? "sin dato" : nf(v)).join(", ")}`).join("; ")}">`;
     svg += ticks.map((t) => `<line x1="${L}" x2="${W - R}" y1="${y(t)}" y2="${y(t)}" stroke="var(--line)"/><text x="${L - 8}" y="${y(t) + 4}" text-anchor="end" font-size="12" fill="var(--muted)">${nf(t)}</text>`).join("");
-    svg += ["1920", "1930", "1940"].map((c, i) => `<text x="${x(i)}" y="${H - 8}" text-anchor="middle" font-size="12" fill="var(--muted)">${c}</text>`).join("");
+    svg += s.per.map((c: string, i: number) => `<text x="${x(i)}" y="${H - 8}" text-anchor="middle" font-size="12" fill="var(--muted)">${c}</text>`).join("");
     svg += `<text x="${L}" y="16" font-size="12" fill="var(--muted)">${esc(s.unit)}</text>`;
     sel.forEach((id, k) => {
       const c = PALETTE[k], d = s.data[id];
       const pts = d.map((v: number | null, i: number) => v == null ? null : [x(i), y(v)]);
-      for (let i = 0; i < 2; i++) if (pts[i] && pts[i + 1]) svg += `<line x1="${pts[i][0]}" y1="${pts[i][1]}" x2="${pts[i + 1][0]}" y2="${pts[i + 1][1]}" stroke="${c}" stroke-width="2.5"${i === 1 ? ' stroke-dasharray="6 4"' : ""}/>`;
-      pts.forEach((p: number[] | null, i: number) => { if (p) svg += `<circle cx="${p[0]}" cy="${p[1]}" r="5" fill="${c}" stroke="var(--surface)" stroke-width="2"><title>${esc(names[id])}, ${["1920", "1930", "1940"][i]}: ${nf(d[i])}</title></circle>`; });
+      for (let i = 0; i < pts.length - 1; i++) if (pts[i] && pts[i + 1]) svg += `<line x1="${pts[i][0]}" y1="${pts[i][1]}" x2="${pts[i + 1][0]}" y2="${pts[i + 1][1]}" stroke="${c}" stroke-width="2.5"${salto(i) ? ' stroke-dasharray="6 4"' : ""}/>`;
+      pts.forEach((p: number[] | null, i: number) => { if (p) svg += `<circle cx="${p[0]}" cy="${p[1]}" r="5" fill="${c}" stroke="var(--surface)" stroke-width="2"><title>${esc(names[id])}, ${s.per[i]}: ${nf(d[i])}</title></circle>`; });
     });
     svg += "</svg>";
-    const legend = `<p class="leyenda-g">${sel.map((id, k) => `<span><i style="background:${PALETTE[k]}"></i>${esc(names[id])}</span>`).join("")}<span class="meta">Tramo 1930-1940 en discontinuo: censo de posguerra</span></p>`;
+    const legend = `<p class="leyenda-g">${sel.map((id, k) => `<span><i style="background:${PALETTE[k]}"></i>${esc(names[id])}</span>`).join("")}${s.per.some((_: string, i: number) => i < s.per.length - 1 && salto(i)) ? `<span class="meta">Tramo 1930-1940 en discontinuo: censo de posguerra</span>` : ""}</p>`;
     el.innerHTML = legend + svg;
   }
   indEl.addEventListener("change", draw); provEl.addEventListener("change", draw);

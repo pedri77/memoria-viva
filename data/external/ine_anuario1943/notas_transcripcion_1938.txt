@@ -1,0 +1,7 @@
+Título: «Movimiento natural de la población, por provincias.—Año de 1938» (sin advertencia en el título). Anuario 1943, págs. 120-121.
+Nota al pie (página 1), llamada (1) en «NUMERO DE FALLECIDOS (1)» de la página 2:
+(1) Sin nacidos muertos, muertos al nacer, ó antes de las primeras veinticuatro horas de vida.
+
+No hay advertencias de provincias sin datos ni datos incompletos: las 50 provincias traen cifras.
+
+Comprobador: falla solo la coherencia tasa/población de Cádiz (población implícita 479913 frente a 600440 de 1940, razón 0,799, justo bajo el umbral 0,8). Las cifras están bien leídas (9 915 fallecidos, 20,66 por 1.000, confirmado en la imagen) y son coherentes con la tasa de natalidad impresa (13986 / 29,14 ≈ 480 mil): el Anuario usa para Cádiz una población base menor que el censo de 1940. No es error de transcripción.

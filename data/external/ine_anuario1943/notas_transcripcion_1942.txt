@@ -1,0 +1,10 @@
+Título: «XXVII. Movimiento natural de la población, por provincias. Año 1942 (1)» (págs. 136-137).
+Llamadas al pie (impresas en la pág. 136):
+(1) Cifras provisionales.
+(2) Sin nacidos muertos, muertos al nacer, o antes de las primeras veinticuatro horas de vida.
+[La llamada (2) va en la cabecera «NUMERO DE FALLECIDOS (2)» de la pág. 137.]
+
+Notas de transcripción:
+- Baleares figura impresa como «Baleares (Palma)» y así se transcribe; tools/comprobar.py no reconoce ese nombre (lo trata como provincia desconocida y descuadra las sumas). Con el nombre «Baleares» la comprobación da OK.
+- Palencia 1942, diferencia: impreso 1711 (nítido); errata, corregido a 1717 (5400 − 3683). Lo confirma la suma de la columna contra el TOTAL (142297).
+- TOTAL 1942, fall_v y fall_h: impresos 204163 y 180586 (nítidos). La suma de las 50 provincias da 204095 varones y 180654 hembras (−68 y +68); el total de fallecidos (384749) sí cuadra. Las 50 filas son coherentes con sus tasas impresas por varones (desviación ≤0,004 por 1.000; un error de 68 se vería como ≥0,035), así que el descuadre parece del propio TOTAL impreso. Se deja el TOTAL impreso; valores que cuadran con las provincias: 204095 y 180654.

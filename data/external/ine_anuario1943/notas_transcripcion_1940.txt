@@ -1,0 +1,13 @@
+Título: «XXIII. Movimiento natural de la población, por provincias. Año de 1940 (1)» (págs. 128-129).
+Llamadas al pie (impresas en la pág. 128):
+(1) Cifras provisionales.
+(2) Sin nacidos muertos, muertos al nacer, ó antes de las primeras veinticuatro horas de vida.
+[La llamada (2) va en la cabecera «NUMERO DE FALLECIDOS (2)» de la pág. 129.]
+
+Notas de transcripción:
+- Madrid 1940, diferencia: impreso «0 444», primer dígito dañado; fijado en 10444 por nacidos − fallecidos (37633 − 27189).
+- Orense 1940, fall_t: último dígito dañado (se lee «7 33?»); fijado en 7338 por V+H=T (3546+3792) y por nacidos − diferencia (9845 − 2507).
+- Navarra 1940, diferencia: impreso 2159; errata, corregido a 2151 (7437 − 5286). Lo confirman la tasa impresa 5,94 por 1.000 y la suma de la columna contra el TOTAL.
+- Vizcaya 1940, fall_h: impreso 2931; errata, corregido a 2981 (6785 − 3804). Lo confirman la tasa de hembras impresa 5,23 y la suma de la columna contra el TOTAL (191223).
+- TOTAL 1940, fall_t: impreso «424 39)», último dígito dañado; 424399 por V+H (233176+191223) y por 627303 − 202904.
+- Cádiz 1940: la comprobación de población avisa (población implícita ≈472.700 frente a 600.440 de hecho en 1940). Las cifras impresas son coherentes entre sí (tasa de nacidos 37,84 y de varones 11,83 dan la misma base de ≈473.000 habitantes), así que la tabla usó esa población para Cádiz; se deja la tasa impresa 21,32.

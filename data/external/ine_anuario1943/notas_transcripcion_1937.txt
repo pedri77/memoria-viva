@@ -1,0 +1,13 @@
+Título: «Movimiento natural de la población, por provincias.—Año de 1937» (sin advertencia en el título). Anuario 1943, págs. 116-117.
+Nota al pie (página 1), llamada (1) en «NUMERO DE FALLECIDOS (1)» de la página 2:
+(1) Sin nacidos muertos, muertos al nacer, o antes de las primeras veinticuatro horas de vida.
+
+No hay advertencias de provincias sin datos ni datos incompletos: las 50 provincias traen cifras.
+
+Lecturas fijadas:
+- Castellón de la Plana 1937, nacidos: dígito dañado («6 20?»), fijado en 6205 por nacidos − fallecidos = diferencia (6205 − 6273 = −68); compatible con hembras 3045 (3160 + 3045).
+- Jaén 1937, nacidos: primer dígito dañado («2? 151»), fijado en 26151 por V+H (13770 + 12381) y por nacidos − fallecidos = diferencia (26151 − 19099 = 7052).
+- Palencia 1937, nacidos: 5385 (2763 + 2622); diferencia 1005 cuadra.
+- Salamanca 1937, nacidos: 9682 (4906 + 4776).
+- Granada 1937, diferencia: último dígito dañado («5 97?», parece 3 o 5), fijado en 5975 por nacidos − fallecidos (18052 − 12077) y por la suma del TOTAL (93667).
+- Oviedo 1937, diferencia: impresa «—5 183»; la fila no cuadra (14517 − 19705 = −5188). Se usa −5188: cuadra con la tasa impresa −6,42 (5183 daría −6,41) y con el TOTAL 93667. Cifra impresa −5183, corregida −5188.

@@ -1,0 +1,14 @@
+Página 1 (llamada (1) en NUMERO DE NACIDOS VIVOS):
+(1) Sin nacidos muertos, muertos al nacer, o antes de las primeras veinticuatro horas de vida.
+
+Página 2: llamada (1) en «NÚMERO DE FALLECIDOS (1)»; la página no imprime texto de nota al pie propio (remite a la nota (1) de la página 1).
+
+Advertencias del título: ninguna («Movimiento natural de la población, por provincias.—Año de 1936»). La tabla no advierte de que el año está afectado por la guerra; las cifras de Madrid dan diferencia negativa impresa «— 1 153» (y «— 0,72» por 1.000).
+
+Observaciones de transcripción (escaneo de la página 2 muy dañado; cada valor fijado es compatible con lo visible):
+- Castellón de la Plana 1936, diferencia: impresa «3 5» con el dígito central perdido; fijada en 395 por nacidos − fallecidos (5 405 − 5 010) y por la fila TOTAL; nacidos 5405 confirmado por varones+hembras (2 717 + 2 688).
+- Fijados por V+H=T: Alava fall_v 1012 («1 0?2»); Albacete fall_v 3734 («3 7?4»); Alicante fall_h 4139 («4 13?»); Avila fall_h 1980 («1 ?80»); Cáceres fall_h 3940 («3 ?40»); Gerona fall_h 2094 («2 ?9?»); Guadalajara fall_h 1427 y fall_t 3296 (también por nacidos − diferencia); Madrid fall_v 21284 («21 28?»); Málaga fall_h 4694 («4 6?4»); Murcia fall_h 5104 («? 104»); Santander fall_h 2382 («2 3?2»); Segovia fall_v 1636 («1 ?36»); Teruel fall_v 1699 («1 69?»); Toledo fall_v 4440 («4 44?»); Valladolid fall_h 2646 («2 ?46»); Pontevedra fall_v 4945 («4 ?45»); TOTAL fall_h 181088 (se lee «181 0?8»).
+- Fijados por nacidos − fallecidos = diferencia: Almería fall_t 6389; Baleares fall_t 5361 y diferencia 1118; Barcelona diferencia 5429; Coruña (La) fall_t 12836 y fall_v 6720; Oviedo diferencia 3452; Palencia fall_t 4309; Palmas (Las) diferencia 4588; Orense fall_t 7084; Salamanca nacidos 11046 y diferencia 4833; Valencia fall_t 17217; Vizcaya fall_t 6783 y fall_h 2826; Zamora diferencia 2833; Tarragona nacidos 5605; Coruña (La) nacidos 22499; Badajoz nacidos 20943.
+- Navarra 1936: fall_v «2 ?59» y fall_h «2 3?8» con total 5 327; fijados en 2959 y 2368 (única combinación compatible con la imagen; cociente coherente con las tasas 8,34 y 6,67).
+- Pontevedra 1936, nacidos: se lee 15 958 (coherente con fallecidos + diferencia).
+- tasa_t con dígito dañado, fijada por la suma de las tasas de varones y hembras: Barcelona 12,67 («1?,67»), Málaga 16,11 («1?,11»), Oviedo 16,53 («1?,53»), Pontevedra 16,69 («16,?9»).

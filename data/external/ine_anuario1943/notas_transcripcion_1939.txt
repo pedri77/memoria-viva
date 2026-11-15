@@ -1,0 +1,14 @@
+Título: «Movimiento natural de la población, por provincias. Año de 1939 (1)». Anuario 1943, págs. 124-125.
+Notas al pie (página 1); la llamada (2) va en «NUMERO DE FALLECIDOS (2)» de la página 2:
+(1) Cifras provisionales.
+(2) Sin nacidos muertos, muertos al nacer, ó antes de las primeras veinticuatro horas de vida.
+
+Advertencia: todas las cifras de 1939 son PROVISIONALES según la nota (1) del título.
+No hay advertencias de provincias sin datos ni datos incompletos: las 50 provincias traen cifras.
+
+Lecturas fijadas:
+- Soria 1939, fall_h: dígito dañado («1 ?97»), fijado en 1197 por V+H=T (2505 − 1308).
+- Tarragona 1939, fall_h: dígito dañado («2 ?93»), fijado en 2693 por V+H=T (6938 − 4245).
+- Sevilla 1939, tasa_t: 16,29 en la imagen (el OCR decía 16,24).
+
+Comprobador: falla solo la coherencia tasa/población de Cádiz (población implícita 476312 frente a 600440 de 1940). Cifras confirmadas en la imagen (10 074 fallecidos, 21,15 por 1.000) y coherentes con la natalidad impresa (14415 / 30,26 ≈ 476 mil): igual que en 1938, el Anuario usa una población base menor para Cádiz. No es error de transcripción.

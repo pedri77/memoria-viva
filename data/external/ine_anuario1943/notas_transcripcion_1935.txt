@@ -1,0 +1,14 @@
+Página 1 (llamada (1) en NUMERO DE NACIDOS VIVOS):
+(1) Sin nacidos muertos, muertos al nacer, o antes de las primeras veinticuatro horas de vida.
+
+Página 2: llamada (1) en «NUMERO DE FALLECIDOS (1)»; la página no imprime texto de nota al pie propio (remite a la nota (1) de la página 1).
+
+Advertencias del título: ninguna («Movimiento natural de la población, por provincias. Año de 1935»).
+
+Observaciones de transcripción:
+- Errata impresa: León 1935, diferencia impresa «6 888»; corregida a 5888 (nacidos 14 179 − fallecidos 8 291 = 5 888; coherente con la tasa impresa 12,91 por 1.000 y con la fila TOTAL 247 968).
+- Badajoz 1935, nacidos: dígito dañado («2? 236»), fijado en 22236 por varones+hembras (11 436 + 10 800) y por fallecidos+diferencia.
+- Barcelona 1935, nacidos: último dígito dañado («31 5?0»), fijado en 31580 por varones+hembras (16 152 + 15 428) y por fallecidos+diferencia.
+- Dígitos dañados en nacidos fijados por varones+hembras y fallecidos+diferencia (compatibles con la imagen): Almería 12022, Gerona 5218, Huelva 8491, Jaén 22624, Málaga 19454, Oviedo 17817, Pontevedra 16174, Santander 9208, Tarragona 5509, Toledo 13733, Zaragoza 12593.
+- Granada 1935, fall_t: lectura ambigua «9 9?6», fijada en 9986 por V+H=T (5 132 + 4 854) y nacidos − diferencia.
+- La provincia se imprime «Sta. Cruz de Tenerife» en la página 2 y «Santa Cruz de Tenerife» en la página 1; se usa la de la página 1.

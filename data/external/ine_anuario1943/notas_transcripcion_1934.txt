@@ -1,0 +1,11 @@
+Página 1 (llamada (1) en NUMERO DE NACIDOS VIVOS):
+(1) Sin nacidos muertos, muertos al nacer, o antes de las primeras veinticuatro horas de vida.
+
+Página 2: llamada (1) en «NUMERO DE FALLECIDOS (1)»; la página no imprime texto de nota al pie propio (remite a la nota (1) de la página 1).
+
+Advertencias del título: ninguna («Movimiento natural de la población, por provincias.—Año de 1934»).
+
+Observaciones de transcripción:
+- La provincia se imprime «Baleares (Palma)»; en el CSV va como «Baleares» para que la reconozca tools/comprobar.py.
+- «Avila» va impreso sin tilde.
+- Sin dígitos fijados por deducción: todas las filas cuadran tal como se leen.

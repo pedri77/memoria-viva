@@ -24,7 +24,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     <label data-capa="censo">Indicador
       <select id="ind">{data.inds.map((i) => <option value={i.id}>{i.concept}</option>)}</select>
     </label>
-    <label data-capa="censo">Censo
+    <label data-capa="censo">Año del dato
       <select id="censo">{CENSOS.map((c) => <option value={c} selected={c === "1930"}>{c}</option>)}</select>
     </label>
     <label data-capa="circ emuni" hidden>Elección
@@ -55,6 +55,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 </Base>
 
 <style is:global>
+  dl.series { display: block; font-size: .88rem; } dl.series dt { color: var(--ink); font-weight: 600; margin-top: 8px; } dl.series dd { margin: 0; color: var(--muted); font-variant-numeric: tabular-nums; }
   .controls { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: end; margin: 16px 0; }
   .controls label { display: grid; gap: 4px; font-size: .9rem; color: var(--muted); }
   .controls .check { display: flex; align-items: center; gap: 8px; }
@@ -108,7 +109,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   const q = new URLSearchParams(location.search);
   if (q.get("year")) yearEl.value = q.get("year")!;
   if (q.get("ind")) indEl.value = q.get("ind")!;
-  if (q.get("censo")) censoEl.value = q.get("censo")!;
+  let censoQ = q.get("censo");
   if (q.get("capa")) capaEl.value = q.get("capa")!;
   if (q.get("eleccion")) elecEl.value = q.get("eleccion")!;
   if (q.get("evar")) evarEl.value = q.get("evar")!;
@@ -130,8 +131,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   const shift = (c: [number, number], ine?: string) =>
     ine && ["35", "38"].includes(ine.slice(0, 2)) ? [c[0] + D.shift[0], c[1] + D.shift[1]] : c;
 
+  const CENSAL = ["1920", "1930", "1940"];
+  // Series anuales (no censales): cortes comunes a todos los años para que los colores se puedan comparar entre años
+  const periodos = (id: string) => [...new Set(Object.values(D.prov).flatMap((p: any) => Object.entries(p.ind[id] ?? {}).filter(([, v]) => v != null).map(([k]) => k)))].sort() as string[];
+  const anual = (id: string) => periodos(id).some((k) => !CENSAL.includes(k));
   function breaks(): number[] {
-    const vals = Object.values(D.prov).map((p: any) => p.ind[indEl.value]?.[censoEl.value]).filter((v: any) => v != null).sort((a: number, b: number) => a - b);
+    const per = anual(indEl.value) ? periodos(indEl.value) : [censoEl.value];
+    const vals = Object.values(D.prov).flatMap((p: any) => per.map((k) => p.ind[indEl.value]?.[k])).filter((v: any) => v != null).sort((a: number, b: number) => a - b);
     return [0.2, 0.4, 0.6, 0.8].map((q) => vals[Math.floor(q * (vals.length - 1))]);
   }
 
@@ -156,10 +162,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   function showProv(code: string) {
     const p = D.prov[code]; if (!p) return;
     selected = `plc-prov-${code}`; syncUrl();
-    const rows = D.inds.map((i: any) => `<tr><th scope="row" style="font-weight:400">${esc(i.short)}</th>${["1920", "1930", "1940"].map((c) => `<td style="text-align:right">${nf(p.ind[i.id]?.[c], i.unit)}</td>`).join("")}</tr>`).join("");
+    const rows = D.inds.filter((i: any) => !anual(i.id)).map((i: any) => `<tr><th scope="row" style="font-weight:400">${esc(i.short)}</th>${CENSAL.map((c) => `<td style="text-align:right">${nf(p.ind[i.id]?.[c], i.unit)}</td>`).join("")}</tr>`).join("");
+    const series = D.inds.filter((i: any) => anual(i.id)).map((i: any) => `<dt>${esc(i.short)}</dt><dd>${periodos(i.id).map((k) => `${k}: ${nf(p.ind[i.id]?.[k], i.unit)}`).join(" · ")}</dd>`).join("");
     const evs = D.events.filter((e: any) => p.events.includes(e.id));
     $("panel").innerHTML = `<h2>${esc(p.name)}</h2>${p.hist ? `<p class="meta">En 1930: ${esc(p.hist)}</p>` : ""}
       <div class="table-wrap"><table><thead><tr><th>Indicador</th><th>1920</th><th>1930</th><th>1940</th></tr></thead><tbody>${rows}</tbody></table></div>
+      ${series ? `<h3>Series anuales</h3><dl class="series">${series}</dl>` : ""}
       <h3>Acontecimientos con lugar en la provincia</h3>
       ${evs.length ? `<ul>${evs.map((e: any) => `<li><a href="${href(`/acontecimientos/${e.id}/`)}">${esc(e.title)}</a></li>`).join("")}</ul>` : `<p class="meta">Ninguno documentado aún.</p>`}
       <p><a href="${href(`/lugares/${p.id}/`)}">Ficha de la provincia</a></p>`;
@@ -183,7 +191,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     const ramp = dark() ? RAMP_D : RAMP_L;
     const unit = D.inds.find((i: any) => i.id === indEl.value).unit;
     const lab = [`< ${nf(b[0], unit)}`, `${nf(b[0], unit)} a ${nf(b[1], unit)}`, `${nf(b[1], unit)} a ${nf(b[2], unit)}`, `${nf(b[2], unit)} a ${nf(b[3], unit)}`, `≥ ${nf(b[3], unit)}`];
-    $("legend").innerHTML = `<span>Censo de ${censoEl.value} · ${unit}:</span>` + ramp.map((c, i) => `<span><i style="background:${c}"></i>${lab[i]}</span>`).join("") + `<span><i style="background:#FFFFFF;border:2.5px solid #17232F;border-radius:50%"></i>acontecimiento</span>`;
+    $("legend").innerHTML = `<span>${anual(indEl.value) ? "Año" : "Censo de"} ${censoEl.value} · ${unit}${anual(indEl.value) ? " (mismos cortes todos los años)" : ""}:</span>` + ramp.map((c, i) => `<span><i style="background:${c}"></i>${lab[i]}</span>`).join("") + `<span><i style="background:#FFFFFF;border:2.5px solid #17232F;border-radius:50%"></i>acontecimiento</span>`;
   }
 
   // Mapa
@@ -369,8 +377,10 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   yearEl.addEventListener("input", () => { updateYearLabel(); applyEvents(); syncUrl(); });
   // Si el indicador no tiene datos del censo elegido (la alfabetización solo es de 1930), saltar al que sí tenga
   function censoDisponible() {
-    const tiene = (c: string) => Object.values(D.prov).some((p: any) => p.ind[indEl.value]?.[c] != null);
-    if (!tiene(censoEl.value)) { const c = [...censoEl.options].map((o) => o.value).find(tiene); if (c) censoEl.value = c; }
+    const per = periodos(indEl.value);
+    const quiero = censoQ ?? censoEl.value; censoQ = null;
+    censoEl.innerHTML = per.map((c) => `<option value="${c}">${c}</option>`).join("");
+    censoEl.value = per.includes(quiero) ? quiero : per.includes("1930") ? "1930" : per[per.length - 1];
   }
   censoDisponible();
   indEl.addEventListener("change", () => { censoDisponible(); applyChoropleth(); syncUrl(); });
