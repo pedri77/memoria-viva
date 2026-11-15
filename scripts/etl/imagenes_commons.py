@@ -4,9 +4,13 @@ Criterio (David, 15-11-2026): solo imágenes con derechos abiertos explícitos, 
 equilibrio entre bandos (por parejas). Se descartan las de procedencia dudosa aunque Commons las marque como
 dominio público: tomadas de agencias comerciales (Getty/Keystone), de prensa actual o de webs de aficionados.
 No se incluyen imágenes de violencia: esperan a los revisores (R1).
-Carteles: los dos de la BnF con derechos claros son republicanos («Aixafem el feixisme» y «Los Nacionales», que es
-una sátira del Ministerio de Propaganda de la República contra la Junta de Burgos, no un cartel sublevado). No se ha
-localizado ninguno del bando sublevado con procedencia verificable, así que no entra ninguno (laguna-imagenes-carteles).
+Carteles: «Los Nacionales» (BnF) es una sátira del Ministerio de Propaganda de la República contra la Junta de Burgos,
+no un cartel sublevado; se descarta. La pareja de «Aixafem el feixisme» (BnF) es «¡Arriba España!» (Biblioteca Regional
+de Madrid), localizado con la API de Europeana (clave pública de pruebas api2demo).
+
+Biblioteca Virtual de Madrid (bibliotecavirtualmadrid.comunidad.madrid): sin robots.txt (404, comprobado 15-11-2026);
+cada ficha declara «Derechos: Obra de dominio público». BiValDi (bivaldi.gva.es) veta en robots.txt a claudebot y
+anthropic-ai: no se consulta.
 
 Cada imagen guarda autor, fecha, custodio, licencia, enlace a su ficha y, si existe, el pie original del
 archivo, que puede ser de parte (los pies del Bundesarchiv proceden de la RDA o del Tercer Reich).
@@ -25,7 +29,43 @@ DEST = RAIZ / "site/public/img/archivo"
 OUT = RAIZ / "data/imagenes.json"
 UA = {"User-Agent": "memoria-viva/0.1 (https://github.com/pedri77/memoria-viva; proyecto de investigación sin ánimo de lucro)"}
 
+BVM = "https://bibliotecavirtualmadrid.comunidad.madrid/bvmadrid_publicacion"
+PDM = "https://creativecommons.org/publicdomain/mark/1.0/deed.es"
+
 IMAGENES = [
+    {"id": "img-cartel-aixafem-feixisme", "pareja": "propaganda", "bando": "republicano",
+     "fichero": "File:Aixafem el feixisme Ecrasons le Fascime affiche, non identifié.jpg",
+     "titulo": "«Aixafem el feixisme» (Aplastemos el fascismo)",
+     "pie": "Cartel editado por la Comissaria de Propaganda de la Generalitat de Catalunya: una alpargata pisa una esvástica. Propaganda del bando republicano.",
+     "autor": "Autor no identificado (fotografía firmada «Fot. Catalá»)", "fecha": "1936-1939",
+     "custodio": "Bibliothèque nationale de France, ENT QB-1 (1936)-FT6",
+     "licencia": "Dominio público (declarado por la BnF)", "licencia_url": PDM,
+     "verificacion": "Ficha de la BnF reproducida en Commons: editor, fecha, signatura y «Rights: Public domain»."},
+    {"id": "img-cartel-arriba-espana", "pareja": "propaganda", "bando": "sublevado",
+     "bvm": {"registro": 24500, "imagen": 12131433},
+     "titulo": "«¡Arriba España!»",
+     "pie": "Dibujo para cartel, a la acuarela, con el yugo y las flechas de Falange: ciudadanos armados con la mano alzada. Propaganda del bando sublevado.",
+     "autor": "Autor anónimo", "fecha": "hacia 1937",
+     "custodio": "Biblioteca Regional de Madrid, Mg.XXVI/74,9",
+     "licencia": "Dominio público (declarado por la Biblioteca Regional de Madrid: obra anónima sin derechos de autor localizados)", "licencia_url": PDM,
+     "verificacion": "Ficha de la Biblioteca Virtual de Madrid, registro 24500: «Derechos: Obra de dominio público»."},
+    {"id": "img-miliciana-barcelona", "pareja": "movilizacion", "bando": "republicano",
+     "bvm": {"registro": 24512, "imagen": 12131438},
+     "titulo": "Milicianos en una calle de Barcelona",
+     "pie": "Dos hombres y una mujer, uniformados y armados, posan en Barcelona. Copia de agencia retocada a mano, como muchas fotos de prensa de la época.",
+     "autor": "Fotógrafo anónimo, distribuida por Keystone View Company (Londres)", "fecha": "julio de 1936",
+     "custodio": "Biblioteca Regional de Madrid, Mg.XXVIII/1320",
+     "licencia": "Dominio público (declarado por la Biblioteca Regional de Madrid)", "licencia_url": PDM,
+     "verificacion": "Ficha de la Biblioteca Virtual de Madrid, registro 24512: «Derechos: Obra de dominio público»; sello al verso «D.M. 28 JUL 1936»."},
+    {"id": "img-flechas-burgos", "pareja": "movilizacion", "bando": "sublevado",
+     "bvm": {"registro": 24520, "imagen": 12131560},
+     "titulo": "Niños de las Flechas desfilando en Burgos",
+     "pie": "Niños desfilan en formación con fusiles de imitación por un puente de Burgos, sede del Gobierno de la zona sublevada.",
+     "pie_original": "Nota de la agencia al verso: «Spain's Young Fascists» (Los jóvenes fascistas de España). Pie de prensa británica.",
+     "autor": "Fotógrafo anónimo, distribuida por Keystone View Company (Londres)", "fecha": "1936",
+     "custodio": "Biblioteca Regional de Madrid, Mg.XXVIII/1381",
+     "licencia": "Dominio público (declarado por la Biblioteca Regional de Madrid)", "licencia_url": PDM,
+     "verificacion": "Ficha de la Biblioteca Virtual de Madrid, registro 24520: «Derechos: Obra de dominio público»."},
     {"id": "img-batallon-etkar-andre", "pareja": "extranjeros", "bando": "republicano",
      "fichero": "File:Bundesarchiv Bild 183-H28510, Spanien, Gefechtsstand des Etkar André Bataillons.jpg",
      "titulo": "El batallón «Etkar André» de las Brigadas Internacionales, en reposo tras el frente",
@@ -57,20 +97,40 @@ IMAGENES = [
 
 
 def main() -> None:
-    q = urllib.parse.urlencode({"action": "query", "titles": "|".join(i["fichero"] for i in IMAGENES), "prop": "imageinfo",
+    import subprocess
+    com = [i for i in IMAGENES if "fichero" in i]
+    for img in [i for i in IMAGENES if "bvm" in i]:
+        dst = DEST / f"{img['id']}.jpg"
+        if not dst.exists():
+            tmp = DEST / f"{img['id']}.orig"
+            with urllib.request.urlopen(urllib.request.Request(f"{BVM}/i18n/catalogo_imagenes/imagen_id.do?idImagen={img['bvm']['imagen']}", headers=UA), timeout=90) as r:
+                tmp.write_bytes(r.read())
+            subprocess.run(["sips", "-s", "format", "jpeg", "-Z", "1200", str(tmp), "--out", str(dst)], check=True, capture_output=True)
+            tmp.unlink()
+            time.sleep(2)
+        img["ficha_url"] = f"{BVM}/es/consulta/registro.do?id={img['bvm']['registro']}"
+        img["src"] = f"img/archivo/{img['id']}.jpg"
+        img["consultado"] = "2026-11-15"
+    q = urllib.parse.urlencode({"action": "query", "titles": "|".join(i["fichero"] for i in com), "prop": "imageinfo",
                                 "iiprop": "url|size", "iiurlwidth": "1000", "format": "json"})
     with urllib.request.urlopen(urllib.request.Request("https://commons.wikimedia.org/w/api.php?" + q, headers=UA), timeout=90) as r:
         pages = {p["title"]: p["imageinfo"][0] for p in json.load(r)["query"]["pages"].values()}
     norm = lambda t: t.replace("_", " ")
-    for img in IMAGENES:
+    for img in com:
         ii = pages[norm(img["fichero"])]
         dst = DEST / f"{img['id']}.jpg"
         if not dst.exists():
             with urllib.request.urlopen(urllib.request.Request(ii["thumburl"], headers=UA), timeout=90) as r:
                 dst.write_bytes(r.read())
             time.sleep(2)
-        img.update({"commons_url": ii["descriptionurl"], "src": f"img/archivo/{img['id']}.jpg",
-                    "ancho": ii["thumbwidth"], "alto": ii["thumbheight"], "consultado": "2026-11-15"})
+        img.update({"ficha_url": ii["descriptionurl"], "src": f"img/archivo/{img['id']}.jpg", "consultado": "2026-11-15"})
+    for img in IMAGENES:
+        dst = DEST / f"{img['id']}.jpg"
+        dims = lambda: (lambda o: (int(o[o.index("pixelWidth:") + 1]), int(o[o.index("pixelHeight:") + 1])))(
+            subprocess.run(["sips", "-g", "pixelWidth", "-g", "pixelHeight", str(dst)], capture_output=True, text=True).stdout.split())
+        if max(dims()) > 1200:  # solo reducir, nunca ampliar
+            subprocess.run(["sips", "-Z", "1200", str(dst)], check=True, capture_output=True)
+        img["ancho"], img["alto"] = dims()
     OUT.write_text(json.dumps(IMAGENES, ensure_ascii=False, indent=1) + "\n")
     print(f"{len(IMAGENES)} imágenes")
 

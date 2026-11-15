@@ -429,11 +429,15 @@
  },
  {
   "id": "laguna-imagenes-carteles",
-  "tema": "Imágenes: carteles y fotografías de los dos bandos con derechos verificables",
+  "tema": "Imágenes: más parejas entre bandos y vida civil",
   "periodo": "1936-1939",
-  "falta": "Carteles y fotografías del bando sublevado con autor, custodio y derechos comprobables, para poder publicar en parejas los carteles republicanos ya localizados («Aixafem el feixisme» y «Los Nacionales», ambos en la BnF y en dominio público). Tampoco hay todavía fotografías de la vida civil en las dos zonas.",
-  "buscado": "Wikimedia Commons (15-11-2026): los carteles y fotos del bando sublevado que hay proceden de blogs, redes sociales, prensa actual o agencias comerciales (Getty/Keystone), o están firmados sin autor identificable; se descartaron. Las imágenes de violencia de las dos retaguardias esperan a los revisores.",
+  "falta": "Fotografías de la vida civil en las dos zonas y de los frentes, con autor, custodio y derechos comprobables, publicadas en parejas. El cartel «El Frente Popular» (Biblioteca Valenciana Digital, 1936) está localizado en Europeana, pero no se ha consultado porque esa biblioteca veta a los agentes de IA en su robots.txt; queda para consulta manual.",
+  "buscado": "Wikimedia Commons y la API de Europeana (15-11-2026). Se descartaron imágenes de procedencia dudosa (blogs, redes sociales, prensa actual, copias de Getty/Keystone) y la sátira republicana «Los Nacionales» que figuraba como cartel sublevado. Las imágenes de violencia de las dos retaguardias esperan a los revisores.",
   "probar": [
+   {
+    "fuente": "Biblioteca Valenciana Digital, consulta manual (cartel «El Frente Popular»)",
+    "url": "https://bivaldi.gva.es/es/consulta/registro.do?id=7661"
+   },
    {
     "fuente": "Biblioteca Nacional de España, colección de carteles (consulta manual)",
     "url": "https://www.bne.es/"
@@ -441,10 +445,6 @@
    {
     "fuente": "Centro Documental de la Memoria Histórica, carteles (PARES)",
     "url": "https://pares.cultura.gob.es/"
-   },
-   {
-    "fuente": "Europeana, carteles de la guerra de España",
-    "url": "https://www.europeana.eu/"
    },
    {
     "fuente": "Bundesarchiv (Alemania) (F077)",

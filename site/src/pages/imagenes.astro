@@ -5,6 +5,8 @@ import lagunas from "../../../data/lagunas.json";
 import { url } from "../lib/data";
 const BANDO: Record<string, string> = { republicano: "Bando republicano", sublevado: "Bando sublevado", poblacion_civil: "Población civil" };
 const GRUPOS: [string, string, string][] = [
+  ["propaganda", "Propaganda", "Un cartel de cada bando. Los dos son de parte por definición: muestran lo que quería mostrar quien los encargó."],
+  ["movilizacion", "Movilización en las dos retaguardias", "Dos fotografías de 1936 de la misma agencia de prensa británica: milicianos en Barcelona y niños de las Flechas en Burgos."],
   ["extranjeros", "Intervención extranjera", "Voluntarios y tropas de otros países en los dos ejércitos: una imagen de cada bando, del mismo archivo."],
   ["efectos", "Efectos de la guerra", "Lo que dejó la guerra sobre las ciudades."],
 ];
@@ -12,22 +14,22 @@ const lag = lagunas.find((l: any) => l.id === "laguna-imagenes-carteles");
 ---
 <Base title="Imágenes" description="Fotografías de 1936-1939 con licencia abierta verificada una a una, con autor, custodio, licencia y pie original.">
   <h1>Imágenes</h1>
-  <p class="im-lead">Pocas, a propósito. Solo entran imágenes con derechos abiertos comprobados una a una, con custodio institucional conocido y en parejas entre bandos. Cada una lleva su autor, su fecha, el archivo que la guarda, su licencia y, si existe, el pie que le puso el archivo, que también es de parte.</p>
+  <p class="im-lead">Pocas, a propósito, y en parejas. Solo entran imágenes con derechos abiertos comprobados una a una, con custodio institucional conocido y en parejas entre bandos. Cada una lleva su autor, su fecha, el archivo que la guarda, su licencia y, si existe, el pie que le puso el archivo, que también es de parte.</p>
   <p class="meta">Se descartaron imágenes que Wikimedia Commons marca como de dominio público pero que proceden de agencias comerciales, prensa actual o webs particulares. Las imágenes de violencia esperan a los revisores. Lo que falta está en <a href={url(`/lagunas/#${lag?.id}`)}>lagunas</a>. Ninguna imagen está generada con IA.</p>
   {GRUPOS.filter(([g]) => imgs.some((i: any) => i.pareja === g)).map(([g, t, d]) => (
     <section class="im-grupo">
       <h2>{t}</h2>
       <p class="meta">{d}</p>
-      <div class="im-rejilla" data-n={imgs.filter((i: any) => i.pareja === g).length}>
+      <div class="im-rejilla" data-n={imgs.filter((i: any) => i.pareja === g).length} style={`--ar:${imgs.filter((i: any) => i.pareja === g).every((i: any) => i.alto > i.ancho) ? "4 / 5" : "3 / 2"}`}>
         {imgs.filter((i: any) => i.pareja === g).map((i: any) => (
           <figure class="im-fig" id={i.id}>
-            <a href={i.commons_url} rel="noopener"><img src={url(`/${i.src}`)} width={i.ancho} height={i.alto} alt={i.titulo} loading="lazy" decoding="async" /></a>
+            <a href={i.ficha_url} rel="noopener"><img src={url(`/${i.src}`)} width={i.ancho} height={i.alto} alt={i.titulo} loading="lazy" decoding="async" /></a>
             <figcaption>
               <p class="im-etq"><span class="tag">{BANDO[i.bando]}</span><span class="meta">{i.fecha}</span></p>
               <p class="im-tit">{i.titulo}</p>
               <p>{i.pie}</p>
               {i.pie_original && <p class="im-orig"><strong>Pie del archivo.</strong> {i.pie_original}</p>}
-              <p class="meta">{i.autor} · {i.custodio} · <a href={i.licencia_url} rel="license noopener">{i.licencia}</a> · <a href={i.commons_url} rel="noopener">ficha en Wikimedia Commons</a></p>
+              <p class="meta">{i.autor} · {i.custodio} · <a href={i.licencia_url} rel="license noopener">{i.licencia}</a> · <a href={i.ficha_url} rel="noopener">{i.ficha_url.includes("wikimedia") ? "ficha en Wikimedia Commons" : "ficha de la biblioteca"}</a></p>
             </figcaption>
           </figure>
         ))}
@@ -40,9 +42,9 @@ const lag = lagunas.find((l: any) => l.id === "laguna-imagenes-carteles");
   .im-grupo h2 { border-bottom: 1px solid var(--ink); padding-bottom: 6px; }
   .im-rejilla { display: grid; gap: 28px; grid-template-columns: 1fr; }
   .im-rejilla[data-n="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .im-rejilla[data-n="2"] .im-fig img { aspect-ratio: 3 / 2; object-fit: contain; }
+  .im-rejilla[data-n="2"] .im-fig img { aspect-ratio: var(--ar, 3 / 2); object-fit: contain; }
   .im-fig { margin: 0; }
-  .im-fig img { display: block; width: 100%; height: auto; background: var(--surface); filter: grayscale(1) contrast(1.05); box-shadow: 0 1px 2px rgb(0 0 0 / .08), 0 12px 32px -16px rgb(0 0 0 / .35); }
+  .im-fig img { display: block; width: 100%; height: auto; background: var(--surface); box-shadow: 0 1px 2px rgb(0 0 0 / .08), 0 12px 32px -16px rgb(0 0 0 / .35); }
   .im-fig figcaption { margin-top: 12px; }
   .im-fig figcaption p { margin: 0 0 6px; font-size: .95rem; }
   .im-etq { display: flex; gap: 10px; align-items: center; }

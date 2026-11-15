@@ -1,5 +1,91 @@
 [
  {
+  "id": "img-cartel-aixafem-feixisme",
+  "pareja": "propaganda",
+  "bando": "republicano",
+  "fichero": "File:Aixafem el feixisme Ecrasons le Fascime affiche, non identifié.jpg",
+  "titulo": "«Aixafem el feixisme» (Aplastemos el fascismo)",
+  "pie": "Cartel editado por la Comissaria de Propaganda de la Generalitat de Catalunya: una alpargata pisa una esvástica. Propaganda del bando republicano.",
+  "autor": "Autor no identificado (fotografía firmada «Fot. Catalá»)",
+  "fecha": "1936-1939",
+  "custodio": "Bibliothèque nationale de France, ENT QB-1 (1936)-FT6",
+  "licencia": "Dominio público (declarado por la BnF)",
+  "licencia_url": "https://creativecommons.org/publicdomain/mark/1.0/deed.es",
+  "verificacion": "Ficha de la BnF reproducida en Commons: editor, fecha, signatura y «Rights: Public domain».",
+  "ficha_url": "https://commons.wikimedia.org/wiki/File:Aixafem_el_feixisme_Ecrasons_le_Fascime_affiche,_non_identifi%C3%A9.jpg",
+  "src": "img/archivo/img-cartel-aixafem-feixisme.jpg",
+  "consultado": "2026-11-15",
+  "ancho": 808,
+  "alto": 1200
+ },
+ {
+  "id": "img-cartel-arriba-espana",
+  "pareja": "propaganda",
+  "bando": "sublevado",
+  "bvm": {
+   "registro": 24500,
+   "imagen": 12131433
+  },
+  "titulo": "«¡Arriba España!»",
+  "pie": "Dibujo para cartel, a la acuarela, con el yugo y las flechas de Falange: ciudadanos armados con la mano alzada. Propaganda del bando sublevado.",
+  "autor": "Autor anónimo",
+  "fecha": "hacia 1937",
+  "custodio": "Biblioteca Regional de Madrid, Mg.XXVI/74,9",
+  "licencia": "Dominio público (declarado por la Biblioteca Regional de Madrid: obra anónima sin derechos de autor localizados)",
+  "licencia_url": "https://creativecommons.org/publicdomain/mark/1.0/deed.es",
+  "verificacion": "Ficha de la Biblioteca Virtual de Madrid, registro 24500: «Derechos: Obra de dominio público».",
+  "ficha_url": "https://bibliotecavirtualmadrid.comunidad.madrid/bvmadrid_publicacion/es/consulta/registro.do?id=24500",
+  "src": "img/archivo/img-cartel-arriba-espana.jpg",
+  "consultado": "2026-11-15",
+  "ancho": 842,
+  "alto": 1200
+ },
+ {
+  "id": "img-miliciana-barcelona",
+  "pareja": "movilizacion",
+  "bando": "republicano",
+  "bvm": {
+   "registro": 24512,
+   "imagen": 12131438
+  },
+  "titulo": "Milicianos en una calle de Barcelona",
+  "pie": "Dos hombres y una mujer, uniformados y armados, posan en Barcelona. Copia de agencia retocada a mano, como muchas fotos de prensa de la época.",
+  "autor": "Fotógrafo anónimo, distribuida por Keystone View Company (Londres)",
+  "fecha": "julio de 1936",
+  "custodio": "Biblioteca Regional de Madrid, Mg.XXVIII/1320",
+  "licencia": "Dominio público (declarado por la Biblioteca Regional de Madrid)",
+  "licencia_url": "https://creativecommons.org/publicdomain/mark/1.0/deed.es",
+  "verificacion": "Ficha de la Biblioteca Virtual de Madrid, registro 24512: «Derechos: Obra de dominio público»; sello al verso «D.M. 28 JUL 1936».",
+  "ficha_url": "https://bibliotecavirtualmadrid.comunidad.madrid/bvmadrid_publicacion/es/consulta/registro.do?id=24512",
+  "src": "img/archivo/img-miliciana-barcelona.jpg",
+  "consultado": "2026-11-15",
+  "ancho": 981,
+  "alto": 1200
+ },
+ {
+  "id": "img-flechas-burgos",
+  "pareja": "movilizacion",
+  "bando": "sublevado",
+  "bvm": {
+   "registro": 24520,
+   "imagen": 12131560
+  },
+  "titulo": "Niños de las Flechas desfilando en Burgos",
+  "pie": "Niños desfilan en formación con fusiles de imitación por un puente de Burgos, sede del Gobierno de la zona sublevada.",
+  "pie_original": "Nota de la agencia al verso: «Spain's Young Fascists» (Los jóvenes fascistas de España). Pie de prensa británica.",
+  "autor": "Fotógrafo anónimo, distribuida por Keystone View Company (Londres)",
+  "fecha": "1936",
+  "custodio": "Biblioteca Regional de Madrid, Mg.XXVIII/1381",
+  "licencia": "Dominio público (declarado por la Biblioteca Regional de Madrid)",
+  "licencia_url": "https://creativecommons.org/publicdomain/mark/1.0/deed.es",
+  "verificacion": "Ficha de la Biblioteca Virtual de Madrid, registro 24520: «Derechos: Obra de dominio público».",
+  "ficha_url": "https://bibliotecavirtualmadrid.comunidad.madrid/bvmadrid_publicacion/es/consulta/registro.do?id=24520",
+  "src": "img/archivo/img-flechas-burgos.jpg",
+  "consultado": "2026-11-15",
+  "ancho": 1200,
+  "alto": 966
+ },
+ {
   "id": "img-batallon-etkar-andre",
   "pareja": "extranjeros",
   "bando": "republicano",
@@ -13,11 +99,11 @@
   "licencia": "CC BY-SA 3.0 DE",
   "licencia_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.es",
   "verificacion": "Donación del Bundesarchiv a Commons (proyecto de cooperación) con su signatura.",
-  "commons_url": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-H28510,_Spanien,_Gefechtsstand_des_Etkar_Andr%C3%A9_Bataillons.jpg",
+  "ficha_url": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-H28510,_Spanien,_Gefechtsstand_des_Etkar_Andr%C3%A9_Bataillons.jpg",
   "src": "img/archivo/img-batallon-etkar-andre.jpg",
+  "consultado": "2026-11-15",
   "ancho": 800,
-  "alto": 377,
-  "consultado": "2026-11-15"
+  "alto": 377
  },
  {
   "id": "img-legion-condor-avila",
@@ -33,11 +119,11 @@
   "licencia": "CC BY-SA 3.0 DE",
   "licencia_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.es",
   "verificacion": "Donación del Bundesarchiv a Commons (proyecto de cooperación) con su signatura.",
-  "commons_url": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-E20569-21,_Spanien,_Ausbildung_durch_%22Legion_Condor%22.jpg",
+  "ficha_url": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-E20569-21,_Spanien,_Ausbildung_durch_%22Legion_Condor%22.jpg",
   "src": "img/archivo/img-legion-condor-avila.jpg",
+  "consultado": "2026-11-15",
   "ancho": 800,
-  "alto": 565,
-  "consultado": "2026-11-15"
+  "alto": 565
  },
  {
   "id": "img-guernica-ruinas",
@@ -53,10 +139,10 @@
   "licencia": "CC BY-SA 3.0 DE",
   "licencia_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.es",
   "verificacion": "Donación del Bundesarchiv a Commons (proyecto de cooperación) con su signatura.",
-  "commons_url": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-H25224,_Guernica,_Ruinen.jpg",
+  "ficha_url": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-H25224,_Guernica,_Ruinen.jpg",
   "src": "img/archivo/img-guernica-ruinas.jpg",
+  "consultado": "2026-11-15",
   "ancho": 798,
-  "alto": 584,
-  "consultado": "2026-11-15"
+  "alto": 584
  }
 ]
