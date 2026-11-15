@@ -176,8 +176,12 @@
     "tema": "Alfabetización por edad",
     "periodo": "1920-1930",
     "falta": "Tasas sobre mayores de 10 años, comparables con la historiografía; hoy el denominador es toda la población.",
-    "buscado": "Tomo II de los censos de 1920 y 1930 (resumen por provincias, sin edades).",
+    "buscado": "Tomo II de los censos de 1920 y 1930 (resumen por provincias, sin edades). Localizada sin transcribir (15-11-2026): el Tomo III de 1930 trae para cada provincia la «Clasificación de los habitantes por su edad combinada con el sexo, estado civil e instrucción elemental» (p. ej. Huesca, td=103310).",
     "probar": [
+      {
+        "fuente": "Censo de 1930, Tomo III, tabla de edad e instrucción de Huesca (INEbase Historia); hay una por provincia",
+        "url": "https://www.ine.es/inebaseweb/pdfDispacher.do?td=103310&ext=.pdf"
+      },
       {
         "fuente": "Censo de 1930, Tomo III (volúmenes regionales: instrucción por edad), INEbase Historia",
         "url": "https://www.ine.es/inebaseweb/71807.do"
@@ -222,5 +226,23 @@
     "afecta": [
       "story-votar-republica"
     ]
+  },
+  {
+    "id": "laguna-profesiones-paginas",
+    "tema": "Profesiones de 1930: páginas que faltan en tres provincias",
+    "periodo": "1930",
+    "falta": "Los grupos I a VI de Gerona y Vizcaya (incluido el grupo II, agrícola) y los grupos XII a XVI de Cádiz (incluida la fila 85, «Diversas») en la tabla de profesiones del censo de 1930.",
+    "buscado": "PDF del Tomo III en INEbase Historia: al de Gerona (td=103513) le falta la primera página de la provincia; en el de Vizcaya (td=104411) esa página es una hoja sin tabla; al de Cádiz (td=103202) le falta la página de las filas 64 a 90.",
+    "probar": [
+      {
+        "fuente": "Biblioteca del INE: consulta del ejemplar impreso del Censo de 1930, Tomo III, y aviso de las páginas ausentes en INEbase Historia (formulario de contacto del INE)",
+        "url": "https://www.ine.es/infoine/"
+      },
+      {
+        "fuente": "Catálogo de la Biblioteca Nacional de España (ejemplar impreso del censo)",
+        "url": "https://catalogo.bne.es/"
+      }
+    ],
+    "afecta": []
   }
 ]

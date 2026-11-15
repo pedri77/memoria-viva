@@ -1,0 +1,37 @@
+{
+  "id": "doc-ine-censo1930-profesiones",
+  "title": "Censo de 1930, Tomo III: población de hecho por sexo, edad, estado civil y profesiones o industrias, por provincias",
+  "title_original": "Habitantes inscritos en la población de HECHO y clasificados por sexo, edad, estado civil y profesiones o industrias",
+  "document_type": "tabla_estadistica",
+  "source_ids": [
+    "F010"
+  ],
+  "custodian": "Instituto Nacional de Estadística, INEbase Historia (fondo documental)",
+  "signature": "Censo de la población de España de 1930, Tomo III. Volúmenes regionales, tabla de profesiones de cada provincia (un PDF por provincia; su número td figura en cada observación)",
+  "canonical_url": "https://www.ine.es/inebaseweb/treeNavigation.do?tn=92538",
+  "date": "1930-12-31",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Tablas oficiales del censo de 1930 que clasifican la población de hecho de cada provincia por sexo, edad y estado civil en 129 profesiones o industrias agrupadas en 27 grupos, del I (pesca) al XXVII (profesión desconocida).",
+  "context": "Cifras oficiales de la Dirección General de Estadística. La profesión se declaraba en la hoja censal. Las mujeres que trabajaban en la casa o en la explotación familiar figuran sobre todo en el grupo XXVI («miembros de la familia»), no en el de su actividad; y el grupo XV incluye una fila «Diversas» muy numerosa en algunas provincias que no especifica la actividad.",
+  "text_origin": "transcripcion_validada",
+  "rights": {
+    "status": "cc_by",
+    "action": "almacenar",
+    "attribution": "Fuente: Instituto Nacional de Estadística (INE), INEbase Historia, Censo de 1930",
+    "evidence_url": "https://www.ine.es/ine/codigobp/politica_difusion_es.pdf",
+    "checked_at": "2026-11-15",
+    "note": "El INE aplica a la información de su web la licencia CC BY 4.0 salvo indicación contraria (Política de Difusión Estadística, febrero de 2026)."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Transcritos a mano los totales de los 27 grupos y la fila 85 de 50 provincias; en cada una, varones + mujeres = total por grupo, y la suma de los grupos reproduce por sexo los totales del censo y la población de hecho."
+  },
+  "consulted_at": "2026-11-15"
+}

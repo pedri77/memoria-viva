@@ -16,15 +16,17 @@ Requieren que antes haya al menos un revisor con formación en historia contempo
 
 | # | Ampliación | Coste | Nota |
 |---|---|---|---|
-| P1 | Censo de 1930 por profesiones (peso del sector agrario por provincia) | Alto: tabla grande, transcripción a mano | Clave para contextualizar la reforma agraria. |
+| ~~P1~~ | ~~Censo de 1930 por profesiones~~ | Hecho 15-11-2026 | `docs/F4_profesiones_1930.md`. Pendiente: usarlo en una narrativa (reforma agraria) y recuperar las páginas de Cádiz, Gerona y Vizcaya. |
 | P2 | Prensa del día en los acontecimientos clave (enlaces a números de la BNE, sin citas) | Medio | El servidor de la BNE bloquea clientes automáticos: los enlaces se construyen desde el CSV oficial y se comprueban a mano. |
-| P3 | Alfabetización por edad (mayores de 10 años), censo de 1930, tomo III | Alto: tablas regionales | Laguna `laguna-alfabetizacion-edad`. |
+| P3 | Alfabetización por edad (mayores de 10 años), censo de 1930, tomo III | Alto: tablas regionales | Laguna `laguna-alfabetizacion-edad`. Localizadas: una tabla por provincia en el Tomo III (p. ej. td=103310); mismo método que P1. |
 | P4 | Georreferenciación de mapas históricos del CNIG | Alto | Aplazado desde F2. |
 | P5 | Enlaces Wikidata de los municipios de 1930 | Medio | Aplazado desde F2. |
 
 ## Hecho fuera de la lista
 
 - 15-11-2026: portada «Del documento al mapa» y capa visual común (`docs/F5_portada_visual.md`).
+
+- Menor: `npm run preview` falla con Astro 7 («Preview server process exited before becoming ready»); la build y el despliegue no se ven afectados.
 
 ## Pendientes de David (no técnicos)
 

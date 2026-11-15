@@ -1,0 +1,396 @@
+{
+  "id": "ind-prof-agraria-prov",
+  "concept": "Población con profesión en explotaciones forestales y agrícolas, 1930",
+  "definition": "Porcentaje de la población con profesión de cada provincia clasificada en el grupo II del censo de 1930 (explotación de montes, agricultura y ganadería).",
+  "unit": "% de la población con profesión",
+  "denominator": "población de hecho menos los grupos XXIV (población escolar), XXV (improductivos), XXVI (miembros de la familia) y XXVII (profesión desconocida)",
+  "source_ids": [
+    "F010"
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Generado por scripts/etl/ine_profesiones_1930.py desde la transcripción comprobada. Pendiente de segunda revisión humana."
+  },
+  "method": "Total del grupo II / (población de hecho − grupos XXIV a XXVII), ambos sexos, sobre la tabla oficial transcrita a mano con comprobación aritmética (scripts/etl/ine_profesiones_1930.py).",
+  "comparability_notes": "Una parte de la fila 85 («Diversas», grupo XV) corresponde con probabilidad a jornaleros sin actividad declarada, también agrícolas; por eso el peso del grupo II es un mínimo. El indicador ind-prof-diversas-prov muestra el tamaño de esa fila en cada provincia. El trabajo de las mujeres en la explotación familiar se registra sobre todo en el grupo XXVI y no cuenta en el denominador.",
+  "observations": [
+    {
+      "place_id": "plc-prov-01",
+      "period": "1930",
+      "value": 46.1,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 13,15,17,19,21 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103944&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1930",
+      "value": 47.5,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=104618&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1930",
+      "value": 38.1,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=104249&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1930",
+      "value": 56.1,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103195&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1930",
+      "value": 53.1,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=108070&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1930",
+      "value": 63.1,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=107432&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1930",
+      "value": 37.4,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103378&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1930",
+      "value": 11.6,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103474&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1930",
+      "value": 57.6,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=108095&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1930",
+      "value": 50.3,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=107427&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1930",
+      "value": 42.1,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103202&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII",
+      "uncertainty": "Cádiz (103202): INCOMPLETA. El PDF tiene 18 páginas; la provincia ocupa 11-18 (derechas 12,14,16,18) y solo trae 4 pares de páginas: filas 1-33, 34-63, 91-118 y 119-129. Falta el par con las filas 64-90. Faltan por tanto: grupo XII (su línea TOTALES DEL GRUPO está en la página que falta; solo se ven las filas 58-63), grupos XIII, XIV, XV, XVI y la fila 85. No se ha creado res/103202.fila85.csv. res/103202.csv lleva solo los 22 grupos legibles (todos cumplen V+M=T). Resto deducido (no transcrito, solo informativo): XII+XIII+XIV+XV+XVI juntos = 38.733 varones, 122 mujeres, 38.855 total (censo por sexo 252.784 / 255.188, población de hecho 507.972); es coherente (V+M=T), lo que sugiere que los 22 grupos leídos están bien. El PDF de Cádiz no trae la página de la provincia con las filas 64 a 90 (grupos XII a XVI). Esos grupos no se necesitan para este dato: el denominador usa el total por sexo del censo."
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1930",
+      "value": 66.3,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 10,12,14,16,18 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=104295&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII",
+      "uncertainty": "Grupo XX (fila 105, pág. 16): varones impresos «901» (el 0 aparece abierto, probable 6 roto); con 901 la fila no cuadra (901+18=919 frente a total general impreso 979). Corregido a 961: cuadra la fila y la suma de varones con el censo (dif -60 desaparece)."
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1930",
+      "value": 55.9,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 2,4,6,8,10 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103414&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1930",
+      "value": 56.6,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103209&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1930",
+      "value": 56.6,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=108539&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1930",
+      "value": 76.2,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103420&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII",
+      "uncertainty": "Cuenca (103420): el grupo XXVI (miembros de la familia) viene impreso con cifras redondas (23.500 varones, 126.900 mujeres, 150.400 en total), probablemente un ajuste de la propia tabla; se copian tal cual y la provincia cuadra con el censo por sexo. No afecta al grupo II ni al denominador, que excluye el grupo XXVI."
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1930",
+      "value": null,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "missingness_reason": "Al PDF de Gerona le falta la primera página de la provincia (impresas 116 y 117, filas 1 a 33: grupos I a VI)."
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1930",
+      "value": 65.7,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103216&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII",
+      "uncertainty": "Granada (103216): en el grupo XV la línea «Totales del grupo» lleva impresos 16.670 varones; la suma de las filas 82-85 da 16.676, que es la cifra que cuadra con el total del grupo y con el censo por sexo. Se usa 16.676 (errata de impresión)."
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1930",
+      "value": 61.8,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103428&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1930",
+      "value": 22.5,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=104127&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1930",
+      "value": 49.9,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103218&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII",
+      "uncertainty": "Huelva (103218): la página 14 (filas 34-63) lleva la cabecera impresa «HUELVA (CAPITAL)» por error; sus cifras no coinciden con las de la capital (pág. 4) y sí cuadran con la provincia, así que se ha usado como página de la provincia."
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1930",
+      "value": 56.7,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103308&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1930",
+      "value": 63.8,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103230&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1930",
+      "value": 59.3,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103299&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1930",
+      "value": 63.0,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 13,15,17,19,21 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103717&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1930",
+      "value": 45.5,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=108101&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1930",
+      "value": 70.4,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=108629&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1930",
+      "value": 8.6,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103448&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1930",
+      "value": 55.2,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103237&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1930",
+      "value": 46.6,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=194371&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII",
+      "uncertainty": "Murcia (194371): la página 20 del PDF está recortada por la derecha; de las columnas TOTAL DE solo se ve «Var.» (faltan «Hem.», «TOTAL general» y «Número de orden») para los grupos XXIV, XXV, XXVI y XXVII. Mujeres de esos grupos calculadas como suma de las columnas impresas de estado civil en la misma página (Solteros + Casados + Viudos + No consta, Hem.); total = Var. + Hem. Los Var. calculados igual cuadran con los impresos.   XXIV  Hem 35.066 = 35.066+0+0+0          total 81.852   XXV   Hem 1.065  = 527+98+361+79          total 6.745   XXVI  Hem 275.105 = 129.685+119.842+25.231+347   total 332.673   XXVII Hem 0 (todo «»»)                    total 3.554 Con esto la comprobación cuadra (sexos contra censo y total contra población de hecho)."
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1930",
+      "value": 58.8,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=104400&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1930",
+      "value": 76.9,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=108606&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1930",
+      "value": 40.1,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103286&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII",
+      "uncertainty": "Oviedo (103286): grupo VII, varones: el segundo dígito del total impreso está borroso («2?»); se lee 24, que es la suma de las filas 34-40 (1+3+2+0+2+2+14) y cuadra con 24+93=117."
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1930",
+      "value": 49.7,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103321&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1930",
+      "value": 29.8,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103388&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1930",
+      "value": 54.1,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=108635&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1930",
+      "value": 59.8,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103330&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII",
+      "uncertainty": "Salamanca (103330): - Grupo XXIV, varones: impreso 22.318 (errata). Corregido a 32.318: es la suma de las filas 119-120 (29.327+2.991) y cuadra con 32.318+27.984=60.302 impreso. - Grupo XXIII, mujeres: último dígito borroso («1.12?»); se lee 1.128 = 711+177+240 y cuadra con 2.638+1.128=3.766."
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1930",
+      "value": 31.3,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103394&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1930",
+      "value": 37.3,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=108107&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1930",
+      "value": 54.4,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=108160&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1930",
+      "value": 47.9,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103244&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1930",
+      "value": 60.2,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=108175&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1930",
+      "value": 53.2,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103842&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1930",
+      "value": 57.2,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103331&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1930",
+      "value": 68.4,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103454&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1930",
+      "value": 41.6,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=104408&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1930",
+      "value": 40.1,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103338&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII",
+      "uncertainty": "Valladolid (103338): grupo XX (fila 105), total general impreso 1.376 (errata); corregido a 1.396 = 1.365 + 31 (varones y mujeres impresos, que a su vez cuadran con las columnas de estado civil: 172+1.097+90+6 y 24+3+3+1). Con 1.396 la suma total cuadra con la población de hecho."
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1930",
+      "value": null,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "missingness_reason": "En el PDF de Vizcaya la página de la provincia con las filas 1 a 33 (grupos I a VI) es una hoja sin tabla."
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1930",
+      "value": 62.8,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103344&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1930",
+      "value": 46.2,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "locator": "provincia entera, págs. 12,14,16,18,20 del PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=103354&ext=.pdf; «Totales del grupo» II y grupos XXIV a XXVII",
+      "uncertainty": "Zaragoza (103354): la última fila (grupo XXVII) lleva impreso el número de orden «126» en lugar de 129; por posición es la 129 y se ha tomado como tal."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1930",
+      "value": null,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "missingness_reason": "Las posesiones del norte y costa occidental de África no tienen tabla de profesiones en el Tomo III del censo de 1930."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1930",
+      "value": null,
+      "document_id": "doc-ine-censo1930-profesiones",
+      "missingness_reason": "Las posesiones del norte y costa occidental de África no tienen tabla de profesiones en el Tomo III del censo de 1930."
+    }
+  ]
+}
