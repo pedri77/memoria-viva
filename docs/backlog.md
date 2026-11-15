@@ -34,8 +34,8 @@ Regla para todas: **los datos oficiales agregados se pueden preparar ya; los rel
 
 | Tema | Fuente primaria abierta | Bloqueo | Bloque |
 |---|---|---|---|
-| Hambre de posguerra | INE: Movimiento Natural de la Población y Anuarios de 1935-1950 (mortalidad, precios, racionamiento) | Ninguno para los datos; el relato es R3. **Partes 1 y 2 hechas 15-11-2026** (defunciones 1934-1950 y mortalidad infantil 1934-1946, `docs/F4_mortalidad_1934_1950.md`); **coste de la vida 1939-1950 hecho 15-11-2026** (`docs/F4_coste_vida_1939_1950.md`); **racionamiento 1948-1950 hecho** (`docs/F4_racionamiento_1948_1950.md`) | A |
-| Cárceles | Anuarios estadísticos del INE (población reclusa por año) | Datos sí; relato R3 | A |
+| Hambre de posguerra | INE: Movimiento Natural de la Población y Anuarios de 1935-1950 (mortalidad, precios, racionamiento) | Ninguno para los datos; el relato es R3. **Partes 1 y 2 hechas 15-11-2026** (defunciones 1934-1950 y mortalidad infantil 1934-1946, `docs/F4_mortalidad_1934_1950.md`); **coste de la vida 1939-1950 hecho 15-11-2026** (`docs/F4_coste_vida_1939_1950.md`); **racionamiento 1943 y 1948-1950 y salarios reales 1939-1950 hechos** (`docs/F4_racionamiento_1948_1950.md`, `docs/F4_series_nacionales_posguerra.md`) | A |
+| Cárceles | Anuarios estadísticos del INE (población reclusa por año) | Datos sí; relato R3. **Serie nacional 1922-1950 hecha 15-11-2026** (`docs/F4_series_nacionales_posguerra.md`) | A |
 | Alfabetización por edad (P3) | INE, Censo de 1930, Tomo III | Ninguno; **hecho 1930** | A |
 | Calles de toda España | INE, Callejero del Censo Electoral (por provincia, semestral) | Clasificar a los «personajes» exige criterio de revisores; el catálogo estatal de símbolos (RD 1040/2025) aún no está publicado | B |
 | Fosas | datos.gob.es «Fosas o lugares de enterramiento» (e05232701); su enlace de descarga se ha dado por roto: verificar | Solo agregado por municipio (guía §4) y revisores | B |

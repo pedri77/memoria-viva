@@ -1,6 +1,8 @@
 ---
 import Base from "../layouts/Base.astro";
 import MiniMapa from "../components/MiniMapa.astro";
+import SerieNacional from "../components/SerieNacional.astro";
+import sn from "../data/series_nacionales.json";
 import { indicators, places, byId, url } from "../lib/data";
 const fmt = (v: number | null, unit: string) =>
   v === null ? "sin dato" : unit.startsWith("habitantes") ? v.toLocaleString("es-ES", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : v.toLocaleString("es-ES");
@@ -15,6 +17,12 @@ const TEMAS: [string, string, string[]][] = [
   ["reforma", "Propiedad y reforma agraria", ["ind-ra-riqueza-grandes-prov", "ind-ra-asentados-prov", "ind-ra-superficie-expropiada-prov", "ind-ra-expropiable-grandeza-prov"]],
   ["mortalidad", "Mortalidad y hambre", ["ind-sobremortalidad-prov", "ind-mortalidad-infantil-prov", "ind-mortalidad-prov", "ind-coste-vida-alimentacion-prov", "ind-coste-vida-general-prov", "ind-racion-aceite-prov", "ind-racion-azucar-prov", "ind-racion-patatas-prov"]],
   ["hoy", "Memoria democrática hoy", ["ind-subv-memoria-local-prov"]],
+];
+const SN = (g: string) => (sn as any).series.filter((x: any) => x.grupo === g);
+const GRUPOS_SN: [string, string, string, boolean][] = [
+  ["salarios", "Salario real máximo por jornada, por oficio", "Índice nacional estimado por el INE del salario máximo por jornada descontada la subida de precios (1936 = 100): por debajo de la línea de 100, un jornal compraba menos que en 1936.", true],
+  ["precios", "Coste de la vida", "Media ponderada de las capitales de provincia (julio de 1936 = 100). El detalle por capital está en «Mortalidad y hambre».", true],
+  ["prisiones", "Población reclusa", "Reclusos en las prisiones a 1 de enero de cada año y, de ellos, los penados por lo que la fuente llama «delitos no comunes». No hay cifras de 1935 a 1938.", false],
 ];
 const enTema = new Set(TEMAS.flatMap(([, , ids]) => ids));
 const resto = ordered.filter((i) => !enTema.has(i.id)).map((i) => i.id);
@@ -32,7 +40,7 @@ const series = Object.fromEntries(ordered.map((i) => [i.id, { concept: i.concept
   <header class="datos-cab">
     <h1>Datos</h1>
     <p class="datos-lead">{ordered.length} indicadores por provincia: censos de 1920, 1930 y 1940, series anuales del movimiento natural de la población y las ayudas públicas de memoria de hoy. Cada uno dice de dónde sale, cómo se calcula y qué limita la comparación.</p>
-    <nav class="temas" aria-label="Temas">{TEMAS.map(([id, t, ids]) => <a href={`#tema-${id}`}>{t} <span>{ids.length}</span></a>)}</nav>
+    <nav class="temas" aria-label="Temas">{TEMAS.map(([id, t, ids]) => <a href={`#tema-${id}`}>{t} <span>{ids.length}</span></a>)}<a href="#tema-nacional">Series nacionales <span>{(sn as any).series.length}</span></a></nav>
     <p class="meta">Descarga: todo en <a href={url("/data/v1/indicators.json")}>JSON</a>, o cada indicador en CSV con su licencia y su atribución. Pasa el ratón por los mapas para ver cada provincia.</p>
   </header>
 
@@ -83,6 +91,22 @@ const series = Object.fromEntries(ordered.map((i) => [i.id, { concept: i.concept
       })}
     </section>
   ))}
+  <section class="tema" id="tema-nacional" aria-labelledby="h-nacional">
+    <h2 id="h-nacional">Series nacionales de la posguerra</h2>
+    <p>Datos que los Anuarios solo publican para el conjunto de España. Cada punto enlaza con su tabla en la tabla de datos; las notas explican los años con cautelas.</p>
+    {GRUPOS_SN.map(([g, t, d, r]) => SN(g).length > 0 && (
+      <article class="sn-art" id={`sn-${g}`}>
+        <h3>{t}</h3>
+        <p>{d}</p>
+        <SerieNacional series={SN(g)} titulo={t} ref100={r} />
+        <details>
+          <summary>Fuente y advertencias</summary>
+          {SN(g).filter((x: any, i: number, arr: any[]) => arr.findIndex((y: any) => y.nota === x.nota) === i).map((x: any) => <p>{x.nota}</p>)}
+          <p class="meta">Documentos: {[...new Set(SN(g).flatMap((x: any) => x.puntos.map((p: any) => p.documento)))].sort().map((d: any, i: number) => <>{i > 0 && " · "}<a href={url(`/documentos/${d}/`)}>{d.replace("doc-ine-", "")}</a></>)}</p>
+        </details>
+      </article>
+    ))}
+  </section>
   <script type="application/json" id="series" set:html={JSON.stringify(series)} />
 </Base>
 <style is:global>
@@ -102,6 +126,8 @@ const series = Object.fromEntries(ordered.map((i) => [i.id, { concept: i.concept
   .ind-mapa { margin: 0; }
   .ind-mapa figcaption { margin-top: 4px; font-size: .78rem; }
   @media (max-width: 760px) { .ind { grid-template-columns: 1fr; } .ind-mapa { max-width: 280px; order: -1; } }
+  .sn-art { padding: 20px 0 28px; border-bottom: 1px solid var(--line); }
+  .sn-art h3 { margin: 0 0 6px; font-size: 1.3rem; }
   .filtros { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: start; margin: 8px 0 16px; }
   .filtros label { display: grid; gap: 4px; color: var(--muted); font-size: .9rem; }
   .leyenda-g { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: .9rem; margin: 0 0 4px; }

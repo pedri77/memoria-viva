@@ -1,0 +1,37 @@
+{
+  "id": "doc-ine-anuario1948-salarios-reales",
+  "title": "Anuario Estadístico de España 1948: índices de las remuneraciones reales por oficios",
+  "title_original": "Números índices de las remuneraciones reales, máxima y mínima, por jornada, que como cifra media nacional estimada corresponden a obreros de tipo profesional corriente, según los distintos grupos de actividad (Base: año 1936 = 100)",
+  "document_type": "tabla_estadistica",
+  "source_ids": [
+    "F010"
+  ],
+  "custodian": "Instituto Nacional de Estadística, INEbase Historia (fondo documental)",
+  "signature": "Anuario Estadístico de España 1948, «Precios, salarios, racionamiento y consumo», Salarios (td=163594)",
+  "canonical_url": "https://www.ine.es/inebaseweb/pdfDispacher.do?td=163594&ext=.pdf",
+  "date": "1948-12-31",
+  "date_precision": "anio",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Índices nacionales estimados de la remuneración real máxima y mínima por jornada de los obreros de tipo profesional corriente, por oficio y sexo, base 1936 = 100.",
+  "context": "Estimación oficial: según la propia tabla, se obtiene relacionando los índices de salarios nominales con el índice del coste de la vida. Son salarios por jornada de convenio o tarifa, no ingresos anuales, y no incluyen el paro ni el estraperlo.",
+  "text_origin": "transcripcion_validada",
+  "rights": {
+    "status": "cc_by",
+    "action": "almacenar",
+    "attribution": "Fuente: Instituto Nacional de Estadística (INE), INEbase Historia, Anuario Estadístico de España 1948",
+    "evidence_url": "https://www.ine.es/ine/codigobp/politica_difusion_es.pdf",
+    "checked_at": "2026-11-15",
+    "note": "El INE aplica a la información de su web la licencia CC BY 4.0 salvo indicación contraria (Política de Difusión Estadística, febrero de 2026)."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Transcrita de la imagen del PDF con doble lectura o comprobación aritmética."
+  },
+  "consulted_at": "2026-11-15"
+}

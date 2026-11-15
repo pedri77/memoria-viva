@@ -1,0 +1,63 @@
+---
+// Gráfico de líneas estático (SVG) de varias series nacionales con la misma unidad.
+// Los años se colocan a su distancia real; no se unen puntos separados por más de un año sin dato.
+interface Punto { periodo: string; valor: number; nota?: string }
+interface Serie { id: string; titulo: string; unidad: string; puntos: Punto[] }
+interface Props { series: Serie[]; titulo: string; ref100?: boolean }
+const { series, titulo, ref100 = false } = Astro.props;
+const W = 720, H = 300, M = { t: 16, r: 16, b: 32, l: 64 };
+const xs = series.flatMap((s) => s.puntos.map((p) => +p.periodo));
+const ys = series.flatMap((s) => s.puntos.map((p) => p.valor));
+const x0 = Math.min(...xs), x1 = Math.max(...xs);
+const yMax = Math.max(...ys, ref100 ? 100 : 0) * 1.08, yMin = 0;
+const X = (v: number) => M.l + ((v - x0) / (x1 - x0 || 1)) * (W - M.l - M.r);
+const Y = (v: number) => H - M.b - ((v - yMin) / (yMax - yMin)) * (H - M.t - M.b);
+const paso = (() => { const r = yMax / 5, e = 10 ** Math.floor(Math.log10(r)); return [1, 2, 2.5, 5, 10].map((m) => m * e).find((m) => m >= r)!; })();
+const ticksY = Array.from({ length: Math.floor(yMax / paso) + 1 }, (_, i) => i * paso);
+const anios = [...new Set(xs)].sort((a, b) => a - b);
+const ticksX = anios.filter((a, i) => anios.length <= 14 || a % 5 === 0 || i === 0 || i === anios.length - 1);
+const COL = ["var(--accent)", "#3b6e8f", "#7a8b3c", "#8a5a9e", "#b07a2a"];
+const tramos = (pts: Punto[]) => {
+  const out: Punto[][] = []; let cur: Punto[] = [];
+  for (const p of pts) { if (cur.length && +p.periodo - +cur[cur.length - 1].periodo > 1) { out.push(cur); cur = []; } cur.push(p); }
+  if (cur.length) out.push(cur); return out;
+};
+const nf = (v: number) => v.toLocaleString("es-ES");
+---
+<figure class="sn">
+  <div class="sn-ley" aria-hidden="true">{series.map((s, i) => <span><i style={`background:${COL[i % COL.length]}`}></i>{s.titulo}</span>)}</div>
+  <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`${titulo}. Los datos están en la tabla que sigue.`}>
+    {ticksY.map((t) => <g><line x1={M.l} x2={W - M.r} y1={Y(t)} y2={Y(t)} class="sn-rej" /><text x={M.l - 8} y={Y(t) + 4} text-anchor="end" class="sn-eje">{nf(t)}</text></g>)}
+    {ref100 && <line x1={M.l} x2={W - M.r} y1={Y(100)} y2={Y(100)} class="sn-ref" />}
+    {ticksX.map((a, i) => <text x={X(a)} y={H - 10} text-anchor="middle" class={`sn-eje${i % 2 && i !== ticksX.length - 1 ? " sn-x2" : ""}`}>{a}</text>)}
+    {series.map((s, i) => tramos(s.puntos).map((tr) => (
+      <g>
+        {tr.length > 1 && <polyline points={tr.map((p) => `${X(+p.periodo)},${Y(p.valor)}`).join(" ")} fill="none" stroke={COL[i % COL.length]} stroke-width="2.4" stroke-linejoin="round" />}
+        {tr.map((p) => <circle cx={X(+p.periodo)} cy={Y(p.valor)} r="4" fill={COL[i % COL.length]} data-tip={`${s.titulo}, ${p.periodo}: ${nf(p.valor)}${p.nota ? ` (${p.nota})` : ""}`} />)}
+      </g>
+    )))}
+  </svg>
+  <details>
+    <summary>Tabla de datos</summary>
+    <div class="table-wrap">
+      <table>
+        <caption class="meta">{titulo} ({series[0].unidad})</caption>
+        <thead><tr><th scope="col">Año</th>{series.map((s) => <th scope="col" style="text-align:right">{s.titulo}</th>)}</tr></thead>
+        <tbody>{anios.map((a) => <tr><th scope="row" style="font-weight:400">{a}</th>{series.map((s) => { const p = s.puntos.find((q) => +q.periodo === a); return <td style="text-align:right">{p ? nf(p.valor) : "—"}{p?.nota ? "*" : ""}</td>; })}</tr>)}</tbody>
+      </table>
+    </div>
+    <ul class="meta sn-notas">{[...new Set(series.flatMap((s) => s.puntos.filter((p) => p.nota).map((p) => `${p.periodo}: ${p.nota}`)))].map((n) => <li>* {n}</li>)}</ul>
+  </details>
+</figure>
+<style is:global>
+  .sn { margin: 8px 0 0; }
+  .sn svg { width: 100%; height: auto; display: block; }
+  .sn-rej { stroke: var(--line); stroke-width: 1; }
+  .sn-ref { stroke: var(--ink); stroke-width: 1; stroke-dasharray: 4 4; opacity: .6; }
+  .sn-eje { font: 12px var(--sans); fill: var(--muted); }
+  .sn-ley { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: .9rem; margin-bottom: 6px; }
+  .sn-ley span { display: inline-flex; align-items: center; gap: 6px; }
+  .sn-ley i { width: 16px; height: 4px; display: inline-block; border-radius: 2px; }
+  .sn-notas { padding-left: 0; list-style: none; }
+  @media (max-width: 600px) { .sn-eje { font-size: 22px; } .sn-x2 { display: none; } .sn circle { r: 6; } .sn polyline { stroke-width: 3.5; } }
+</style>

@@ -1,0 +1,824 @@
+{
+ "generado": "2026-11-15",
+ "series": [
+  {
+   "id": "salario-real-agricolas-hombres",
+   "grupo": "salarios",
+   "titulo": "Agrícolas (hombres)",
+   "unidad": "índice, 1936 = 100",
+   "nota": "Índice nacional estimado por el INE de la remuneración real (salario por jornada dividido por el coste de la vida), máximo, base 1936 = 100. Por debajo de 100 un jornal compraba menos que en 1936.",
+   "puntos": [
+    {
+     "periodo": "1939",
+     "valor": 76,
+     "documento": "doc-ine-anuario1950-salarios-reales",
+     "td": "29958"
+    },
+    {
+     "periodo": "1940",
+     "valor": 82,
+     "documento": "doc-ine-anuario1943-salarios-reales",
+     "td": "160638"
+    },
+    {
+     "periodo": "1941",
+     "valor": 73,
+     "documento": "doc-ine-anuario1943-salarios-reales",
+     "td": "160638"
+    },
+    {
+     "periodo": "1942",
+     "valor": 72,
+     "documento": "doc-ine-anuario1943-salarios-reales",
+     "td": "160638",
+     "nota": "Se usa el Anuario de 1943: la columna de máximos de 1942 del Anuario de 1944-1945 repite por error la de 1940."
+    },
+    {
+     "periodo": "1943",
+     "valor": 74,
+     "documento": "doc-ine-anuario1944-1945-salarios-reales",
+     "td": "162168"
+    },
+    {
+     "periodo": "1944",
+     "valor": 73,
+     "documento": "doc-ine-anuario1946-1947-salarios-reales",
+     "td": "162870",
+     "nota": "1944 y 1945: sin las cifras del segundo semestre (nota de la tabla)."
+    },
+    {
+     "periodo": "1945",
+     "valor": 72,
+     "documento": "doc-ine-anuario1946-1947-salarios-reales",
+     "td": "162870",
+     "nota": "1944 y 1945: sin las cifras del segundo semestre (nota de la tabla)."
+    },
+    {
+     "periodo": "1946",
+     "valor": 63,
+     "documento": "doc-ine-anuario1950-salarios-reales",
+     "td": "29958"
+    },
+    {
+     "periodo": "1947",
+     "valor": 60,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648"
+    },
+    {
+     "periodo": "1948",
+     "valor": 56,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648"
+    },
+    {
+     "periodo": "1949",
+     "valor": 53,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648"
+    },
+    {
+     "periodo": "1950",
+     "valor": 56,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648",
+     "nota": "1950: la columna del Anuario de 1951 repite casi exactamente la de 1948; se publica tal como está impresa."
+    }
+   ]
+  },
+  {
+   "id": "salario-real-albaniles-hombres",
+   "grupo": "salarios",
+   "titulo": "Albañiles (hombres)",
+   "unidad": "índice, 1936 = 100",
+   "nota": "Índice nacional estimado por el INE de la remuneración real (salario por jornada dividido por el coste de la vida), máximo, base 1936 = 100. Por debajo de 100 un jornal compraba menos que en 1936.",
+   "puntos": [
+    {
+     "periodo": "1939",
+     "valor": 70,
+     "documento": "doc-ine-anuario1950-salarios-reales",
+     "td": "29958"
+    },
+    {
+     "periodo": "1940",
+     "valor": 74,
+     "documento": "doc-ine-anuario1943-salarios-reales",
+     "td": "160638"
+    },
+    {
+     "periodo": "1941",
+     "valor": 60,
+     "documento": "doc-ine-anuario1943-salarios-reales",
+     "td": "160638"
+    },
+    {
+     "periodo": "1942",
+     "valor": 59,
+     "documento": "doc-ine-anuario1943-salarios-reales",
+     "td": "160638",
+     "nota": "Se usa el Anuario de 1943: la columna de máximos de 1942 del Anuario de 1944-1945 repite por error la de 1940."
+    },
+    {
+     "periodo": "1943",
+     "valor": 61,
+     "documento": "doc-ine-anuario1944-1945-salarios-reales",
+     "td": "162168"
+    },
+    {
+     "periodo": "1944",
+     "valor": 61,
+     "documento": "doc-ine-anuario1946-1947-salarios-reales",
+     "td": "162870",
+     "nota": "1944 y 1945: sin las cifras del segundo semestre (nota de la tabla)."
+    },
+    {
+     "periodo": "1945",
+     "valor": 58,
+     "documento": "doc-ine-anuario1946-1947-salarios-reales",
+     "td": "162870",
+     "nota": "1944 y 1945: sin las cifras del segundo semestre (nota de la tabla)."
+    },
+    {
+     "periodo": "1946",
+     "valor": 55,
+     "documento": "doc-ine-anuario1950-salarios-reales",
+     "td": "29958"
+    },
+    {
+     "periodo": "1947",
+     "valor": 54,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648"
+    },
+    {
+     "periodo": "1948",
+     "valor": 50,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648"
+    },
+    {
+     "periodo": "1949",
+     "valor": 47,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648"
+    },
+    {
+     "periodo": "1950",
+     "valor": 50,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648",
+     "nota": "1950: la columna del Anuario de 1951 repite casi exactamente la de 1948; se publica tal como está impresa."
+    }
+   ]
+  },
+  {
+   "id": "salario-real-metalurgicos-hombres",
+   "grupo": "salarios",
+   "titulo": "Metalúrgicos (hombres)",
+   "unidad": "índice, 1936 = 100",
+   "nota": "Índice nacional estimado por el INE de la remuneración real (salario por jornada dividido por el coste de la vida), máximo, base 1936 = 100. Por debajo de 100 un jornal compraba menos que en 1936.",
+   "puntos": [
+    {
+     "periodo": "1939",
+     "valor": 74,
+     "documento": "doc-ine-anuario1950-salarios-reales",
+     "td": "29958"
+    },
+    {
+     "periodo": "1940",
+     "valor": 77,
+     "documento": "doc-ine-anuario1943-salarios-reales",
+     "td": "160638"
+    },
+    {
+     "periodo": "1941",
+     "valor": 61,
+     "documento": "doc-ine-anuario1943-salarios-reales",
+     "td": "160638"
+    },
+    {
+     "periodo": "1942",
+     "valor": 60,
+     "documento": "doc-ine-anuario1943-salarios-reales",
+     "td": "160638",
+     "nota": "Se usa el Anuario de 1943: la columna de máximos de 1942 del Anuario de 1944-1945 repite por error la de 1940."
+    },
+    {
+     "periodo": "1943",
+     "valor": 61,
+     "documento": "doc-ine-anuario1944-1945-salarios-reales",
+     "td": "162168"
+    },
+    {
+     "periodo": "1944",
+     "valor": 60,
+     "documento": "doc-ine-anuario1946-1947-salarios-reales",
+     "td": "162870",
+     "nota": "1944 y 1945: sin las cifras del segundo semestre (nota de la tabla)."
+    },
+    {
+     "periodo": "1945",
+     "valor": 57,
+     "documento": "doc-ine-anuario1946-1947-salarios-reales",
+     "td": "162870",
+     "nota": "1944 y 1945: sin las cifras del segundo semestre (nota de la tabla)."
+    },
+    {
+     "periodo": "1946",
+     "valor": 52,
+     "documento": "doc-ine-anuario1950-salarios-reales",
+     "td": "29958"
+    },
+    {
+     "periodo": "1947",
+     "valor": 50,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648"
+    },
+    {
+     "periodo": "1948",
+     "valor": 46,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648"
+    },
+    {
+     "periodo": "1949",
+     "valor": 44,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648"
+    },
+    {
+     "periodo": "1950",
+     "valor": 47,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648",
+     "nota": "1950: la columna del Anuario de 1951 repite casi exactamente la de 1948; se publica tal como está impresa."
+    }
+   ]
+  },
+  {
+   "id": "salario-real-textiles-mujeres",
+   "grupo": "salarios",
+   "titulo": "Textiles (mujeres)",
+   "unidad": "índice, 1936 = 100",
+   "nota": "Índice nacional estimado por el INE de la remuneración real (salario por jornada dividido por el coste de la vida), máximo, base 1936 = 100. Por debajo de 100 un jornal compraba menos que en 1936.",
+   "puntos": [
+    {
+     "periodo": "1939",
+     "valor": 75,
+     "documento": "doc-ine-anuario1950-salarios-reales",
+     "td": "29958"
+    },
+    {
+     "periodo": "1940",
+     "valor": 83,
+     "documento": "doc-ine-anuario1943-salarios-reales",
+     "td": "160638"
+    },
+    {
+     "periodo": "1941",
+     "valor": 69,
+     "documento": "doc-ine-anuario1943-salarios-reales",
+     "td": "160638"
+    },
+    {
+     "periodo": "1942",
+     "valor": 68,
+     "documento": "doc-ine-anuario1943-salarios-reales",
+     "td": "160638",
+     "nota": "Se usa el Anuario de 1943: la columna de máximos de 1942 del Anuario de 1944-1945 repite por error la de 1940."
+    },
+    {
+     "periodo": "1943",
+     "valor": 74,
+     "documento": "doc-ine-anuario1944-1945-salarios-reales",
+     "td": "162168"
+    },
+    {
+     "periodo": "1944",
+     "valor": 76,
+     "documento": "doc-ine-anuario1946-1947-salarios-reales",
+     "td": "162870",
+     "nota": "1944 y 1945: sin las cifras del segundo semestre (nota de la tabla)."
+    },
+    {
+     "periodo": "1945",
+     "valor": 73,
+     "documento": "doc-ine-anuario1946-1947-salarios-reales",
+     "td": "162870",
+     "nota": "1944 y 1945: sin las cifras del segundo semestre (nota de la tabla)."
+    },
+    {
+     "periodo": "1946",
+     "valor": 77,
+     "documento": "doc-ine-anuario1950-salarios-reales",
+     "td": "29958"
+    },
+    {
+     "periodo": "1947",
+     "valor": 76,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648"
+    },
+    {
+     "periodo": "1948",
+     "valor": 70,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648"
+    },
+    {
+     "periodo": "1949",
+     "valor": 67,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648"
+    },
+    {
+     "periodo": "1950",
+     "valor": 71,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648",
+     "nota": "1950: la columna del Anuario de 1951 repite casi exactamente la de 1948; se publica tal como está impresa."
+    }
+   ]
+  },
+  {
+   "id": "salario-real-costureras-mujeres",
+   "grupo": "salarios",
+   "titulo": "Costureras y modistas (mujeres)",
+   "unidad": "índice, 1936 = 100",
+   "nota": "Índice nacional estimado por el INE de la remuneración real (salario por jornada dividido por el coste de la vida), máximo, base 1936 = 100. Por debajo de 100 un jornal compraba menos que en 1936.",
+   "puntos": [
+    {
+     "periodo": "1939",
+     "valor": 74,
+     "documento": "doc-ine-anuario1950-salarios-reales",
+     "td": "29958"
+    },
+    {
+     "periodo": "1940",
+     "valor": 80,
+     "documento": "doc-ine-anuario1943-salarios-reales",
+     "td": "160638"
+    },
+    {
+     "periodo": "1941",
+     "valor": 69,
+     "documento": "doc-ine-anuario1943-salarios-reales",
+     "td": "160638"
+    },
+    {
+     "periodo": "1942",
+     "valor": 68,
+     "documento": "doc-ine-anuario1943-salarios-reales",
+     "td": "160638",
+     "nota": "Se usa el Anuario de 1943: la columna de máximos de 1942 del Anuario de 1944-1945 repite por error la de 1940."
+    },
+    {
+     "periodo": "1943",
+     "valor": 71,
+     "documento": "doc-ine-anuario1944-1945-salarios-reales",
+     "td": "162168"
+    },
+    {
+     "periodo": "1944",
+     "valor": 70,
+     "documento": "doc-ine-anuario1946-1947-salarios-reales",
+     "td": "162870",
+     "nota": "1944 y 1945: sin las cifras del segundo semestre (nota de la tabla)."
+    },
+    {
+     "periodo": "1945",
+     "valor": 69,
+     "documento": "doc-ine-anuario1946-1947-salarios-reales",
+     "td": "162870",
+     "nota": "1944 y 1945: sin las cifras del segundo semestre (nota de la tabla)."
+    },
+    {
+     "periodo": "1946",
+     "valor": 70,
+     "documento": "doc-ine-anuario1950-salarios-reales",
+     "td": "29958"
+    },
+    {
+     "periodo": "1947",
+     "valor": 76,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648"
+    },
+    {
+     "periodo": "1948",
+     "valor": 71,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648"
+    },
+    {
+     "periodo": "1949",
+     "valor": 67,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648"
+    },
+    {
+     "periodo": "1950",
+     "valor": 71,
+     "documento": "doc-ine-anuario1951-salarios-reales",
+     "td": "165648",
+     "nota": "1950: la columna del Anuario de 1951 repite casi exactamente la de 1948; se publica tal como está impresa."
+    }
+   ]
+  },
+  {
+   "id": "coste-vida-alimentacion-espana",
+   "grupo": "precios",
+   "titulo": "Alimentación",
+   "unidad": "índice, julio de 1936 = 100",
+   "nota": "Media ponderada de las capitales de provincia publicada por el INE. Precios oficiales de un presupuesto tipo, sin estraperlo.",
+   "puntos": [
+    {
+     "periodo": "1939",
+     "valor": 177.7,
+     "documento": "doc-ine-anuario1943-coste-vida",
+     "nota": "1939: promedio del segundo semestre (coste de la vida)."
+    },
+    {
+     "periodo": "1940",
+     "valor": 214.6,
+     "documento": "doc-ine-anuario1943-coste-vida"
+    },
+    {
+     "periodo": "1941",
+     "valor": 300.0,
+     "documento": "doc-ine-anuario1943-coste-vida"
+    },
+    {
+     "periodo": "1942",
+     "valor": 318.4,
+     "documento": "doc-ine-anuario1944-1945-coste-vida"
+    },
+    {
+     "periodo": "1943",
+     "valor": 310.0,
+     "documento": "doc-ine-anuario1944-1945-coste-vida"
+    },
+    {
+     "periodo": "1944",
+     "valor": 323.0,
+     "documento": "doc-ine-anuario1946-1947-coste-vida"
+    },
+    {
+     "periodo": "1945",
+     "valor": 347.0,
+     "documento": "doc-ine-anuario1948-coste-vida"
+    },
+    {
+     "periodo": "1946",
+     "valor": 491.1,
+     "documento": "doc-ine-anuario1949-coste-vida"
+    },
+    {
+     "periodo": "1947",
+     "valor": 580.7,
+     "documento": "doc-ine-anuario1949-coste-vida"
+    },
+    {
+     "periodo": "1948",
+     "valor": 599.2,
+     "documento": "doc-ine-anuario1949-coste-vida"
+    },
+    {
+     "periodo": "1949",
+     "valor": 622.9,
+     "documento": "doc-ine-anuario1950-coste-vida"
+    },
+    {
+     "periodo": "1950",
+     "valor": 694.0,
+     "documento": "doc-ine-anuario1951-coste-vida"
+    }
+   ]
+  },
+  {
+   "id": "coste-vida-general-espana",
+   "grupo": "precios",
+   "titulo": "Índice general",
+   "unidad": "índice, julio de 1936 = 100",
+   "nota": "Media ponderada de las capitales de provincia publicada por el INE. Precios oficiales de un presupuesto tipo, sin estraperlo.",
+   "puntos": [
+    {
+     "periodo": "1939",
+     "valor": 153.6,
+     "documento": "doc-ine-anuario1943-coste-vida",
+     "nota": "1939: promedio del segundo semestre (coste de la vida)."
+    },
+    {
+     "periodo": "1940",
+     "valor": 178.1,
+     "documento": "doc-ine-anuario1943-coste-vida"
+    },
+    {
+     "periodo": "1941",
+     "valor": 231.5,
+     "documento": "doc-ine-anuario1943-coste-vida"
+    },
+    {
+     "periodo": "1942",
+     "valor": 247.4,
+     "documento": "doc-ine-anuario1944-1945-coste-vida"
+    },
+    {
+     "periodo": "1943",
+     "valor": 245.0,
+     "documento": "doc-ine-anuario1944-1945-coste-vida"
+    },
+    {
+     "periodo": "1944",
+     "valor": 256.9,
+     "documento": "doc-ine-anuario1946-1947-coste-vida"
+    },
+    {
+     "periodo": "1945",
+     "valor": 274.8,
+     "documento": "doc-ine-anuario1948-coste-vida"
+    },
+    {
+     "periodo": "1946",
+     "valor": 360.6,
+     "documento": "doc-ine-anuario1949-coste-vida"
+    },
+    {
+     "periodo": "1947",
+     "valor": 424.4,
+     "documento": "doc-ine-anuario1949-coste-vida"
+    },
+    {
+     "periodo": "1948",
+     "valor": 453.0,
+     "documento": "doc-ine-anuario1949-coste-vida"
+    },
+    {
+     "periodo": "1949",
+     "valor": 477.5,
+     "documento": "doc-ine-anuario1950-coste-vida"
+    },
+    {
+     "periodo": "1950",
+     "valor": 529.3,
+     "documento": "doc-ine-anuario1951-coste-vida"
+    }
+   ]
+  },
+  {
+   "id": "poblacion-reclusa",
+   "grupo": "prisiones",
+   "titulo": "Reclusos a 1 de enero",
+   "unidad": "personas",
+   "nota": "Reclusos en las prisiones a 1 de enero (en 1939, a 1 de abril). Sin datos de 1935 a 1938. No incluye campos de concentración, batallones de trabajadores ni colonias penitenciarias militarizadas.",
+   "puntos": [
+    {
+     "periodo": "1922",
+     "fecha": "1922-01-01",
+     "valor": 15619,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1923",
+     "fecha": "1923-01-01",
+     "valor": 14153,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1924",
+     "fecha": "1924-01-01",
+     "valor": 15154,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1925",
+     "fecha": "1925-01-01",
+     "valor": 12306,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1926",
+     "fecha": "1926-01-01",
+     "valor": 12837,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1927",
+     "fecha": "1927-01-01",
+     "valor": 13017,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1928",
+     "fecha": "1928-01-01",
+     "valor": 13331,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1929",
+     "fecha": "1929-01-01",
+     "valor": 9349,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1930",
+     "fecha": "1930-01-01",
+     "valor": 9152,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1931",
+     "fecha": "1931-01-01",
+     "valor": 10386,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1932",
+     "fecha": "1932-01-01",
+     "valor": 6264,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648",
+     "nota": "(1) Por haberse destruido el Archivo de la prisión de Sevilla, no figuran las existencias en dicho Establecimiento."
+    },
+    {
+     "periodo": "1933",
+     "fecha": "1933-01-01",
+     "valor": 8640,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1934",
+     "fecha": "1934-01-01",
+     "valor": 12574,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1939",
+     "fecha": "1939-04-01",
+     "valor": 100262,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648",
+     "nota": "1.º de abril de 1939."
+    },
+    {
+     "periodo": "1940",
+     "fecha": "1940-01-01",
+     "valor": 270719,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1941",
+     "fecha": "1941-01-01",
+     "valor": 233373,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1942",
+     "fecha": "1942-01-01",
+     "valor": 159392,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1943",
+     "fecha": "1943-01-01",
+     "valor": 124423,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1944",
+     "fecha": "1944-01-01",
+     "valor": 74095,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648",
+     "nota": "(2) No obtenida la clasificación por sexo."
+    },
+    {
+     "periodo": "1945",
+     "fecha": "1945-01-01",
+     "valor": 54072,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1946",
+     "fecha": "1946-01-01",
+     "valor": 43812,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1947",
+     "fecha": "1947-01-01",
+     "valor": 36379,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1948",
+     "fecha": "1948-01-01",
+     "valor": 38139,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1949",
+     "fecha": "1949-01-01",
+     "valor": 37451,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    },
+    {
+     "periodo": "1950",
+     "fecha": "1950-01-01",
+     "valor": 36127,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29648"
+    }
+   ]
+  },
+  {
+   "id": "penados-no-comunes",
+   "grupo": "prisiones",
+   "titulo": "Penados por «delitos no comunes»",
+   "unidad": "personas",
+   "nota": "Denominación de la fuente para los delitos políticos, sobre todo la «rebelión militar»; el resto de presos lo eran por delitos comunes o estaban procesados o detenidos. En 1943, a 1 de julio.",
+   "puntos": [
+    {
+     "periodo": "1943",
+     "fecha": "1943-07-01",
+     "valor": 49453,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29649",
+     "nota": "1.º de julio de 1943."
+    },
+    {
+     "periodo": "1944",
+     "fecha": "1944-01-01",
+     "valor": 39962,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29649",
+     "nota": "Sin clasificación por sexo ni por tiempo de condena."
+    },
+    {
+     "periodo": "1945",
+     "fecha": "1945-01-01",
+     "valor": 29005,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29649"
+    },
+    {
+     "periodo": "1946",
+     "fecha": "1946-01-01",
+     "valor": 21930,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29649"
+    },
+    {
+     "periodo": "1947",
+     "fecha": "1947-01-01",
+     "valor": 9752,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29649"
+    },
+    {
+     "periodo": "1948",
+     "fecha": "1948-01-01",
+     "valor": 8202,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29649"
+    },
+    {
+     "periodo": "1949",
+     "fecha": "1949-01-01",
+     "valor": 7667,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29649"
+    },
+    {
+     "periodo": "1950",
+     "fecha": "1950-01-01",
+     "valor": 7734,
+     "documento": "doc-ine-anuario1950-poblacion-reclusa",
+     "td": "29649"
+    }
+   ]
+  }
+ ]
+}

@@ -43,3 +43,16 @@
 - Resto de artículos (legumbres, arroz, pan).
 - Salarios reales.
 - Relato R3.
+
+## Ampliación: 1943 (15-11-2026)
+
+**Fuente:** Anuario de 1944-1945, «Resumen, por provincias, de las cantidades de artículos distribuidos mediante racionamiento a la población civil», año 1943 (td 162173; aceite, azúcar y patatas). Tiene las mismas columnas que en 1948-1950. Todo cuadra salvo dos erratas del aceite:
+- Málaga: total civil 8.402.413 por 8.402.314. Esta corrección afecta al cálculo.
+- Baleares: total general 2.430.876 por 2.430.676. Sin efecto en el cálculo.
+
+**Cautelas:**
+- El aceite de Córdoba solo cubre de agosto a diciembre (nota de la tabla) y se publica sin dato.
+- En 1943 no hay cartillas por provincia. Se divide por la población de hecho del censo de 1940, y cada dato lleva una nota.
+- La comparación con 1948 es aproximada: las cartillas de 1948 superaban en un 3 % a la población.
+
+**Resultado nacional:** 7,8 kg de aceite, 5,3 de azúcar y 18,2 de patatas por habitante. El script pasa a llamarse `scripts/etl/ine_racionamiento_1943_1950.py`.

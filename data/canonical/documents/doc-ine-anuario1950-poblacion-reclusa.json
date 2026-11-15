@@ -1,0 +1,37 @@
+{
+  "id": "doc-ine-anuario1950-poblacion-reclusa",
+  "title": "Anuario Estadístico de España 1950: población reclusa, 1922-1950",
+  "title_original": "Población reclusa. I. Existencia en 1.º de enero. Años 1922 a 1950; II. Reclusos en las fechas que se detallan; III. Penados por delitos no comunes, clasificados por el tiempo de sus condenas",
+  "document_type": "tabla_estadistica",
+  "source_ids": [
+    "F010"
+  ],
+  "custodian": "Instituto Nacional de Estadística, INEbase Historia (fondo documental)",
+  "signature": "Anuario Estadístico de España 1950, «Justicia y culto», Población reclusa, págs. 939-940 (td=29648 y 29649)",
+  "canonical_url": "https://www.ine.es/inebaseweb/pdfDispacher.do?td=29648&ext=.pdf",
+  "date": "1950-12-31",
+  "date_precision": "anio",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Reclusos existentes en las prisiones a 1 de enero de cada año (1922-1934 y 1939-1950), por sexo; reclusos penados, procesados y detenidos (1939-1950) y penados por «delitos no comunes» (1943-1950).",
+  "context": "Datos primarios de la Dirección General de Prisiones. La tabla no da cifras de 1935 a 1938. «Delitos no comunes» es la denominación de la fuente para los delitos políticos, sobre todo la «rebelión militar» juzgada por los tribunales franquistas. Los totales no incluyen los campos de concentración, los batallones de trabajadores ni las colonias penitenciarias militarizadas.",
+  "text_origin": "transcripcion_validada",
+  "rights": {
+    "status": "cc_by",
+    "action": "almacenar",
+    "attribution": "Fuente: Instituto Nacional de Estadística (INE), INEbase Historia, Anuario Estadístico de España 1950",
+    "evidence_url": "https://www.ine.es/ine/codigobp/politica_difusion_es.pdf",
+    "checked_at": "2026-11-15",
+    "note": "El INE aplica a la información de su web la licencia CC BY 4.0 salvo indicación contraria (Política de Difusión Estadística, febrero de 2026)."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Transcrita de la imagen del PDF con doble lectura o comprobación aritmética."
+  },
+  "consulted_at": "2026-11-15"
+}
