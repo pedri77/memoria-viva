@@ -87,7 +87,7 @@ const indice = [
         </div>
         <figure class="ap-mapa" aria-hidden="true">
           <svg viewBox={`0 0 ${MAPA.w} ${MAPA.h}`} class="mapa mapa-ap">
-            <g class="prov">{provs.map((p) => <path d={p.d} pathLength="1" />)}</g>
+            <g class="prov">{provs.map((p) => <path d={p.d} pathLength="1" data-tip={p.name} />)}</g>
             <rect class="recuadro" x="18" y={MAPA.h - 150} width="232" height="118" pathLength="1" />
             <g class="pts">{pts.map((p) => <circle cx={p.x} cy={p.y} r="6" data-y={p.year} />)}</g>
           </svg>

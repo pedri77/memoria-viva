@@ -44,6 +44,20 @@ const current = (p: string) => here.startsWith(url(p)) ? "page" : undefined;
         const open = btn.getAttribute("aria-expanded") !== "true";
         btn.setAttribute("aria-expanded", String(open));
       });
+      // Etiqueta flotante para mapas SVG: cualquier elemento con data-tip (o con <title>, que se convierte)
+      const tipEl = document.createElement("div");
+      tipEl.className = "tip-flot"; tipEl.setAttribute("aria-hidden", "true"); tipEl.hidden = true;
+      document.body.append(tipEl);
+      document.querySelectorAll("svg [data-tip], svg path > title").forEach((n) => {
+        if (n.tagName === "title") { const p = n.parentElement!; p.dataset.tip = n.textContent ?? ""; n.remove(); }
+      });
+      document.addEventListener("pointermove", (e) => {
+        const t = (e.target as Element)?.closest?.("svg [data-tip]") as HTMLElement | null;
+        if (!t || e.pointerType === "touch") { tipEl.hidden = true; return; }
+        tipEl.textContent = t.dataset.tip ?? ""; tipEl.hidden = false;
+        const x = Math.min(e.clientX + 14, innerWidth - tipEl.offsetWidth - 8), y = Math.min(e.clientY + 14, innerHeight - tipEl.offsetHeight - 8);
+        tipEl.style.transform = `translate(${x}px, ${y}px)`;
+      }, { passive: true });
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && btn?.getAttribute("aria-expanded") === "true") { btn.setAttribute("aria-expanded", "false"); btn.focus(); }
       });
@@ -109,6 +123,8 @@ const current = (p: string) => here.startsWith(url(p)) ? "page" : undefined;
     html.js nav a { padding: 10px 0; border-top: 1px solid var(--line); background: none; font-size: 1.05rem; }
   }
 
+  .tip-flot { position: fixed; left: 0; top: 0; z-index: 50; pointer-events: none; max-width: 280px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; font: 13px/1.4 var(--sans); box-shadow: 0 8px 24px -12px rgb(0 0 0 / .4); white-space: pre-line; }
+  svg [data-tip]:hover { stroke: var(--ink); stroke-width: 1.4; }
   footer.site { margin-top: 64px; padding-top: 16px; padding-bottom: 32px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
   body.wide footer.site { max-width: 1240px; padding-left: 24px; padding-right: 24px; margin-top: 0; }
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 16px 20px; margin: 16px 0; }

@@ -1,12 +1,13 @@
 ---
 import Base from "../../layouts/Base.astro";
-import { stories, documents, byId, url } from "../../lib/data";
+import { stories, documents, places, byId, url } from "../../lib/data";
 import { svgProvincias } from "../../lib/atlas";
 export function getStaticPaths() {
   return stories.map((s) => ({ params: { slug: s.id.replace("story-", "") }, props: { s } }));
 }
 const { s } = Astro.props;
 const svg = svgProvincias(420);
+const provNombre = (c: string) => places.find((p) => p.id === `plc-prov-${c}`)?.canonical_name ?? c;
 const KIND: Record<string, string> = { documento: "Según el documento", hecho: "Hecho documentado", interpretacion: "Interpretación", estimacion: "Estimación" };
 let n = 0;
 const scenes = s.scenes.map((sc: any) => ({
@@ -57,7 +58,7 @@ const draft = s.review.status !== "aprobado";
     <aside class="lateral" aria-hidden="true">
       <div class="pegajoso">
         <svg viewBox={`0 0 ${svg.width} ${svg.height}`} class="mini">
-          {svg.paths.map((p) => <path d={p.d} data-code={p.code} />)}
+          {svg.paths.map((p) => <path d={p.d} data-code={p.code} data-tip={provNombre(p.code)} />)}
         </svg>
         <p class="meta" id="lat-txt">España, provincias de 1930.</p>
       </div>

@@ -55,6 +55,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 </Base>
 
 <style is:global>
+  .maplibregl-popup.tip .maplibregl-popup-content { background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; font: 13px/1.4 var(--sans); box-shadow: 0 8px 24px -12px rgb(0 0 0 / .4); }
+  .maplibregl-popup.tip .maplibregl-popup-tip { display: none; }
   dl.series { display: block; font-size: .88rem; } dl.series dt { color: var(--ink); font-weight: 600; margin-top: 8px; } dl.series dd { margin: 0; color: var(--muted); font-variant-numeric: tabular-nums; }
   .controls { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: end; margin: 16px 0; }
   .controls label { display: grid; gap: 4px; font-size: .9rem; color: var(--muted); }
@@ -235,6 +237,12 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
         map!.on("mouseenter", l, () => (map!.getCanvas().style.cursor = "pointer"));
         map!.on("mouseleave", l, () => (map!.getCanvas().style.cursor = ""));
       }
+      // Etiqueta al pasar el ratón: el dato de la capa visible sin tener que hacer clic
+      hover("prov-fill", (p: any) => {
+        const i = D.inds.find((x: any) => x.id === indEl.value), pr = D.prov[p.cod_unit];
+        return `<strong>${esc(pr?.name ?? p.cod_unit)}</strong><br>${esc(i.short)}, ${censoEl.value}: ${nf(pr?.ind[i.id]?.[censoEl.value] ?? null, i.unit)}`;
+      });
+      hover("ev", (p: any) => { const e = D.events.find((x: any) => x.id === p.id); return e ? `<span class="meta">${e.date}</span><br><strong>${esc(e.title)}</strong>` : ""; });
       if (munisEl.checked) loadMunis();
       if (selected.startsWith("plc-prov-")) { const c = selected.slice(9); selectProv(c); showProv(c); }
       else if (selected) showEvent(selected);
@@ -246,6 +254,19 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     if ("requestIdleCallback" in window) (window as any).requestIdleCallback(go, { timeout: 1500 }); else setTimeout(go, 200);
   }
 
+  let tip: any = null;
+  function hover(layer: string, html: (p: any) => string) {
+    tip ??= new maplibregl.Popup({ closeButton: false, closeOnClick: false, className: "tip", offset: 12, maxWidth: "260px" });
+    map.on("mousemove", layer, (e: any) => {
+      // Prioridad: acontecimiento > municipio > capa de fondo
+      const munis = map.getLayer("muni-hit") && map.getLayoutProperty("muni-hit", "visibility") !== "none";
+      const antes = layer === "ev" ? [] : layer === "muni-hit" ? ["ev"] : munis ? ["ev", "muni-hit"] : ["ev"];
+      if (antes.length && map.queryRenderedFeatures(e.point, { layers: antes }).length) return;
+      const p = e.features?.[0]?.properties; const h = p && html(p);
+      if (h) tip.setLngLat(e.lngLat).setHTML(h).addTo(map);
+    });
+    map.on("mouseleave", layer, () => tip.remove());
+  }
   let RESUMEN: any = null;
   async function loadBloques() {
     if (!Object.keys(BLOQUES).length) [BLOQUES, RESUMEN] = await Promise.all([
@@ -262,6 +283,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
       map.addSource("circ", { type: "geojson", data: urlC });
       map.addLayer({ id: "circ-fill", type: "fill", source: "circ", paint: { "fill-opacity": 0.9 } }, "prov-line");
       map.addLayer({ id: "circ-line", type: "line", source: "circ", paint: { "line-color": dark() ? "#0F1820" : "#FFFFFF", "line-width": 0.8 } }, "ev");
+      hover("circ-fill", (p: any) => `<strong>${esc(p.nombre)}</strong><br>${esc(BLOQUES[p.fp]?.label ?? "sin dato")}<br>Participación: ${p.part != null ? `${nf(Number(p.part), "habitantes")} %` : "sin dato"}`);
       map.on("click", "circ-fill", (e: any) => {
         if (map.queryRenderedFeatures(e.point, { layers: ["ev"] }).length) return;
         const p = e.features?.[0]?.properties; if (p) showCircPanel(p);
@@ -290,6 +312,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     if (!map.getSource("emuni")) {
       map.addSource("emuni", { type: "geojson", data: href("/data/v1/municipios_1930_elecciones.geojson") });
       map.addLayer({ id: "emuni-fill", type: "fill", source: "emuni", paint: { "fill-opacity": 0.95 } }, "prov-line");
+      hover("emuni-fill", (p: any) => { const yy = elecEl.value, part = p[`p${yy}`];
+        return `<strong>${esc(p.nombre)}</strong><br>${esc(BLOQUES[p[`e${yy}`]]?.label ?? "sin dato")}<br>Participación ${yy}: ${part != null && part !== "null" ? `${nf(Number(part), "habitantes")} %` : "sin dato"}`; });
       map.on("click", "emuni-fill", (e: any) => {
         const p = e.features?.[0]?.properties; if (!p) return;
         const yy = elecEl.value, fp = p[`e${yy}`], part = p[`p${yy}`];
@@ -359,12 +383,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
       await ensureMuniSource();
       map.addLayer({ id: "muni-line", type: "line", source: "muni", minzoom: 5.5, paint: { "line-color": dark() ? "#3A4B5B" : "#D6BE94", "line-width": 0.4 } }, "prov-line");
       map.addLayer({ id: "muni-hit", type: "fill", source: "muni", minzoom: 5.5, paint: { "fill-opacity": 0 } }, "prov-line");
-      const pop = new maplibregl.Popup({ closeButton: false, closeOnClick: false });
-      map.on("mousemove", "muni-hit", (e: any) => {
-        const p = e.features?.[0]?.properties; if (!p) return;
-        pop.setLngLat(e.lngLat).setHTML(`<strong>${esc(p.nombre)}</strong><br>Población de hecho 1930: ${p.phec1930 != null ? Number(p.phec1930).toLocaleString("es-ES") : "sin dato"}`).addTo(map!);
-      });
-      map.on("mouseleave", "muni-hit", () => pop.remove());
+      hover("muni-hit", (p: any) => `<strong>${esc(p.nombre)}</strong><br>Población de hecho 1930: ${p.phec1930 != null ? Number(p.phec1930).toLocaleString("es-ES") : "sin dato"}`);
     }
     for (const l of ["muni-line", "muni-hit"]) map.setLayoutProperty(l, "visibility", munisEl.checked ? "visible" : "none");
     if (munisEl.checked && map.getZoom() < 5.5) map.easeTo({ zoom: 6, duration: reduce ? 0 : 600 });
