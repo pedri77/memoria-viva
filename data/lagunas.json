@@ -1,430 +1,456 @@
 [
-  {
-    "id": "laguna-convocatoria-1936",
-    "tema": "Disolución de las Cortes y convocatoria de las elecciones de febrero de 1936",
-    "periodo": "enero de 1936",
-    "falta": "El decreto de disolución de las Cortes y la convocatoria de las elecciones generales de 16 de febrero de 1936.",
-    "buscado": "Ruta de PDF /gazeta/dias/ de la sede del BOE (no están los ejemplares de enero de 1936) y fichas /buscar/doc.php (en 1936 no hay fichas antes de BOE-A-1936-9134, octubre de 1936).",
-    "probar": [
-      {
-        "fuente": "Buscador de la Gazeta del BOE, consulta manual (prohibido a agentes automáticos por robots.txt)",
-        "url": "https://www.boe.es/buscar/gazeta.php"
-      },
-      {
-        "fuente": "Biblioteca Virtual de Prensa Histórica (Ministerio de Cultura)",
-        "url": "https://prensahistorica.mcu.es/"
-      },
-      {
-        "fuente": "Hemeroteca Digital de la BNE, consulta manual",
-        "url": "https://hemerotecadigital.bne.es/"
-      },
-      {
-        "fuente": "Petición de los ejemplares a la Agencia Estatal BOE (AEBOE)",
-        "url": "https://www.boe.es/"
-      }
-    ],
-    "afecta": [
-      "story-votar-republica"
-    ]
-  },
-  {
-    "id": "laguna-febrero-marzo-1936",
-    "tema": "Gobierno de febrero de 1936 y decreto-ley de amnistía",
-    "periodo": "febrero-marzo de 1936",
-    "falta": "Los decretos de nombramiento del Gobierno tras las elecciones de febrero de 1936, el decreto-ley de amnistía y el restablecimiento del Parlamento de Cataluña.",
-    "buscado": "Ruta /gazeta/dias/ para el 20, 22 y 23 de febrero y el 1 de marzo de 1936: no están. No hay fichas doc.php de 1936 antes de octubre.",
-    "probar": [
-      {
-        "fuente": "Buscador de la Gazeta del BOE, consulta manual",
-        "url": "https://www.boe.es/buscar/gazeta.php"
-      },
-      {
-        "fuente": "Diario de Sesiones de las Cortes (Congreso de los Diputados, serie histórica)",
-        "url": "https://app.congreso.es/est_sesiones/"
-      },
-      {
-        "fuente": "Biblioteca Virtual de Prensa Histórica",
-        "url": "https://prensahistorica.mcu.es/"
-      }
-    ],
-    "afecta": []
-  },
-  {
-    "id": "laguna-destitucion-alcala-zamora",
-    "tema": "Destitución de Niceto Alcalá-Zamora como presidente de la República",
-    "periodo": "abril de 1936",
-    "falta": "El acuerdo de las Cortes de abril de 1936 que puso fin a su mandato. Solo está documentado que los decretos de 8 de abril los firma Diego Martínez Barrio.",
-    "buscado": "Gaceta del 8 de abril de 1936 en /gazeta/dias/ (no está); Gacetas del 9 y 10 de abril (sí están, sin el acuerdo).",
-    "probar": [
-      {
-        "fuente": "Diario de Sesiones de las Cortes, abril de 1936",
-        "url": "https://app.congreso.es/est_sesiones/"
-      },
-      {
-        "fuente": "Buscador de la Gazeta del BOE, consulta manual",
-        "url": "https://www.boe.es/buscar/gazeta.php"
-      }
-    ],
-    "afecta": []
-  },
-  {
-    "id": "laguna-sanjurjada",
-    "tema": "Sublevación del general Sanjurjo",
-    "periodo": "10 de agosto de 1932",
-    "falta": "Una fuente primaria que documente la sublevación. La ley de separación de funcionarios del 12 de agosto de 1932 no la menciona en su título, así que no se relaciona con ella.",
-    "buscado": "Fichas doc.php de la Gaceta del 11 y 12 de agosto de 1932.",
-    "probar": [
-      {
-        "fuente": "Diario de Sesiones de las Cortes Constituyentes, agosto de 1932",
-        "url": "https://app.congreso.es/est_sesiones/"
-      },
-      {
-        "fuente": "Biblioteca Virtual de Prensa Histórica (prensa sevillana y madrileña de agosto de 1932)",
-        "url": "https://prensahistorica.mcu.es/"
-      },
-      {
-        "fuente": "Hemeroteca de ABC (Madrid y Sevilla)",
-        "url": "https://www.abc.es/archivo/"
-      },
-      {
-        "fuente": "Texto de la ley de 11 de agosto de 1932 en la Gaceta (consulta manual)",
-        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1932-6203"
-      }
-    ],
-    "afecta": []
-  },
-  {
-    "id": "laguna-junta-defensa-nacional",
-    "tema": "Boletín Oficial de la Junta de Defensa Nacional",
-    "periodo": "julio-septiembre de 1936",
-    "falta": "Las disposiciones de la Junta de Defensa Nacional antes del primer BOE de Burgos (2 de octubre de 1936), entre ellas el nombramiento de Franco en septiembre de 1936.",
-    "buscado": "Fichas doc.php de 1936 (no hay ninguna anterior a BOE-A-1936-9134).",
-    "probar": [
-      {
-        "fuente": "Buscador de la Gazeta del BOE, consulta manual (comprobar si incluye el Boletín de la Junta)",
-        "url": "https://www.boe.es/buscar/gazeta.php"
-      },
-      {
-        "fuente": "Biblioteca Virtual de Prensa Histórica",
-        "url": "https://prensahistorica.mcu.es/"
-      },
-      {
-        "fuente": "PARES, Portal de Archivos Españoles",
-        "url": "https://pares.cultura.gob.es/"
-      }
-    ],
-    "afecta": []
-  },
-  {
-    "id": "laguna-texto-fichas",
-    "tema": "Texto completo de las normas citadas solo por su título",
-    "periodo": "1932-1939",
-    "falta": "El texto de las disposiciones citadas por su ficha oficial (BOE de Burgos 1936-1939 y Gaceta de 1932-1935): hoy solo se afirma su título y sus datos de publicación.",
-    "buscado": "Fichas doc.php (dan título, no texto). Los PDF de esas fichas están en /datos/pdfs/, prohibido a agentes automáticos.",
-    "probar": [
-      {
-        "fuente": "Lectura manual del PDF desde la ficha de cada norma en la sede del BOE",
-        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1936-9694"
-      },
-      {
-        "fuente": "Petición de un volcado de texto a la AEBOE",
-        "url": "https://www.boe.es/"
-      }
-    ],
-    "afecta": [
-      "story-escuelas-republica"
-    ]
-  },
-  {
-    "id": "laguna-segundas-vueltas",
-    "tema": "Segundas vueltas y reparto final de escaños",
-    "periodo": "1931-1936",
-    "falta": "Resultados de las segundas vueltas y composición final de las Cortes; el atlas solo usa la primera vuelta.",
-    "buscado": "Atlas Electoral de la Segunda República (solo primera vuelta en los datos usados).",
-    "probar": [
-      {
-        "fuente": "Diario de Sesiones de las Cortes (actas y credenciales)",
-        "url": "https://app.congreso.es/est_sesiones/"
-      },
-      {
-        "fuente": "Archivo del Congreso de los Diputados, histórico de diputados",
-        "url": "https://www.congreso.es/"
-      }
-    ],
-    "afecta": [
-      "story-votar-republica"
-    ]
-  },
-  {
-    "id": "laguna-voto-por-sexo",
-    "tema": "Censo electoral y voto por sexo",
-    "periodo": "1933-1936",
-    "falta": "Electores y votantes por sexo para medir el efecto del artículo 36 de la Constitución.",
-    "buscado": "Atlas Electoral (no distingue por sexo).",
-    "probar": [
-      {
-        "fuente": "Anuarios estadísticos de 1934-1936 en INEbase Historia",
-        "url": "https://www.ine.es/inebaseweb/71807.do"
-      }
-    ],
-    "afecta": [
-      "story-votar-republica"
-    ]
-  },
-  {
-    "id": "laguna-alfabetizacion-edad",
-    "tema": "Alfabetización por edad",
-    "periodo": "1920-1930",
-    "falta": "Tasas sobre mayores de 10 años, comparables con la historiografía; hoy el denominador es toda la población.",
-    "buscado": "Tomo II de los censos de 1920 y 1930 (resumen por provincias, sin edades). Localizada sin transcribir (15-11-2026): el Tomo III de 1930 trae para cada provincia la «Clasificación de los habitantes por su edad combinada con el sexo, estado civil e instrucción elemental» (p. ej. Huesca, td=103310).",
-    "probar": [
-      {
-        "fuente": "Censo de 1930, Tomo III, tabla de edad e instrucción de Huesca (INEbase Historia); hay una por provincia",
-        "url": "https://www.ine.es/inebaseweb/pdfDispacher.do?td=103310&ext=.pdf"
-      },
-      {
-        "fuente": "Censo de 1930, Tomo III (volúmenes regionales: instrucción por edad), INEbase Historia",
-        "url": "https://www.ine.es/inebaseweb/71807.do"
-      }
-    ],
-    "afecta": [
-      "story-escuelas-republica"
-    ]
-  },
-  {
-    "id": "laguna-ensenanza-1934-1935",
-    "tema": "Sustitución de la enseñanza de las congregaciones y texto de los decretos de Inspección, 1934-1935",
-    "periodo": "1934-1935",
-    "falta": "Las disposiciones sobre el plazo de sustitución de la enseñanza de las congregaciones religiosas en la primaria y el texto de los decretos de 25 de julio y 28 de noviembre de 1935 sobre la Inspección (hoy solo su título).",
-    "buscado": "Fichas doc.php del 2-3 de agosto de 1934, 24-25 de julio y 27-28 de noviembre de 1935 (localizados la orden de coeducación y los dos decretos de Inspección). La sustitución no se ha buscado por fecha concreta.",
-    "probar": [
-      {
-        "fuente": "Fichas doc.php del Ministerio de Instrucción Pública, 1934-1935 (vía ya probada)",
-        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1935-101"
-      }
-    ],
-    "afecta": [
-      "story-escuelas-republica"
-    ]
-  },
-  {
-    "id": "laguna-municipales-referendums",
-    "tema": "Elecciones municipales y referéndums de estatutos",
-    "periodo": "1931-1936",
-    "falta": "Elecciones municipales de abril de 1931 y abril de 1933 y referéndums de los estatutos de Cataluña (1931), País Vasco (1933) y Galicia (1936).",
-    "buscado": "No buscados todavía.",
-    "probar": [
-      {
-        "fuente": "Anuarios estadísticos en INEbase Historia",
-        "url": "https://www.ine.es/inebaseweb/71807.do"
-      },
-      {
-        "fuente": "Biblioteca Virtual de Prensa Histórica",
-        "url": "https://prensahistorica.mcu.es/"
-      }
-    ],
-    "afecta": [
-      "story-votar-republica"
-    ]
-  },
-  {
-    "id": "laguna-profesiones-paginas",
-    "tema": "Profesiones de 1930: páginas que faltan en tres provincias",
-    "periodo": "1930",
-    "falta": "Los grupos I a VI de Gerona y Vizcaya (incluido el grupo II, agrícola) y los grupos XII a XVI de Cádiz (incluida la fila 85, «Diversas») en la tabla de profesiones del censo de 1930.",
-    "buscado": "PDF del Tomo III en INEbase Historia: al de Gerona (td=103513) le falta la primera página de la provincia; en el de Vizcaya (td=104411) esa página es una hoja sin tabla; al de Cádiz (td=103202) le falta la página de las filas 64 a 90.",
-    "probar": [
-      {
-        "fuente": "Biblioteca del INE: consulta del ejemplar impreso del Censo de 1930, Tomo III, y aviso de las páginas ausentes en INEbase Historia (formulario de contacto del INE)",
-        "url": "https://www.ine.es/infoine/"
-      },
-      {
-        "fuente": "Catálogo de la Biblioteca Nacional de España (ejemplar impreso del censo)",
-        "url": "https://catalogo.bne.es/"
-      }
-    ],
-    "afecta": []
-  },
-  {
-    "id": "laguna-ayuntamientos-memoria",
-    "tema": "Lo que publica cada ayuntamiento sobre memoria democrática",
-    "periodo": "actualidad",
-    "falta": "La información que difunden los propios ayuntamientos (portales de transparencia, catálogos de vestigios franquistas, lugares de memoria, actos y ejecución de las ayudas recibidas) y los proyectos financiados por fondos europeos (programa CERV «European Remembrance»).",
-    "buscado": "Solo la Base de Datos Nacional de Subvenciones (convocatorias y concesiones; ver /memoria-hoy/). No se han revisado webs municipales una a una ni los resultados del programa CERV.",
-    "probar": [
-      {
-        "fuente": "Portal de la Transparencia de la Administración General del Estado",
-        "url": "https://transparencia.gob.es/"
-      },
-      {
-        "fuente": "Resultados de proyectos del programa CERV en el portal Funding & Tenders de la Comisión Europea",
-        "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/projects-results"
-      },
-      {
-        "fuente": "Federación Española de Municipios y Provincias (ayudas de memoria democrática a entidades locales)",
-        "url": "https://www.femp.es/"
-      }
-    ],
-    "afecta": []
-  },
-  {
-    "id": "laguna-aplicacion-reforma-agraria",
-    "tema": "Cómo se aplicó la reforma agraria (1932-1936)",
-    "periodo": "1932-1936",
-    "falta": "Los resultados del conjunto de la reforma: campesinos asentados y tierras ocupadas en todas las provincias, la fecha de corte de las cifras del Anuario y los cambios de la primavera de 1936 (ocupaciones de fincas y asentamientos de yunteros). Ya publicado: las fincas expropiadas a la extinguida Grandeza de España y la riqueza catastrada por categoría de propietarios (Anuario de 1934, tablas IV a VI).",
-    "buscado": "Anuario Estadístico de 1934, sección «Reforma agraria»: transcritas las tablas IV (td=102040), V (td=102041) y VI (td=102042). Sin transcribir: formas de explotación (td=103024), distribución de fincas por superficie (td=102037), propiedad catastrada (td=102039), señoríos (td=102043), montes (td=102044, 102045) y arrendamientos colectivos (td=102046). No se ha buscado aún el Boletín del Instituto de Reforma Agraria ni el Anuario de 1936.",
-    "probar": [
-      {
-        "fuente": "Anuario Estadístico de 1934, sección «Reforma agraria» (INEbase Historia, CC BY 4.0): mismo método de transcripción que las profesiones y la mortalidad",
-        "url": "https://www.ine.es/inebaseweb/treeNavigation.do?tn=102811"
-      },
-      {
-        "fuente": "Anuario Estadístico de 1936 (INEbase Historia): comprobar si continúa las tablas",
-        "url": "https://www.ine.es/inebaseweb/treeNavigation.do?tn=194372"
-      },
-      {
-        "fuente": "PARES: fondos del Instituto de Reforma Agraria y del IRYDA",
-        "url": "https://pares.cultura.gob.es/"
-      },
-      {
-        "fuente": "Biblioteca Virtual de Prensa Histórica (Boletín del Instituto de Reforma Agraria y prensa agraria)",
-        "url": "https://prensahistorica.mcu.es/"
-      }
-    ],
-    "afecta": []
-  },
-  {
-    "id": "laguna-gobierno-republica-guerra",
-    "tema": "Traslados y gobiernos de la República en guerra (1936-1939)",
-    "periodo": "noviembre de 1936 - 1939",
-    "falta": "Las disposiciones del traslado del Gobierno a Valencia (noviembre de 1936) y a Barcelona (otoño de 1937), el Gobierno de abril de 1938 y la Gaceta de la República de 1938-1939. Hoy solo se documenta que los decretos de mayo de 1937 están fechados en Valencia.",
-    "buscado": "Ruta /gazeta/dias/ con el prefijo GRP («Gaceta de la República»): localizado el número 138 de 1937 (18 de mayo). Para abril de 1938 la numeración ya no se acerca al día del año y la búsqueda por número (±6) no lo encontró; no se ha probado un barrido más amplio.",
-    "probar": [
-      {
-        "fuente": "Buscador de la Gazeta del BOE, consulta manual (prohibido a agentes automáticos por robots.txt)",
-        "url": "https://www.boe.es/buscar/gazeta.php"
-      },
-      {
-        "fuente": "Diario de Sesiones de las Cortes de la República (Valencia, Barcelona, Figueres)",
-        "url": "https://app.congreso.es/est_sesiones/"
-      },
-      {
-        "fuente": "Centro Documental de la Memoria Histórica (Salamanca), fondos de la Presidencia del Gobierno de la República",
-        "url": "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/cdmh/portada.html"
-      }
-    ],
-    "afecta": []
-  },
-  {
-    "id": "laguna-archivos-derecha",
-    "tema": "Archivos de las organizaciones de la derecha de la época",
-    "periodo": "1931-1939",
-    "falta": "Archivos propios de la CEDA y la derecha católica, de los monárquicos (Renovación Española), de Falange antes de su unificación en 1937 y de las organizaciones carlistas regionales. El registro tiene 2 fuentes de organizaciones del bando sublevado frente a 9 de partidos y sindicatos del bando republicano.",
-    "buscado": "Revisión del registro de fuentes (15-11-2026). No se ha localizado un archivo central de esas organizaciones: parte de su documentación pasó al partido único (FET y de las JONS) y a la administración franquista, y otra parte está en archivos personales o se perdió.",
-    "probar": [
-      {
-        "fuente": "Archivo General de la Administración: fondos de FET y de las JONS (F064)",
-        "url": "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/aga/portada.html"
-      },
-      {
-        "fuente": "Real Academia de la Historia (archivos personales) (F073)",
-        "url": "https://www.rah.es/"
-      },
-      {
-        "fuente": "Biblioteca Virtual Larramendi (carlismo y pensamiento tradicionalista) (F072)",
-        "url": "https://www.larramendi.es/"
-      },
-      {
-        "fuente": "Prensa de la época (El Debate, ABC, órganos de Falange) en la Hemeroteca Digital de la BNE, consulta manual",
-        "url": "https://hemerotecadigital.bne.es/"
-      }
-    ],
-    "afecta": []
-  },
-  {
-    "id": "laguna-violencia-retaguardias",
-    "tema": "Violencia en las dos retaguardias (1936-1939)",
-    "periodo": "1936-1939",
-    "falta": "Documentación y cifras de la violencia ejercida en la zona republicana y en la zona sublevada: agentes, mecanismos, periodos y escala. Pendiente de revisores (R1): se tratará según la evidencia, sin simetrías artificiales (guía editorial §1.4) y sin nombrar víctimas ni responsables (§3).",
-    "buscado": "Nada todavía: el tema espera a los revisores. Fuentes identificadas, cada una con su sesgo, en el registro y en la bibliografía (Juliá 1999, Cervera 1998, Ledesma 2003, Espinosa 2003, Preston 2011, Ruiz 2012).",
-    "probar": [
-      {
-        "fuente": "Causa General (Archivo Histórico Nacional, digitalizada en PARES), fuente franquista sobre la zona republicana (F061)",
-        "url": "https://pares.cultura.gob.es/"
-      },
-      {
-        "fuente": "Consejos de guerra (sumarios de los tribunales militares), fuente sobre la represión franquista (F063)",
-        "url": "https://www.defensa.gob.es/"
-      },
-      {
-        "fuente": "CDMH portal víctimas y represaliados (F003)",
-        "url": "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/cdmh/bases-de-datos.html"
-      },
-      {
-        "fuente": "Archivos diocesanos y de órdenes religiosas (F074)",
-        "url": "https://www.conferenciaepiscopal.es/"
-      },
-      {
-        "fuente": "Víctimas mortales de la guerra civil en Euskadi (Gogora) (F041)",
-        "url": "https://opendata.euskadi.eus/contenidos/ds_general/victimas_guerra_civil/"
-      },
-      {
-        "fuente": "Fosas comunes de la Guerra Civil (Junta de Andalucía) (F044)",
-        "url": "https://juntadeandalucia.es/datosabiertos/portal/dataset/fosas-comunes-de-la-guerra-civil"
-      }
-    ],
-    "afecta": []
-  },
-  {
-    "id": "laguna-campos-concentracion",
-    "tema": "Campos de concentración (1936-1947)",
-    "periodo": "1936-1947",
-    "falta": "Localización, funcionamiento y número de internos de los campos de concentración del bando sublevado y del franquismo, de los campos de trabajo y de los campos de refugiados españoles en Francia y de deportados en Alemania.",
-    "buscado": "Nada todavía. Bibliografía de referencia: Rodrigo 2005 (Cautivos). Pendiente de revisores (R1).",
-    "probar": [
-      {
-        "fuente": "Archivo General Militar de Ávila (documentación de los ejércitos de las dos zonas), por verificar si conserva la documentación de la Inspección de Campos de Concentración (F062)",
-        "url": "https://www.defensa.gob.es/"
-      },
-      {
-        "fuente": "Camps i refugis amb refugiats espanyols a França (1939) (F048)",
-        "url": "https://analisi.transparenciacatalunya.cat/d/r2n5-8zfj"
-      },
-      {
-        "fuente": "Arolsen Archives (F029)",
-        "url": "https://arolsen-archives.org/"
-      },
-      {
-        "fuente": "CDMH deportados a campos nazis (F004)",
-        "url": "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/cdmh/bases-de-datos.html"
-      }
-    ],
-    "afecta": []
-  },
-  {
-    "id": "laguna-criptografia",
-    "tema": "Criptografía y comunicaciones durante la guerra",
-    "periodo": "1936-1939",
-    "falta": "Cómo cifraban y descifraban sus comunicaciones los dos ejércitos, qué sistemas usaban y qué papel tuvo la ayuda extranjera.",
-    "buscado": "Nada todavía. No se ha localizado ninguna fuente primaria publicada y abierta.",
-    "probar": [
-      {
-        "fuente": "Archivo General Militar de Ávila (documentación de los ejércitos de las dos zonas) (F062)",
-        "url": "https://www.defensa.gob.es/"
-      },
-      {
-        "fuente": "Biblioteca Virtual de Defensa (F050)",
-        "url": "https://bibliotecavirtual.defensa.gob.es"
-      },
-      {
-        "fuente": "Bundesarchiv (Alemania) (F077)",
-        "url": "https://www.bundesarchiv.de/"
-      },
-      {
-        "fuente": "Archivio Centrale dello Stato (Italia) (F078)",
-        "url": "https://acs.cultura.gov.it/"
-      }
-    ],
-    "afecta": []
-  }
+ {
+  "id": "laguna-convocatoria-1936",
+  "tema": "Disolución de las Cortes y convocatoria de las elecciones de febrero de 1936",
+  "periodo": "enero de 1936",
+  "falta": "El decreto de disolución de las Cortes y la convocatoria de las elecciones generales de 16 de febrero de 1936.",
+  "buscado": "Ruta de PDF /gazeta/dias/ de la sede del BOE (no están los ejemplares de enero de 1936) y fichas /buscar/doc.php (en 1936 no hay fichas antes de BOE-A-1936-9134, octubre de 1936).",
+  "probar": [
+   {
+    "fuente": "Buscador de la Gazeta del BOE, consulta manual (prohibido a agentes automáticos por robots.txt)",
+    "url": "https://www.boe.es/buscar/gazeta.php"
+   },
+   {
+    "fuente": "Biblioteca Virtual de Prensa Histórica (Ministerio de Cultura)",
+    "url": "https://prensahistorica.mcu.es/"
+   },
+   {
+    "fuente": "Hemeroteca Digital de la BNE, consulta manual",
+    "url": "https://hemerotecadigital.bne.es/"
+   },
+   {
+    "fuente": "Petición de los ejemplares a la Agencia Estatal BOE (AEBOE)",
+    "url": "https://www.boe.es/"
+   }
+  ],
+  "afecta": [
+   "story-votar-republica"
+  ]
+ },
+ {
+  "id": "laguna-febrero-marzo-1936",
+  "tema": "Gobierno de febrero de 1936 y decreto-ley de amnistía",
+  "periodo": "febrero-marzo de 1936",
+  "falta": "Los decretos de nombramiento del Gobierno tras las elecciones de febrero de 1936, el decreto-ley de amnistía y el restablecimiento del Parlamento de Cataluña.",
+  "buscado": "Ruta /gazeta/dias/ para el 20, 22 y 23 de febrero y el 1 de marzo de 1936: no están. No hay fichas doc.php de 1936 antes de octubre.",
+  "probar": [
+   {
+    "fuente": "Buscador de la Gazeta del BOE, consulta manual",
+    "url": "https://www.boe.es/buscar/gazeta.php"
+   },
+   {
+    "fuente": "Diario de Sesiones de las Cortes (Congreso de los Diputados, serie histórica)",
+    "url": "https://app.congreso.es/est_sesiones/"
+   },
+   {
+    "fuente": "Biblioteca Virtual de Prensa Histórica",
+    "url": "https://prensahistorica.mcu.es/"
+   }
+  ],
+  "afecta": []
+ },
+ {
+  "id": "laguna-destitucion-alcala-zamora",
+  "tema": "Destitución de Niceto Alcalá-Zamora como presidente de la República",
+  "periodo": "abril de 1936",
+  "falta": "El acuerdo de las Cortes de abril de 1936 que puso fin a su mandato. Solo está documentado que los decretos de 8 de abril los firma Diego Martínez Barrio.",
+  "buscado": "Gaceta del 8 de abril de 1936 en /gazeta/dias/ (no está); Gacetas del 9 y 10 de abril (sí están, sin el acuerdo).",
+  "probar": [
+   {
+    "fuente": "Diario de Sesiones de las Cortes, abril de 1936",
+    "url": "https://app.congreso.es/est_sesiones/"
+   },
+   {
+    "fuente": "Buscador de la Gazeta del BOE, consulta manual",
+    "url": "https://www.boe.es/buscar/gazeta.php"
+   }
+  ],
+  "afecta": []
+ },
+ {
+  "id": "laguna-sanjurjada",
+  "tema": "Sublevación del general Sanjurjo",
+  "periodo": "10 de agosto de 1932",
+  "falta": "Una fuente primaria que documente la sublevación. La ley de separación de funcionarios del 12 de agosto de 1932 no la menciona en su título, así que no se relaciona con ella.",
+  "buscado": "Fichas doc.php de la Gaceta del 11 y 12 de agosto de 1932.",
+  "probar": [
+   {
+    "fuente": "Diario de Sesiones de las Cortes Constituyentes, agosto de 1932",
+    "url": "https://app.congreso.es/est_sesiones/"
+   },
+   {
+    "fuente": "Biblioteca Virtual de Prensa Histórica (prensa sevillana y madrileña de agosto de 1932)",
+    "url": "https://prensahistorica.mcu.es/"
+   },
+   {
+    "fuente": "Hemeroteca de ABC (Madrid y Sevilla)",
+    "url": "https://www.abc.es/archivo/"
+   },
+   {
+    "fuente": "Texto de la ley de 11 de agosto de 1932 en la Gaceta (consulta manual)",
+    "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1932-6203"
+   }
+  ],
+  "afecta": []
+ },
+ {
+  "id": "laguna-junta-defensa-nacional",
+  "tema": "Boletín Oficial de la Junta de Defensa Nacional",
+  "periodo": "julio-septiembre de 1936",
+  "falta": "Las disposiciones de la Junta de Defensa Nacional antes del primer BOE de Burgos (2 de octubre de 1936), entre ellas el nombramiento de Franco en septiembre de 1936.",
+  "buscado": "Fichas doc.php de 1936 (no hay ninguna anterior a BOE-A-1936-9134).",
+  "probar": [
+   {
+    "fuente": "Buscador de la Gazeta del BOE, consulta manual (comprobar si incluye el Boletín de la Junta)",
+    "url": "https://www.boe.es/buscar/gazeta.php"
+   },
+   {
+    "fuente": "Biblioteca Virtual de Prensa Histórica",
+    "url": "https://prensahistorica.mcu.es/"
+   },
+   {
+    "fuente": "PARES, Portal de Archivos Españoles",
+    "url": "https://pares.cultura.gob.es/"
+   }
+  ],
+  "afecta": []
+ },
+ {
+  "id": "laguna-texto-fichas",
+  "tema": "Texto completo de las normas citadas solo por su título",
+  "periodo": "1932-1939",
+  "falta": "El texto de las disposiciones citadas por su ficha oficial (BOE de Burgos 1936-1939 y Gaceta de 1932-1935): hoy solo se afirma su título y sus datos de publicación.",
+  "buscado": "Fichas doc.php (dan título, no texto). Los PDF de esas fichas están en /datos/pdfs/, prohibido a agentes automáticos.",
+  "probar": [
+   {
+    "fuente": "Lectura manual del PDF desde la ficha de cada norma en la sede del BOE",
+    "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1936-9694"
+   },
+   {
+    "fuente": "Petición de un volcado de texto a la AEBOE",
+    "url": "https://www.boe.es/"
+   }
+  ],
+  "afecta": [
+   "story-escuelas-republica"
+  ]
+ },
+ {
+  "id": "laguna-segundas-vueltas",
+  "tema": "Segundas vueltas y reparto final de escaños",
+  "periodo": "1931-1936",
+  "falta": "Resultados de las segundas vueltas y composición final de las Cortes; el atlas solo usa la primera vuelta.",
+  "buscado": "Atlas Electoral de la Segunda República (solo primera vuelta en los datos usados).",
+  "probar": [
+   {
+    "fuente": "Diario de Sesiones de las Cortes (actas y credenciales)",
+    "url": "https://app.congreso.es/est_sesiones/"
+   },
+   {
+    "fuente": "Archivo del Congreso de los Diputados, histórico de diputados",
+    "url": "https://www.congreso.es/"
+   }
+  ],
+  "afecta": [
+   "story-votar-republica"
+  ]
+ },
+ {
+  "id": "laguna-voto-por-sexo",
+  "tema": "Censo electoral y voto por sexo",
+  "periodo": "1933-1936",
+  "falta": "Electores y votantes por sexo para medir el efecto del artículo 36 de la Constitución.",
+  "buscado": "Atlas Electoral (no distingue por sexo).",
+  "probar": [
+   {
+    "fuente": "Anuarios estadísticos de 1934-1936 en INEbase Historia",
+    "url": "https://www.ine.es/inebaseweb/71807.do"
+   }
+  ],
+  "afecta": [
+   "story-votar-republica"
+  ]
+ },
+ {
+  "id": "laguna-alfabetizacion-edad",
+  "tema": "Alfabetización por edad",
+  "periodo": "1920-1930",
+  "falta": "Tasas sobre mayores de 10 años, comparables con la historiografía; hoy el denominador es toda la población.",
+  "buscado": "Tomo II de los censos de 1920 y 1930 (resumen por provincias, sin edades). Localizada sin transcribir (15-11-2026): el Tomo III de 1930 trae para cada provincia la «Clasificación de los habitantes por su edad combinada con el sexo, estado civil e instrucción elemental» (p. ej. Huesca, td=103310).",
+  "probar": [
+   {
+    "fuente": "Censo de 1930, Tomo III, tabla de edad e instrucción de Huesca (INEbase Historia); hay una por provincia",
+    "url": "https://www.ine.es/inebaseweb/pdfDispacher.do?td=103310&ext=.pdf"
+   },
+   {
+    "fuente": "Censo de 1930, Tomo III (volúmenes regionales: instrucción por edad), INEbase Historia",
+    "url": "https://www.ine.es/inebaseweb/71807.do"
+   }
+  ],
+  "afecta": [
+   "story-escuelas-republica"
+  ]
+ },
+ {
+  "id": "laguna-ensenanza-1934-1935",
+  "tema": "Sustitución de la enseñanza de las congregaciones y texto de los decretos de Inspección, 1934-1935",
+  "periodo": "1934-1935",
+  "falta": "Las disposiciones sobre el plazo de sustitución de la enseñanza de las congregaciones religiosas en la primaria y el texto de los decretos de 25 de julio y 28 de noviembre de 1935 sobre la Inspección (hoy solo su título).",
+  "buscado": "Fichas doc.php del 2-3 de agosto de 1934, 24-25 de julio y 27-28 de noviembre de 1935 (localizados la orden de coeducación y los dos decretos de Inspección). La sustitución no se ha buscado por fecha concreta.",
+  "probar": [
+   {
+    "fuente": "Fichas doc.php del Ministerio de Instrucción Pública, 1934-1935 (vía ya probada)",
+    "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1935-101"
+   }
+  ],
+  "afecta": [
+   "story-escuelas-republica"
+  ]
+ },
+ {
+  "id": "laguna-municipales-referendums",
+  "tema": "Elecciones municipales y referéndums de estatutos",
+  "periodo": "1931-1936",
+  "falta": "Elecciones municipales de abril de 1931 y abril de 1933 y referéndums de los estatutos de Cataluña (1931), País Vasco (1933) y Galicia (1936).",
+  "buscado": "No buscados todavía.",
+  "probar": [
+   {
+    "fuente": "Anuarios estadísticos en INEbase Historia",
+    "url": "https://www.ine.es/inebaseweb/71807.do"
+   },
+   {
+    "fuente": "Biblioteca Virtual de Prensa Histórica",
+    "url": "https://prensahistorica.mcu.es/"
+   }
+  ],
+  "afecta": [
+   "story-votar-republica"
+  ]
+ },
+ {
+  "id": "laguna-profesiones-paginas",
+  "tema": "Profesiones de 1930: páginas que faltan en tres provincias",
+  "periodo": "1930",
+  "falta": "Los grupos I a VI de Gerona y Vizcaya (incluido el grupo II, agrícola) y los grupos XII a XVI de Cádiz (incluida la fila 85, «Diversas») en la tabla de profesiones del censo de 1930.",
+  "buscado": "PDF del Tomo III en INEbase Historia: al de Gerona (td=103513) le falta la primera página de la provincia; en el de Vizcaya (td=104411) esa página es una hoja sin tabla; al de Cádiz (td=103202) le falta la página de las filas 64 a 90.",
+  "probar": [
+   {
+    "fuente": "Biblioteca del INE: consulta del ejemplar impreso del Censo de 1930, Tomo III, y aviso de las páginas ausentes en INEbase Historia (formulario de contacto del INE)",
+    "url": "https://www.ine.es/infoine/"
+   },
+   {
+    "fuente": "Catálogo de la Biblioteca Nacional de España (ejemplar impreso del censo)",
+    "url": "https://catalogo.bne.es/"
+   }
+  ],
+  "afecta": []
+ },
+ {
+  "id": "laguna-ayuntamientos-memoria",
+  "tema": "Lo que publica cada ayuntamiento sobre memoria democrática",
+  "periodo": "actualidad",
+  "falta": "La información que difunden los propios ayuntamientos (portales de transparencia, catálogos de vestigios franquistas, lugares de memoria, actos y ejecución de las ayudas recibidas) y los proyectos financiados por fondos europeos (programa CERV «European Remembrance»).",
+  "buscado": "Solo la Base de Datos Nacional de Subvenciones (convocatorias y concesiones; ver /memoria-hoy/). No se han revisado webs municipales una a una ni los resultados del programa CERV.",
+  "probar": [
+   {
+    "fuente": "Portal de la Transparencia de la Administración General del Estado",
+    "url": "https://transparencia.gob.es/"
+   },
+   {
+    "fuente": "Resultados de proyectos del programa CERV en el portal Funding & Tenders de la Comisión Europea",
+    "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/projects-results"
+   },
+   {
+    "fuente": "Federación Española de Municipios y Provincias (ayudas de memoria democrática a entidades locales)",
+    "url": "https://www.femp.es/"
+   }
+  ],
+  "afecta": []
+ },
+ {
+  "id": "laguna-aplicacion-reforma-agraria",
+  "tema": "Cómo se aplicó la reforma agraria (1932-1936)",
+  "periodo": "1932-1936",
+  "falta": "Los resultados del conjunto de la reforma: campesinos asentados y tierras ocupadas en todas las provincias, la fecha de corte de las cifras del Anuario y los cambios de la primavera de 1936 (ocupaciones de fincas y asentamientos de yunteros). Ya publicado: las fincas expropiadas a la extinguida Grandeza de España y la riqueza catastrada por categoría de propietarios (Anuario de 1934, tablas IV a VI).",
+  "buscado": "Anuario Estadístico de 1934, sección «Reforma agraria»: transcritas las tablas IV (td=102040), V (td=102041) y VI (td=102042). Sin transcribir: formas de explotación (td=103024), distribución de fincas por superficie (td=102037), propiedad catastrada (td=102039), señoríos (td=102043), montes (td=102044, 102045) y arrendamientos colectivos (td=102046). No se ha buscado aún el Boletín del Instituto de Reforma Agraria ni el Anuario de 1936.",
+  "probar": [
+   {
+    "fuente": "Anuario Estadístico de 1934, sección «Reforma agraria» (INEbase Historia, CC BY 4.0): mismo método de transcripción que las profesiones y la mortalidad",
+    "url": "https://www.ine.es/inebaseweb/treeNavigation.do?tn=102811"
+   },
+   {
+    "fuente": "Anuario Estadístico de 1936 (INEbase Historia): comprobar si continúa las tablas",
+    "url": "https://www.ine.es/inebaseweb/treeNavigation.do?tn=194372"
+   },
+   {
+    "fuente": "PARES: fondos del Instituto de Reforma Agraria y del IRYDA",
+    "url": "https://pares.cultura.gob.es/"
+   },
+   {
+    "fuente": "Biblioteca Virtual de Prensa Histórica (Boletín del Instituto de Reforma Agraria y prensa agraria)",
+    "url": "https://prensahistorica.mcu.es/"
+   }
+  ],
+  "afecta": []
+ },
+ {
+  "id": "laguna-gobierno-republica-guerra",
+  "tema": "Traslados y gobiernos de la República en guerra (1936-1939)",
+  "periodo": "noviembre de 1936 - 1939",
+  "falta": "Las disposiciones del traslado del Gobierno a Valencia (noviembre de 1936) y a Barcelona (otoño de 1937), el Gobierno de abril de 1938 y la Gaceta de la República de 1938-1939. Hoy solo se documenta que los decretos de mayo de 1937 están fechados en Valencia.",
+  "buscado": "Ruta /gazeta/dias/ con el prefijo GRP («Gaceta de la República»): localizado el número 138 de 1937 (18 de mayo). Para abril de 1938 la numeración ya no se acerca al día del año y la búsqueda por número (±6) no lo encontró; no se ha probado un barrido más amplio.",
+  "probar": [
+   {
+    "fuente": "Buscador de la Gazeta del BOE, consulta manual (prohibido a agentes automáticos por robots.txt)",
+    "url": "https://www.boe.es/buscar/gazeta.php"
+   },
+   {
+    "fuente": "Diario de Sesiones de las Cortes de la República (Valencia, Barcelona, Figueres)",
+    "url": "https://app.congreso.es/est_sesiones/"
+   },
+   {
+    "fuente": "Centro Documental de la Memoria Histórica (Salamanca), fondos de la Presidencia del Gobierno de la República",
+    "url": "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/cdmh/portada.html"
+   }
+  ],
+  "afecta": []
+ },
+ {
+  "id": "laguna-archivos-derecha",
+  "tema": "Archivos de las organizaciones de la derecha de la época",
+  "periodo": "1931-1939",
+  "falta": "Archivos propios de la CEDA y la derecha católica, de los monárquicos (Renovación Española), de Falange antes de su unificación en 1937 y de las organizaciones carlistas regionales. El registro tiene 2 fuentes de organizaciones del bando sublevado frente a 9 de partidos y sindicatos del bando republicano.",
+  "buscado": "Revisión del registro de fuentes (15-11-2026). No se ha localizado un archivo central de esas organizaciones: parte de su documentación pasó al partido único (FET y de las JONS) y a la administración franquista, y otra parte está en archivos personales o se perdió.",
+  "probar": [
+   {
+    "fuente": "Archivo General de la Administración: fondos de FET y de las JONS (F064)",
+    "url": "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/aga/portada.html"
+   },
+   {
+    "fuente": "Real Academia de la Historia (archivos personales) (F073)",
+    "url": "https://www.rah.es/"
+   },
+   {
+    "fuente": "Biblioteca Virtual Larramendi (carlismo y pensamiento tradicionalista) (F072)",
+    "url": "https://www.larramendi.es/"
+   },
+   {
+    "fuente": "Prensa de la época (El Debate, ABC, órganos de Falange) en la Hemeroteca Digital de la BNE, consulta manual",
+    "url": "https://hemerotecadigital.bne.es/"
+   }
+  ],
+  "afecta": []
+ },
+ {
+  "id": "laguna-violencia-retaguardias",
+  "tema": "Violencia en las dos retaguardias (1936-1939)",
+  "periodo": "1936-1939",
+  "falta": "Documentación y cifras de la violencia ejercida en la zona republicana y en la zona sublevada: agentes, mecanismos, periodos y escala. Pendiente de revisores (R1): se tratará según la evidencia, sin simetrías artificiales (guía editorial §1.4) y sin nombrar víctimas ni responsables (§3).",
+  "buscado": "Nada todavía: el tema espera a los revisores. Fuentes identificadas, cada una con su sesgo, en el registro y en la bibliografía (Juliá 1999, Cervera 1998, Ledesma 2003, Espinosa 2003, Preston 2011, Ruiz 2012).",
+  "probar": [
+   {
+    "fuente": "Causa General (Archivo Histórico Nacional, digitalizada en PARES), fuente franquista sobre la zona republicana (F061)",
+    "url": "https://pares.cultura.gob.es/"
+   },
+   {
+    "fuente": "Consejos de guerra (sumarios de los tribunales militares), fuente sobre la represión franquista (F063)",
+    "url": "https://www.defensa.gob.es/"
+   },
+   {
+    "fuente": "CDMH portal víctimas y represaliados (F003)",
+    "url": "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/cdmh/bases-de-datos.html"
+   },
+   {
+    "fuente": "Archivos diocesanos y de órdenes religiosas (F074)",
+    "url": "https://www.conferenciaepiscopal.es/"
+   },
+   {
+    "fuente": "Víctimas mortales de la guerra civil en Euskadi (Gogora) (F041)",
+    "url": "https://opendata.euskadi.eus/contenidos/ds_general/victimas_guerra_civil/"
+   },
+   {
+    "fuente": "Fosas comunes de la Guerra Civil (Junta de Andalucía) (F044)",
+    "url": "https://juntadeandalucia.es/datosabiertos/portal/dataset/fosas-comunes-de-la-guerra-civil"
+   }
+  ],
+  "afecta": []
+ },
+ {
+  "id": "laguna-campos-concentracion",
+  "tema": "Campos de concentración (1936-1947)",
+  "periodo": "1936-1947",
+  "falta": "Localización, funcionamiento y número de internos de los campos de concentración del bando sublevado y del franquismo, de los campos de trabajo y de los campos de refugiados españoles en Francia y de deportados en Alemania.",
+  "buscado": "Nada todavía. Bibliografía de referencia: Rodrigo 2005 (Cautivos). Pendiente de revisores (R1).",
+  "probar": [
+   {
+    "fuente": "Archivo General Militar de Ávila (documentación de los ejércitos de las dos zonas), por verificar si conserva la documentación de la Inspección de Campos de Concentración (F062)",
+    "url": "https://www.defensa.gob.es/"
+   },
+   {
+    "fuente": "Camps i refugis amb refugiats espanyols a França (1939) (F048)",
+    "url": "https://analisi.transparenciacatalunya.cat/d/r2n5-8zfj"
+   },
+   {
+    "fuente": "Arolsen Archives (F029)",
+    "url": "https://arolsen-archives.org/"
+   },
+   {
+    "fuente": "CDMH deportados a campos nazis (F004)",
+    "url": "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/cdmh/bases-de-datos.html"
+   }
+  ],
+  "afecta": []
+ },
+ {
+  "id": "laguna-criptografia",
+  "tema": "Criptografía y comunicaciones durante la guerra",
+  "periodo": "1936-1939",
+  "falta": "Cómo cifraban y descifraban sus comunicaciones los dos ejércitos, qué sistemas usaban y qué papel tuvo la ayuda extranjera.",
+  "buscado": "Nada todavía. No se ha localizado ninguna fuente primaria publicada y abierta.",
+  "probar": [
+   {
+    "fuente": "Archivo General Militar de Ávila (documentación de los ejércitos de las dos zonas) (F062)",
+    "url": "https://www.defensa.gob.es/"
+   },
+   {
+    "fuente": "Biblioteca Virtual de Defensa (F050)",
+    "url": "https://bibliotecavirtual.defensa.gob.es"
+   },
+   {
+    "fuente": "Bundesarchiv (Alemania) (F077)",
+    "url": "https://www.bundesarchiv.de/"
+   },
+   {
+    "fuente": "Archivio Centrale dello Stato (Italia) (F078)",
+    "url": "https://acs.cultura.gov.it/"
+   }
+  ],
+  "afecta": []
+ },
+ {
+  "id": "laguna-imagenes-carteles",
+  "tema": "Imágenes: carteles y fotografías de los dos bandos con derechos verificables",
+  "periodo": "1936-1939",
+  "falta": "Carteles y fotografías del bando sublevado con autor, custodio y derechos comprobables, para poder publicar en parejas los carteles republicanos ya localizados («Aixafem el feixisme» y «Los Nacionales», ambos en la BnF y en dominio público). Tampoco hay todavía fotografías de la vida civil en las dos zonas.",
+  "buscado": "Wikimedia Commons (15-11-2026): los carteles y fotos del bando sublevado que hay proceden de blogs, redes sociales, prensa actual o agencias comerciales (Getty/Keystone), o están firmados sin autor identificable; se descartaron. Las imágenes de violencia de las dos retaguardias esperan a los revisores.",
+  "probar": [
+   {
+    "fuente": "Biblioteca Nacional de España, colección de carteles (consulta manual)",
+    "url": "https://www.bne.es/"
+   },
+   {
+    "fuente": "Centro Documental de la Memoria Histórica, carteles (PARES)",
+    "url": "https://pares.cultura.gob.es/"
+   },
+   {
+    "fuente": "Europeana, carteles de la guerra de España",
+    "url": "https://www.europeana.eu/"
+   },
+   {
+    "fuente": "Bundesarchiv (Alemania) (F077)",
+    "url": "https://www.bundesarchiv.de/"
+   }
+  ],
+  "afecta": []
+ }
 ]
