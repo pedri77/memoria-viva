@@ -1,0 +1,5 @@
+Título: «II. Movimiento natural de la población por provincias. Año 1947» (Anuario 1949, p. 66). Sin notas al pie ni advertencias en el título.
+La tabla trae también «Número de matrimonios» y la diferencia «Por 1.000 habitantes» (no se copian); no trae tasa de mortalidad: tasa_t vacía.
+Cifras fijadas o corregidas:
+- Zaragoza, fallecidos en total: impreso 7.753; corregido a 7.573 (3.928 + 3.645 = 7.573; las columnas de varones y hembras cuadran con sus totales, y la suma de la columna total da 325.289 solo con 7.573).
+- Zaragoza, diferencia: impreso 3.478; corregido a 3.658 (11.231 − 7.573; la suma de la columna da 256.774 solo con 3.658). Errata impresa coherente con el 7.753 (11.231 − 7.753 = 3.478).

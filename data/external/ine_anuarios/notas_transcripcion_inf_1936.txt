@@ -1,0 +1,6 @@
+Título: «XLI. Mortalidad infantil, por provincias.—Año de 1936» (Anuario 1943, pág. 155). Sin notas al pie ni advertencias en el título.
+Errata de cabecera (no afecta a los datos): la última columna dice «Por 0 100 habitantes» en lugar de «Por 1 000 habitantes».
+Columnas copiadas: cifra absoluta y «por 100 defunciones» de menos de un año y de menos de cinco años.
+Cifras fijadas:
+- Palmas (Las), por 100 defunciones de menos de un año: impreso «3 ,09» con el segundo dígito borrado; fijado en 31,09 (1333 / 4288 defunciones de res/1936.csv; coherente con 1954/45,57 %).
+Cruce con res/1936.csv (fall_t): todas las filas cuadran.

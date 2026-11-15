@@ -1,0 +1,12 @@
+Fuente: Anuario 1946-1947, td 162666, pág. 300.
+Título: «XXVI. Mortalidad infantil, por provincias.—Año de 1943». Sin notas al pie ni advertencias en el título.
+
+Cifras fijadas o corregidas (todas con dígito dañado en el escaneo; la columna de menos de un año sumaba 22 menos que el total impreso 59 837 y la de menos de cinco, 1 menos que 82 510):
+- Guadalajara, menos de un año: leído «4?7»; fijado en 457 (457 / 16,24 % = 2 814 = 639 / 22,71 %; con 437 no cuadra la fila).
+- Ávila, menos de un año: «79?»; fijado en 796 (796 / 21,62 % = 3 682 = 1 237 / 33,60 %).
+- Tarragona, menos de un año: «26?»; fijado en 266 (266 / 5,90 % = 4 508 = 378 / 8,39 %).
+- Logroño, menos de cinco años: «58?»; fijado en 586 (432 / 15,30 % = 2 824; 586 / 2 824 = 20,75 %, lo impreso).
+- Con estas cuatro, las dos columnas suman exactamente los totales impresos.
+- Cáceres, menos de un año «2 28?» leído 2 289 (lo exige la suma); por 100 de menos de cinco años «38,6?» leído 38,66.
+- Cuenca, por 100 defunciones de menos de un año «21,8?» fijado en 21,85 (902 / 21,85 % = 4 128 = 1 250 / 30,29 %).
+- Lecturas dudosas: Avila 3,34; Coruña (La) <5 años 3 059 (cuadra con la fila); Granada por 100 22,99; Oviedo <1 año 1 050 («1 0?0»; 1 050 / 10,08 % = 10 417 ≈ 1 411 / 13,55 % = 10 413); Toledo 1 399; Valencia 1 790; Zaragoza 1 180 («1 1?0»).

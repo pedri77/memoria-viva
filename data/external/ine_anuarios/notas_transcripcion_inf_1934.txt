@@ -1,0 +1,4 @@
+Título: «XXXVII. Mortalidad infantil, por provincias.—Año de 1934» (Anuario 1943, pág. 151). Sin notas al pie ni advertencias en el título.
+Columnas copiadas: cifra absoluta y «por 100 defunciones» de menos de un año y de menos de cinco años.
+Cifras fijadas o corregidas: ninguna.
+Cruce con res/1934.csv (fall_t): todas las filas cuadran.

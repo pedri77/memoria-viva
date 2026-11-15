@@ -1,0 +1,7 @@
+Fuente: Anuario 1948, td 163414, pág. 147.
+Título: «XLVIII. Mortalidad infantil, por provincias.—Año 1946». Sin notas al pie ni advertencias en el título.
+Maquetación: el punto separa los miles (1.425) y algunas últimas cifras decimales van subrayadas (marca tipográfica, se transcribe la cifra sin el subrayado). Fila de totales: «TOTAL».
+
+Cifras fijadas o corregidas:
+- Baleares, menos de cinco años, por 100 defunciones: impreso «8,92»; corregido a 8,72. La fila no cuadra consigo misma: 267 / 5,94 % = 4 495 defunciones y 392 / 4 495 = 8,72 %; coincide con los fallecidos de res2/mnp-1946.csv, y las columnas por 1.000 hab. (0,62 y 0,91) confirman las cifras absolutas.
+Sumas: las columnas suman exactamente los totales impresos (50 500 y 69 709).

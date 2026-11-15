@@ -1,0 +1,5 @@
+Título: «VIII. Movimiento natural de la población por provincias. Año 1946» (Anuario 1948, p. 104). Sin notas al pie ni advertencias en el título.
+La tabla trae también «Número de matrimonios» y la diferencia «Por 1.000 habitantes» (no se copian); no trae tasa de mortalidad: tasa_t vacía.
+Cifras fijadas o corregidas:
+- Lérida, nacidos en total: tipo dañado («5.0?3»), fijado en 5.033 (2.571 + 2.462; 5.033 − 3.823 = 1.210).
+Nombre: impreso «Sta. Cruz de Tenerife», transcrito «Santa Cruz de Tenerife» para que lo reconozca el comprobador.

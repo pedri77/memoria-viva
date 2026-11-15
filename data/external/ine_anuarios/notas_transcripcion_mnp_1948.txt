@@ -1,0 +1,6 @@
+Título: «V. Movimiento natural de la población, por provincias. Año 1948» (Anuario 1949, p. 69). Sin notas al pie ni advertencias en el título.
+La tabla trae también «Número de matrimonios» y la diferencia «Por 1.000 habitantes» (no se copian); no trae tasa de mortalidad: tasa_t vacía.
+Cifras fijadas o corregidas:
+- Lugo, diferencia: último dígito dañado («4.18?»), fijado en 4.180 (10.388 − 6.208).
+- Toledo, nacidos varones: dígito dañado («6.?41»), fijado en 6.841 (13.336 − 6.495).
+Nombre: impreso «Sta. Cruz de Tenerife», transcrito «Santa Cruz de Tenerife» para que lo reconozca el comprobador.

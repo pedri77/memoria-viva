@@ -1,0 +1,3 @@
+Título: «II. Movimiento natural de la población por provincias. Año 1944» (Anuario 1948, p. 98). Sin notas al pie ni advertencias en el título.
+La tabla trae también «Número de matrimonios» y la diferencia «Por 1.000 habitantes» (no se copian); no trae tasa de mortalidad: tasa_t vacía.
+Cifras fijadas o corregidas: ninguna. Nombre «Jeén» (tipo dañado) transcrito como «Jaén».

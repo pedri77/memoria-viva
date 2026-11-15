@@ -1,0 +1,5 @@
+Título: «XLIII. Mortalidad infantil, por provincias.—Año 1937» (Anuario 1943, pág. 157). Sin notas al pie ni advertencias en el título.
+Columnas copiadas: cifra absoluta y «por 100 defunciones» de menos de un año y de menos de cinco años.
+Cifras fijadas:
+- Santander, menos de un año: se lee «1 4?9» con el tercer dígito dañado (parece 3); fijado en 1459 por la suma de la columna (total impreso 73 546) y por 16,11 % de las defunciones (1459 / 9059 de res/1937.csv; la fila da 9059 con 2436/26,89 %).
+Cruce con res/1937.csv (fall_t): todas las filas cuadran.

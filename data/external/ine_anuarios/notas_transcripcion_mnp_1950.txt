@@ -1,0 +1,6 @@
+Título: «Año 1950» (Anuario 1951, p. 50); la mitad superior de la imagen empieza en el año, sin número ni título visible del cuadro. Columnas «Varones / Mujeres / Total» (no «Hembras»). Sin notas al pie ni advertencias.
+La tabla trae también «Número de matrimonios» y la diferencia «Por 1.000 habitantes» (no se copian); no trae tasa de mortalidad: tasa_t vacía.
+Cifras fijadas o corregidas:
+- Ciudad Real, diferencia: impreso 7.151; corregido a 7.145 (13.433 − 6.288; la suma de la columna da 257.976 solo con 7.145).
+- Teruel, fallecidos mujeres: impreso 1.885; corregido a 1.385 (2.900 − 1.515; 4.497 − 2.900 = 1.597 confirma el total; la suma de la columna da 146.786 solo con 1.385).
+- Valencia, fallecidos en total: primer dígito dañado, fijado en 14.755 (7.683 + 7.072; 22.627 − 14.755 = 7.872).

@@ -1,0 +1,5 @@
+Título: «XXVIII. Mortalidad infantil, por provincias.—Año 1939» (Anuario 1944-1945, pág. 167). Sin notas al pie ni advertencias en el título.
+Columnas copiadas: cifra absoluta y «por 100 defunciones» de menos de un año y de menos de cinco años.
+Cifras corregidas:
+- Navarra, <5 años por 100 defunciones: impreso «6,27» (nítido); corregido a 18,22 (1020 / 5598 defunciones de res2/mnp-1939.csv; la propia fila da 5597 con 647/11,56 %). La cifra absoluta 1020 queda confirmada por la suma de la columna y por la razón de las columnas «por 1.000 habitantes» (2,83/1,80).
+Cruce con res2/mnp-1939.csv (fall_t): todas las filas cuadran.

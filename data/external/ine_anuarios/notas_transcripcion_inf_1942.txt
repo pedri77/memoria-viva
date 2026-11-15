@@ -1,0 +1,11 @@
+Fuente: Anuario 1946-1947, td 162664, pág. 298.
+Título: «XXIV. Mortalidad infantil, por provincias.—Año de 1942». Sin notas al pie ni advertencias en el título.
+
+Cifras fijadas o corregidas:
+- Albacete, menos de cinco años, cifra absoluta: última cifra dañada («1 33?»); fijada en 1 338. Con 1 338 la fila cuadra (885 / 17,00 % = 5 206; 1 338 / 5 206 = 25,70 %, lo impreso) y la columna suma el total impreso 80 225 (con 1 333 faltaban 5).
+- Lérida, menos de un año, cifra absoluta: última cifra dañada («35?»); fijada en 356. Con 356 la fila cuadra (356 / 9,10 % = 3 912 = 455 / 11,63 %) y la columna suma el total impreso 54 464 (con 355 faltaba 1).
+- Soria, menos de un año: cifra central dañada («3?5»); leído 395 (16,89 % de 597 / 25,53 % = 2 338 → 395).
+- Lecturas dudosas resueltas con la fila: Segovia <5 años por 100 28,63; Teruel <5 años por 100 17,38.
+
+Cruce con res2/mnp-1942.csv (misma edición del Anuario): todo cuadra en la columna de menos de un año y en la de menos de cinco.
+Cruce anterior con res/1942.csv (otra edición): no cuadran Álava (≈1 564 defunciones implícitas frente a 1 554), Barcelona (≈27 610 frente a 27 455; dentro de tolerancia), Lérida (≈3 910 frente a 3 643), Oviedo (≈10 560 frente a 11 117), Soria (≈2 338 frente a 2 311) y Zamora (≈4 962 frente a 4 925); en todas, las dos columnas «por 100 defunciones» son coherentes entre sí. Discrepancia entre tablas, no corregida. Guadalajara <5 años (20,85 frente a 20,92) en el límite.

@@ -1,0 +1,8 @@
+Fuente: Anuario 1948, td 163412, pág. 145.
+Título: «XLVI. Mortalidad infantil, por provincias.—Año de 1945». Sin notas al pie ni advertencias en el título.
+Maquetación: el punto separa los miles (1.518). Fila de totales: «TOTAL».
+
+Cifras fijadas o corregidas:
+- Palencia, menos de un año, por 100 defunciones: última cifra dañada («25,6?»); fijada en 25,62 (1 136 / 32,37 % = 3 509; 899 / 3 509 = 25,62 %).
+Sin más correcciones; sumas y cruce con res2/mnp-1945.csv correctos.
+Errata impresa no transcrita (columna por 1.000 hab., que no se copia): Barcelona, menos de un año, «0,08» (debería ser ≈0,76).

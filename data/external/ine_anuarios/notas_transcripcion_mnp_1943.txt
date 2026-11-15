@@ -1,0 +1,10 @@
+Título: «XVI. Movimiento natural de la población, por provincias. Año de 1943» (anuario 1946-1947, td 162658). Sin advertencias en el título.
+
+Notas al pie: ninguna. A diferencia de 1939-1942, la cabecera «NUMERO DE FALLECIDOS» no lleva llamada (1) y la tabla no trae nota al pie.
+
+Cifras fijadas o corregidas:
+- Avila, fallecidos varones: segundo dígito dañado («1 ?48»); fijado en 1 848 por V+H=T (3 681 − 1 833).
+- Total, nacidos varones: dígito dañado («310 7?7»); fijado en 310 717 por V+H=T (603 430 − 292 713).
+- Total, fallecidos varones: dígito dañado («18? 889»); fijado en 182 889 por V+H=T (349 046 − 166 157).
+- Total, fallecidos en total: dígito dañado («349 0?6»); fijado en 349 046 por V+H y por la suma de la columna.
+- Total, diferencia: impreso «254 348» (nítido). Errata (transposición): 603 430 − 349 046 = 254 384, que es también la suma de la columna. Corregido a 254 384.

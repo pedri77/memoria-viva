@@ -1,0 +1,7 @@
+Título: «V. Movimiento natural de la población por provincias. Año 1945» (Anuario 1948, p. 101). Sin notas al pie ni advertencias en el título.
+La tabla trae también «Número de matrimonios» y la diferencia «Por 1.000 habitantes» (no se copian); no trae tasa de mortalidad: tasa_t vacía.
+Cifras fijadas o corregidas:
+- Madrid, fallecidos en total: impreso 20.153; corregido a 20.154 (10.589 + 9.565 = 20.154; 34.365 − 14.211 = 20.154; la suma de la columna cuadra con el total 327.045 solo con 20.154).
+- Murcia, nacidos en total: tipo dañado («2?.108»), fijado en 20.108 (10.122 + 9.986; 20.108 − 7.855 = 12.253).
+- Lérida, diferencia: primer dígito dañado, fijado en 1.173 (4.970 − 3.797).
+Nombre: impreso «Sta. Cruz de Tenerife», transcrito «Santa Cruz de Tenerife» para que lo reconozca el comprobador.

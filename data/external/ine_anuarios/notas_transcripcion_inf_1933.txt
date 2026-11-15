@@ -1,0 +1,8 @@
+Título: «XXXV. Mortalidad infantil, por provincias.—Año de 1933» (Anuario 1943, pág. 149). Sin notas al pie ni advertencias en el título.
+Columnas: Número de fallecidos de menos de un año y de menos de cinco años; cifra absoluta, por 100 defunciones, por 1.000 habitantes (esta última no se copia).
+Cifras corregidas:
+- Zamora, menos de cinco años: impreso «2 842» (nítido); corregido a 1842. Errata de imprenta: con 2842 la suma de la columna da 117 997 frente al total impreso 116 997, y el total de defunciones implícito (2842/34,31 %) sería 8283 frente a 5369 de la columna de menos de un año (1259/23,45 %); con 1842 cuadran ambos, y la razón de las columnas «por 1.000 habitantes» (6,49/4,44) también.
+Lecturas dudosas resueltas con la propia fila (m1/por100 = m5/por100):
+- Guipúzcoa, m1 «423» (primer dígito borroso): confirmado por 682/17,10 % → 423.
+- Pontevedra, por 100 de m1 «15,33» (dígito central borroso): confirmado por 1379 sobre 8998 defunciones.
+No hay tabla de fallecidos de 1933 para el cruce externo.

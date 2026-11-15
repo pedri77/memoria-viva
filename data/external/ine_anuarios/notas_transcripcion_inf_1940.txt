@@ -1,0 +1,9 @@
+Fuente: Anuario 1944-1945, td 161995, pág. 169.
+Título: «XXX. Mortalidad infantil, por provincias.-Año de 1940». Sin notas al pie ni advertencias en el título.
+
+Cifras fijadas o corregidas:
+- Toledo, menos de cinco años, cifra absoluta: impreso «2 717»; corregido a 2777. La fila no cuadra consigo misma con 2717 (1 941 / 17,30 % = 11 220 defunciones; 2 777 / 11 220 = 24,75 %, que es lo impreso; 2 777 / 3,61 x 5,16 ≈ 2 774 por 1.000 hab.) y con 2777 la columna suma exactamente el total impreso 99 085.
+- Lecturas dudosas resueltas con la imagen: Cádiz por 100 defunciones 18,98; Sevilla <5 años 4 668; Tarragona <5 años por 100 9,17 (1.ª cifra dañada; 464 / (306/6,05 %) = 9,17); Teruel <5 años por 100 15,33.
+
+Cruce con res2/mnp-1940.csv (misma edición del Anuario): todo cuadra en la columna de menos de un año y en la de menos de cinco.
+Cruce anterior con res/1940.csv (otra edición) (fallecidos de la tabla de movimiento natural): cuadran todas las provincias salvo Barcelona, Lérida, Soria y Zamora, cuyas dos columnas «por 100 defunciones» son coherentes entre sí pero implican otro total de defunciones (Barcelona ≈ 26 036 frente a 25 851; Lérida ≈ 3 959 frente a 3 813; Soria ≈ 2 644 frente a 2 584; Zamora ≈ 5 235 frente a 5 164). El total nacional implícito es 68 268 / 16,07 % ≈ 424 800 frente a 424 399. Discrepancia entre tablas (provisional/definitiva), no corregida.

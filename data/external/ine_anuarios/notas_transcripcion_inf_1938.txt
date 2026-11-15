@@ -1,0 +1,4 @@
+Título: «XLV. Mortalidad infantil por provincias.—Año 1938» (Anuario 1943, pág. 159). Sin notas al pie ni advertencias en el título.
+Columnas copiadas: cifra absoluta y «por 100 defunciones» de menos de un año y de menos de cinco años.
+Cifras fijadas o corregidas: ninguna. Todas las filas leídas cuadran con las sumas y con el cruce.
+Cruce con res/1938.csv (fall_t): todas las filas cuadran.

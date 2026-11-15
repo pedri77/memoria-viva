@@ -1,0 +1,9 @@
+Fuente: Anuario 1948, td 163410, pág. 143.
+Título: «XLIV. Mortalidad infantil, por provincias.—Año de 1944». Sin notas al pie ni advertencias en el título.
+Maquetación: el punto separa los miles (1.637) y muchas últimas cifras decimales van subrayadas en el impreso (marca tipográfica, se transcribe la cifra sin el subrayado). Fila de totales: «TOTAL».
+
+Cifras fijadas o corregidas:
+- Palmas (Las), menos de cinco años, por 100 defunciones: impreso «36,37»; corregido a 35,37. La fila no cuadra consigo misma: 1 112 / 26,29 % = 4 230 defunciones y 1 496 / 4 230 = 35,37 %; coincide con los fallecidos de res2/mnp-1944.csv.
+- Vizcaya, menos de cinco años, por 100 defunciones: impreso «10,01»; corregido a 14,01. 597 / 10,39 % = 5 746 defunciones y 805 / 5 746 = 14,01 %; las columnas por 1.000 hab. (1,15 y 1,55) confirman las cifras absolutas.
+- Guipúzcoa, menos de un año: cifra central dañada («4?9»); leído 429 (429 / 10,26 % = 4 181 = 602 / 14,40 %).
+Sumas: con estas lecturas las columnas suman los totales impresos (55 654 y 76 280).

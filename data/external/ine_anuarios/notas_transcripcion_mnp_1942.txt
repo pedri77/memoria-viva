@@ -1,0 +1,10 @@
+Título: «XIII. Movimiento natural de la población, por provincias. Año 1942» (anuario 1946-1947, td 162655). Sin advertencias en el título.
+
+Notas al pie (literal):
+(1) Sin nacidos muertos, muertos al nacer, o antes de las primeras veinticuatro horas de vida.   [llamada en «NUMERO DE FALLECIDOS (1)»]
+
+Cifras fijadas o corregidas:
+- Palencia, diferencia: se lee «1 711». Corregido a 1 717 = 5 400 − 3 683; cuadra con la suma de la columna (143 001) y con la tasa impresa (7,85 por 1 000; 1 711 daría 7,83). Errata o último dígito dañado.
+- Valladolid, nacidos varones: tercer dígito dañado («3 9?2»); fijado en 3 992 por V+H=T (7 772 − 3 780).
+- Zaragoza, nacidos total: dígito dañado («11 0?3»); fijado en 11 053 por V+H=T (5 771 + 5 282).
+- Total fallecidos en total: último dígito dañado («384 70?»); fijado en 384 702 por V+H (203 941 + 180 761) y por la diferencia (527 703 − 143 001).

@@ -1,0 +1,13 @@
+Fuente: Anuario 1944-1945, td 162029, pág. 171.
+Título: «XXXII. Mortalidad infantil, por provincias.-Año 1941». Sin notas al pie ni advertencias en el título.
+
+Cifras fijadas o corregidas:
+- León, menos de un año, por 100 defunciones: impreso «17,46»; corregido a 19,75. La fila no cuadra consigo misma: 2 376 / 27,20 % = 8 735 defunciones (igual que las 8 736 de res/1941.csv), y 1 725 / 8 735 = 19,75 %. Las columnas por 1.000 hab. (3,48 y 4,79) confirman las cifras absolutas.
+- Oviedo, menos de un año, por 100 defunciones: primera cifra dañada en el escaneo («1?,33»); leído 10,33 (1 415 / 13 716 defunciones de res/1941.csv = 10,32).
+
+Sumas: las columnas de cifras absolutas suman exactamente los totales impresos (72 555 y 101 330).
+
+Desajustes impresos que se dejan como están (las cifras absolutas cuadran con la suma; el porcentaje impreso de menos de cinco años implica un total de defunciones algo distinto del de la columna de menos de un año): Álava (17,36), Baleares (9,54), Barcelona (10,40), Cádiz (21,25), Córdoba, Guadalajara (17,96), Oviedo (14,06), Salamanca, Santa Cruz de Tenerife, Sevilla (20,50), Zamora. Diferencias de 0,05 a 0,3 puntos.
+Cruce con res2/mnp-1941.csv (misma edición del Anuario): todo cuadra en la columna de menos de un año.
+Cruce anterior con res/1941.csv (otra edición): Lérida (≈4 240 defunciones implícitas frente a 3 930) y Soria (≈2 760 frente a 2 656) no cuadran en ninguna de las dos columnas, como en 1940: discrepancia entre tablas, no corregida.
+Comprobador con res2/mnp-1941.csv: FALLA solo en «por 100 defunciones» de menos de cinco años en 11 provincias (Álava, Baleares, Barcelona, Cádiz, Guadalajara, Lérida, Salamanca, Santa Cruz de Tenerife, Sevilla, Soria, Zamora), diferencias de 0,07 a 0,31 puntos en ambos sentidos. Las cifras absolutas suman los totales y la columna de menos de un año cuadra con las defunciones de la tabla mnp, así que se interpreta como desajuste del impreso en esa columna de porcentajes; se deja la lectura impresa.

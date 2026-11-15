@@ -1,4 +1,4 @@
-# F4 · Hambre de posguerra (1): defunciones por provincia, 1934-1942
+# F4 · Hambre de posguerra: defunciones y mortalidad infantil por provincia, 1934-1950
 
 **Fecha:** 15-11-2026. Es el bloque A del triaje: datos oficiales agregados, sin relato. El relato sobre la posguerra (R3) espera a los revisores.
 
@@ -16,7 +16,7 @@ Tres subagentes transcribieron tres años cada uno, sobre las páginas partidas 
 
 Datos en `data/external/ine_anuario1943/mnp_provincias_1934_1942.csv`, con las notas de cada año en `notas_transcripcion_AAAA.txt`.
 
-Comprobaciones de `scripts/etl/ine_mortalidad_1934_1942.py`, superadas en los 9 años:
+Comprobaciones de `scripts/etl/ine_mortalidad_1934_1950.py`, superadas en los 9 años:
 1. En cada fila, varones + mujeres = total, y nacidos − fallecidos = diferencia impresa.
 2. Las 50 provincias suman la fila de la nación en todas las columnas.
 3. La población que se deduce de la tasa está entre 0,8 y 1,25 veces la interpolada entre los censos de 1930 y 1940.
@@ -53,8 +53,48 @@ En 1941 los valores más altos son los de Huelva (212), Badajoz (195), Cádiz (1
 - **Datos:** columnas y gráfico con los años de cada indicador. El eje horizontal respeta la distancia entre años.
 - **Fichas de provincia:** nueva sección «Series anuales».
 
-## Siguiente (hambre, parte 2)
+## Parte 2 (15-11-2026): 1939-1950 definitivos y mortalidad infantil
 
-- **1943-1950:** defunciones de los Anuarios de 1944-1945, 1946-1947, 1948, 1949 y 1950.
-- **Mortalidad infantil por provincia, 1933-1942:** ya localizada en el mismo Anuario de 1943 (td 161414 a 161432, los números pares son las provincias).
-- **Precios y racionamiento:** en el apartado «Precios, salarios y consumo» de los Anuarios.
+**Ediciones.** Para cada año se toma la última edición del Anuario que lo publica:
+- 1939-1941: Anuario de 1944-1945;
+- 1942-1943: Anuario de 1946-1947;
+- 1944-1946: Anuario de 1948;
+- 1947-1948: Anuario de 1949;
+- 1949: Anuario de 1950;
+- 1950: Anuario de 1951.
+
+Las cifras de 1939 a 1942 sustituyen a las provisionales del Anuario de 1943. La revisión es mínima en España (+0,1 %), pero llega al +8,5 % en Lérida en 1941 y al −5 % en Oviedo en 1942. Cuando pasa del 1 %, se publica como nota en el dato. La tabla de mortalidad infantil confirma que las definitivas son las buenas: sus «por 100 defunciones» solo cuadran con ellas.
+
+**Datos nuevos.** Están en `data/external/ine_anuarios/`, con las notas de transcripción de cada año:
+- `mnp_provincias_1939_1950.csv`: nacidos y fallecidos por sexo, y diferencia. Desde 1944 las tablas ya no traen la tasa.
+- `mortalidad_infantil_provincias_1933_1946.csv`: fallecidos de menos de 1 año y de menos de 5, con su «por 100 defunciones».
+
+**Comprobaciones.** Las de la parte 1, y además:
+- en cada fila, nacidos varones + mujeres = total;
+- el «por 100 defunciones» impreso de los menores de un año coincide (±0,06) con los fallecidos de la tabla del movimiento natural de la misma edición.
+
+**Erratas corregidas y anotadas.**
+- Movimiento natural: Madrid 1945, Zaragoza 1947, Ciudad Real y Teruel 1950, total de 1943.
+- Mortalidad infantil: Zamora 1933, León 1941, Toledo 1940, porcentajes de 1935, 1944 y 1946.
+
+En la tabla de mortalidad infantil de 1943, la suma solo cuadró tras fijar cuatro dígitos dañados, y lleva una cautela pública. En 1941, la columna «por 100» de los menores de cinco años no cuadra en 11 provincias; no se usa en ningún indicador.
+
+**Indicadores**
+- `ind-sobremortalidad-prov`: ahora va de 1934 a 1950.
+- `ind-mortalidad-prov`: la tasa oficial, de 1934 a 1943.
+- `ind-mortalidad-infantil-prov` (nuevo): fallecidos de menos de un año por 1.000 nacidos vivos, de 1934 a 1946. Se calcula aquí, porque el Anuario no da esa tasa por provincia.
+
+España en su conjunto:
+
+| | 1934 | 1935 | 1937 | 1939 | 1940 | 1941 | 1942 | 1943 | 1945 | 1946 | 1948 | 1950 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Defunciones (1934-35 = 100) | 101 | 99 | 122 | 122 | 110 | 125 | 99 | 90 | 85 | 90 | 78 | 78 |
+| Mortalidad infantil (‰) | 113 | 109 | 130 | 135 | 109 | 143 | 103 | 99 | 85 | 87 | | |
+
+En 1941 la mortalidad infantil llega a 235 por 1.000 en Badajoz, 229 en Cáceres y 199 en Córdoba; la más baja es la de Baleares, con 67.
+
+## Pendiente
+
+- Precios y racionamiento: en el apartado «Precios, salarios y consumo» de los Anuarios; probablemente solo nacionales.
+- Mortalidad infantil por provincia desde 1947: los Anuarios de 1949 a 1951 ya no traen esa tabla; habría que buscarla en el Movimiento Natural de esos años.
+- Relato (R3): con revisores. La causa de la sobremortalidad (hambre, tifus, represión) es interpretación atribuida.

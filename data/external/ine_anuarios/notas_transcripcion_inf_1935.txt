@@ -1,0 +1,10 @@
+Título: «XXXIX. Mortalidad infantil, por provincias.—Año de 1935» (Anuario 1943, pág. 153). Sin notas al pie ni advertencias en el título.
+Columnas copiadas: cifra absoluta y «por 100 defunciones» de menos de un año y de menos de cinco años (no se copian las de «por 1.000 habitantes»).
+Cifras fijadas o corregidas:
+- León, menos de cinco años: se lee «3 0?0» con el tercer dígito dañado (parece 3); fijado en 3050 por la suma de la columna (total impreso 108 160) y por 36,79 % de 8291 defunciones.
+- Málaga, <5 años por 100 defunciones: impreso «23,30» (nítido); corregido a 33,30 (3222 / 9676 defunciones; la propia fila da 9678 con 2013/20,80 %).
+- Palmas (Las), <5 años por 100: se lee «45,58» con el último dígito poco claro; fijado en 45,53 (1791 / 3934).
+- Teruel, <5 años por 100: se lee «25,11» con el segundo dígito dañado; corregido a 26,11 (1126 / 4312, coherente con 721/16,72 %).
+- Vizcaya, <5 años por 100: impreso «39,84» (nítido); corregido a 19,84 (1179 / 5942; la fila da 5944 con 718/12,08 %).
+- Zamora, <5 años por 100: impreso «36,56» (nítido); corregido a 35,56 (2031 / 5712; la fila da 5713 con 1362/23,84 %).
+Cruce con res/1935.csv (fall_t): todas las filas cuadran tras estas correcciones.

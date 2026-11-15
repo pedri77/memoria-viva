@@ -9,7 +9,7 @@ Requieren que antes haya al menos un revisor con formación en historia contempo
 | # | Ampliación | Por qué espera | Material ya disponible |
 |---|---|---|---|
 | R1 | **Tercera narrativa: las normas de las dos zonas durante la guerra (1936-1939)** | Es el tema más delicado: vocabulario y riesgo de simetrías artificiales (guía editorial, §1.4 y §2). | 8 acontecimientos del BOE de Burgos (`scripts/etl/eventos_burgos.py`), Gaceta de la zona republicana de julio y octubre de 1936 (`doc-gaceta-1936-07-19`, `-07-20`, `-10-07`, `-10-08`), Decreto 66 sobre el magisterio, bombardeos de Euskadi (Gogora, licencia sin verificar, en `data/raw/`). Lagunas: Boletín de la Junta de Defensa Nacional y texto completo de las normas. |
-| R2 | **Imágenes de Europeana en las fichas** | Hay que revisar los derechos imagen por imagen; ninguna se publica sin una licencia abierta verificada. | Fuente catalogada en `docs/05_acceso_y_nuevas_fuentes.md`. API de Europeana con clave gratuita. |
+| R2 | **Imágenes de Europeana en las fichas** | Hay que revisar los derechos imagen por imagen; ninguna se publica sin una licencia abierta verificada. **Criterio de equilibrio (David, 15-11-2026):** si se usan archivos de partidos u organizaciones de un bando, se suman los equivalentes del otro (p. ej. fotos del Archivo Histórico del PCE en Europeana junto a fondos del Archivo General Militar o de FET y de las JONS en el Archivo General de la Administración). | Fuente catalogada en `docs/05_acceso_y_nuevas_fuentes.md`. API de Europeana con clave gratuita. |
 | R3 | **Ampliación del periodo a 1939-1975** | Es otro proyecto por tamaño: necesita su propia guía editorial (represión, exilio, fosas) y revisores. | `mapSpainHist` cubre los censos de 1940 a 1970; los BOE de 1939-1975 tienen fichas `doc.php`. |
 
 ## Pendientes sin revisores (por orden de valor)
@@ -34,7 +34,7 @@ Regla para todas: **los datos oficiales agregados se pueden preparar ya; los rel
 
 | Tema | Fuente primaria abierta | Bloqueo | Bloque |
 |---|---|---|---|
-| Hambre de posguerra | INE: Movimiento Natural de la Población y Anuarios de 1935-1950 (mortalidad, precios, racionamiento) | Ninguno para los datos; el relato es R3. **Parte 1 hecha 15-11-2026** (defunciones 1934-1942, `docs/F4_mortalidad_1934_1942.md`); falta 1943-1950, mortalidad infantil y precios | A |
+| Hambre de posguerra | INE: Movimiento Natural de la Población y Anuarios de 1935-1950 (mortalidad, precios, racionamiento) | Ninguno para los datos; el relato es R3. **Partes 1 y 2 hechas 15-11-2026** (defunciones 1934-1950 y mortalidad infantil 1934-1946, `docs/F4_mortalidad_1934_1950.md`); faltan precios y racionamiento | A |
 | Cárceles | Anuarios estadísticos del INE (población reclusa por año) | Datos sí; relato R3 | A |
 | Alfabetización por edad (P3) | INE, Censo de 1930, Tomo III | Ninguno | A |
 | Calles de toda España | INE, Callejero del Censo Electoral (por provincia, semestral) | Clasificar a los «personajes» exige criterio de revisores; el catálogo estatal de símbolos (RD 1040/2025) aún no está publicado | B |
@@ -51,6 +51,8 @@ Regla para todas: **los datos oficiales agregados se pueden preparar ya; los rel
 | Represión | Estimaciones historiográficas atribuidas | R1/R3 | C |
 | Lugares y actos de memoria hoy | Catálogos autonómicos (Memorial Democràtic, Andalucía), Ley 20/2022 | Revisores para la selección | B |
 | Vivienda | INE, Censo de Viviendas de 1950; BOE: Instituto Nacional de la Vivienda (1939), Regiones Devastadas | R3 | B |
+| Archivos de partidos y sindicatos | AHPCE (fotos de la guerra en Europeana; prensa clandestina en la BVPH), Fundación Pablo Iglesias (PSOE), Fundación Anselmo Lorenzo (CNT); contrapeso: Archivo General Militar (Ávila), fondos de FET y de las JONS en el AGA | Equilibrio entre bandos (criterio de David); derechos por documento; Patrimonio Digital Complutense veta en robots.txt /s/patrimonio/item* | B |
+| Ayuntamientos y fondos públicos para memoria democrática hoy (propuesta de David, 15-11-2026) | BDNS / infosubvenciones (concesiones por beneficiario; p. ej. convocatoria BDNS 907882 de fosas y exhumaciones, RD 866/2025 de ayudas directas a entidades locales y a la FEMP); portal de transparencia de cada ayuntamiento; UE: programa CERV «European Remembrance» (resultados en el Funding & Tenders Portal; no se ha encontrado aún ningún ayuntamiento español beneficiario) | Datos actuales de entidades públicas, sin datos personales: se puede hacer sin revisores como capa de datos (mapa de importes por municipio y año). Qué publica cada ayuntamiento exige revisar web a web (respetando robots.txt) | A |
 | Imágenes | Europeana, Biblioteca Digital Hispánica (carteles anónimos de 1936-1939: dominio público si son anónimos y publicados hace más de 70 años) | R2: derechos imagen por imagen | B |
 | Libros | Catálogo BNE (solo metadatos y enlaces) | Selección con revisores para evitar sesgo | B |
 | Música | Biblioteca Digital Hispánica, Europeana Sounds: solo enlaces y metadatos, nunca letras ni grabaciones con derechos | Derechos y equilibrio | C |

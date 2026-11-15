@@ -1,0 +1,3 @@
+Título: «III. Movimiento natural de la población por provincias. Año 1949» (Anuario 1950, p. 66). Sin notas al pie ni advertencias en el título.
+La tabla trae también «Número de matrimonios» y la diferencia «Por 1.000 habitantes» (no se copian); no trae tasa de mortalidad: tasa_t vacía. Observación: el «por 1.000» de la diferencia en Tarragona va impreso 29,37 (incoherente con 969; no se copia).
+Cifras fijadas o corregidas: ninguna.

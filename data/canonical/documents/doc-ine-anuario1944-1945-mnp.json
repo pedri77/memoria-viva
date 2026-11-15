@@ -1,0 +1,37 @@
+{
+  "id": "doc-ine-anuario1944-1945-mnp",
+  "title": "Anuario Estadístico de España 1944-1945: movimiento natural de la población por provincias (1939, 1940, 1941) y mortalidad infantil por provincias (1939, 1940, 1941)",
+  "title_original": "Movimiento natural de la población, por provincias; Mortalidad infantil, por provincias",
+  "document_type": "tabla_estadistica",
+  "source_ids": [
+    "F010"
+  ],
+  "custodian": "Instituto Nacional de Estadística, INEbase Historia (fondo documental)",
+  "signature": "Anuario Estadístico de España 1944-1945, Demografía, «Movimiento de la población» (movimiento natural 1939: td=162019; movimiento natural 1940: td=162020; movimiento natural 1941: td=162022; mortalidad infantil 1939: td=161993; mortalidad infantil 1940: td=161995; mortalidad infantil 1941: td=162029)",
+  "canonical_url": "https://www.ine.es/inebaseweb/treeNavigation.do?tn=161457",
+  "date": "1945-12-31",
+  "date_precision": "anio",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Tablas oficiales con los nacidos vivos y los fallecidos de cada provincia y año, por sexo, y su diferencia; y con los fallecidos de menos de un año y de menos de cinco.",
+  "context": "Cifras de los registros civiles recopiladas por el Instituto Nacional de Estadística. Los fallecidos excluyen a los nacidos muertos y a los muertos antes de las primeras veinticuatro horas. Cada edición del Anuario puede revisar las cifras provisionales de las anteriores.",
+  "text_origin": "transcripcion_validada",
+  "rights": {
+    "status": "cc_by",
+    "action": "almacenar",
+    "attribution": "Fuente: Instituto Nacional de Estadística (INE), INEbase Historia, Anuario Estadístico de España 1944-1945",
+    "evidence_url": "https://www.ine.es/ine/codigobp/politica_difusion_es.pdf",
+    "checked_at": "2026-11-15",
+    "note": "El INE aplica a la información de su web la licencia CC BY 4.0 salvo indicación contraria (Política de Difusión Estadística, febrero de 2026)."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Transcritas a mano; cada fila cuadra por sexo y con la diferencia impresa, y la suma de provincias reproduce la fila de totales."
+  },
+  "consulted_at": "2026-11-15"
+}
