@@ -83,6 +83,18 @@ for (const [id, o] of data.stories) {
 }
 
 const counts = Object.entries(data).map(([k, m]) => `${k}=${m.size}`).join(" ");
+// Registro de lagunas (data/lagunas.json): campos mínimos y narrativas existentes
+{
+  const lag = read("data/lagunas.json"), ids = new Set();
+  for (const l of lag) {
+    for (const k of ["id", "tema", "periodo", "falta", "buscado", "probar"]) if (!l[k] || (Array.isArray(l[k]) && !l[k].length)) errors.push(`data/lagunas.json: ${l.id ?? "?"} sin ${k}`);
+    if (ids.has(l.id)) errors.push(`data/lagunas.json: id duplicado ${l.id}`);
+    ids.add(l.id);
+    for (const s of l.afecta ?? []) if (!data.stories.has(s)) errors.push(`data/lagunas.json: ${l.id} cita la narrativa inexistente ${s}`);
+    for (const p of l.probar ?? []) if (!/^https:\/\//.test(p.url ?? "")) errors.push(`data/lagunas.json: ${l.id} con URL no https`);
+  }
+}
+
 if (errors.length) {
   console.error(`✗ ${errors.length} errores (${counts})`);
   errors.forEach((e) => console.error("  " + e));

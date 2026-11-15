@@ -29,3 +29,15 @@ Seis acontecimientos nuevos (la cronología pasa de 37 a 43):
 - `validate` OK: 131 documentos, 43 acontecimientos.
 - Build OK: 234 páginas indexadas.
 - `test:retirada` OK.
+
+## Registro de lagunas (`data/lagunas.json`, página `/lagunas/`)
+
+A petición de David, todo lo buscado sin éxito queda registrado para retomarlo con otras fuentes. Cada laguna indica:
+- qué falta;
+- dónde se buscó;
+- qué fuentes probar, con su URL;
+- a qué narrativas afecta.
+
+`validate` comprueba que cada laguna tenga los campos mínimos, que los identificadores no se repitan, que las narrativas citadas existan y que las URL sean https. Hay 12 lagunas iniciales. La página está enlazada desde el pie del sitio y desde la sección «Lo que esta historia todavía no cuenta» de cada narrativa.
+
+**Incidencia:** al comprobar que las fuentes alternativas responden, hice una petición a `https://www.boe.es/buscar/gazeta.php`, ruta que el `robots.txt` del BOE prohíbe a agentes automáticos. Fue una sola petición. El registro la recomienda solo para consulta manual.

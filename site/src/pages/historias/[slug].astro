@@ -51,7 +51,7 @@ const draft = s.review.status !== "aprobado";
       <section class="escena" id="lagunas" aria-labelledby="h-lagunas" data-codes="">
         <h2 id="h-lagunas">Lo que esta historia todavía no cuenta</h2>
         <ul>{s.gaps.map((g: string) => <li>{g}</li>)}</ul>
-        <p class="meta">La ausencia de un tema aquí no significa que no ocurriera: significa que aún no está documentado en este proyecto.</p>
+        <p class="meta">La ausencia de un tema aquí no significa que no ocurriera: significa que aún no está documentado en este proyecto. Dónde se ha buscado y qué fuentes probar: <a href={url("/lagunas/")}>lagunas pendientes</a>.</p>
       </section>
     </div>
     <aside class="lateral" aria-hidden="true">

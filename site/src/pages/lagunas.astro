@@ -1,0 +1,22 @@
+---
+import Base from "../layouts/Base.astro";
+import lagunas from "../../../data/lagunas.json";
+import { stories, url } from "../lib/data";
+const titulo = (id: string) => stories.find((s: any) => s.id === id)?.title ?? id;
+---
+<Base title="Lagunas pendientes" description="Lo que el proyecto ha buscado y no ha encontrado todavía, dónde se buscó y qué fuentes probar para retomarlo.">
+  <h1>Lagunas pendientes</h1>
+  <p>Lo que hemos buscado sin encontrarlo con las vías que el proyecto puede usar, dónde se buscó y qué fuentes conviene probar después. Que algo figure aquí no significa que no ocurriera: significa que todavía no está documentado en este proyecto.</p>
+  <p class="meta">Si conoces una fuente para alguna de estas lagunas, <a href="https://github.com/pedri77/memoria-viva/issues/new?template=correccion.yml">avísanos</a>. Los datos están en <a href="https://github.com/pedri77/memoria-viva/blob/main/data/lagunas.json">data/lagunas.json</a>.</p>
+  {lagunas.map((l: any) => (
+    <article class="card" id={l.id}>
+      <h2>{l.tema}</h2>
+      <p class="meta">{l.periodo}</p>
+      <p><strong>Qué falta.</strong> {l.falta}</p>
+      <p><strong>Dónde se buscó.</strong> {l.buscado}</p>
+      <p><strong>Qué probar.</strong></p>
+      <ul>{l.probar.map((p: any) => <li><a href={p.url} rel="noopener">{p.fuente}</a></li>)}</ul>
+      {l.afecta?.length > 0 && <p class="meta">Afecta a: {l.afecta.map((s: string, i: number) => <>{i > 0 && " · "}<a href={url(`/historias/${s.replace("story-", "")}/#lagunas`)}>{titulo(s)}</a></>)}</p>}
+    </article>
+  ))}
+</Base>
