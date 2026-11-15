@@ -1,0 +1,41 @@
+{
+  "id": "evt-1934-08-29-plan-bachillerato",
+  "title": "Nuevo plan de estudios del Bachillerato",
+  "event_type": "educativo",
+  "start_date": "1934-08-29",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "Un decreto de 29 de agosto de 1934, publicado en la Gaceta del día siguiente, establece que el Bachillerato se desarrollará en siete cursos, divididos en un primer ciclo de tres y un segundo de cuatro.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1934-08-30",
+          "locator": "preámbulo y art. 1.º, pág. 1872"
+        }
+      ]
+    },
+    {
+      "text": "El preámbulo introduce un examen de conjunto al final del tercer curso para orientar a otros estudios a los alumnos que, según el Ministerio, no tengan capacidad o vocación; el decreto exige además una reválida al final, con diecisiete años cumplidos.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1934-08-30",
+          "locator": "preámbulo, págs. 1872-1873"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  }
+}

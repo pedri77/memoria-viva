@@ -101,7 +101,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   const RAMP_L = ["#E3EBF0", "#B4CAD7", "#7FA3B8", "#4A7591", "#1F4A66"];
   const RAMP_D = ["#2A3B4B", "#3F6177", "#5E89A3", "#8DB3CA", "#C7DDEA"];
   const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]!));
-  const nf = (v: number | null, unit: string) => v == null ? "sin dato" : v.toLocaleString("es-ES", { maximumFractionDigits: unit.startsWith("habitantes") ? 1 : 0 });
+  const nf = (v: number | null, unit: string) => v == null ? "sin dato" : v.toLocaleString("es-ES", { maximumFractionDigits: unit.startsWith("habitantes") || unit.startsWith("%") ? 1 : 0 });
   const href = (p: string) => `${D.base}${p}`;
 
   // Estado inicial desde la URL
@@ -367,7 +367,13 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     yearEl.setAttribute("aria-valuetext", y === 1930 ? "Todos los años" : String(y));
   }
   yearEl.addEventListener("input", () => { updateYearLabel(); applyEvents(); syncUrl(); });
-  indEl.addEventListener("change", () => { applyChoropleth(); syncUrl(); });
+  // Si el indicador no tiene datos del censo elegido (la alfabetización solo es de 1930), saltar al que sí tenga
+  function censoDisponible() {
+    const tiene = (c: string) => Object.values(D.prov).some((p: any) => p.ind[indEl.value]?.[c] != null);
+    if (!tiene(censoEl.value)) { const c = [...censoEl.options].map((o) => o.value).find(tiene); if (c) censoEl.value = c; }
+  }
+  censoDisponible();
+  indEl.addEventListener("change", () => { censoDisponible(); applyChoropleth(); syncUrl(); });
   censoEl.addEventListener("change", () => { applyChoropleth(); syncUrl(); });
   munisEl.addEventListener("change", () => { loadMunis(); syncUrl(); });
   capaEl.addEventListener("change", () => { applyCapa(); syncUrl(); });

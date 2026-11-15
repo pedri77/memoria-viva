@@ -1,0 +1,41 @@
+{
+  "id": "doc-boe-a-1935-101",
+  "title": "Gaceta de Madrid n.º 3, 3 de enero de 1935: Ley dejando en suspenso las facultades concedidas por el Estatuto de Cataluña al Parlamento de la Generalidad, hasta que las Cortes, a propuesta del Gobierno y después de levantada la suspensión de garantías constitucionales, acuerden el restablecimiento gradual del régimen autonómico",
+  "title_original": "Ley dejando en suspenso las facultades concedidas por el Estatuto de Cataluña al Parlamento de la Generalidad, hasta que las Cortes, a propuesta del Gobierno y después de levantada la suspensión de garantías constitucionales, acuerden el restablecimiento gradual del régimen autonómico.",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado",
+  "signature": "BOE-A-1935-101 · «Gaceta de Madrid», núm. 3, 3 de enero de 1935, págs. 82 a 83 · Presidencia del Consejo de Ministros",
+  "canonical_url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1935-101",
+  "date": "1935-01-03",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana",
+    "plc-prov-08",
+    "plc-prov-17",
+    "plc-prov-25",
+    "plc-prov-43"
+  ],
+  "summary": "Disposición de Presidencia del Consejo de Ministros publicada en la Gaceta de Madrid núm. 3 de 3 de enero de 1935, págs. 82 a 83: «Ley dejando en suspenso las facultades concedidas por el Estatuto de Cataluña al Parlamento de la Generalidad, hasta que las Cortes, a propuesta del Gobierno y después de levantada la suspensión de garantías constitucionales, acuerden el restablecimiento gradual del régimen autonómico».",
+  "context": "Ficha oficial del BOE. El ejemplar completo no está en la ruta de la sede del BOE que este proyecto consulta, así que solo se usan el título y los datos de publicación.",
+  "text_origin": "ninguno",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-15",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza a la ficha oficial."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado; pendiente de lectura humana."
+  },
+  "consulted_at": "2026-11-15"
+}

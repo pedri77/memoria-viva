@@ -1,0 +1,37 @@
+{
+  "id": "doc-gaceta-1935-08-10",
+  "title": "Gaceta de Madrid n.º 222, 10 de agosto de 1935: ley de reforma de la de Reforma agraria",
+  "title_original": "Gaceta de Madrid. Núm. 222",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 222, 10/08/1935, págs. 1288-1291",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1935/08/10/pdfs/GMD-1935-222.pdf",
+  "date": "1935-08-10",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Ley llamada «de reforma de la de Reforma agraria», que modifica la ley de 15 de septiembre de 1932: deroga su base 7.ª y anula el inventario de fincas formado por el Instituto de Reforma Agraria en cumplimiento de ella.",
+  "context": "Ley aprobada por las Cortes elegidas en noviembre de 1933.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-15",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-15"
+}

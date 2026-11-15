@@ -1,0 +1,41 @@
+{
+  "id": "evt-1934-04-25-ley-amnistia",
+  "title": "Ley de amnistía de 1934",
+  "event_type": "legislativo",
+  "start_date": "1934-04-25",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La Gaceta del 25 de abril de 1934 publica una ley que concede amnistía por los hechos que enumera, entre ellos los delitos y faltas cometidos por medio de la imprenta o de la palabra, los de sedición y rebelión, los cometidos con motivo de conflictos sociales, huelgas o paros y los relacionados con elecciones.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1934-04-25",
+          "locator": "artículo único, apartados 1.º, 3.º, 9.º y 14, pág. 548"
+        }
+      ]
+    },
+    {
+      "text": "La ley excluye de varios de esos apartados los delitos contra la vida y la integridad corporal que constituyeran homicidio o lesiones graves.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1934-04-25",
+          "locator": "apartados 9.º y 14, pág. 548"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  }
+}

@@ -30,10 +30,24 @@
               "locator": "págs. 1612-1613"
             }
           ]
+        },
+        {
+          "text": "El censo de 31 de diciembre de 1930 declara que sabía leer el 62,0 % de los varones y el 51,2 % de las mujeres de la población de hecho, contando todas las edades e incluidas las posesiones del norte y costa occidental de África; por provincias, la proporción iba del 37,1 % de Albacete al 76,8 % de Álava.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-ine-censo1930-instruccion",
+              "locator": "totales nacionales y filas provinciales, columnas «saben leer» y «saben leer y escribir»"
+            }
+          ]
         }
       ],
       "event_ids": [
         "evt-1931-06-23-plazas-maestros"
+      ],
+      "place_ids": [
+        "plc-prov-01",
+        "plc-prov-02"
       ]
     },
     {
@@ -209,13 +223,13 @@
   "gaps": [
     "De las normas de la zona sublevada (BOE de Burgos) solo se recoge el decreto de revisión del personal de Instrucción Pública de noviembre de 1936, a partir de su título oficial; falta leer su texto y el de las disposiciones posteriores.",
     "Solo hay normas, no su aplicación: cuántas escuelas se construyeron y cuántos maestros se nombraron de verdad necesita otras fuentes (estadísticas del Ministerio, archivos provinciales).",
-    "Las disposiciones del periodo 1934-1935 sobre enseñanza no están documentadas aquí.",
-    "Falta la alfabetización por provincia del censo de 1930, pendiente de transcribir de INEbase Historia.",
-    "Faltan voces de la época: prensa profesional y de distintas tendencias (por ejemplo, la Revista de Escuelas Normales, disponible en la Hemeroteca Digital)."
+    "Del periodo 1934-1935 solo está en la cronología el nuevo plan de Bachillerato de agosto de 1934; faltan las disposiciones sobre la escuela primaria y la sustitución de la enseñanza de las congregaciones.",
+    "Faltan voces de la época: prensa profesional y de distintas tendencias (por ejemplo, la Revista de Escuelas Normales, disponible en la Hemeroteca Digital).",
+    "Las cifras de alfabetización de 1930 cuentan toda la población, niños pequeños incluidos, y son declaraciones censales: no son comparables sin más con las tasas sobre mayores de 10 años que usa la historiografía."
   ],
   "review": {
     "status": "revision",
-    "date": "2026-11-14",
+    "date": "2026-11-15",
     "by": [
       "autor"
     ],

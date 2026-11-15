@@ -1,0 +1,31 @@
+{
+  "id": "evt-1935-03-24-arrendamientos-rusticos",
+  "title": "Ley de arrendamientos de fincas rústicas",
+  "event_type": "economico",
+  "start_date": "1935-03-24",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La Gaceta del 24 de marzo de 1935 publica la «Ley relativa a contratos de arrendamientos de fincas rústicas», del Ministerio de Agricultura.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1935-2712",
+          "locator": "págs. 2346 a 2351"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado; pendiente de lectura humana."
+  }
+}

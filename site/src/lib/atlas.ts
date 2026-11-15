@@ -43,7 +43,7 @@ export function atlasData() {
   for (const code of Object.keys(prov)) {
     prov[code].events = ev.filter((e) => e.pts.some((p) => p.ine === code || p.ine?.startsWith(code))).map((e) => e.id);
   }
-  const SHORT: Record<string, string> = { "ind-densidad-prov": "Densidad (hab./km²)", "ind-pob-derecho-prov": "Pobl. de derecho", "ind-pob-hecho-prov": "Pobl. de hecho" };
+  const SHORT: Record<string, string> = { "ind-densidad-prov": "Densidad (hab./km²)", "ind-pob-derecho-prov": "Pobl. de derecho", "ind-pob-hecho-prov": "Pobl. de hecho", "ind-alfab-total-prov": "Saben leer (%)", "ind-alfab-varones-prov": "Varones que leen (%)", "ind-alfab-mujeres-prov": "Mujeres que leen (%)" };
   const inds = indicators.map((i) => ({ id: i.id, concept: i.concept, short: SHORT[i.id] ?? i.concept, unit: i.unit }))
     .sort((a, b) => a.id.localeCompare(b.id));
   return { events: ev, prov, inds };

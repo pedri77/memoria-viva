@@ -1,0 +1,37 @@
+{
+  "id": "doc-gaceta-1934-04-25",
+  "title": "Gaceta de Madrid n.º 115, 25 de abril de 1934: ley de amnistía",
+  "title_original": "Gaceta de Madrid. Núm. 115",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 115, 25/04/1934, págs. 548-549",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1934/04/25/pdfs/GMD-1934-115.pdf",
+  "date": "1934-04-25",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Ley que concede amnistía por los hechos que enumera en sus apartados, entre ellos los delitos de imprenta, los de rebelión y sedición, los cometidos con ocasión de conflictos sociales, huelgas o paros y los electorales, con excepciones.",
+  "context": "Ley aprobada por las Cortes elegidas en noviembre de 1933 y promulgada por el presidente de la República.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-15",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-15"
+}

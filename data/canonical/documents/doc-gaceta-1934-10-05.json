@@ -1,0 +1,37 @@
+{
+  "id": "doc-gaceta-1934-10-05",
+  "title": "Gaceta de Madrid n.º 278, 5 de octubre de 1934: nombramiento del Gobierno presidido por Alejandro Lerroux",
+  "title_original": "Gaceta de Madrid. Núm. 278",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 278, 05/10/1934, págs. 178-179",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1934/10/05/pdfs/GMD-1934-278.pdf",
+  "date": "1934-10-05",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Decretos de 4 de octubre de 1934 que admiten la dimisión de Ricardo Samper Ibáñez como presidente del Consejo de Ministros y de sus ministros, nombran presidente a Alejandro Lerroux García y nombran a los ministros del nuevo Gobierno.",
+  "context": "Decretos del presidente de la República.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-15",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-15"
+}

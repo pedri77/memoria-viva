@@ -1,0 +1,35 @@
+{
+  "id": "evt-1935-01-03-suspension-estatuto-cataluna",
+  "title": "Suspensión de las facultades del Parlamento de Cataluña",
+  "event_type": "politico",
+  "start_date": "1935-01-03",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana",
+    "plc-prov-08",
+    "plc-prov-17",
+    "plc-prov-25",
+    "plc-prov-43"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La Gaceta del 3 de enero de 1935 publica una ley que deja en suspenso las facultades concedidas por el Estatuto de Cataluña al Parlamento de la Generalidad hasta que las Cortes, a propuesta del Gobierno y después de levantada la suspensión de garantías constitucionales, acuerden el restablecimiento gradual del régimen autonómico.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1935-101",
+          "locator": "págs. 82 a 83"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado; pendiente de lectura humana."
+  }
+}

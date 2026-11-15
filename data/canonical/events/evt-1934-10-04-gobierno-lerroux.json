@@ -1,0 +1,41 @@
+{
+  "id": "evt-1934-10-04-gobierno-lerroux",
+  "title": "Nombramiento del Gobierno presidido por Alejandro Lerroux",
+  "event_type": "politico",
+  "start_date": "1934-10-04",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "Decretos de 4 de octubre de 1934, publicados en la Gaceta del día 5, admiten la dimisión de Ricardo Samper Ibáñez como presidente del Consejo de Ministros y nombran para el cargo a Alejandro Lerroux García.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1934-10-05",
+          "locator": "pág. 178"
+        }
+      ]
+    },
+    {
+      "text": "Otros decretos del mismo número admiten la dimisión de los ministros del Gobierno saliente y nombran a los del nuevo.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1934-10-05",
+          "locator": "págs. 178-179"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  }
+}

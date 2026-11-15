@@ -1,0 +1,37 @@
+{
+  "id": "doc-ine-censo1930-instruccion",
+  "title": "Censo de 1930, Tomo II: población de hecho por sexo, estado civil e instrucción elemental, por provincias",
+  "title_original": "Habitantes inscritos en la Población de HECHO del Censo de 1930 clasificados según el sexo en combinación con el estado civil y con la instrucción elemental, por provincias",
+  "document_type": "tabla_estadistica",
+  "source_ids": [
+    "F010"
+  ],
+  "custodian": "Instituto Nacional de Estadística, INEbase Historia (fondo documental)",
+  "signature": "Censo de la población de España de 1930, Tomo II. Resúmenes generales de la nación, «Resumen por provincias», págs. 2-4 del PDF",
+  "canonical_url": "https://www.ine.es/inebaseweb/pdfDispacher.do?td=194363&ext=.pdf",
+  "date": "1930-12-31",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Tabla oficial del censo de 1930 con la población de hecho de cada provincia, por sexo, clasificada por estado civil y por instrucción elemental: saben solo leer, saben leer y escribir, no saben leer y no consta.",
+  "context": "Cifras oficiales de la Dirección General de Estadística. La instrucción se declaraba en la hoja censal, sin prueba de lectura, y se cuenta para todas las edades, incluidos los niños pequeños. La tabla impresa contiene al menos una errata (Sevilla, mujeres que saben leer y escribir), corregida en la transcripción con la regla documentada en el CSV.",
+  "text_origin": "transcripcion_validada",
+  "rights": {
+    "status": "cc_by",
+    "action": "almacenar",
+    "attribution": "Fuente: Instituto Nacional de Estadística (INE), INEbase Historia, Censo de 1930",
+    "evidence_url": "https://www.ine.es/ine/codigobp/politica_difusion_es.pdf",
+    "checked_at": "2026-11-15",
+    "note": "El INE aplica a la información de su web la licencia CC BY 4.0 salvo indicación contraria (Política de Difusión Estadística, febrero de 2026)."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Transcrita a mano de la imagen del PDF; 102 filas cuadradas por estado civil e instrucción, totales nacionales impresos reproducidos columna a columna y totales provinciales iguales a la suma municipal de mapSpainHist."
+  },
+  "consulted_at": "2026-11-15"
+}
