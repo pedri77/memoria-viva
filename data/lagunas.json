@@ -432,7 +432,7 @@
   "tema": "Imágenes: más parejas entre bandos y vida civil",
   "periodo": "1936-1939",
   "falta": "Fotografías de la vida civil en las dos zonas y de los frentes, con autor, custodio y derechos comprobables, publicadas en parejas. El cartel «El Frente Popular» (Biblioteca Valenciana Digital, 1936) está localizado en Europeana, pero no se ha consultado porque esa biblioteca veta a los agentes de IA en su robots.txt; queda para consulta manual.",
-  "buscado": "Wikimedia Commons y la API de Europeana (15-11-2026). Se descartaron imágenes de procedencia dudosa (blogs, redes sociales, prensa actual, copias de Getty/Keystone) y la sátira republicana «Los Nacionales» que figuraba como cartel sublevado. Las imágenes de violencia de las dos retaguardias esperan a los revisores.",
+  "buscado": "Wikimedia Commons y la API de Europeana (15-11-2026), incluidos Nationaal Archief, Rijksmuseum y Fortepan: sobre vida civil (abastecimiento, colas, escuelas, evacuación de niños) no hay imágenes abiertas de 1936-1939; solo se publicó la pareja de billetes de las dos zonas. Se descartaron imágenes de procedencia dudosa (blogs, redes sociales, prensa actual, copias de Getty/Keystone) y la sátira republicana «Los Nacionales» que figuraba como cartel sublevado. Las imágenes de violencia de las dos retaguardias esperan a los revisores.",
   "probar": [
    {
     "fuente": "Biblioteca Valenciana Digital, consulta manual (cartel «El Frente Popular»)",
