@@ -1,21 +1,21 @@
 {
   "id": "ind-alfab10-total-prov",
-  "concept": "Saben leer, mayores de 10 años, 1930",
-  "definition": "Porcentaje de la población de hecho de 10 años o más de cada provincia que, según el censo de 1930, sabía leer (solo leer, o leer y escribir).",
+  "concept": "Saben leer, mayores de 10 años, 1920 y 1930",
+  "definition": "Porcentaje de la población de hecho de 10 años o más de cada provincia que, según los censos de 1920 y 1930, sabía leer (solo leer, o leer y escribir).",
   "unit": "% de la población de hecho de 10 años o más",
   "denominator": "población de hecho de 10 años o más (incluye a quienes no declararon la edad)",
-  "method": "(saben solo leer + saben escribir) / habitantes, ambos de 10 años en adelante, calculados como el total menos las columnas de menos de 5 y de 5 a 9 años de la tabla de edad e instrucción de cada provincia (Tomo III del censo de 1930), transcrita con comprobación aritmética (scripts/etl/ine_alfabetizacion_edad_1930.py).",
+  "method": "(saben solo leer + saben escribir) / habitantes, ambos de 10 años en adelante, calculados como el total menos las columnas de menos de 5 y de 5 a 9 años de la tabla de edad e instrucción de cada provincia (Tomo III de los censos de 1920 y 1930), transcrita con comprobación aritmética (scripts/etl/ine_alfabetizacion_edad.py).",
   "source_ids": [
     "F010"
   ],
-  "comparability_notes": "Medida habitual en la historiografía, más alta que la calculada sobre toda la población (ind-alfab-*). Es una declaración censal, no una prueba de lectura. Solo 1930: el Tomo III de 1920 no se ha transcrito.",
+  "comparability_notes": "Medida habitual en la historiografía, más alta que la calculada sobre toda la población (ind-alfab-*). Es una declaración censal, no una prueba de lectura. En 1920 Canarias era una sola provincia y Cádiz incluía Ceuta.",
   "review": {
     "status": "revision",
     "date": "2026-11-15",
     "by": [
       "autor"
     ],
-    "note": "Generado por scripts/etl/ine_alfabetizacion_edad_1930.py. Pendiente de segunda revisión humana."
+    "note": "Generado por scripts/etl/ine_alfabetizacion_edad.py. Pendiente de segunda revisión humana."
   },
   "observations": [
     {
@@ -379,14 +379,385 @@
       "period": "1930",
       "value": null,
       "document_id": "doc-ine-censo1930-edad-instruccion",
-      "missingness_reason": "El Tomo III de 1930 no trae tabla propia de Ceuta y Melilla."
+      "missingness_reason": "El Tomo III de 1930 no trae una tabla propia de Ceuta y Melilla."
     },
     {
       "place_id": "plc-prov-52",
       "period": "1930",
       "value": null,
       "document_id": "doc-ine-censo1930-edad-instruccion",
-      "missingness_reason": "El Tomo III de 1930 no trae tabla propia de Ceuta y Melilla."
+      "missingness_reason": "El Tomo III de 1930 no trae una tabla propia de Ceuta y Melilla."
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1920",
+      "value": 86.7,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88198&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1920",
+      "value": 36.0,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88199&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1920",
+      "value": 45.8,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88200&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1920",
+      "value": 36.2,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88201&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1920",
+      "value": 65.3,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88202&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1920",
+      "value": 40.2,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88203&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1920",
+      "value": 46.9,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88204&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1920",
+      "value": 75.9,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88205&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1920",
+      "value": 81.5,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88206&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1920",
+      "value": 46.9,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88207&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1920",
+      "value": 47.4,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88208&ext=.pdf",
+      "uncertainty": "En 1920 la provincia de Cádiz incluía Ceuta."
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1920",
+      "value": 42.7,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88245&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1920",
+      "value": 40.1,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88246&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1920",
+      "value": 40.1,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88251&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1920",
+      "value": 50.9,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88255&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1920",
+      "value": 45.6,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88258&ext=.pdf",
+      "uncertainty": "El reparto de la instrucción difiere del publicado en el Tomo II del mismo censo (mismos habitantes); se usa el del Tomo III, que coincide con su propio resumen nacional. En la columna de 9 años (mujeres) la instrucción suma 2 más que los habitantes."
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1920",
+      "value": 66.9,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88426&ext=.pdf",
+      "uncertainty": "Corregida una errata de la tabla impresa (varones con instrucción «no consta»: 173 por 178). El reparto de la instrucción de los varones difiere del Tomo II del mismo censo; se usa el del Tomo III."
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1920",
+      "value": 34.7,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88427&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1920",
+      "value": 63.9,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88428&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1920",
+      "value": 77.6,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88429&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1920",
+      "value": 50.5,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88430&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1920",
+      "value": 59.2,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88431&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1920",
+      "value": 30.7,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88432&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1920",
+      "value": 73.9,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88433&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1920",
+      "value": 63.2,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88434&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1920",
+      "value": 72.7,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88435&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1920",
+      "value": 53.6,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88436&ext=.pdf",
+      "uncertainty": "En la columna de 9 años (mujeres) la instrucción suma 20 más que los habitantes; efecto inapreciable."
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1920",
+      "value": 78.6,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88437&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1920",
+      "value": 33.0,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88438&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1920",
+      "value": 37.3,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88440&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1920",
+      "value": 75.9,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88443&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1920",
+      "value": 49.0,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88445&ext=.pdf",
+      "uncertainty": "El reparto de la instrucción de las mujeres difiere mucho del publicado en el Tomo II del mismo censo (11.519 frente a 14.225 que saben solo leer, con los mismos habitantes); se usa el del Tomo III, que coincide con su propio resumen nacional."
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1920",
+      "value": 68.4,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88447&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1920",
+      "value": 83.5,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88448&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1920",
+      "value": 54.6,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88449&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1920",
+      "value": 73.0,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88458&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1920",
+      "value": 89.3,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88460&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1920",
+      "value": 81.7,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88462&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1920",
+      "value": 52.6,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88525&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1920",
+      "value": 75.9,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88530&ext=.pdf",
+      "uncertainty": "Corregida una errata de la tabla impresa (varones de 9 años que no saben leer: 579 por 379)."
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1920",
+      "value": 59.0,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88534&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1920",
+      "value": 51.2,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88536&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1920",
+      "value": 44.9,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88538&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1920",
+      "value": 51.6,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88542&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1920",
+      "value": 76.0,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88543&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1920",
+      "value": 79.0,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88544&ext=.pdf",
+      "uncertainty": "En la columna de 5 años (mujeres) la instrucción suma 47 más que los habitantes; efecto inapreciable."
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1920",
+      "value": 69.9,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88545&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1920",
+      "value": 57.4,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "locator": "«Resumen de la provincia», columnas total y menos de 10 años, PDF https://www.ine.es/inebaseweb/pdfDispacher.do?td=88546&ext=.pdf"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1920",
+      "value": null,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "missingness_reason": "En 1920 Canarias era una sola provincia; el censo da 36,4 % para el conjunto del archipiélago."
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1920",
+      "value": null,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "missingness_reason": "En 1920 Canarias era una sola provincia; el censo da 36,4 % para el conjunto del archipiélago."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1920",
+      "value": null,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "missingness_reason": "El Tomo III de 1920 no trae una tabla propia de Ceuta y Melilla (en 1920 Ceuta va dentro de Cádiz)."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1920",
+      "value": null,
+      "document_id": "doc-ine-censo1920-edad-instruccion",
+      "missingness_reason": "El Tomo III de 1920 no trae una tabla propia de Ceuta y Melilla (en 1920 Ceuta va dentro de Cádiz)."
     }
   ]
 }

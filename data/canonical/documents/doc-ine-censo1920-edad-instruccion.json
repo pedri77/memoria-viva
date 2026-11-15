@@ -1,0 +1,37 @@
+{
+  "id": "doc-ine-censo1920-edad-instruccion",
+  "title": "Censo de 1920, Tomo III: habitantes por edad, sexo, estado civil e instrucción elemental, resumen de cada provincia",
+  "title_original": "Clasificación de los habitantes por su edad combinada con el sexo, estado civil e instrucción elemental",
+  "document_type": "tabla_estadistica",
+  "source_ids": [
+    "F010"
+  ],
+  "custodian": "Instituto Nacional de Estadística, INEbase Historia (fondo documental)",
+  "signature": "Censo de la población de España de 1920, Tomo III, tabla de edad e instrucción de cada provincia (un PDF por provincia; su número td figura en cada observación)",
+  "canonical_url": "https://www.ine.es/inebaseweb/treeNavigation.do?tn=88197",
+  "date": "1920-12-31",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Tablas oficiales del censo de 1920, una por provincia, que cruzan la edad de los habitantes de hecho con el sexo, el estado civil y la instrucción elemental (saben solo leer, saben escribir, no saben leer, no consta).",
+  "context": "Cifras oficiales de la Dirección General de Estadística. La instrucción se declaraba en la hoja censal, sin prueba de lectura. Permiten calcular la alfabetización de los mayores de 10 años, la medida habitual en la historiografía. En 1920 Canarias era una sola provincia y la de Cádiz incluía Ceuta. En tres provincias (Cuenca, Gerona y Orense) el reparto de la instrucción difiere del publicado en el Tomo II.",
+  "text_origin": "transcripcion_validada",
+  "rights": {
+    "status": "cc_by",
+    "action": "almacenar",
+    "attribution": "Fuente: Instituto Nacional de Estadística (INE), INEbase Historia, Censo de 1920",
+    "evidence_url": "https://www.ine.es/ine/codigobp/politica_difusion_es.pdf",
+    "checked_at": "2026-11-15",
+    "note": "El INE aplica a la información de su web la licencia CC BY 4.0 salvo indicación contraria (Política de Difusión Estadística, febrero de 2026)."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Transcrita de la imagen del PDF; cada columna cuadrada por instrucción y la columna total contrastada fila a fila con la transcripción independiente del Tomo II."
+  },
+  "consulted_at": "2026-11-15"
+}
