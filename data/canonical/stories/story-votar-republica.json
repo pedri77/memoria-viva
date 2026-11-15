@@ -39,9 +39,22 @@
               "locator": "arts. 2, 3 y 11, pág. 640"
             }
           ]
+        },
+        {
+          "text": "El decreto no toca, en cambio, quién puede votar. La ley electoral de 8 de agosto de 1907, que sigue en vigor, declara electores para diputados a Cortes y concejales a «todos los españoles varones» mayores de veinticinco años en el pleno goce de sus derechos civiles; el decreto solo rebaja esa edad a veintitrés. En junio de 1931 votaban, por tanto, solo los varones.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-gaceta-1907-08-10",
+              "locator": "art. 1.º, pág. 584"
+            },
+            {
+              "document_id": "doc-gaceta-1931-05-10",
+              "locator": "preámbulo y art. 2.º, págs. 639-640"
+            }
+          ]
         }
-      ],
-      "editorial_note": "El decreto declara elegibles a las mujeres, pero no cambia quién puede votar: para eso remite a la ley electoral de 1907, cuyo texto no se recoge todavía en este proyecto."
+      ]
     },
     {
       "id": "constituyentes",

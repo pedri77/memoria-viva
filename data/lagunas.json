@@ -6,12 +6,26 @@
     "falta": "El decreto de disolución de las Cortes y la convocatoria de las elecciones generales de 16 de febrero de 1936.",
     "buscado": "Ruta de PDF /gazeta/dias/ de la sede del BOE (no están los ejemplares de enero de 1936) y fichas /buscar/doc.php (en 1936 no hay fichas antes de BOE-A-1936-9134, octubre de 1936).",
     "probar": [
-      {"fuente": "Buscador de la Gazeta del BOE, consulta manual (prohibido a agentes automáticos por robots.txt)", "url": "https://www.boe.es/buscar/gazeta.php"},
-      {"fuente": "Biblioteca Virtual de Prensa Histórica (Ministerio de Cultura)", "url": "https://prensahistorica.mcu.es/"},
-      {"fuente": "Hemeroteca Digital de la BNE, consulta manual", "url": "https://hemerotecadigital.bne.es/"},
-      {"fuente": "Petición de los ejemplares a la Agencia Estatal BOE (AEBOE)", "url": "https://www.boe.es/"}
+      {
+        "fuente": "Buscador de la Gazeta del BOE, consulta manual (prohibido a agentes automáticos por robots.txt)",
+        "url": "https://www.boe.es/buscar/gazeta.php"
+      },
+      {
+        "fuente": "Biblioteca Virtual de Prensa Histórica (Ministerio de Cultura)",
+        "url": "https://prensahistorica.mcu.es/"
+      },
+      {
+        "fuente": "Hemeroteca Digital de la BNE, consulta manual",
+        "url": "https://hemerotecadigital.bne.es/"
+      },
+      {
+        "fuente": "Petición de los ejemplares a la Agencia Estatal BOE (AEBOE)",
+        "url": "https://www.boe.es/"
+      }
     ],
-    "afecta": ["story-votar-republica"]
+    "afecta": [
+      "story-votar-republica"
+    ]
   },
   {
     "id": "laguna-febrero-marzo-1936",
@@ -20,9 +34,18 @@
     "falta": "Los decretos de nombramiento del Gobierno tras las elecciones de febrero de 1936, el decreto-ley de amnistía y el restablecimiento del Parlamento de Cataluña.",
     "buscado": "Ruta /gazeta/dias/ para el 20, 22 y 23 de febrero y el 1 de marzo de 1936: no están. No hay fichas doc.php de 1936 antes de octubre.",
     "probar": [
-      {"fuente": "Buscador de la Gazeta del BOE, consulta manual", "url": "https://www.boe.es/buscar/gazeta.php"},
-      {"fuente": "Diario de Sesiones de las Cortes (Congreso de los Diputados, serie histórica)", "url": "https://app.congreso.es/est_sesiones/"},
-      {"fuente": "Biblioteca Virtual de Prensa Histórica", "url": "https://prensahistorica.mcu.es/"}
+      {
+        "fuente": "Buscador de la Gazeta del BOE, consulta manual",
+        "url": "https://www.boe.es/buscar/gazeta.php"
+      },
+      {
+        "fuente": "Diario de Sesiones de las Cortes (Congreso de los Diputados, serie histórica)",
+        "url": "https://app.congreso.es/est_sesiones/"
+      },
+      {
+        "fuente": "Biblioteca Virtual de Prensa Histórica",
+        "url": "https://prensahistorica.mcu.es/"
+      }
     ],
     "afecta": []
   },
@@ -33,8 +56,14 @@
     "falta": "El acuerdo de las Cortes de abril de 1936 que puso fin a su mandato. Solo está documentado que los decretos de 8 de abril los firma Diego Martínez Barrio.",
     "buscado": "Gaceta del 8 de abril de 1936 en /gazeta/dias/ (no está); Gacetas del 9 y 10 de abril (sí están, sin el acuerdo).",
     "probar": [
-      {"fuente": "Diario de Sesiones de las Cortes, abril de 1936", "url": "https://app.congreso.es/est_sesiones/"},
-      {"fuente": "Buscador de la Gazeta del BOE, consulta manual", "url": "https://www.boe.es/buscar/gazeta.php"}
+      {
+        "fuente": "Diario de Sesiones de las Cortes, abril de 1936",
+        "url": "https://app.congreso.es/est_sesiones/"
+      },
+      {
+        "fuente": "Buscador de la Gazeta del BOE, consulta manual",
+        "url": "https://www.boe.es/buscar/gazeta.php"
+      }
     ],
     "afecta": []
   },
@@ -45,10 +74,22 @@
     "falta": "Una fuente primaria que documente la sublevación. La ley de separación de funcionarios del 12 de agosto de 1932 no la menciona en su título, así que no se relaciona con ella.",
     "buscado": "Fichas doc.php de la Gaceta del 11 y 12 de agosto de 1932.",
     "probar": [
-      {"fuente": "Diario de Sesiones de las Cortes Constituyentes, agosto de 1932", "url": "https://app.congreso.es/est_sesiones/"},
-      {"fuente": "Biblioteca Virtual de Prensa Histórica (prensa sevillana y madrileña de agosto de 1932)", "url": "https://prensahistorica.mcu.es/"},
-      {"fuente": "Hemeroteca de ABC (Madrid y Sevilla)", "url": "https://www.abc.es/archivo/"},
-      {"fuente": "Texto de la ley de 11 de agosto de 1932 en la Gaceta (consulta manual)", "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1932-6203"}
+      {
+        "fuente": "Diario de Sesiones de las Cortes Constituyentes, agosto de 1932",
+        "url": "https://app.congreso.es/est_sesiones/"
+      },
+      {
+        "fuente": "Biblioteca Virtual de Prensa Histórica (prensa sevillana y madrileña de agosto de 1932)",
+        "url": "https://prensahistorica.mcu.es/"
+      },
+      {
+        "fuente": "Hemeroteca de ABC (Madrid y Sevilla)",
+        "url": "https://www.abc.es/archivo/"
+      },
+      {
+        "fuente": "Texto de la ley de 11 de agosto de 1932 en la Gaceta (consulta manual)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1932-6203"
+      }
     ],
     "afecta": []
   },
@@ -59,9 +100,18 @@
     "falta": "Las disposiciones de la Junta de Defensa Nacional antes del primer BOE de Burgos (2 de octubre de 1936), entre ellas el nombramiento de Franco en septiembre de 1936.",
     "buscado": "Fichas doc.php de 1936 (no hay ninguna anterior a BOE-A-1936-9134).",
     "probar": [
-      {"fuente": "Buscador de la Gazeta del BOE, consulta manual (comprobar si incluye el Boletín de la Junta)", "url": "https://www.boe.es/buscar/gazeta.php"},
-      {"fuente": "Biblioteca Virtual de Prensa Histórica", "url": "https://prensahistorica.mcu.es/"},
-      {"fuente": "PARES, Portal de Archivos Españoles", "url": "https://pares.cultura.gob.es/"}
+      {
+        "fuente": "Buscador de la Gazeta del BOE, consulta manual (comprobar si incluye el Boletín de la Junta)",
+        "url": "https://www.boe.es/buscar/gazeta.php"
+      },
+      {
+        "fuente": "Biblioteca Virtual de Prensa Histórica",
+        "url": "https://prensahistorica.mcu.es/"
+      },
+      {
+        "fuente": "PARES, Portal de Archivos Españoles",
+        "url": "https://pares.cultura.gob.es/"
+      }
     ],
     "afecta": []
   },
@@ -72,21 +122,18 @@
     "falta": "El texto de las disposiciones citadas por su ficha oficial (BOE de Burgos 1936-1939 y Gaceta de 1932-1935): hoy solo se afirma su título y sus datos de publicación.",
     "buscado": "Fichas doc.php (dan título, no texto). Los PDF de esas fichas están en /datos/pdfs/, prohibido a agentes automáticos.",
     "probar": [
-      {"fuente": "Lectura manual del PDF desde la ficha de cada norma en la sede del BOE", "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1936-9694"},
-      {"fuente": "Petición de un volcado de texto a la AEBOE", "url": "https://www.boe.es/"}
+      {
+        "fuente": "Lectura manual del PDF desde la ficha de cada norma en la sede del BOE",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1936-9694"
+      },
+      {
+        "fuente": "Petición de un volcado de texto a la AEBOE",
+        "url": "https://www.boe.es/"
+      }
     ],
-    "afecta": ["story-escuelas-republica"]
-  },
-  {
-    "id": "laguna-ley-electoral-1907",
-    "tema": "Ley electoral de 8 de agosto de 1907",
-    "periodo": "1907-1931",
-    "falta": "Su texto, necesario para afirmar quién podía votar en junio de 1931 (el decreto de mayo de 1931 solo cambia quién puede ser elegido).",
-    "buscado": "No buscada todavía.",
-    "probar": [
-      {"fuente": "Gaceta de Madrid de agosto de 1907 en la sede del BOE (ruta /gazeta/dias/)", "url": "https://www.boe.es/buscar/gazeta.php"}
-    ],
-    "afecta": ["story-votar-republica"]
+    "afecta": [
+      "story-escuelas-republica"
+    ]
   },
   {
     "id": "laguna-segundas-vueltas",
@@ -95,10 +142,18 @@
     "falta": "Resultados de las segundas vueltas y composición final de las Cortes; el atlas solo usa la primera vuelta.",
     "buscado": "Atlas Electoral de la Segunda República (solo primera vuelta en los datos usados).",
     "probar": [
-      {"fuente": "Diario de Sesiones de las Cortes (actas y credenciales)", "url": "https://app.congreso.es/est_sesiones/"},
-      {"fuente": "Archivo del Congreso de los Diputados, histórico de diputados", "url": "https://www.congreso.es/"}
+      {
+        "fuente": "Diario de Sesiones de las Cortes (actas y credenciales)",
+        "url": "https://app.congreso.es/est_sesiones/"
+      },
+      {
+        "fuente": "Archivo del Congreso de los Diputados, histórico de diputados",
+        "url": "https://www.congreso.es/"
+      }
     ],
-    "afecta": ["story-votar-republica"]
+    "afecta": [
+      "story-votar-republica"
+    ]
   },
   {
     "id": "laguna-voto-por-sexo",
@@ -107,9 +162,14 @@
     "falta": "Electores y votantes por sexo para medir el efecto del artículo 36 de la Constitución.",
     "buscado": "Atlas Electoral (no distingue por sexo).",
     "probar": [
-      {"fuente": "Anuarios estadísticos de 1934-1936 en INEbase Historia", "url": "https://www.ine.es/inebaseweb/71807.do"}
+      {
+        "fuente": "Anuarios estadísticos de 1934-1936 en INEbase Historia",
+        "url": "https://www.ine.es/inebaseweb/71807.do"
+      }
     ],
-    "afecta": ["story-votar-republica"]
+    "afecta": [
+      "story-votar-republica"
+    ]
   },
   {
     "id": "laguna-alfabetizacion-edad",
@@ -118,20 +178,30 @@
     "falta": "Tasas sobre mayores de 10 años, comparables con la historiografía; hoy el denominador es toda la población.",
     "buscado": "Tomo II de los censos de 1920 y 1930 (resumen por provincias, sin edades).",
     "probar": [
-      {"fuente": "Censo de 1930, Tomo III (volúmenes regionales: instrucción por edad), INEbase Historia", "url": "https://www.ine.es/inebaseweb/71807.do"}
+      {
+        "fuente": "Censo de 1930, Tomo III (volúmenes regionales: instrucción por edad), INEbase Historia",
+        "url": "https://www.ine.es/inebaseweb/71807.do"
+      }
     ],
-    "afecta": ["story-escuelas-republica"]
+    "afecta": [
+      "story-escuelas-republica"
+    ]
   },
   {
     "id": "laguna-ensenanza-1934-1935",
-    "tema": "Escuela primaria y sustitución de la enseñanza de las congregaciones, 1934-1935",
+    "tema": "Sustitución de la enseñanza de las congregaciones y texto de los decretos de Inspección, 1934-1935",
     "periodo": "1934-1935",
-    "falta": "Disposiciones sobre primaria y sobre la sustitución de la enseñanza de las congregaciones religiosas.",
-    "buscado": "Solo se ha incorporado el plan de Bachillerato de agosto de 1934.",
+    "falta": "Las disposiciones sobre el plazo de sustitución de la enseñanza de las congregaciones religiosas en la primaria y el texto de los decretos de 25 de julio y 28 de noviembre de 1935 sobre la Inspección (hoy solo su título).",
+    "buscado": "Fichas doc.php del 2-3 de agosto de 1934, 24-25 de julio y 27-28 de noviembre de 1935 (localizados la orden de coeducación y los dos decretos de Inspección). La sustitución no se ha buscado por fecha concreta.",
     "probar": [
-      {"fuente": "Fichas doc.php del Ministerio de Instrucción Pública, 1934-1935 (vía ya probada)", "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1935-101"}
+      {
+        "fuente": "Fichas doc.php del Ministerio de Instrucción Pública, 1934-1935 (vía ya probada)",
+        "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1935-101"
+      }
     ],
-    "afecta": ["story-escuelas-republica"]
+    "afecta": [
+      "story-escuelas-republica"
+    ]
   },
   {
     "id": "laguna-municipales-referendums",
@@ -140,9 +210,17 @@
     "falta": "Elecciones municipales de abril de 1931 y abril de 1933 y referéndums de los estatutos de Cataluña (1931), País Vasco (1933) y Galicia (1936).",
     "buscado": "No buscados todavía.",
     "probar": [
-      {"fuente": "Anuarios estadísticos en INEbase Historia", "url": "https://www.ine.es/inebaseweb/71807.do"},
-      {"fuente": "Biblioteca Virtual de Prensa Histórica", "url": "https://prensahistorica.mcu.es/"}
+      {
+        "fuente": "Anuarios estadísticos en INEbase Historia",
+        "url": "https://www.ine.es/inebaseweb/71807.do"
+      },
+      {
+        "fuente": "Biblioteca Virtual de Prensa Histórica",
+        "url": "https://prensahistorica.mcu.es/"
+      }
     ],
-    "afecta": ["story-votar-republica"]
+    "afecta": [
+      "story-votar-republica"
+    ]
   }
 ]

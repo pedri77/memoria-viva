@@ -1,0 +1,37 @@
+{
+  "id": "doc-boe-a-1935-10978",
+  "title": "Gaceta de Madrid n.º 332, 28 de noviembre de 1935: Decreto disponiendo quede redactado en la forma que se inserta el artículo 20 del Decreto de 2 de Diciembre de 1932",
+  "title_original": "Decreto disponiendo quede redactado en la forma que se inserta el artículo 20 del Decreto de 2 de Diciembre de 1932.",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado",
+  "signature": "BOE-A-1935-10978 · «Gaceta de Madrid», núm. 332, 28 de noviembre de 1935, págs. 1723 a 1723 · Ministerio de Instrucción Pública y Bellas Artes",
+  "canonical_url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1935-10978",
+  "date": "1935-11-28",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Disposición del Ministerio de Instrucción Pública y Bellas Artes publicada en la Gaceta de Madrid núm. 332 de 28 de noviembre de 1935: «Decreto disponiendo quede redactado en la forma que se inserta el artículo 20 del Decreto de 2 de Diciembre de 1932».",
+  "context": "Ficha oficial del BOE. Solo se usan el título y los datos de publicación; el texto no se ha consultado.",
+  "text_origin": "ninguno",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-15",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza a la ficha oficial."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado; pendiente de lectura humana."
+  },
+  "consulted_at": "2026-11-15"
+}

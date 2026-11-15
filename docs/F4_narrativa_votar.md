@@ -31,7 +31,7 @@ Sumas propias sobre `elect` y `votant`. El Atlas solo agrega mesas con ambos dat
 
 - La ley de julio de 1933 aparece fechada en el OCR el «veintiuno de julio»; como el OCR no es fiable en fechas, la narrativa la cita solo por su publicación (Gaceta del 28-07-1933).
 - La narrativa no atribuye el aumento del censo en 1933 al voto femenino: el Atlas no separa por sexo. Lo dice en una nota editorial.
-- El voto exclusivamente masculino en 1931 no se afirma: depende del texto de la ley de 1907, que aún no está en el proyecto.
+- ~~El voto exclusivamente masculino en 1931 no se afirma~~. **Resuelto el 15-11-2026:** el art. 1.º de la ley electoral de 1907 (Gaceta del 10-08-1907, pág. 584) declara electores solo a los «españoles varones», y el decreto de mayo de 1931 solo rebaja la edad. Ahora la narrativa lo afirma con las dos evidencias.
 
 ## Cambios de código
 

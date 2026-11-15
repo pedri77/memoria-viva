@@ -1,7 +1,7 @@
 {
   "id": "story-escuelas-republica",
   "title": "Las escuelas de la República, 1931-1936",
-  "summary": "Qué dicen las normas publicadas en la Gaceta sobre la escuela entre la proclamación de la República y la guerra: el diagnóstico de 1931, la lengua y la religión en el aula, las Misiones Pedagógicas, la Constitución, la ley de congregaciones de 1933 y las plazas de maestros de 1936. Es una historia de normas, no de su aplicación.",
+  "summary": "Qué dicen las normas publicadas en la Gaceta sobre la escuela entre la proclamación de la República y la guerra: el diagnóstico de 1931, la lengua y la religión en el aula, las Misiones Pedagógicas, la Constitución, la ley de congregaciones de 1933, los cambios de 1934-1935 y las plazas de maestros de 1936. Es una historia de normas, no de su aplicación.",
   "period": "1931-1936",
   "scenes": [
     {
@@ -187,6 +187,71 @@
       "editorial_note": "Esta narrativa todavía no recoge cómo se recibió la ley ni hasta qué punto se aplicó tras las elecciones de noviembre de 1933. Se incorporará con fuentes de distintas tendencias."
     },
     {
+      "id": "segundo-bienio",
+      "heading": "Cambio de rumbo",
+      "date_label": "1934-1935",
+      "intro": "Tras las elecciones de noviembre de 1933, el Ministerio de Instrucción Pública dicta normas que modifican algunas de las de 1931-1933.",
+      "claims": [
+        {
+          "text": "La Gaceta del 3 de agosto de 1934 publica una orden de 1 de agosto que deja sin efecto el régimen de coeducación establecido, con y sin autorización ministerial, y prohíbe a maestros e inspectores implantarlo en las escuelas primarias nacionales, salvo en las escuelas mixtas y de párvulos.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-gaceta-1934-08-03",
+              "locator": "pág. 1224"
+            }
+          ]
+        },
+        {
+          "text": "La orden lo justifica en que algunos inspectores habían establecido la coeducación en escuelas unitarias sin autorización del Ministerio, «provocando la protesta de los Ayuntamientos, de los padres de los niños y de los propios Maestros».",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-gaceta-1934-08-03",
+              "locator": "pág. 1224"
+            }
+          ]
+        },
+        {
+          "text": "Un decreto de 29 de agosto de 1934 establece un Bachillerato de siete cursos, divididos en un primer ciclo de tres y un segundo de cuatro.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-gaceta-1934-08-30",
+              "locator": "art. 1.º, pág. 1872"
+            }
+          ]
+        },
+        {
+          "text": "La Gaceta del 25 de julio de 1935 publica un decreto del Ministerio de Instrucción Pública que suprime la Inspección Central de Primera enseñanza.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-boe-a-1935-7071",
+              "locator": "pág. 856"
+            }
+          ]
+        },
+        {
+          "text": "La Gaceta del 28 de noviembre de 1935 publica un decreto que da nueva redacción al artículo 20 del decreto de 2 de diciembre de 1932.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-boe-a-1935-10978",
+              "locator": "pág. 1723"
+            }
+          ]
+        }
+      ],
+      "event_ids": [
+        "evt-1934-08-01-orden-coeducacion",
+        "evt-1934-08-29-plan-bachillerato",
+        "evt-1935-07-25-supresion-inspeccion-central",
+        "evt-1935-11-28-inspeccion-articulo-20"
+      ],
+      "editorial_note": "De los dos decretos de 1935 solo se conoce el título oficial: qué decía la nueva redacción del artículo 20 y cómo se aplicó la supresión de la Inspección Central requiere leer su texto."
+    },
+    {
       "id": "guerra",
       "heading": "Maestros en guerra",
       "date_label": "Octubre de 1936",
@@ -227,9 +292,9 @@
   "gaps": [
     "De las normas de la zona sublevada (BOE de Burgos) solo se recoge el decreto de revisión del personal de Instrucción Pública de noviembre de 1936, a partir de su título oficial; falta leer su texto y el de las disposiciones posteriores.",
     "Solo hay normas, no su aplicación: cuántas escuelas se construyeron y cuántos maestros se nombraron de verdad necesita otras fuentes (estadísticas del Ministerio, archivos provinciales).",
-    "Del periodo 1934-1935 solo está en la cronología el nuevo plan de Bachillerato de agosto de 1934; faltan las disposiciones sobre la escuela primaria y la sustitución de la enseñanza de las congregaciones.",
     "Faltan voces de la época: prensa profesional y de distintas tendencias (por ejemplo, la Revista de Escuelas Normales, disponible en la Hemeroteca Digital).",
-    "Las cifras de alfabetización de 1930 cuentan toda la población, niños pequeños incluidos, y son declaraciones censales: no son comparables sin más con las tasas sobre mayores de 10 años que usa la historiografía."
+    "Las cifras de alfabetización de 1930 cuentan toda la población, niños pequeños incluidos, y son declaraciones censales: no son comparables sin más con las tasas sobre mayores de 10 años que usa la historiografía.",
+    "De 1934-1935 falta la sustitución de la enseñanza de las congregaciones religiosas, cuyo plazo para la primaria fijaba la ley de 1933, y el texto de los decretos de Inspección de 1935."
   ],
   "review": {
     "status": "revision",

@@ -1,0 +1,37 @@
+{
+  "id": "doc-gaceta-1934-08-03",
+  "title": "Gaceta de Madrid n.º 215, 3 de agosto de 1934: orden sobre la coeducación en las escuelas primarias",
+  "title_original": "Gaceta de Madrid. Núm. 215",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 215, 03/08/1934, pág. 1224",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1934/08/03/pdfs/GMD-1934-215.pdf",
+  "date": "1934-08-03",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Orden del Ministerio de Instrucción Pública de 1 de agosto de 1934, firmada por Filiberto Villalobos, que deja sin efecto el régimen de coeducación establecido y prohíbe a maestros e inspectores implantarlo en las escuelas primarias nacionales, salvo en las mixtas y de párvulos.",
+  "context": "Disposición del Gobierno; el preámbulo expone los motivos del propio Ministerio.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-15",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-15"
+}

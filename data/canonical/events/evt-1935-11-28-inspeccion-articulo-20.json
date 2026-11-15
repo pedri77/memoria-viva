@@ -1,0 +1,31 @@
+{
+  "id": "evt-1935-11-28-inspeccion-articulo-20",
+  "title": "Nueva redacción del artículo 20 del decreto de Inspección de 1932",
+  "event_type": "educativo",
+  "start_date": "1935-11-28",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La Gaceta del 28 de noviembre de 1935 publica un decreto que da nueva redacción al artículo 20 del decreto de 2 de diciembre de 1932.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1935-10978",
+          "locator": "pág. 1723"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado; pendiente de lectura humana."
+  }
+}

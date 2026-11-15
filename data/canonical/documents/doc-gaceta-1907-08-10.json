@@ -1,0 +1,37 @@
+{
+  "id": "doc-gaceta-1907-08-10",
+  "title": "Gaceta de Madrid n.º 222, 10 de agosto de 1907: ley electoral",
+  "title_original": "Gaceta de Madrid. Núm. 222",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 222, 10/08/1907, págs. 584 y ss.",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1907/08/10/pdfs/GMD-1907-222.pdf",
+  "date": "1907-08-10",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Ley electoral de 8 de agosto de 1907 (Ministerio de la Gobernación). Su artículo 1.º declara electores para diputados a Cortes y concejales a los españoles varones mayores de veinticinco años en el pleno goce de sus derechos civiles y vecinos de un municipio con al menos dos años de residencia; el 4.º declara elegibles a los españoles varones de estado seglar mayores de veinticinco años.",
+  "context": "Ley de la Restauración, vigente en 1931 con las modificaciones del decreto de 8 de mayo de 1931. La fecha de 8 de agosto la da ese decreto; la sanción no se lee con fiabilidad en el OCR de este ejemplar.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-15",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-15"
+}

@@ -41,3 +41,27 @@ A petición de David, todo lo buscado sin éxito queda registrado para retomarlo
 `validate` comprueba que cada laguna tenga los campos mínimos, que los identificadores no se repitan, que las narrativas citadas existan y que las URL sean https. Hay 12 lagunas iniciales. La página está enlazada desde el pie del sitio y desde la sección «Lo que esta historia todavía no cuenta» de cada narrativa.
 
 **Incidencia:** al comprobar que las fuentes alternativas responden, hice una petición a `https://www.boe.es/buscar/gazeta.php`, ruta que el `robots.txt` del BOE prohíbe a agentes automáticos. Fue una sola petición. El registro la recomienda solo para consulta manual.
+
+## Lagunas cerradas el 15-11-2026
+
+**Ley electoral de 1907** (`laguna-ley-electoral-1907`, retirada del registro). En la Gaceta del 10-08-1907, pág. 584:
+- El art. 1.º declara electores a «todos los españoles varones» mayores de 25 años.
+- El art. 4.º declara elegibles a los varones de estado seglar.
+
+La narrativa del voto afirma ya, con dos evidencias, que en junio de 1931 votaban solo los varones. La fecha de 8 de agosto la da el decreto de mayo de 1931; el OCR del ejemplar no la deja leer.
+
+**Enseñanza primaria 1934-1935** (`laguna-ensenanza-1934-1935`, reducida). Fechas tomadas de la bibliografía y verificadas en las fichas oficiales:
+
+| Fecha | Disposición | Evidencia |
+|---|---|---|
+| 01-08-1934 | Orden que deja sin efecto la coeducación en las escuelas primarias nacionales, salvo en las mixtas y de párvulos | Gaceta 03-08-1934, pág. 1224 (texto) |
+| 25-07-1935 | Decreto que suprime la Inspección Central de Primera enseñanza | Ficha BOE-A-1935-7071 (título) |
+| 28-11-1935 | Decreto que da nueva redacción al art. 20 del decreto de Inspección de 1932 | Ficha BOE-A-1935-10978 (título) |
+
+- **En la narrativa:** nueva escena de la narrativa de las escuelas, «Cambio de rumbo (1934-1935)», con 5 afirmaciones.
+- **Lo que no se afirma:** que el decreto de noviembre de 1935 suprimiera la inamovilidad de los inspectores. Lo dice la bibliografía, pero el título no; queda como nota editorial.
+- **Sigue abierto en el registro:** la sustitución de la enseñanza de las congregaciones.
+
+**Generador:** `scripts/etl/ensenanza_1934_1935.py`, idempotente.
+
+**Recuento:** 135 documentos, 46 acontecimientos y 11 lagunas.

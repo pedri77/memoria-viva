@@ -1,0 +1,31 @@
+{
+  "id": "evt-1935-07-25-supresion-inspeccion-central",
+  "title": "Supresión de la Inspección Central de Primera enseñanza",
+  "event_type": "educativo",
+  "start_date": "1935-07-25",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La Gaceta del 25 de julio de 1935 publica un decreto del Ministerio de Instrucción Pública que suprime la Inspección Central de Primera enseñanza.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1935-7071",
+          "locator": "pág. 856"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado; pendiente de lectura humana."
+  }
+}
