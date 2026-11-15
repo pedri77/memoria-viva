@@ -1,0 +1,37 @@
+{
+  "id": "doc-gaceta-1937-05-18",
+  "title": "Gaceta de la República n.º 138, 18 de mayo de 1937: nombramiento del Gobierno de Juan Negrín",
+  "title_original": "Gaceta de la República. Núm. 138",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de la República, núm. 138, 18/05/1937, págs. 751-752",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1937/05/18/pdfs/GRP-1937-138.pdf",
+  "date": "1937-05-18",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Decretos dados en Valencia el 17 de mayo de 1937, firmados por Manuel Azaña, que admiten las dimisiones del Gobierno de Largo Caballero y nombran presidente del Consejo de Ministros y ministro de Hacienda y Economía a Juan Negrín López.",
+  "context": "Diario oficial del Gobierno de la República. Acredita los nombramientos y su fecha y lugar de firma, no la actuación de los gobiernos.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-15",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-15"
+}

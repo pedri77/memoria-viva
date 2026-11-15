@@ -1,0 +1,41 @@
+{
+  "id": "evt-1936-09-04-gobierno-largo-caballero",
+  "title": "Gobierno de Francisco Largo Caballero",
+  "event_type": "politico",
+  "start_date": "1936-09-04",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La Gaceta de Madrid del 5 de septiembre de 1936 publica el decreto de 4 de septiembre por el que Manuel Azaña, en uso de las atribuciones del artículo 75 de la Constitución, nombra presidente del Consejo de Ministros y ministro de la Guerra a Francisco Largo Caballero.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1936-09-05",
+          "locator": "pág. 1671"
+        }
+      ]
+    },
+    {
+      "text": "Los decretos del mismo día nombran a los demás ministros del nuevo Gobierno, entre ellos a Jesús Hernández Tomás en Instrucción Pública y Bellas Artes.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1936-09-05",
+          "locator": "pág. 1672"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  }
+}

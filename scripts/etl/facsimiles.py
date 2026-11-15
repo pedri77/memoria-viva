@@ -28,7 +28,7 @@ CACHE = ROOT / "data/raw/gaceta"
 OUT = ROOT / "site/public/facsimiles"
 MANIFEST = ROOT / "site/src/data/facsimiles.json"
 UA = {"User-Agent": "memoria-viva/0.1 (proyecto de investigación sin ánimo de lucro)"}
-GAZ = re.compile(r"^https://www\.boe\.es/gazeta/dias/\d{4}/\d{2}/\d{2}/pdfs/(GMD-\d{4}-\d+)\.pdf$")
+GAZ = re.compile(r"^https://www\.boe\.es/gazeta/dias/\d{4}/\d{2}/\d{2}/pdfs/([A-Z]{3}-\d{4}-\d+)\.pdf$")
 INE = re.compile(r"^https://www\.ine\.es/inebaseweb/pdfDispacher\.do\?td=(\d+)&ext=\.pdf$")
 ANCHO = 520
 

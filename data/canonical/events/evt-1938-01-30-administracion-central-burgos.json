@@ -1,0 +1,51 @@
+{
+  "id": "evt-1938-01-30-administracion-central-burgos",
+  "title": "Primer Gobierno de la zona sublevada",
+  "event_type": "politico",
+  "start_date": "1938-01-31",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "El BOE editado en Burgos publica el 31 de enero de 1938 la «Ley organizando la Administración Central del Estado», del Gobierno del Estado.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1938-1406",
+          "locator": "págs. 5514 a 5515"
+        }
+      ]
+    },
+    {
+      "text": "El BOE del 1 de febrero de 1938 publica los decretos de la Jefatura del Estado que nombran a los ministros, entre ellos al teniente general Francisco Gómez Jordana y Sousa como vicepresidente del Gobierno.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1938-1424",
+          "locator": "pág. 5547"
+        }
+      ]
+    },
+    {
+      "text": "Otro decreto del mismo número nombra ministro del Interior a Ramón Serrano Suñer.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1938-1417",
+          "locator": "pág. 5547"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado; pendiente de lectura humana."
+  }
+}

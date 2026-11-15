@@ -292,5 +292,27 @@
       }
     ],
     "afecta": []
+  },
+  {
+    "id": "laguna-gobierno-republica-guerra",
+    "tema": "Traslados y gobiernos de la República en guerra (1936-1939)",
+    "periodo": "noviembre de 1936 - 1939",
+    "falta": "Las disposiciones del traslado del Gobierno a Valencia (noviembre de 1936) y a Barcelona (otoño de 1937), el Gobierno de abril de 1938 y la Gaceta de la República de 1938-1939. Hoy solo se documenta que los decretos de mayo de 1937 están fechados en Valencia.",
+    "buscado": "Ruta /gazeta/dias/ con el prefijo GRP («Gaceta de la República»): localizado el número 138 de 1937 (18 de mayo). Para abril de 1938 la numeración ya no se acerca al día del año y la búsqueda por número (±6) no lo encontró; no se ha probado un barrido más amplio.",
+    "probar": [
+      {
+        "fuente": "Buscador de la Gazeta del BOE, consulta manual (prohibido a agentes automáticos por robots.txt)",
+        "url": "https://www.boe.es/buscar/gazeta.php"
+      },
+      {
+        "fuente": "Diario de Sesiones de las Cortes de la República (Valencia, Barcelona, Figueres)",
+        "url": "https://app.congreso.es/est_sesiones/"
+      },
+      {
+        "fuente": "Centro Documental de la Memoria Histórica (Salamanca), fondos de la Presidencia del Gobierno de la República",
+        "url": "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/cdmh/portada.html"
+      }
+    ],
+    "afecta": []
   }
 ]

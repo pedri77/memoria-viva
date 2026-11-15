@@ -22,16 +22,16 @@
     "action": "enlazar",
     "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
     "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
-    "checked_at": "2026-11-14",
+    "checked_at": "2026-11-15",
     "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza a la ficha oficial."
   },
   "review": {
     "status": "revision",
-    "date": "2026-11-14",
+    "date": "2026-11-15",
     "by": [
       "autor"
     ],
-    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado (solo PDF en ruta vetada a robots); pendiente de lectura humana."
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado; pendiente de lectura humana."
   },
-  "consulted_at": "2026-11-14"
+  "consulted_at": "2026-11-15"
 }

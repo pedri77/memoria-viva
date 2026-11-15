@@ -183,6 +183,14 @@
   "cita": "Fuente de los datos: Agencia Estatal Boletín Oficial del Estado (https://www.boe.es)",
   "original": "https://www.boe.es/gazeta/dias/1936/07/20/pdfs/GMD-1936-202.pdf"
  },
+ "doc-gaceta-1936-09-05": {
+  "src": "facsimiles/doc-gaceta-1936-09-05.webp",
+  "w": 520,
+  "h": 724,
+  "pagina": 1,
+  "cita": "Fuente de los datos: Agencia Estatal Boletín Oficial del Estado (https://www.boe.es)",
+  "original": "https://www.boe.es/gazeta/dias/1936/09/05/pdfs/GMD-1936-249.pdf"
+ },
  "doc-gaceta-1936-10-07": {
   "src": "facsimiles/doc-gaceta-1936-10-07.webp",
   "w": 520,
@@ -198,6 +206,14 @@
   "pagina": 1,
   "cita": "Fuente de los datos: Agencia Estatal Boletín Oficial del Estado (https://www.boe.es)",
   "original": "https://www.boe.es/gazeta/dias/1936/10/08/pdfs/GMD-1936-282.pdf"
+ },
+ "doc-gaceta-1937-05-18": {
+  "src": "facsimiles/doc-gaceta-1937-05-18.webp",
+  "w": 520,
+  "h": 738,
+  "pagina": 1,
+  "cita": "Fuente de los datos: Agencia Estatal Boletín Oficial del Estado (https://www.boe.es)",
+  "original": "https://www.boe.es/gazeta/dias/1937/05/18/pdfs/GRP-1937-138.pdf"
  },
  "doc-ine-censo1920-instruccion": {
   "src": "facsimiles/doc-ine-censo1920-instruccion.webp",

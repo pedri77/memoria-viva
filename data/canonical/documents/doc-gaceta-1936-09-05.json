@@ -1,0 +1,37 @@
+{
+  "id": "doc-gaceta-1936-09-05",
+  "title": "Gaceta de Madrid n.º 249, 5 de septiembre de 1936: nombramiento del Gobierno de Francisco Largo Caballero",
+  "title_original": "Gaceta de Madrid. Núm. 249",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 249, 05/09/1936, págs. 1671-1672",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1936/09/05/pdfs/GMD-1936-249.pdf",
+  "date": "1936-09-05",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Decretos de 4 de septiembre de 1936, firmados por Manuel Azaña, que admiten las dimisiones del Gobierno anterior y nombran presidente del Consejo de Ministros y ministro de la Guerra a Francisco Largo Caballero y a los ministros de su Gobierno.",
+  "context": "Diario oficial del Gobierno de la República. Acredita los nombramientos y su fecha y lugar de firma, no la actuación de los gobiernos.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-15",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-15"
+}

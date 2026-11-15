@@ -1,0 +1,41 @@
+{
+  "id": "evt-1937-05-17-gobierno-negrin",
+  "title": "Gobierno de Juan Negrín",
+  "event_type": "politico",
+  "start_date": "1937-05-17",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La Gaceta de la República del 18 de mayo de 1937 publica un decreto dado en Valencia el 17 de mayo de 1937 por el que Manuel Azaña, en uso de las atribuciones del artículo 75 de la Constitución, nombra presidente del Consejo de Ministros y ministro de Hacienda y Economía a Juan Negrín López.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1937-05-18",
+          "locator": "pág. 751"
+        }
+      ]
+    },
+    {
+      "text": "Decretos del mismo día, también fechados en Valencia, admiten la dimisión de los ministros del Gobierno anterior, entre ellos Indalecio Prieto en Marina y Aire.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-gaceta-1937-05-18",
+          "locator": "pág. 751"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  }
+}
