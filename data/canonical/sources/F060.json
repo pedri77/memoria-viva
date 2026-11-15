@@ -1,0 +1,12 @@
+{
+  "id": "F060",
+  "name": "Base de Datos Nacional de Subvenciones (SNPSAP, IGAE)",
+  "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/index",
+  "priority": "P1",
+  "status": "pilot",
+  "license": "reutilización según el aviso legal del SNPSAP (Ley 37/2007), con cita «Origen de los datos: Intervención General de la Administración del Estado»",
+  "access": "API JSON del portal (convocatorias/busqueda y concesiones/busqueda); sin robots.txt publicado; una petición por segundo",
+  "years": "convocatorias desde 2016; concesiones visibles desde 2022",
+  "risks": "datos dinámicos que la fuente puede corregir o retirar; las concesiones solo se publican durante un plazo limitado; títulos con datos personales; búsqueda por palabras clave",
+  "checked_at": "2026-11-15"
+}

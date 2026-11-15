@@ -2,7 +2,7 @@ import { indicators, places, documents, byId } from "../../../lib/data";
 export function getStaticPaths() {
   return indicators.map((i) => ({ params: { id: i.id } }));
 }
-const LIC: Record<string, string> = { cc_by: "CC BY 4.0", cc_by_sa: "CC BY-SA 4.0", cc_by_nc: "CC BY-NC 4.0", cc_by_nc_sa: "CC BY-NC-SA 4.0", cc0: "CC0", public_domain: "Dominio público" };
+const LIC: Record<string, string> = { cc_by: "CC BY 4.0", cc_by_sa: "CC BY-SA 4.0", cc_by_nc: "CC BY-NC 4.0", cc_by_nc_sa: "CC BY-NC-SA 4.0", cc0: "CC0", public_domain: "Dominio público", reuse_open: "Reutilización con cita (Ley 37/2007, condiciones generales del custodio)" };
 const q = (s: unknown) => `"${String(s ?? "").replace(/"/g, '""')}"`;
 export function GET({ params }: { params: { id: string } }) {
   const ind = indicators.find((i) => i.id === params.id)!;

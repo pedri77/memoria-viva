@@ -1,0 +1,116 @@
+---
+// Memoria democrática hoy: ayudas públicas registradas en la BDNS. Datos de data/external/bdns
+// (scripts/etl/bdns_memoria_descarga.py) y del indicador ind-subv-memoria-local-prov.
+import Base from "../layouts/Base.astro";
+import { places, url } from "../lib/data";
+import convRaw from "../../../data/external/bdns/convocatorias_memoria.csv?raw";
+import concRaw from "../../../data/external/bdns/concesiones_entidades.csv?raw";
+import persRaw from "../../../data/external/bdns/concesiones_personas_agregadas.csv?raw";
+
+const parse = (raw: string) => {
+  const lines = raw.trim().split(/\r?\n/);
+  const head = lines[0].split(",");
+  return lines.slice(1).map((l) => {
+    const out: string[] = []; let cur = "", q = false;
+    for (const ch of l) { if (ch === '"') q = !q; else if (ch === "," && !q) { out.push(cur); cur = ""; } else cur += ch; }
+    out.push(cur);
+    return Object.fromEntries(head.map((h, i) => [h, out[i] ?? ""]));
+  });
+};
+const conv = parse(convRaw), conc = parse(concRaw), pers = parse(persRaw);
+const convBy = Object.fromEntries(conv.map((c) => [c.numero_convocatoria, c]));
+const eur = (v: number) => `${Math.round(v).toLocaleString("es-ES")} €`;
+const sum = (xs: any[]) => xs.reduce((a, c) => a + Number(c.importe || c.importe_total || 0), 0);
+const TIPO = (nif: string) => nif.startsWith("P") ? "Ayuntamientos y entidades locales"
+  : /^[QS]/.test(nif) ? "Universidades y organismos públicos"
+  : nif.startsWith("G") ? "Asociaciones y fundaciones"
+  : /^[AB]/.test(nif) ? "Empresas"
+  : /^[A-Z]{2}\d|^\d/.test(nif) ? "Entidades extranjeras"
+  : "Otras entidades (cooperativas, comunidades de bienes, entidades religiosas…)";
+const CAT: Record<string, string> = {
+  fosas: "Fosas, exhumaciones e identificación", simbolos: "Retirada de símbolos franquistas", lugares: "Lugares, refugios y patrimonio",
+  investigacion: "Investigación, archivos y publicaciones", divulgacion: "Divulgación, jornadas y actos", indemnizaciones: "Indemnizaciones",
+  general: "Programas y convenios generales de memoria",
+};
+const NIVEL: Record<string, string> = { ESTADO: "Estado", AUTONOMICA: "Comunidades autónomas", LOCAL: "Entidades locales (ayuntamientos, diputaciones…)", OTROS: "Otros (universidades y organismos)" };
+const agrupa = (xs: any[], key: (x: any) => string) => {
+  const m = new Map<string, { n: number; v: number }>();
+  for (const x of xs) { const k = key(x); const a = m.get(k) ?? { n: 0, v: 0 }; a.n++; a.v += Number(x.importe || 0); m.set(k, a); }
+  return [...m.entries()].sort((a, b) => b[1].v - a[1].v);
+};
+const total = sum(conc), totalPers = sum(pers), nPers = pers.reduce((a, c) => a + Number(c.concesiones), 0);
+const porAnio = agrupa(conc, (c) => c.fecha_concesion.slice(0, 4)).sort((a, b) => a[0].localeCompare(b[0]));
+const porTipo = agrupa(conc, (c) => TIPO(c.nif));
+const porNivel = agrupa(conc, (c) => NIVEL[convBy[c.numero_convocatoria]?.nivel1] ?? "Sin dato");
+const porCat = agrupa(conc, (c) => CAT[convBy[c.numero_convocatoria]?.categoria] ?? "Sin dato");
+const convPorCat = Object.entries(conv.reduce((a: any, c) => (a[c.categoria] = (a[c.categoria] ?? 0) + 1, a), {})).sort((a: any, b: any) => b[1] - a[1]);
+const provName = (c: string) => places.find((p) => p.id === `plc-prov-${c}`)?.canonical_name ?? c;
+const provCod = (nif: string) => { const c = nif.slice(1, 3); return places.some((p) => p.id === `plc-prov-${c}`) ? c : String(Number(c) - 50).padStart(2, "0"); };
+const locales = conc.filter((c) => c.nif.startsWith("P"));
+const porProv = agrupa(locales, (c) => provCod(c.nif));
+const porEntidad = agrupa(locales, (c) => `${c.entidad}|${provCod(c.nif)}`).slice(0, 30);
+const anioMax = Math.max(...porAnio.map(([, a]) => a.v));
+---
+<Base title="Memoria democrática hoy" description="Ayudas públicas de memoria democrática registradas en la Base de Datos Nacional de Subvenciones: quién convoca, quién recibe, para qué y dónde.">
+  <h1>Memoria democrática hoy: las ayudas públicas</h1>
+  <p>Qué ayudas públicas se registran hoy para la memoria de la Guerra Civil y el franquismo: quién las convoca, quién las recibe, para qué y en qué provincias. Es el único apartado del proyecto que no trata el periodo 1931-1939, sino lo que las administraciones hacen ahora con él.</p>
+  <p class="card">Desde 2022 hay registradas <strong>{conc.length.toLocaleString("es-ES")} concesiones a entidades por {eur(total)}</strong>, en {conv.length} convocatorias con títulos sobre memoria democrática o histórica, Guerra Civil, franquismo, fosas o simbología franquista. Además hay {nPers} concesiones a personas físicas por {eur(totalPers)}, que solo se dan en conjunto. <span class="meta">Origen de los datos: Intervención General de la Administración del Estado (Base de Datos Nacional de Subvenciones), extracción del 15-11-2026.</span></p>
+
+  <h2>Por año de concesión</h2>
+  <div class="barras" role="list">
+    {porAnio.map(([y, a]) => (
+      <div class="barra" role="listitem"><span class="b-et">{y}{y === "2026" ? "*" : ""}</span><span class="b-pista"><span class="b-val" style={`width:${(100 * a.v / anioMax).toFixed(1)}%`}></span></span><span class="b-num">{eur(a.v)} · {a.n} concesiones</span></div>
+    ))}
+  </div>
+  <p class="meta">* 2026 hasta el 15 de noviembre. Las concesiones anteriores a 2022 ya no son visibles en la base de datos: eso no significa que no las hubiera.</p>
+
+  <div class="dos">
+    <section>
+      <h2>Quién convoca</h2>
+      <table><thead><tr><th scope="col">Administración</th><th scope="col" style="text-align:right">Importe</th><th scope="col" style="text-align:right">Concesiones</th></tr></thead>
+        <tbody>{porNivel.map(([k, a]) => <tr><th scope="row" style="font-weight:400">{k}</th><td style="text-align:right">{eur(a.v)}</td><td style="text-align:right">{a.n}</td></tr>)}</tbody></table>
+    </section>
+    <section>
+      <h2>Quién recibe</h2>
+      <table><thead><tr><th scope="col">Tipo de entidad</th><th scope="col" style="text-align:right">Importe</th><th scope="col" style="text-align:right">Concesiones</th></tr></thead>
+        <tbody>{porTipo.map(([k, a]) => <tr><th scope="row" style="font-weight:400">{k}</th><td style="text-align:right">{eur(a.v)}</td><td style="text-align:right">{a.n}</td></tr>)}</tbody></table>
+      <p class="meta">Tipo deducido de la letra del NIF.</p>
+    </section>
+  </div>
+
+  <h2>Para qué</h2>
+  <table><thead><tr><th scope="col">Tema de la convocatoria</th><th scope="col" style="text-align:right">Importe concedido</th><th scope="col" style="text-align:right">Concesiones</th></tr></thead>
+    <tbody>{porCat.map(([k, a]) => <tr><th scope="row" style="font-weight:400">{k}</th><td style="text-align:right">{eur(a.v)}</td><td style="text-align:right">{a.n}</td></tr>)}</tbody></table>
+  <p class="meta">Clasificación automática por palabras del título de cada convocatoria; es aproximada. Convocatorias por tema: {convPorCat.map(([k, n]: any) => `${CAT[k]} ${n}`).join(" · ")}.</p>
+
+  <h2>Ayuntamientos y entidades locales, por provincia</h2>
+  <p>Importe concedido a ayuntamientos, diputaciones, comarcas y otras entidades locales, según la provincia de su NIF. En el <a href={url("/atlas/?capa=censo&ind=ind-subv-memoria-local-prov&censo=2025")}>atlas</a> está por año.</p>
+  <div class="table-wrap"><table><thead><tr><th scope="col">Provincia</th><th scope="col" style="text-align:right">Importe</th><th scope="col" style="text-align:right">Concesiones</th></tr></thead>
+    <tbody>{porProv.map(([c, a]) => <tr><th scope="row" style="font-weight:400"><a href={url(`/lugares/plc-prov-${c}/`)}>{provName(c)}</a></th><td style="text-align:right">{eur(a.v)}</td><td style="text-align:right">{a.n}</td></tr>)}</tbody></table></div>
+  <p class="meta">Las {places.filter((p) => p.place_type === "provincia").length - porProv.length} provincias que no aparecen no tienen concesiones a entidades locales registradas con estos términos.</p>
+
+  <h2>Las 30 entidades locales con más importe</h2>
+  <div class="table-wrap"><table><thead><tr><th scope="col">Entidad</th><th scope="col">Provincia</th><th scope="col" style="text-align:right">Importe</th><th scope="col" style="text-align:right">Concesiones</th></tr></thead>
+    <tbody>{porEntidad.map(([k, a]) => { const [e, c] = k.split("|"); return <tr><th scope="row" style="font-weight:400">{e}</th><td>{provName(c)}</td><td style="text-align:right">{eur(a.v)}</td><td style="text-align:right">{a.n}</td></tr>; })}</tbody></table></div>
+
+  <section class="card" id="metodo">
+    <h2>Cómo se ha hecho y qué no dice</h2>
+    <ul>
+      <li>Búsqueda en la Base de Datos Nacional de Subvenciones por los términos «memoria democrática», «memoria histórica», «exhumación», «fosas», «simbología franquista», «guerra civil», «franquismo» y «víctimas de la guerra civil». Las ayudas con otros títulos no aparecen.</li>
+      <li>Son importes concedidos, no pagados ni ejecutados. La base solo enseña las concesiones de los últimos años; no hay datos de la ejecución ni de los resultados de cada proyecto.</li>
+      <li>No se publican los títulos de las convocatorias ni ningún dato de personas físicas, conforme al aviso legal de la fuente y a la <a href={url("/metodologia/")}>guía editorial</a>.</li>
+      <li>Falta lo que cada ayuntamiento publica por su cuenta (portales de transparencia, catálogos de vestigios, lugares de memoria): está en las <a href={url("/lagunas/#laguna-ayuntamientos-memoria")}>lagunas pendientes</a>.</li>
+      <li>Fondos europeos: el programa CERV «European Remembrance» financia proyectos de memoria, pero no figura en esta base; queda pendiente.</li>
+    </ul>
+    <p class="meta">Datos: <a href="https://github.com/pedri77/memoria-viva/tree/main/data/external/bdns">data/external/bdns</a> (CSV) · scripts <code>bdns_memoria_descarga.py</code> y <code>bdns_memoria.py</code>. Origen de los datos: Intervención General de la Administración del Estado. La IGAE no participa en este proyecto ni lo respalda.</p>
+  </section>
+</Base>
+<style is:global>
+  .barras { display: grid; gap: 8px; margin: 12px 0; }
+  .barra { display: grid; grid-template-columns: 4.5em 1fr minmax(12em, auto); gap: 12px; align-items: center; font-variant-numeric: tabular-nums; }
+  .b-pista { height: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
+  .b-val { display: block; height: 100%; background: var(--accent); }
+  .b-num { color: var(--muted); font-size: .9rem; }
+  .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  @media (max-width: 760px) { .dos { grid-template-columns: 1fr; } .barra { grid-template-columns: 3.5em 1fr; } .b-num { grid-column: 2; } }
+</style>

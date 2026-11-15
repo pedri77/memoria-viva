@@ -244,5 +244,27 @@
       }
     ],
     "afecta": []
+  },
+  {
+    "id": "laguna-ayuntamientos-memoria",
+    "tema": "Lo que publica cada ayuntamiento sobre memoria democrática",
+    "periodo": "actualidad",
+    "falta": "La información que difunden los propios ayuntamientos (portales de transparencia, catálogos de vestigios franquistas, lugares de memoria, actos y ejecución de las ayudas recibidas) y los proyectos financiados por fondos europeos (programa CERV «European Remembrance»).",
+    "buscado": "Solo la Base de Datos Nacional de Subvenciones (convocatorias y concesiones; ver /memoria-hoy/). No se han revisado webs municipales una a una ni los resultados del programa CERV.",
+    "probar": [
+      {
+        "fuente": "Portal de la Transparencia de la Administración General del Estado",
+        "url": "https://transparencia.gob.es/"
+      },
+      {
+        "fuente": "Resultados de proyectos del programa CERV en el portal Funding & Tenders de la Comisión Europea",
+        "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/projects-results"
+      },
+      {
+        "fuente": "Federación Española de Municipios y Provincias (ayudas de memoria democrática a entidades locales)",
+        "url": "https://www.femp.es/"
+      }
+    ],
+    "afecta": []
   }
 ]

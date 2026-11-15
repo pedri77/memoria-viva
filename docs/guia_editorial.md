@@ -48,6 +48,7 @@ Fosas, lugares de ejecución, centros de detención: como mucho, nivel municipio
 |---|---|
 | `public_domain`, `cc0`, `cc_by`, `cc_by_sa` | almacenar y mostrar con atribución |
 | `cc_by_nc`, `cc_by_nc_sa` | almacenar y mostrar con atribución mientras el proyecto no tenga uso comercial; lo derivado de un `nc_sa` hereda esa licencia y se indica junto al dato |
+| `reuse_open` | almacenar y mostrar con la cita que exija el custodio: condiciones generales de reutilización del sector público (Ley 37/2007) que autorizan expresamente copiar y transformar, como las del SNPSAP (añadido el 15-11-2026) |
 | `reuse_conditions` | enlazar y citar; reproducir solo si las condiciones lo permiten expresamente |
 | `link_only` | solo enlace |
 | `restricted` | solo la referencia, sin enlace a imagen |

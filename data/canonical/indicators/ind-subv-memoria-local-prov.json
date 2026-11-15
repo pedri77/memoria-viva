@@ -1,0 +1,1894 @@
+{
+  "id": "ind-subv-memoria-local-prov",
+  "concept": "Ayudas de memoria democrática a ayuntamientos y entidades locales",
+  "definition": "Importe de las concesiones registradas en la Base de Datos Nacional de Subvenciones a ayuntamientos y otras entidades locales de cada provincia, en convocatorias cuyo título se refiere a la memoria democrática o histórica, la Guerra Civil, el franquismo, las fosas o la simbología franquista.",
+  "unit": "euros",
+  "denominator": "ninguno (importe absoluto)",
+  "method": "Suma de importes por año de concesión y provincia del NIF de la entidad local beneficiaria (scripts/etl/bdns_memoria.py). Las concesiones a asociaciones, universidades, empresas y personas se resumen aparte en /memoria-hoy/.",
+  "source_ids": [
+    "F060"
+  ],
+  "comparability_notes": "Es un dato de hoy, no del periodo 1931-1939. Cero significa que no hay concesiones registradas con esos términos, no que no se hiciera nada: la búsqueda depende del título y las concesiones solo son visibles desde 2022. Los importes son los concedidos, no los pagados. Origen de los datos: Intervención General de la Administración del Estado.",
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Generado por scripts/etl/bdns_memoria.py."
+  },
+  "observations": [
+    {
+      "place_id": "plc-prov-01",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P01…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P02…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "2022",
+      "value": 136291,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P03…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P04…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P05…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "2022",
+      "value": 61787,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P06…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P07…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "2022",
+      "value": 12262,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P08…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P09…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "2022",
+      "value": 32093,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P10…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "2022",
+      "value": 144390,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P11…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "2022",
+      "value": 255271,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P12…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "2022",
+      "value": 150000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P13…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "2022",
+      "value": 236729,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P14…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P15…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "2022",
+      "value": 12000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P16…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "2022",
+      "value": 48050,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P17…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "2022",
+      "value": 41478,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P18…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P19…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P20…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P21…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "2022",
+      "value": 63000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P22…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P23…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P24…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "2022",
+      "value": 271618,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P25…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P26…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P27…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P28…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P29…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P30…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P31…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P32…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P33…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P34…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P35…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "2022",
+      "value": 400000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P36…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P37…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P38…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "2022",
+      "value": 3654,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P39…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P40…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P41…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P42…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "2022",
+      "value": 30127,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P43…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P44…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P45…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "2022",
+      "value": 607296,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P46…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P47…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P48…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P49…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P50…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P51…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "2022",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2022 a beneficiarios con NIF de entidad local (P52…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P01…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P02…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "2023",
+      "value": 77817,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P03…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P04…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P05…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "2023",
+      "value": 102000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P06…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P07…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "2023",
+      "value": 99922,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P08…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P09…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "2023",
+      "value": 133000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P10…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "2023",
+      "value": 200408,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P11…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "2023",
+      "value": 225924,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P12…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P13…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "2023",
+      "value": 176379,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P14…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P15…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P16…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "2023",
+      "value": 100258,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P17…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "2023",
+      "value": 20650,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P18…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P19…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P20…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P21…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "2023",
+      "value": 58221,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P22…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P23…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P24…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "2023",
+      "value": 469893,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P25…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P26…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P27…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P28…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P29…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P30…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P31…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P32…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P33…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P34…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P35…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "2023",
+      "value": 380426,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P36…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P37…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "2023",
+      "value": 126463,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P38…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P39…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P40…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P41…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P42…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "2023",
+      "value": 119584,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P43…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P44…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P45…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "2023",
+      "value": 1051025,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P46…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P47…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P48…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P49…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P50…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P51…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "2023",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2023 a beneficiarios con NIF de entidad local (P52…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P01…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P02…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P03…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P04…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P05…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "2024",
+      "value": 120307,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P06…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P07…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "2024",
+      "value": 90690,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P08…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P09…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "2024",
+      "value": 10102,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P10…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "2024",
+      "value": 139500,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P11…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P12…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P13…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "2024",
+      "value": 89516,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P14…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P15…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P16…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "2024",
+      "value": 76220,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P17…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P18…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P19…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P20…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P21…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P22…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P23…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "2024",
+      "value": 18728,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P24…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "2024",
+      "value": 109657,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P25…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P26…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P27…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P28…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P29…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P30…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P31…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P32…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "2024",
+      "value": 42000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P33…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "2024",
+      "value": 36426,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P34…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "2024",
+      "value": 200000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P35…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P36…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P37…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "2024",
+      "value": 7115612,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P38…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P39…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P40…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P41…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P42…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "2024",
+      "value": 25058,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P43…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P44…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P45…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "2024",
+      "value": 673199,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P46…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P47…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P48…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P49…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P50…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P51…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "2024",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2024 a beneficiarios con NIF de entidad local (P52…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P01…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "2025",
+      "value": 105000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P02…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "2025",
+      "value": 22880,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P03…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P04…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P05…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "2025",
+      "value": 352162,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P06…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P07…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "2025",
+      "value": 66165,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P08…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P09…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "2025",
+      "value": 217055,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P10…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "2025",
+      "value": 150423,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P11…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "2025",
+      "value": 25601,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P12…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "2025",
+      "value": 303075,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P13…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "2025",
+      "value": 221287,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P14…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "2025",
+      "value": 150000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P15…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P16…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "2025",
+      "value": 114669,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P17…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P18…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P19…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P20…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "2025",
+      "value": 150000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P21…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P22…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "2025",
+      "value": 400000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P23…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "2025",
+      "value": 6998,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P24…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "2025",
+      "value": 731250,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P25…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P26…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P27…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P28…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P29…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P30…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P31…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P32…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P33…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "2025",
+      "value": 50616,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P34…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "2025",
+      "value": 100000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P35…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P36…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P37…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "2025",
+      "value": 127922,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P38…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P39…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P40…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "2025",
+      "value": 432500,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P41…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P42…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "2025",
+      "value": 34032,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P43…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P44…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "2025",
+      "value": 29500,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P45…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "2025",
+      "value": 437007,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P46…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P47…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "2025",
+      "value": 30000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P48…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P49…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "2025",
+      "value": 100000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P50…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P51…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "2025",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2025 a beneficiarios con NIF de entidad local (P52…), convocatorias de memoria democrática"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P01…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P02…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "2026",
+      "value": 50936,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P03…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P04…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P05…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "2026",
+      "value": 102000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P06…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P07…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "2026",
+      "value": 54869,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P08…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P09…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "2026",
+      "value": 40000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P10…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "2026",
+      "value": 196171,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P11…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "2026",
+      "value": 17423,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P12…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "2026",
+      "value": 5123,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P13…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P14…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "2026",
+      "value": 107892,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P15…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P16…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "2026",
+      "value": 101043,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P17…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P18…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P19…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P20…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P21…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P22…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P23…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "2026",
+      "value": 40730,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P24…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "2026",
+      "value": 31462,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P25…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P26…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P27…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P28…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P29…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P30…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P31…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P32…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P33…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "2026",
+      "value": 8400,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P34…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P35…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P36…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P37…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P38…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P39…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P40…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P41…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P42…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "2026",
+      "value": 16749,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P43…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P44…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P45…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "2026",
+      "value": 875000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P46…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P47…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P48…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P49…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "2026",
+      "value": 50000,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P50…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P51…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "2026",
+      "value": 0,
+      "document_id": "doc-bdns-memoria-democratica",
+      "locator": "concesiones de 2026 a beneficiarios con NIF de entidad local (P52…), convocatorias de memoria democrática",
+      "uncertainty": "Año incompleto: datos hasta el 15-11-2026."
+    }
+  ]
+}

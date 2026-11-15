@@ -1,0 +1,37 @@
+{
+  "id": "doc-bdns-memoria-democratica",
+  "title": "Convocatorias y concesiones de memoria democrática en la Base de Datos Nacional de Subvenciones (extracción del 15-11-2026)",
+  "title_original": "Sistema Nacional de Publicidad de Subvenciones y Ayudas Públicas: convocatorias y concesiones",
+  "document_type": "tabla_estadistica",
+  "source_ids": [
+    "F060"
+  ],
+  "custodian": "Intervención General de la Administración del Estado (IGAE), Ministerio de Hacienda",
+  "signature": "Búsqueda por los términos de scripts/etl/bdns_memoria_descarga.py; 777 convocatorias y sus concesiones",
+  "canonical_url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatorias",
+  "date": "2026-11-15",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Convocatorias de subvenciones y ayudas públicas de las administraciones estatal, autonómica y local cuyo título se refiere a la memoria democrática o histórica, la Guerra Civil, el franquismo, las fosas o la simbología franquista, y las concesiones registradas.",
+  "context": "Registro administrativo de publicidad de subvenciones. Recoge lo que cada administración inscribe; la búsqueda por palabras del título puede dejar fuera ayudas con otros títulos. Las concesiones solo son visibles desde 2022.",
+  "text_origin": "ninguno",
+  "rights": {
+    "status": "reuse_open",
+    "action": "almacenar",
+    "attribution": "Origen de los datos: Intervención General de la Administración del Estado",
+    "evidence_url": "https://www.infosubvenciones.es/bdnstrans/GE/es/avisolegal",
+    "checked_at": "2026-11-15",
+    "note": "El aviso legal permite la reutilización con fines comerciales y no comerciales citando la fuente y la fecha; los datos personales solo con fines históricos, estadísticos o científicos y disociados. No se publican nombres de personas ni títulos de convocatorias."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Extracción automática; clasificación temática aproximada por palabras clave del título."
+  },
+  "consulted_at": "2026-11-15"
+}

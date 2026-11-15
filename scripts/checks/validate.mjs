@@ -63,7 +63,7 @@ for (const [id, o] of data.documents) {
   o.source_ids.forEach((s) => need(`documents/${id}`, "sources", s));
   (o.place_ids ?? []).forEach((p) => need(`documents/${id}`, "places", p));
   // Regla editorial: no se almacena ni descarga nada que no sea de dominio público o con licencia abierta.
-  if (["almacenar", "descargar"].includes(o.rights.action) && !["public_domain", "cc0", "cc_by", "cc_by_sa", "cc_by_nc", "cc_by_nc_sa"].includes(o.rights.status))
+  if (["almacenar", "descargar"].includes(o.rights.action) && !["public_domain", "cc0", "cc_by", "cc_by_sa", "cc_by_nc", "cc_by_nc_sa", "reuse_open"].includes(o.rights.status))
     errors.push(`documents/${id}: acción «${o.rights.action}» no permitida con derechos «${o.rights.status}»`);
 }
 for (const [id, o] of data.events) {
