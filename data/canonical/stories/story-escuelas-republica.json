@@ -44,6 +44,16 @@
               "locator": "totales generales, columnas «saben leer» y «saben leer y escribir»"
             }
           ]
+        },
+        {
+          "text": "Contando solo a los mayores de 10 años, la medida habitual en la historiografía, en 1930 sabía leer el 75,1 % de los varones y el 60,5 % de las mujeres de las 50 provincias (sin Ceuta, Melilla ni las posesiones de África), entre el 46,6 % de Albacete y el 90,9 % de Álava. Es un cálculo de este proyecto sobre las tablas de edad e instrucción de cada provincia del censo.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-ine-censo1930-edad-instruccion",
+              "locator": "«Resumen de la PROVINCIA» de las 50 tablas provinciales, columnas total y menos de 10 años; cálculo en scripts/etl/ine_alfabetizacion_edad_1930.py"
+            }
+          ]
         }
       ],
       "event_ids": [
@@ -293,8 +303,8 @@
     "De las normas de la zona sublevada (BOE de Burgos) solo se recoge el decreto de revisión del personal de Instrucción Pública de noviembre de 1936, a partir de su título oficial; falta leer su texto y el de las disposiciones posteriores.",
     "Solo hay normas, no su aplicación: cuántas escuelas se construyeron y cuántos maestros se nombraron de verdad necesita otras fuentes (estadísticas del Ministerio, archivos provinciales).",
     "Faltan voces de la época: prensa profesional y de distintas tendencias (por ejemplo, la Revista de Escuelas Normales, disponible en la Hemeroteca Digital).",
-    "Las cifras de alfabetización de 1930 cuentan toda la población, niños pequeños incluidos, y son declaraciones censales: no son comparables sin más con las tasas sobre mayores de 10 años que usa la historiografía.",
-    "De 1934-1935 falta la sustitución de la enseñanza de las congregaciones religiosas, cuyo plazo para la primaria fijaba la ley de 1933, y el texto de los decretos de Inspección de 1935."
+    "De 1934-1935 falta la sustitución de la enseñanza de las congregaciones religiosas, cuyo plazo para la primaria fijaba la ley de 1933, y el texto de los decretos de Inspección de 1935.",
+    "Las tasas de alfabetización son declaraciones censales, no pruebas de lectura; las de mayores de 10 años solo están calculadas para 1930."
   ],
   "review": {
     "status": "revision",

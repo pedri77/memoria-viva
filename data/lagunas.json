@@ -174,17 +174,13 @@
  {
   "id": "laguna-alfabetizacion-edad",
   "tema": "Alfabetización por edad",
-  "periodo": "1920-1930",
-  "falta": "Tasas sobre mayores de 10 años, comparables con la historiografía; hoy el denominador es toda la población.",
-  "buscado": "Tomo II de los censos de 1920 y 1930 (resumen por provincias, sin edades). Localizada sin transcribir (15-11-2026): el Tomo III de 1930 trae para cada provincia la «Clasificación de los habitantes por su edad combinada con el sexo, estado civil e instrucción elemental» (p. ej. Huesca, td=103310).",
+  "periodo": "1920",
+  "falta": "Tasas sobre mayores de 10 años para el censo de 1920. Las de 1930 ya están publicadas (indicadores ind-alfab10-*).",
+  "buscado": "Tomo II del censo de 1920 (resumen por provincias, sin edades). Las de 1930 salen del Tomo III de ese censo, transcrito el 15-11-2026; el Tomo III de 1920 (tn=80563) tiene la tabla equivalente sin transcribir.",
   "probar": [
    {
-    "fuente": "Censo de 1930, Tomo III, tabla de edad e instrucción de Huesca (INEbase Historia); hay una por provincia",
-    "url": "https://www.ine.es/inebaseweb/pdfDispacher.do?td=103310&ext=.pdf"
-   },
-   {
-    "fuente": "Censo de 1930, Tomo III (volúmenes regionales: instrucción por edad), INEbase Historia",
-    "url": "https://www.ine.es/inebaseweb/71807.do"
+    "fuente": "Censo de 1920, Tomo III: clasificación de los habitantes por su edad, combinada con sexo, estado civil e instrucción (INEbase Historia)",
+    "url": "https://www.ine.es/inebaseweb/treeNavigation.do?tn=80563"
    }
   ],
   "afecta": [

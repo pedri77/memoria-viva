@@ -18,7 +18,7 @@ Requieren que antes haya al menos un revisor con formación en historia contempo
 |---|---|---|---|
 | ~~P1~~ | ~~Censo de 1930 por profesiones~~ | Hecho 15-11-2026 | `docs/F4_profesiones_1930.md`. Pendiente: usarlo en una narrativa (reforma agraria) y recuperar las páginas de Cádiz, Gerona y Vizcaya. |
 | P2 | Prensa del día en los acontecimientos clave (enlaces a números de la BNE, sin citas) | Medio | El servidor de la BNE bloquea clientes automáticos: los enlaces se construyen desde el CSV oficial y se comprueban a mano. |
-| P3 | Alfabetización por edad (mayores de 10 años), censo de 1930, tomo III | Alto: tablas regionales | Laguna `laguna-alfabetizacion-edad`. Localizadas: una tabla por provincia en el Tomo III (p. ej. td=103310); mismo método que P1. |
+| P3 | Alfabetización por edad (mayores de 10 años), censo de 1930, tomo III | Alto: tablas regionales | Laguna `laguna-alfabetizacion-edad`. Localizadas: una tabla por provincia en el Tomo III (p. ej. td=103310); mismo método que P1. **Hecho 15-11-2026 para 1930** (`docs/F4_alfabetizacion_edad_1930.md`); falta 1920. |
 | P4 | Georreferenciación de mapas históricos del CNIG | Alto | Aplazado desde F2. |
 | P5 | Enlaces Wikidata de los municipios de 1930 | Medio | Aplazado desde F2. |
 
@@ -36,7 +36,7 @@ Regla para todas: **los datos oficiales agregados se pueden preparar ya; los rel
 |---|---|---|---|
 | Hambre de posguerra | INE: Movimiento Natural de la Población y Anuarios de 1935-1950 (mortalidad, precios, racionamiento) | Ninguno para los datos; el relato es R3. **Partes 1 y 2 hechas 15-11-2026** (defunciones 1934-1950 y mortalidad infantil 1934-1946, `docs/F4_mortalidad_1934_1950.md`); faltan precios y racionamiento | A |
 | Cárceles | Anuarios estadísticos del INE (población reclusa por año) | Datos sí; relato R3 | A |
-| Alfabetización por edad (P3) | INE, Censo de 1930, Tomo III | Ninguno | A |
+| Alfabetización por edad (P3) | INE, Censo de 1930, Tomo III | Ninguno; **hecho 1930** | A |
 | Calles de toda España | INE, Callejero del Censo Electoral (por provincia, semestral) | Clasificar a los «personajes» exige criterio de revisores; el catálogo estatal de símbolos (RD 1040/2025) aún no está publicado | B |
 | Fosas | datos.gob.es «Fosas o lugares de enterramiento» (e05232701); su enlace de descarga se ha dado por roto: verificar | Solo agregado por municipio (guía §4) y revisores | B |
 | Cuerpos de seguridad | Gaceta/BOE: Guardia de Asalto, Guardia Civil, Policía Armada (1941), etc. | Normas de 1931-1936 sí; posteriores, R3 | A/B |

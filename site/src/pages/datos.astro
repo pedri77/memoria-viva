@@ -10,7 +10,7 @@ const PER = (i: any) => [...new Set(i.observations.map((o: any) => o.period as s
 const val = (i: any, pid: string, y: string) => i.observations.find((o: any) => o.place_id === pid && o.period === y)?.value ?? null;
 const TEMAS: [string, string, string[]][] = [
   ["poblacion", "Población", ["ind-pob-hecho-prov", "ind-pob-derecho-prov", "ind-densidad-prov"]],
-  ["educacion", "Saber leer", ["ind-alfab-total-prov", "ind-alfab-varones-prov", "ind-alfab-mujeres-prov"]],
+  ["educacion", "Saber leer", ["ind-alfab10-total-prov", "ind-alfab10-varones-prov", "ind-alfab10-mujeres-prov", "ind-alfab-total-prov", "ind-alfab-varones-prov", "ind-alfab-mujeres-prov"]],
   ["trabajo", "Trabajo", ["ind-prof-agraria-prov", "ind-prof-agraria-varones-prov", "ind-prof-diversas-prov"]],
   ["reforma", "Propiedad y reforma agraria", ["ind-ra-riqueza-grandes-prov", "ind-ra-asentados-prov", "ind-ra-superficie-expropiada-prov", "ind-ra-expropiable-grandeza-prov"]],
   ["mortalidad", "Mortalidad y hambre", ["ind-sobremortalidad-prov", "ind-mortalidad-infantil-prov", "ind-mortalidad-prov"]],
