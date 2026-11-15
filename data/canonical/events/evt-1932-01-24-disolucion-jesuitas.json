@@ -1,0 +1,31 @@
+{
+  "id": "evt-1932-01-24-disolucion-jesuitas",
+  "title": "Disolución de la Compañía de Jesús",
+  "event_type": "legislativo",
+  "start_date": "1932-01-24",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La Gaceta del 24 de enero de 1932 publica un decreto del Ministerio de Justicia que declara disuelta en el territorio español la Compañía de Jesús y dispone que sus religiosos y novicios cesen en la vida común dentro del territorio nacional en el término de diez días.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1932-592",
+          "locator": "págs. 610 a 611"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado; pendiente de lectura humana."
+  }
+}

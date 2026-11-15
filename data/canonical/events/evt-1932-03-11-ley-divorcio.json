@@ -1,0 +1,41 @@
+{
+  "id": "evt-1932-03-11-ley-divorcio",
+  "title": "Ley de divorcio",
+  "event_type": "social",
+  "start_date": "1932-03-11",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La Gaceta del 11 de marzo de 1932 publica la «Ley relativa al divorcio», del Ministerio de Justicia.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1932-1855",
+          "locator": "págs. 1762 a 1767"
+        }
+      ]
+    },
+    {
+      "text": "Al día siguiente la Gaceta la publica de nuevo, rectificada.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1932-1898",
+          "locator": "págs. 1794 a 1799"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado; pendiente de lectura humana."
+  }
+}

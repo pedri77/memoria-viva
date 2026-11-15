@@ -1,0 +1,37 @@
+{
+  "id": "doc-gaceta-1936-05-11",
+  "title": "Gaceta de Madrid n.º 132, 11 de mayo de 1936: elección de Manuel Azaña como presidente de la República",
+  "title_original": "Gaceta de Madrid. Núm. 132",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 132, 11/05/1936, pág. 1379",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1936/05/11/pdfs/GMD-1936-132.pdf",
+  "date": "1936-05-11",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Acta de la Asamblea de Diputados a Cortes y Compromisarios que proclama presidente electo de la República a Manuel Azaña el 10 de mayo de 1936, acta de su aceptación y decretos que admiten su dimisión como presidente del Consejo de Ministros y nombran para ese cargo a Augusto Barcia Trelles.",
+  "context": "Publicación oficial del Congreso de los Diputados y decretos firmados por Diego Martínez Barrio.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-15",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-15"
+}

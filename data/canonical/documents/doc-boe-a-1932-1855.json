@@ -1,0 +1,37 @@
+{
+  "id": "doc-boe-a-1932-1855",
+  "title": "Gaceta de Madrid n.º 71, 11 de marzo de 1932: Ley relativa al divorcio",
+  "title_original": "Ley relativa al divorcio.",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado",
+  "signature": "BOE-A-1932-1855 · «Gaceta de Madrid», núm. 71, 11 de marzo de 1932, págs. 1762 a 1767 · Ministerio de Justicia",
+  "canonical_url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1932-1855",
+  "date": "1932-03-11",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Disposición de Ministerio de Justicia publicada en la Gaceta de Madrid núm. 71 de 11 de marzo de 1932, págs. 1762 a 1767: «Ley relativa al divorcio».",
+  "context": "Ficha oficial del BOE. Solo se usan el título y los datos de publicación; el texto no se ha consultado.",
+  "text_origin": "ninguno",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-15",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza a la ficha oficial."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado; pendiente de lectura humana."
+  },
+  "consulted_at": "2026-11-15"
+}

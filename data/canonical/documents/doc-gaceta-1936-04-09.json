@@ -1,0 +1,37 @@
+{
+  "id": "doc-gaceta-1936-04-09",
+  "title": "Gaceta de Madrid n.º 100, 9 de abril de 1936: decretos de 8 de abril de 1936",
+  "title_original": "Gaceta de Madrid. Núm. 100",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 100, 09/04/1936, pág. 259",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1936/04/09/pdfs/GMD-1936-100.pdf",
+  "date": "1936-04-09",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Ejemplar con decretos fechados el 8 de abril de 1936 que firma Diego Martínez Barrio, con el refrendo de Manuel Azaña como presidente del Consejo de Ministros.",
+  "context": "Ejemplar ordinario de la Gaceta. Se cita por las firmas de los decretos.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-15",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-15"
+}

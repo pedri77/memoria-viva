@@ -1,0 +1,31 @@
+{
+  "id": "evt-1933-07-30-ley-orden-publico",
+  "title": "Ley de Orden Público de 1933",
+  "event_type": "legislativo",
+  "start_date": "1933-07-30",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La Gaceta del 30 de julio de 1933 publica la «Ley de Orden público», del Ministerio de la Gobernación.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1933-6584",
+          "locator": "págs. 682 a 690"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado; pendiente de lectura humana."
+  }
+}

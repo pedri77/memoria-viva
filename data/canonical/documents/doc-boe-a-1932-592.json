@@ -1,0 +1,37 @@
+{
+  "id": "doc-boe-a-1932-592",
+  "title": "Gaceta de Madrid n.º 24, 24 de enero de 1932: Decreto declarando disuelta en el territorio español la Compañía de Jesús, y disponiendo que los religiosos y novicios de dicha Compañía cesen en la vida común dentro del territorio nacional en el término de diez días",
+  "title_original": "Decreto declarando disuelta en el territorio español la Compañía de Jesús, y disponiendo que los religiosos y novicios de dicha Compañía cesen en la vida común dentro del territorio nacional en el término de diez días.",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado",
+  "signature": "BOE-A-1932-592 · «Gaceta de Madrid», núm. 24, 24 de enero de 1932, págs. 610 a 611 · Ministerio de Justicia",
+  "canonical_url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1932-592",
+  "date": "1932-01-24",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Disposición de Ministerio de Justicia publicada en la Gaceta de Madrid núm. 24 de 24 de enero de 1932, págs. 610 a 611: «Decreto declarando disuelta en el territorio español la Compañía de Jesús, y disponiendo que los religiosos y novicios de dicha Compañía cesen en la vida común dentro del territorio nacional en el término de diez días».",
+  "context": "Ficha oficial del BOE. Solo se usan el título y los datos de publicación; el texto no se ha consultado.",
+  "text_origin": "ninguno",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-15",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza a la ficha oficial."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado; pendiente de lectura humana."
+  },
+  "consulted_at": "2026-11-15"
+}

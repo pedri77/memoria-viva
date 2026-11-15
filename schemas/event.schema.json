@@ -117,6 +117,10 @@
     "wikidata": {
       "type": "string",
       "pattern": "^Q\\d+$"
+    },
+    "editorial_note": {
+      "type": "string",
+      "description": "aviso del editor sobre lo que la evidencia no cubre; no contiene afirmaciones de hecho"
     }
   },
   "if": {

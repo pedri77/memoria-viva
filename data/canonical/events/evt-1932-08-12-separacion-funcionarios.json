@@ -1,0 +1,31 @@
+{
+  "id": "evt-1932-08-12-separacion-funcionarios",
+  "title": "Ley de separación de funcionarios hostiles a la República",
+  "event_type": "politico",
+  "start_date": "1932-08-12",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "spatial_precision": "estatal",
+  "claims": [
+    {
+      "text": "La Gaceta del 12 de agosto de 1932 publica una ley que autoriza al Gobierno a separar definitivamente del servicio a los funcionarios civiles o militares que, rebasando el derecho que les otorga el artículo 41 de la Constitución, realicen o hayan realizado actos de hostilidad o menosprecio contra la República.",
+      "kind": "documento",
+      "evidence": [
+        {
+          "document_id": "doc-boe-a-1932-6203",
+          "locator": "pág. 1122"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Título, número, fecha y páginas leídos en la ficha oficial del BOE. Texto completo no consultado; pendiente de lectura humana."
+  }
+}

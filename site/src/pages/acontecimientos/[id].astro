@@ -25,6 +25,7 @@ const { e } = Astro.props;
       })}</p>
     </article>
   ))}
+  {e.editorial_note && <p class="card"><strong>Nota editorial.</strong> {e.editorial_note}</p>}
   {e.review.note && <p class="meta">Nota de revisión: {e.review.note}</p>}
 </Base>
 </>}
