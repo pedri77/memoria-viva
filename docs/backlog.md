@@ -62,6 +62,8 @@ A = sin revisores · B = preparar ahora, publicar tras revisión · C = solo con
 
 - 15-11-2026: facsímiles de la Gaceta, cronología rediseñada y datos al pasar el ratón (`docs/F5_facsimiles_y_cronologia.md`). Pendiente: llevar el mismo estilo a archivo, fichas de lugar, datos y metodología.
 
+- Reforma agraria, aplicación: tablas del Anuario de 1934 localizadas (`laguna-aplicacion-reforma-agraria`); mismo método de transcripción que P1. Alimentaría el relato «La tierra» de la portada.
+
 ## Pendientes de David (no técnicos)
 
 - 3 pruebas informales con usuarios (F2).
