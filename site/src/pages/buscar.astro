@@ -3,7 +3,7 @@ import Base from "../layouts/Base.astro";
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 ---
 <Base index={false} title="Buscar" description="Buscador de acontecimientos, documentos y lugares.">
-  <h1>Buscar</h1>
+  <h1 class="bs-h1">Buscar</h1>
   <p class="meta">Busca en acontecimientos, fichas documentales y lugares. Puedes filtrar por tipo de ficha. El buscador no lee el texto de los documentos originales, solo nuestras fichas.</p>
   <div id="buscador"></div>
   <noscript><p>El buscador necesita JavaScript. Puedes recorrer la <a href={`${base}/acontecimientos/`}>cronología</a> y el <a href={`${base}/documentos/`}>archivo</a>.</p></noscript>
@@ -20,5 +20,8 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   </script>
 </Base>
 <style is:global>
-  #buscador { --pagefind-ui-primary: var(--accent); --pagefind-ui-text: var(--ink); --pagefind-ui-background: var(--surface); --pagefind-ui-border: var(--line); --pagefind-ui-tag: var(--bg); --pagefind-ui-font: "Inter", system-ui, sans-serif; }
+  #buscador { --pagefind-ui-primary: var(--accent); --pagefind-ui-text: var(--ink); --pagefind-ui-background: var(--surface); --pagefind-ui-border: var(--line); --pagefind-ui-tag: var(--bg); --pagefind-ui-font: var(--sans); --pagefind-ui-border-radius: 6px; --pagefind-ui-scale: .95; }
+  .bs-h1 { font-size: clamp(2.4rem, 1.4rem + 4vw, 4.4rem); letter-spacing: -0.03em; font-variation-settings: "opsz" 60; margin: .6em 0 .2em; }
+  #buscador .pagefind-ui__result-title { font-family: var(--serif); }
+  #buscador .pagefind-ui__search-input { font-size: 1.1rem; }
 </style>

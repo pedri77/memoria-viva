@@ -18,14 +18,27 @@ const retirados = Object.entries(retired).flatMap(([k, list]) => list.map((o) =>
 const REPO = "https://github.com/pedri77/memoria-viva";
 ---
 <Base title="Registro de cambios" index={false} description="Historial público de cambios en datos, esquemas y documentación.">
-  <h1>Registro de cambios</h1>
+  <h1 class="cb-h1">Registro de cambios</h1>
   <p>Todo cambio en los datos queda en el historial público del repositorio. Aquí se listan los que afectan a datos, esquemas o documentación. Para notificar un error, usa el <a href={`${REPO}/issues/new?template=correccion.yml`}>formulario de correcciones</a>.</p>
   <h2>Contenidos retirados</h2>
   {retirados.length ? <ul>{retirados.map(({ o }) => <li>{o.review.date} · {o.title ?? o.canonical_name ?? o.id}: {o.review.note}</li>)}</ul> : <p class="meta">Ninguno.</p>}
   <h2>Cambios</h2>
   {commits.length ? (
-    <ol class="cambios" reversed>
-      {commits.map((c) => <li><span class="meta">{c.date}</span> · <a href={`${REPO}/commit/${c.hash}`}>{c.subject}</a> <span class="meta">({c.files} ficheros)</span></li>)}
-    </ol>
+    <div class="cambios">
+      {[...new Set(commits.map((c) => c.date))].map((d) => (
+        <section class="cb-dia">
+          <h3><time datetime={d}>{new Date(d + "T00:00:00Z").toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" })}</time></h3>
+          <ul>{commits.filter((c) => c.date === d).map((c) => <li><a href={`${REPO}/commit/${c.hash}`}>{c.subject}</a> <span class="meta">{c.files} {c.files === 1 ? "fichero" : "ficheros"}</span></li>)}</ul>
+        </section>
+      ))}
+    </div>
   ) : <p class="meta">Historial no disponible en esta compilación. Consulta <a href={`${REPO}/commits/main`}>el repositorio</a>.</p>}
 </Base>
+<style is:global>
+  .cb-h1 { font-size: clamp(2.4rem, 1.4rem + 4vw, 4.4rem); letter-spacing: -0.03em; font-variation-settings: "opsz" 60; margin: .6em 0 .2em; }
+  .cb-dia { display: grid; grid-template-columns: 11em 1fr; gap: 8px 24px; padding: 16px 0; border-top: 1px solid var(--line); }
+  .cb-dia h3 { margin: 0; font-family: var(--serif); font-size: 1.1rem; color: var(--accent); font-weight: 600; }
+  .cb-dia ul { margin: 0; padding: 0; list-style: none; }
+  .cb-dia li { padding: 3px 0; max-width: none; }
+  @media (max-width: 700px) { .cb-dia { grid-template-columns: 1fr; } }
+</style>

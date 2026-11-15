@@ -3,20 +3,70 @@ import Base from "../layouts/Base.astro";
 import lagunas from "../../../data/lagunas.json";
 import { stories, url } from "../lib/data";
 const titulo = (id: string) => stories.find((s: any) => s.id === id)?.title ?? id;
+// Estado deducido del propio texto de cada laguna
+const estado = (l: any) => {
+  const t = `${l.falta} ${l.buscado}`;
+  if (/R1|revisores/.test(t)) return "revisores";
+  if (/[Ll]ocalizad[oa]s? sin transcribir|Sin transcribir/.test(t)) return "localizada";
+  if (/Nada todavía|No buscados|no se ha buscado/i.test(l.buscado)) return "por_buscar";
+  return "buscada";
+};
+const ESTADOS: Record<string, [string, string]> = {
+  localizada: ["Localizada, sin transcribir", "r-cc_by"], buscada: ["Buscada sin éxito", "r-reuse_conditions"],
+  por_buscar: ["Por buscar", "r-link_only"], revisores: ["Espera a los revisores", "t-politico"],
+};
+const items = lagunas.map((l: any) => ({ l, e: estado(l) }));
+const cuenta = (e: string) => items.filter((x) => x.e === e).length;
 ---
 <Base title="Lagunas pendientes" description="Lo que el proyecto ha buscado y no ha encontrado todavía, dónde se buscó y qué fuentes probar para retomarlo.">
-  <h1>Lagunas pendientes</h1>
-  <p>Lo que hemos buscado sin encontrarlo con las vías que el proyecto puede usar, dónde se buscó y qué fuentes conviene probar después. Que algo figure aquí no significa que no ocurriera: significa que todavía no está documentado en este proyecto.</p>
-  <p class="meta">Si conoces una fuente para alguna de estas lagunas, <a href="https://github.com/pedri77/memoria-viva/issues/new?template=correccion.yml">avísanos</a>. Los datos están en <a href="https://github.com/pedri77/memoria-viva/blob/main/data/lagunas.json">data/lagunas.json</a>.</p>
-  {lagunas.map((l: any) => (
-    <article class="card" id={l.id}>
-      <h2>{l.tema}</h2>
-      <p class="meta">{l.periodo}</p>
-      <p><strong>Qué falta.</strong> {l.falta}</p>
-      <p><strong>Dónde se buscó.</strong> {l.buscado}</p>
-      <p><strong>Qué probar.</strong></p>
-      <ul>{l.probar.map((p: any) => <li><a href={p.url} rel="noopener">{p.fuente}</a></li>)}</ul>
+  <h1 class="lg-h1">Lagunas pendientes</h1>
+  <p class="lg-lead">Lo que hemos buscado sin encontrarlo, o aún no hemos podido buscar, con las vías que el proyecto puede usar: dónde se buscó y qué fuentes conviene probar. Que algo figure aquí no significa que no ocurriera: significa que todavía no está documentado en este proyecto.</p>
+  <div class="lg-filtros" role="group" aria-label="Filtrar por estado">
+    <button type="button" class="chip" aria-pressed="true" data-e="">Todas <span>{items.length}</span></button>
+    {Object.keys(ESTADOS).filter(cuenta).map((e) => <button type="button" class="chip" aria-pressed="false" data-e={e}>{ESTADOS[e][0]} <span>{cuenta(e)}</span></button>)}
+  </div>
+  <p class="meta">Si conoces una fuente para alguna de estas lagunas, <a href="https://github.com/pedri77/memoria-viva/issues/new?template=correccion.yml">avísanos</a>. Los datos están en <a href="https://github.com/pedri77/memoria-viva/blob/main/data/lagunas.json">data/lagunas.json</a>; las fuentes, en <a href={url("/fuentes/")}>Fuentes</a>.</p>
+  {items.map(({ l, e }) => (
+    <article class="lg" id={l.id} data-e={e}>
+      <header>
+        <p class="lg-meta"><span class="tag" data-c={ESTADOS[e][1]}>{ESTADOS[e][0]}</span><span>{l.periodo}</span></p>
+        <h2>{l.tema}</h2>
+      </header>
+      <div class="lg-cuerpo">
+        <div><h3>Qué falta</h3><p>{l.falta}</p></div>
+        <div><h3>Dónde se buscó</h3><p>{l.buscado}</p></div>
+        <div><h3>Qué probar</h3><ul>{l.probar.map((p: any) => <li><a href={p.url} rel="noopener">{p.fuente}</a></li>)}</ul></div>
+      </div>
       {l.afecta?.length > 0 && <p class="meta">Afecta a: {l.afecta.map((s: string, i: number) => <>{i > 0 && " · "}<a href={url(`/historias/${s.replace("story-", "")}/#lagunas`)}>{titulo(s)}</a></>)}</p>}
     </article>
   ))}
 </Base>
+<style is:global>
+  .lg-h1 { font-size: clamp(2.4rem, 1.4rem + 4vw, 4.4rem); letter-spacing: -0.03em; font-variation-settings: "opsz" 60; margin: .6em 0 .2em; }
+  .lg-lead { font-size: 1.1rem; }
+  .lg-filtros { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 8px; }
+  .chip { font: 500 .9rem var(--sans); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+  .chip span { color: var(--muted); margin-left: 4px; font-variant-numeric: tabular-nums; }
+  .chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .chip[aria-pressed="true"] span { color: inherit; opacity: .8; }
+  .lg { padding: 24px 0; border-top: 1px solid var(--line); }
+  .lg-meta { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin: 0; color: var(--muted); font-size: .9rem; }
+  .lg h2 { margin: 6px 0 12px; font-size: 1.5rem; }
+  .lg-cuerpo { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 28px; }
+  .lg-cuerpo h3 { font-family: var(--sans); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 6px; }
+  .lg-cuerpo p, .lg-cuerpo ul { margin: 0; font-size: .95rem; }
+  .lg-cuerpo ul { padding-left: 18px; }
+  @media (max-width: 760px) { .lg-cuerpo { grid-template-columns: 1fr; } }
+</style>
+<script>
+  const chips = [...document.querySelectorAll<HTMLButtonElement>(".lg-filtros .chip")];
+  const arts = [...document.querySelectorAll<HTMLElement>("article.lg")];
+  let e = new URLSearchParams(location.search).get("estado") ?? "";
+  function aplicar() {
+    chips.forEach((c) => c.setAttribute("aria-pressed", String(c.dataset.e === e)));
+    arts.forEach((a) => (a.hidden = !!e && a.dataset.e !== e));
+    history.replaceState(null, "", e ? `?estado=${e}${location.hash}` : location.pathname + location.hash);
+  }
+  chips.forEach((c) => c.addEventListener("click", () => { e = c.dataset.e!; aplicar(); }));
+  aplicar();
+</script>

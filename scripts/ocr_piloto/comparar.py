@@ -12,7 +12,8 @@ No hay transcripción de referencia completa. Se mide:
   3. Ruido: letras sueltas separadas por espacios («S U M A R I O») y tokens con símbolos.
 Genera data/raw/ocr_piloto/informe.html con la imagen y los tres textos lado a lado.
 
-Uso: uv run scripts/ocr_piloto/comparar.py USUARIO_HF
+Uso: uv run scripts/ocr_piloto/comparar.py USUARIO_HF   # salidas de HF Jobs
+     uv run scripts/ocr_piloto/comparar.py --local      # salidas de local_mlx.py
 """
 import html
 import json
@@ -21,7 +22,7 @@ import re
 import sys
 import unicodedata
 
-from datasets import load_dataset
+from datasets import load_dataset, load_from_disk
 from rapidfuzz import fuzz
 from rapidfuzz.distance import Levenshtein
 
@@ -63,13 +64,22 @@ def ruido(t: str) -> dict:
 
 
 def main() -> None:
-    user = sys.argv[1]
-    salidas = {m: load_dataset(f"{user}/memoria-viva-ocr-piloto-{m}", split="train")
-               for m in ("0.8b", "4b")}
+    if sys.argv[1] == "--local":
+        boe = {r["id"]: r["texto_boe"] for r in load_from_disk(str(DIR / "dataset"))
+               .remove_columns("image")}
+        por_id = {}
+        for m in ("0.8b", "4b"):
+            f = DIR / f"salida-{m}.jsonl"
+            filas_m = [json.loads(l) for l in f.open()] if f.exists() else []
+            por_id[m] = {r["id"]: {**r, "texto_boe": boe[r["id"]]} for r in filas_m}
+    else:
+        user = sys.argv[1]
+        por_id = {m: {r["id"]: r for r in load_dataset(
+            f"{user}/memoria-viva-ocr-piloto-{m}", split="train")} for m in ("0.8b", "4b")}
     filas, bloques = [], []
-    por_id = {m: {r["id"]: r for r in ds} for m, ds in salidas.items()}
     for pid, r08 in sorted(por_id["0.8b"].items()):
         r4 = por_id["4b"].get(pid, {})
+        tiempos = {m: por_id[m].get(pid, {}).get("segundos") for m in ("0.8b", "4b")}
         textos = {"boe": r08["texto_boe"], "0.8b": r08["markdown"], "4b": r4.get("markdown", "")}
         frag = (ORO / f"{pid}.txt").read_text() if (ORO / f"{pid}.txt").exists() else ""
         cif = [l.strip() for l in (ORO / f"{pid}.cifras").read_text().splitlines()
@@ -80,7 +90,8 @@ def main() -> None:
                 "cer_08_vs_4": round(cer(textos["0.8b"], textos["4b"]), 3),
                 "cer_boe_vs_4": round(cer(textos["boe"], textos["4b"]), 3),
                 "cer_boe_vs_08": round(cer(textos["boe"], textos["0.8b"]), 3),
-                "ruido": {k: ruido(v) for k, v in textos.items()}}
+                "ruido": {k: ruido(v) for k, v in textos.items()},
+                "segundos": tiempos}
         filas.append(fila)
         cols = "".join(f"<td><h4>{k}</h4><pre>{html.escape(v)}</pre></td>" for k, v in textos.items())
         bloques.append(f"<h2>{pid}</h2><p>{html.escape(json.dumps(fila, ensure_ascii=False))}</p>"
@@ -106,6 +117,10 @@ def main() -> None:
             if con:
                 print(f"{nombre} {src}: {sum(f[clave][src] for f in con) / len(con):.3f} "
                       f"({len(con)} páginas)")
+    for m in ("0.8b", "4b"):
+        seg = [f["segundos"][m] for f in filas if f.get("segundos", {}).get(m)]
+        if seg:
+            print(f"segundos por página {m}: media {sum(seg) / len(seg):.1f} ({len(seg)} páginas)")
     print(f"Informe: {DIR / 'informe.html'}")
 
 

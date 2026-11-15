@@ -1,15 +1,56 @@
 ---
 import Base from "../../layouts/Base.astro";
+import MiniMapa from "../../components/MiniMapa.astro";
+import man from "../../data/facsimiles.json";
 import { stories, url } from "../../lib/data";
+const datos = stories.map((s: any) => {
+  const claims = s.scenes.flatMap((sc: any) => sc.claims);
+  const docs = [...new Set(claims.flatMap((c: any) => c.evidence.map((e: any) => e.document_id)))];
+  const provs = [...new Set(s.scenes.flatMap((sc: any) => (sc.place_ids ?? []).map((p: string) => p.replace("plc-prov-", ""))))] as string[];
+  const facs = docs.filter((d) => (man as any)[d]).length;
+  return { s, n: claims.length, docs: docs.length, provs, facs, fechas: s.scenes.map((sc: any) => sc.date_label).filter(Boolean) };
+});
 ---
-<Base title="Historias" index={false} description="Narrativas documentadas: cada afirmación enlaza a su fuente.">
-  <h1>Historias</h1>
-  <p>Recorridos guiados por un tema. Cada afirmación enlaza al documento que la sostiene y cada historia dice lo que todavía no cubre.</p>
-  {stories.map((s) => (
-    <article class="card">
-      <h2><a href={url(`/historias/${s.id.replace("story-", "")}/`)}>{s.title}</a></h2>
-      <p>{s.summary}</p>
-      <p class="meta">{s.scenes.length} escenas · {s.review.status === "aprobado" ? `revisada por ${s.reviewers.join(" y ")}` : "borrador en revisión"}</p>
-    </article>
-  ))}
+<Base title="Historias" index={false} wide description="Narrativas documentadas: cada afirmación enlaza a su fuente.">
+  <div class="hist-idx">
+    <header>
+      <h1>Historias</h1>
+      <p class="hi-lead">Recorridos guiados por un tema. Cada afirmación enlaza al documento que la sostiene y cada historia dice lo que todavía no cubre.</p>
+    </header>
+    <ol class="hi-lista">
+      {datos.map(({ s, n, docs, provs, facs, fechas }) => (
+        <li>
+          <a class="hi-item" href={url(`/historias/${s.id.replace("story-", "")}/`)}>
+            <div class="hi-txt">
+              <p class="hi-periodo">{s.period}</p>
+              <h2>{s.title}</h2>
+              <p class="hi-resumen">{s.summary}</p>
+              <p class="hi-datos"><span>{s.scenes.length} escenas</span><span>{n} afirmaciones</span><span>{docs} documentos{facs ? `, ${facs} con facsímil` : ""}</span></p>
+              <p class="hi-fechas meta">{fechas.join(" · ")}</p>
+              <p class="meta">{s.review.status === "aprobado" ? `Revisada por ${s.reviewers.join(" y ")}` : "Borrador en revisión"}</p>
+            </div>
+            <div class="hi-mapa"><MiniMapa resaltas={provs} ancho={300} etiqueta={provs.length ? `Provincias que aparecen en «${s.title}»` : `«${s.title}»: ámbito estatal`} /></div>
+          </a>
+        </li>
+      ))}
+    </ol>
+  </div>
 </Base>
+<style is:global>
+  .hist-idx { max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+  .hist-idx h1 { font-size: clamp(2.6rem, 1.4rem + 5vw, 5.4rem); letter-spacing: -0.035em; line-height: 1; margin: 40px 0 16px; font-variation-settings: "opsz" 60; }
+  .hi-lead { font-size: 1.15rem; max-width: 56ch; }
+  .hi-lista { list-style: none; margin: 32px 0 0; padding: 0; border-top: 1px solid var(--ink); }
+  .hi-lista li { max-width: none; border-bottom: 1px solid var(--line); }
+  .hi-item { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 24px 56px; padding: 32px 0; color: var(--ink); text-decoration: none; align-items: center; }
+  .hi-periodo { margin: 0; font-family: var(--serif); font-size: 1.1rem; color: var(--accent); font-variant-numeric: lining-nums; }
+  .hi-item h2 { font-size: clamp(1.8rem, 1.3rem + 1.8vw, 3rem); letter-spacing: -0.02em; margin: 4px 0 12px; transition: color .3s var(--ease); }
+  .hi-item:hover h2, .hi-item:focus-visible h2 { color: var(--accent); }
+  .hi-resumen { font-size: 1.05rem; margin: 0 0 12px; }
+  .hi-datos { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0 0 6px; font-weight: 600; font-size: .95rem; }
+  .hi-fechas { margin: 0 0 6px; }
+  .hi-mapa { transition: transform .5s var(--ease); }
+  .hi-item:hover .hi-mapa { transform: translateY(-4px); }
+  @media (max-width: 760px) { .hi-item { grid-template-columns: 1fr; } .hi-mapa { max-width: 240px; order: -1; } }
+  @media (prefers-reduced-motion: reduce) { .hi-mapa, .hi-item h2 { transition: none; } }
+</style>

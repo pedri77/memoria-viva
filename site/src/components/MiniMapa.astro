@@ -5,8 +5,9 @@
 // Cada provincia lleva data-tip para la etiqueta flotante de Base.astro.
 import { svgProvincias } from "../lib/atlas";
 import { places } from "../lib/data";
-interface Props { ancho?: number; ind?: any; periodo?: string; resalta?: string; etiqueta?: string }
-const { ancho = 240, ind, periodo, resalta, etiqueta } = Astro.props;
+interface Props { ancho?: number; ind?: any; periodo?: string; resalta?: string; resaltas?: string[]; etiqueta?: string }
+const { ancho = 240, ind, periodo, resalta, resaltas = [], etiqueta } = Astro.props;
+const marcadas = new Set([...(resalta ? [resalta] : []), ...resaltas]);
 const svg = svgProvincias(ancho);
 const nombre = (c: string) => places.find((p) => p.id === `plc-prov-${c}`)?.canonical_name ?? c;
 const val: Record<string, number | null> = {};
@@ -16,10 +17,10 @@ const cortes = [0.2, 0.4, 0.6, 0.8].map((q) => vs[Math.floor(q * (vs.length - 1)
 const clase = (v: number | null | undefined) => v == null ? "nd" : `q${cortes.filter((c) => v >= c).length}`;
 const fmt = (v: number | null | undefined) => v == null ? "sin dato" : v.toLocaleString("es-ES", { maximumFractionDigits: 1 });
 ---
-<svg viewBox={`0 0 ${svg.width} ${svg.height}`} class="minimapa" role="img" aria-label={etiqueta ?? (resalta ? `Situación de ${nombre(resalta)} en el mapa de España` : `Mapa de ${ind?.concept ?? ""}, ${periodo ?? ""}`)}>
+<svg viewBox={`0 0 ${svg.width} ${svg.height}`} class="minimapa" role="img" aria-label={etiqueta ?? (resalta ? `Situación de ${nombre(resalta)} en el mapa de España` : marcadas.size ? `Provincias citadas: ${[...marcadas].map(nombre).join(", ")}` : `Mapa de ${ind?.concept ?? ""}, ${periodo ?? ""}`)}>
   {svg.paths.map((p) => ind
     ? <path d={p.d} class={clase(val[p.code])} data-tip={`${nombre(p.code)}: ${fmt(val[p.code])} ${ind.unit}`} />
-    : <path d={p.d} class={p.code === resalta ? "sel" : ""} data-tip={nombre(p.code)} />)}
+    : <path d={p.d} class={marcadas.has(p.code) ? "sel" : ""} data-tip={nombre(p.code)} />)}
 </svg>
 <style is:global>
   .minimapa { width: 100%; height: auto; display: block; overflow: visible; }

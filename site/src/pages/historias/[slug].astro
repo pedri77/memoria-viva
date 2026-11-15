@@ -2,6 +2,8 @@
 import Base from "../../layouts/Base.astro";
 import { stories, documents, places, byId, url } from "../../lib/data";
 import { svgProvincias } from "../../lib/atlas";
+import Facsimil from "../../components/Facsimil.astro";
+import man from "../../data/facsimiles.json";
 export function getStaticPaths() {
   return stories.map((s) => ({ params: { slug: s.id.replace("story-", "") }, props: { s } }));
 }
@@ -14,10 +16,12 @@ const scenes = s.scenes.map((sc: any) => ({
   ...sc,
   claims: sc.claims.map((c: any) => ({ ...c, n: ++n, docs: c.evidence.map((e: any) => ({ ...e, d: byId(documents, e.document_id) })) })),
   codes: (sc.place_ids ?? []).map((p: string) => p.replace("plc-prov-", "")),
+  facs: [...new Set(sc.claims.flatMap((c: any) => c.evidence.map((e: any) => e.document_id)))].filter((id: any) => (man as any)[id]),
 }));
 const draft = s.review.status !== "aprobado";
 ---
 <Base title={s.title} description={s.summary}>
+  <div class="progreso" aria-hidden="true"><span></span></div>
   <p class="meta"><a href={url("/historias/")}>Historias</a> · {s.period}</p>
   <h1>{s.title}</h1>
   {draft && <p class="aviso" role="note"><strong>Borrador en revisión.</strong> Cada afirmación está comprobada sobre su documento, pero la narrativa aún no ha pasado la revisión de dos especialistas. <a href={url("/metodologia/#correcciones")}>Cómo notificar un error</a>.</p>}
@@ -45,6 +49,7 @@ const draft = s.review.status !== "aprobado";
               </li>
             )))}
           </ol>
+          {sc.facs.length > 0 && <div class="esc-facs" aria-label="Facsímiles de los documentos citados">{sc.facs.slice(0, 3).map((id: string) => <Facsimil id={id} tam="mini" pie={false} />)}</div>}
           {sc.atlas_query && <p class="meta"><a href={url(`/atlas/?${sc.atlas_query}`)}>Ver estas elecciones en el atlas</a></p>}
           {sc.event_ids?.length > 0 && <p class="meta">En la cronología: {sc.event_ids.map((id: string, i: number) => <>{i > 0 && " · "}<a href={url(`/acontecimientos/${id}/`)}>ficha</a></>)}</p>}
         </section>
@@ -69,7 +74,14 @@ const draft = s.review.status !== "aprobado";
 <style is:global>
   .aviso { border-left: 4px solid var(--accent); background: var(--surface); padding: 12px 16px; }
   .entradilla { font-size: 1.1rem; }
-  .historia { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 32px; }
+  .historia { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 40px; }
+  main > h1 { font-size: clamp(2.4rem, 1.4rem + 4vw, 4.4rem); letter-spacing: -0.03em; font-variation-settings: "opsz" 60; margin-top: .4em; }
+  .escena > .meta:first-child { font-family: var(--serif); font-size: 1.35rem; color: var(--accent); margin: 0; font-variant-numeric: lining-nums; }
+  .escena h2 { margin-top: .2em; }
+  .esc-facs { display: flex; gap: 12px; margin: 12px 0; }
+  .esc-facs .facsimil { width: 110px; flex: none; }
+  .progreso { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 20; pointer-events: none; }
+  .progreso span { display: block; height: 100%; width: 100%; background: var(--accent); transform-origin: 0 50%; transform: scaleX(var(--p, 0)); }
   .escena { padding: 24px 0 40px; border-bottom: 1px solid var(--line); }
   .escena .intro { font-style: italic; color: var(--muted); }
   .escena sup a { text-decoration: none; padding: 0 2px; }
@@ -100,4 +112,9 @@ const draft = s.review.status !== "aprobado";
     }
   }, { rootMargin: "-40% 0px -55% 0px" });
   document.querySelectorAll(".escena").forEach((s) => io.observe(s));
+  // Barra de progreso de lectura (ligada al scroll: la controla quien lee)
+  const barra = document.querySelector<HTMLElement>(".progreso span");
+  let pend = false;
+  const prog = () => { pend = false; const h = document.documentElement.scrollHeight - innerHeight; barra?.style.setProperty("--p", String(h > 0 ? Math.min(1, scrollY / h) : 0)); };
+  addEventListener("scroll", () => { if (!pend) { pend = true; requestAnimationFrame(prog); } }, { passive: true }); prog();
 </script>
