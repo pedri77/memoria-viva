@@ -39,7 +39,7 @@ const parent = p.parent_id ? byId(places, p.parent_id) : null;
         <thead><tr><th scope="col">Indicador</th><th scope="col" style="text-align:right">1920</th><th scope="col" style="text-align:right">1930</th><th scope="col" style="text-align:right">1940</th></tr></thead>
         <tbody>{rows.map((r) => <tr><th scope="row" style="font-weight:400"><a href={url(`/datos/#${r.i.id}`)}>{r.i.concept}</a></th>{r.obs.map((o: any) => <td style="text-align:right">{o?.value != null ? o.value.toLocaleString("es-ES") : "sin dato"}</td>)}</tr>)}</tbody>
       </table></div>
-      <p class="meta">Fuente: mapSpainHist (CC BY 4.0), a partir de los censos del INE. Ver advertencias de comparabilidad en <a href={url("/datos/")}>Datos</a>.</p>
+      <p class="meta">Fuentes: población y densidad, mapSpainHist (CC BY 4.0) a partir de los censos del INE; alfabetización, tablas de instrucción de los censos de 1920 y 1930 del INE (CC BY 4.0). Ver advertencias de comparabilidad en <a href={url("/datos/")}>Datos</a>.</p>
     </section>
   )}
   <section>
