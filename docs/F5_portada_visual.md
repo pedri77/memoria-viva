@@ -29,3 +29,18 @@
 - axe (WCAG 2.1 AA) sin incidencias en la portada (claro y oscuro), en una historia y en las lagunas.
 - Capturas a 1440 y 390 px, en modo oscuro y sin JS.
 - Detector de Impeccable: en una primera pasada saltó una transición de `max-height` en el menú; ya está corregida.
+
+## Relato «La tierra» (15-11-2026)
+
+Tercer relato de la portada, entre «Votar» y la cronología. Tiene cinco pasos:
+1. El censo de 1930: población con profesión en montes, agricultura y ganadería.
+2. Lo que el censo no aclara: la fila «Diversas» y las provincias sin dato.
+3. El decreto de términos municipales de 1931.
+4. La Ley de Reforma Agraria de 1932.
+5. La ley de arrendamientos de 1935 y la «reforma de la reforma».
+
+Reglas del relato:
+- **Textos:** son las afirmaciones de la cronología, tal cual, con sus fuentes agrupadas por documento. Los extremos del mapa (provincia y valor) se calculan a partir de los datos.
+- **Mapas:** los dos tienen escalas distintas, así que se funden en lugar de interpolar colores, y la leyenda cambia de rango con el paso.
+- **Sin JS:** se ve el mapa agrario.
+- **Verificación:** axe sin incidencias en claro y oscuro; capturas de los cinco pasos a 1440 y 390 px.

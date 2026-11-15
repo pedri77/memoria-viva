@@ -12,6 +12,9 @@ Saber leer · relato con pasos (mapa fijo, textos en flujo normal)
   el color de cada provincia se interpola entre pasos según la posición del scroll
 Votar · relato con pasos
   1931 · Constitución (art. 36) · 1933 · 1936; los mapas de circunscripciones se funden
+La tierra · relato con pasos
+  censo de 1930 (grupo II) · fila «Diversas» · términos municipales 1931 · Reforma Agraria 1932 · 1935;
+  dos mapas con escalas distintas que se funden (no se interpolan) y leyenda que cambia con el paso
 Cronología · carrete horizontal fijado, alto calculado en JS según el ancho de la pista
 Índice · flujo normal · Cierre · wordmark
 Sin JS: todas las secciones en flujo normal, mapas en su estado final, carrete con scroll horizontal.
@@ -19,7 +22,7 @@ Movimiento reducido: sin transiciones autónomas; lo ligado al scroll se mantien
 */
 import Base from "../layouts/Base.astro";
 import Fuente from "../components/Fuente.astro";
-import { events, documents, sources, stories, places, url, byId } from "../lib/data";
+import { events, documents, sources, stories, places, indicators, url, byId } from "../lib/data";
 import { TYPE_LABEL } from "../lib/atlas";
 import { MAPA, provincias, circunscripciones, puntos, afirmacion, docIndicador, cronologia } from "../lib/portada";
 
@@ -53,6 +56,36 @@ const votar = [
   const sc = scene("story-votar-republica", scid as string);
   return { frame, fecha: sc.date_label, titulo: sc.heading, claim: afirmacion("story-votar-republica", scid as string, i as number), atlas: sc.atlas_query };
 });
+
+// «La tierra»: peso agrario y fila «Diversas» del censo de 1930; pasos legales con afirmaciones de la cronología.
+const indAgr = byId(indicators, "ind-prof-agraria-prov"), indDiv = byId(indicators, "ind-prof-diversas-prov");
+const v30 = (ind: any) => Object.fromEntries((ind?.observations ?? []).filter((o: any) => o.period === "1930").map((o: any) => [o.place_id.slice(-2), o.value]));
+const agr = v30(indAgr), div = v30(indDiv);
+const rango = (m: Record<string, number | null>) => { const xs = Object.values(m).filter((v): v is number => v != null); return [Math.floor(Math.min(...xs)), Math.ceil(Math.max(...xs))]; };
+const domAgr = rango(agr), domDiv = rango(div);
+const docProf = byId(documents, "doc-ine-censo1930-profesiones");
+const claimEv = (eid: string, i: number) => { const e = byId(events, eid); const c = e.claims[i]; const d = byId(documents, c.evidence[0].document_id); return { text: c.text, doc: { id: d.id, title: d.title, locator: c.evidence[0].locator ?? "" }, ev: eid }; };
+const extremo = (m: Record<string, number | null>, signo: number) => {
+  const [c, v] = Object.entries(m).filter(([, v]) => v != null).sort((x: any, y: any) => signo * (y[1] - x[1]))[0] as [string, number];
+  return `${String(v).replace(".", ",")} % de ${provs.find((p) => p.code === c)?.name ?? c}`;
+};
+const agrupar = (cs: any[]) => {
+  const m = new Map<string, { id: string; title: string; locs: string[] }>();
+  for (const c of cs) { const g = m.get(c.doc.id) ?? { id: c.doc.id, title: c.doc.title, locs: [] }; if (c.doc.locator && !g.locs.includes(c.doc.locator)) g.locs.push(c.doc.locator); m.set(c.doc.id, g); }
+  return [...m.values()];
+};
+const tierra = [
+  { frame: "agr", fecha: "Diciembre de 1930", titulo: "El campo en 1930", min: domAgr[0], max: domAgr[1],
+    textos: [`Porcentaje de la población con profesión que el censo clasifica en el grupo II: explotación de montes, agricultura y ganadería. Va del ${extremo(agr, -1)} al ${extremo(agr, 1)}.`],
+    doc: docProf && { id: docProf.id, title: docProf.title, locator: "" }, atlas: "capa=censo&ind=ind-prof-agraria-prov&censo=1930" },
+  { frame: "div", fecha: "Diciembre de 1930", titulo: "Lo que el censo no aclara", min: domDiv[0], max: domDiv[1],
+    textos: ["El mismo censo pone a mucha gente en una fila de «Diversas» que no dice a qué se dedicaba; parte serían jornaleros del campo. Donde esa fila es grande, el peso real de la agricultura puede ser mayor que el del mapa anterior. A las tablas de algunas provincias les faltan páginas: en el mapa anterior, Gerona y Vizcaya quedan sin dato; en este, Cádiz."],
+    doc: docProf && { id: docProf.id, title: docProf.title, locator: "" }, atlas: "capa=censo&ind=ind-prof-diversas-prov&censo=1930" },
+  { frame: "agr", fecha: "Abril de 1931", titulo: "Los braceros del término", min: domAgr[0], max: domAgr[1], pasos: [claimEv("evt-1931-04-30-terminos-municipales", 0), claimEv("evt-1931-04-30-terminos-municipales", 1)] },
+  { frame: "agr", fecha: "Septiembre de 1932", titulo: "La Ley de Reforma Agraria", min: domAgr[0], max: domAgr[1], pasos: [claimEv("evt-1932-09-15-reforma-agraria", 0), claimEv("evt-1932-09-15-reforma-agraria", 1)] },
+  { frame: "agr", fecha: "1935", titulo: "Arrendamientos y «reforma de la reforma»", min: domAgr[0], max: domAgr[1], pasos: [claimEv("evt-1935-03-24-arrendamientos-rusticos", 0), claimEv("evt-1935-08-10-reforma-reforma-agraria", 0), claimEv("evt-1935-08-10-reforma-reforma-agraria", 1)] },
+];
+const tT = (v: number | null | undefined, d: number[]) => v == null ? null : ((v - d[0]) / (d[1] - d[0])).toFixed(3);
 
 // Dominios de color: de los propios datos, no fijados a mano.
 const vLeer = provs.flatMap((p) => [p.a20, p.a30, p.m30]).filter((v): v is number => v != null);
@@ -160,6 +193,44 @@ const indice = [
       </div>
     </section>
 
+    <section class="relato" id="tierra" data-relato="tierra" aria-labelledby="h-tierra">
+      <header class="rel-cab">
+        <h2 id="h-tierra">La tierra</h2>
+        <p>Cuánta gente vivía del campo en cada provincia y qué normas cambiaron su trabajo entre 1931 y 1935.</p>
+      </header>
+      <div class="rel-cuerpo">
+        <figure class="rel-mapa" aria-hidden="true">
+          <svg viewBox={`0 0 ${MAPA.w} ${MAPA.h}`} class="mapa">
+            <defs><pattern id="rayado-t" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="ray-f" /><line x1="0" y1="0" x2="0" y2="6" class="ray-l" /></pattern></defs>
+            {[["agr", agr, domAgr, "trabaja en el campo"], ["div", div, domDiv, "en la fila «Diversas»"]].map(([fr, m, d, txt]: any) => (
+              <g class="capa-elec capa-tierra" data-frame={fr}>{provs.map((p) => { const v = m[p.code]; return (
+                <path d={p.d} class={v == null ? "nd" : undefined} style={v == null ? undefined : `--t:${tT(v, d)}`} data-tip={`${p.name}: ${v == null ? "sin dato" : `${String(v).replace(".", ",")} % ${txt}`}`} />); })}</g>
+            ))}
+          </svg>
+          <div class="leyenda"><span class="ley-et" data-label>El campo en 1930</span><span class="ley-barra"></span><span class="ley-min" data-ley-min>{domAgr[0]} %</span><span class="ley-max" data-ley-max>{domAgr[1]} %</span></div>
+          <figcaption class="meta">% de la población con profesión. INE, censo de 1930, tomo III (CC BY 4.0). Sin dato: rayado.</figcaption>
+        </figure>
+        <ol class="pasos">
+          {tierra.map((s) => (
+            <li class="paso" data-frame={s.frame} data-label={s.frame === "div" ? "«Diversas», 1930" : "El campo en 1930"} data-min={s.min} data-max={s.max}>
+              <div class="paso-caja">
+                <p class="meta">{s.fecha}</p>
+                <h3>{s.titulo}</h3>
+                {s.textos?.map((t) => <p>{t}</p>)}
+                {s.pasos?.map((c) => <p>{c.text}</p>)}
+                <p class="meta">
+                  {s.doc && <><Fuente doc={s.doc} /> </>}
+                  {s.pasos && <>Fuentes: {agrupar(s.pasos).map((g, i) => <>{i > 0 && " · "}<a href={url(`/documentos/${g.id}/`)}>{g.title}</a>{g.locs.length ? `, ${g.locs.join("; ")}` : ""}</>)}. </>}
+                  {s.atlas && <a href={url(`/atlas/?${s.atlas}`)}>Ver en el atlas</a>}
+                  {s.pasos && <a href={url(`/acontecimientos/${s.pasos[0].ev}/`)}>Ver en la cronología</a>}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
     <section class="carrete" aria-labelledby="h-crono">
       <div class="fijo">
         <header class="car-cab">
@@ -245,7 +316,11 @@ const indice = [
       const activo = Math.round(pos);
       r.pasos.forEach((s, k) => s.classList.toggle("activo", k === activo));
       const et = r.pasos[activo].dataset.label!;
-      if (r.label.textContent !== et) r.label.textContent = et;
+      if (r.label.textContent !== et) {
+        r.label.textContent = et;
+        const pa = r.pasos[activo], mn = r.el.querySelector("[data-ley-min]"), mx = r.el.querySelector("[data-ley-max]");
+        if (pa.dataset.min && mn && mx) { mn.textContent = `${pa.dataset.min} %`; mx.textContent = `${pa.dataset.max} %`; }
+      }
       if (r.tipo === "leer") {
         for (const p of r.prov!) {
           const va = p.dataset[fa], vb = p.dataset[fb];
@@ -363,7 +438,12 @@ const indice = [
   .coro path:hover, .capa-elec path:hover { stroke: var(--ink); stroke-width: 1.6; }
   .capa-elec { transition: opacity .2s linear; }
   html.js .capa-elec:not([data-frame="1931"]) { opacity: 0; }
-  html:not(.js) .capa-elec:not([data-frame="1936"]) { display: none; }
+  html:not(.js) .capa-elec:not([data-frame="1936"]):not(.capa-tierra) { display: none; }
+  html:not(.js) .capa-tierra:not([data-frame="agr"]) { display: none; }
+  html.js .capa-tierra[data-frame="div"] { opacity: 0; }
+  html.js .capa-tierra[data-frame="agr"] { opacity: 1; }
+  .capa-tierra path { fill: color-mix(in oklab, var(--r0), var(--r2) calc(var(--t, 0) * 100%)); }
+  .capa-tierra path.nd { fill: url(#rayado-t); }
   .leyenda { display: grid; grid-template-columns: auto 1fr auto; grid-template-areas: "et et et" "min barra max"; gap: 4px 10px; align-items: center; font-size: .85rem; color: var(--muted); margin-top: 8px; max-width: 420px; font-variant-numeric: tabular-nums; }
   .ley-et { grid-area: et; color: var(--ink); font-weight: 600; }
   .ley-barra { grid-area: barra; height: 10px; border-radius: 5px; background: linear-gradient(90deg in oklab, var(--r0), var(--r2)); }
