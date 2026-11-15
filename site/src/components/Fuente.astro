@@ -1,0 +1,5 @@
+---
+import { url } from "../lib/data";
+const { doc } = Astro.props as { doc?: { id: string; title: string; locator?: string } | null };
+---
+{doc && <>Fuente: <a href={url(`/documentos/${doc.id}/`)}>{doc.title}</a>{doc.locator ? `, ${doc.locator}` : ""}.</>}

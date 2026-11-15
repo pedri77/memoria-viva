@@ -1,9 +1,439 @@
 ---
+/*
+Portada · «Del documento al mapa»
+Metáfora: el mapa de 1930 se dibuja y se llena de datos; cada cifra lleva a su documento.
+Sin imágenes generadas: todo sale de data/canonical y de las capas públicas (ver lib/portada.ts).
+
+Apertura · 220 svh fijada
+  al cargar   se dibujan los límites provinciales de 1930 (trazo, 1,6 s; inmediato con movimiento reducido)
+  0.05 – 0.85  el año corre de 1931 a 1939 y se encienden los acontecimientos con lugar
+Saber leer · relato con pasos (mapa fijo, textos en flujo normal)
+  paso 0 censo 1920 · paso 1 censo 1930 (afirmación de la narrativa) · paso 2 mujeres 1930
+  el color de cada provincia se interpola entre pasos según la posición del scroll
+Votar · relato con pasos
+  1931 · Constitución (art. 36) · 1933 · 1936; los mapas de circunscripciones se funden
+Cronología · carrete horizontal fijado, alto calculado en JS según el ancho de la pista
+Índice · flujo normal · Cierre · wordmark
+Sin JS: todas las secciones en flujo normal, mapas en su estado final, carrete con scroll horizontal.
+Movimiento reducido: sin transiciones autónomas; lo ligado al scroll se mantiene.
+*/
 import Base from "../layouts/Base.astro";
-import { events, documents, sources, indicators, places, url } from "../lib/data";
+import Fuente from "../components/Fuente.astro";
+import { events, documents, sources, stories, places, url, byId } from "../lib/data";
+import { TYPE_LABEL } from "../lib/atlas";
+import { MAPA, provincias, circunscripciones, puntos, afirmacion, docIndicador, cronologia } from "../lib/portada";
+
+const provs = provincias();
+const circ = circunscripciones();
+const pts = puntos();
+const conLugar = new Set(pts.map((p) => p.id)).size;
+const nProv = places.filter((p) => p.place_type === "provincia").length;
+const fmtFecha = (d: string, prec: string) => {
+  const [y, m, dd] = d.split("-").map(Number);
+  const mes = new Date(Date.UTC(y, m - 1, dd || 1)).toLocaleDateString("es-ES", { month: "long", timeZone: "UTC" });
+  return prec === "dia" ? `${dd} de ${mes} de ${y}` : prec === "mes" ? `${mes} de ${y}` : String(y);
+};
+const scene = (sid: string, scid: string) => byId(stories, sid)?.scenes.find((s: any) => s.id === scid);
+
+const docA20 = docIndicador("ind-alfab-total-prov", "1920");
+const docA30 = docIndicador("ind-alfab-total-prov", "1930");
+const docM30 = docIndicador("ind-alfab-mujeres-prov", "1930");
+const leer = [
+  { frame: "a20", fecha: "Diciembre de 1920", titulo: "Censo de 1920",
+    texto: "Porcentaje de la población de hecho que sabía leer, provincia a provincia. El censo de 1920 no da la cifra separada de Las Palmas y Santa Cruz de Tenerife: Canarias queda sin color.",
+    doc: docA20 && { id: docA20.id, title: docA20.title, locator: "" }, atlas: "capa=censo&ind=ind-alfab-total-prov&censo=1920" },
+  { frame: "a30", fecha: "Diciembre de 1930", titulo: "Censo de 1930", claim: afirmacion("story-escuelas-republica", "diagnostico", 2), atlas: "capa=censo&ind=ind-alfab-total-prov&censo=1930" },
+  { frame: "m30", fecha: "Diciembre de 1930", titulo: "Las mujeres, en 1930",
+    texto: "El mismo censo, solo para las mujeres: porcentaje de las mujeres de cada provincia que sabían leer.",
+    doc: docM30 && { id: docM30.id, title: docM30.title, locator: "" }, atlas: "capa=censo&ind=ind-alfab-mujeres-prov&censo=1930" },
+];
+const votar = [
+  ["1931", "constituyentes", 1], ["1931", "constitucion", 0], ["1933", "elecciones-1933", 1], ["1936", "elecciones-1936", 0],
+].map(([frame, scid, i]) => {
+  const sc = scene("story-votar-republica", scid as string);
+  return { frame, fecha: sc.date_label, titulo: sc.heading, claim: afirmacion("story-votar-republica", scid as string, i as number), atlas: sc.atlas_query };
+});
+
+// Dominios de color: de los propios datos, no fijados a mano.
+const vLeer = provs.flatMap((p) => [p.a20, p.a30, p.m30]).filter((v): v is number => v != null);
+const vPart = Object.values(circ).flat().map((c) => c.part).filter((v): v is number => v != null);
+const dom = { leer: [Math.floor(Math.min(...vLeer)), Math.ceil(Math.max(...vLeer))], part: [Math.floor(Math.min(...vPart)), Math.ceil(Math.max(...vPart))] };
+const tLeer = (v: number | null) => v == null ? null : ((v - dom.leer[0]) / (dom.leer[1] - dom.leer[0])).toFixed(3);
+const tPart = (v: number | null) => v == null ? null : ((v - dom.part[0]) / (dom.part[1] - dom.part[0])).toFixed(3);
+const nf = (v: number | null) => v == null ? "sin dato" : `${v.toLocaleString("es-ES", { maximumFractionDigits: 1 })} %`;
+
+const crono = cronologia();
+const indice = [
+  { href: "/atlas/", t: "Atlas", d: `Censos de 1920 a 1940 y elecciones de 1931, 1933 y 1936 sobre los límites de 1930, con ${events.length} acontecimientos situados.` },
+  { href: "/historias/", t: "Historias", d: `${stories.length} narrativas en borrador: ${stories.map((s) => `«${s.title}»`).join(" y ")}.` },
+  { href: "/acontecimientos/", t: "Cronología", d: `${events.length} acontecimientos de 1931 a 1939, cada uno con su documento.` },
+  { href: "/documentos/", t: "Archivo", d: `${documents.length} fichas documentales con su custodio, su signatura y sus condiciones de uso.` },
+  { href: "/datos/", t: "Datos abiertos", d: "Todo en JSON y CSV, con la licencia y la atribución de cada dato." },
+  { href: "/lagunas/", t: "Lagunas", d: "Lo que se ha buscado sin encontrarlo, dónde se buscó y qué fuentes probar." },
+  { href: "/metodologia/", t: "Metodología", d: "Cómo se documenta cada afirmación, cómo se revisa y cómo notificar un error." },
+];
 ---
-<Base index={false} title="Inicio">
-  <h1>Historia contemporánea de España, documento a documento</h1>
-  <p>Un atlas y archivo de la Segunda República y la Guerra Civil (1931-1939) en el que cada afirmación enlaza a la fuente que la sostiene, con su fecha, su lugar, su grado de certeza y sus condiciones de uso.</p>
-  <p class="card">Fase de datos de referencia: {events.length} acontecimientos, {documents.length} fichas documentales, {indicators.length} series censales sobre {places.filter((p) => p.place_type === "provincia").length} provincias y {sources.length} fuentes registradas. Todo en revisión. Antes de seguir, lee <a href={url("/metodologia/")}>cómo se documenta</a>.</p>
+<Base index={false} wide title="Inicio" description="Atlas y archivo documental de la Segunda República y la Guerra Civil (1931-1939). Cada afirmación enlaza al documento que la sostiene.">
+  <div class="portada">
+
+    <section class="apertura" aria-labelledby="h-portada">
+      <div class="fijo">
+        <div class="ap-texto">
+          <h1 id="h-portada">Historia contemporánea de España, <em>documento a documento</em></h1>
+          <p class="ap-lead">Un atlas y archivo de la Segunda República y la Guerra Civil (1931-1939) en el que cada afirmación enlaza a la fuente que la sostiene, con su fecha, su lugar, su grado de certeza y sus condiciones de uso.</p>
+          <p class="ap-cifras">{events.length} acontecimientos, {documents.length} fichas documentales, {nProv} provincias y {sources.length} fuentes registradas.</p>
+          <p class="ap-acciones"><a class="boton" href={url("/atlas/")}>Abrir el atlas</a> <a href="#saber-leer">Empezar a leer</a></p>
+          <p class="meta ap-aviso">Proyecto en construcción: todo está en revisión. Antes de seguir, lee <a href={url("/metodologia/")}>cómo se documenta</a>.</p>
+        </div>
+        <figure class="ap-mapa" aria-hidden="true">
+          <svg viewBox={`0 0 ${MAPA.w} ${MAPA.h}`} class="mapa mapa-ap">
+            <g class="prov">{provs.map((p) => <path d={p.d} pathLength="1" />)}</g>
+            <rect class="recuadro" x="18" y={MAPA.h - 150} width="232" height="118" pathLength="1" />
+            <g class="pts">{pts.map((p) => <circle cx={p.x} cy={p.y} r="6" data-y={p.year} />)}</g>
+          </svg>
+          <p class="anio"><span class="anio-n">1931</span></p>
+          <figcaption class="meta">Límites provinciales de 1930. Los puntos son los lugares de los {conLugar} acontecimientos con lugar concreto; los otros {events.length - conLugar} son de ámbito estatal.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="relato" id="saber-leer" data-relato="leer" aria-labelledby="h-leer">
+      <header class="rel-cab">
+        <h2 id="h-leer">Saber leer</h2>
+        <p>Qué parte de la población sabía leer, provincia a provincia, según los censos de 1920 y 1930.</p>
+      </header>
+      <div class="rel-cuerpo">
+        <figure class="rel-mapa" aria-hidden="true">
+          <svg viewBox={`0 0 ${MAPA.w} ${MAPA.h}`} class="mapa">
+            <defs><pattern id="rayado" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="ray-f" /><line x1="0" y1="0" x2="0" y2="6" class="ray-l" /></pattern></defs>
+            <g class="coro">{provs.map((p) => (
+              <path d={p.d} data-a20={tLeer(p.a20) ?? ""} data-a30={tLeer(p.a30) ?? ""} data-m30={tLeer(p.m30) ?? ""} class={p.a30 == null ? "nd" : undefined} style={p.a30 == null ? undefined : `--t:${tLeer(p.a30)}`}>
+                <title>{p.name}: 1920, {nf(p.a20)}; 1930, {nf(p.a30)}; mujeres en 1930, {nf(p.m30)}</title>
+              </path>
+            ))}</g>
+          </svg>
+          <div class="leyenda"><span class="ley-et" data-label>Censo de 1930</span><span class="ley-barra"></span><span class="ley-min">{dom.leer[0]} %</span><span class="ley-max">{dom.leer[1]} %</span></div>
+          <figcaption class="meta">INE, censos de 1920 y 1930, tomo II (CC BY 4.0). Sin dato: rayado.</figcaption>
+        </figure>
+        <ol class="pasos">
+          {leer.map((s) => (
+            <li class="paso" data-frame={s.frame} data-label={s.titulo}>
+              <div class="paso-caja">
+                <p class="meta">{s.fecha}</p>
+                <h3>{s.titulo}</h3>
+                <p>{s.claim ? s.claim.text : s.texto}</p>
+                <p class="meta"><Fuente doc={s.claim ? s.claim.doc : s.doc} /> <a href={url(`/atlas/?${s.atlas}`)}>Ver en el atlas</a>{s.claim && <> · <a href={url(`/historias/${s.claim.story}/#${s.claim.scene}`)}>Seguir en la historia</a></>}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <section class="relato" id="votar" data-relato="votar" aria-labelledby="h-votar">
+      <header class="rel-cab">
+        <h2 id="h-votar">Votar</h2>
+        <p>Las tres elecciones generales de la República, con la participación en la primera vuelta de cada circunscripción.</p>
+      </header>
+      <div class="rel-cuerpo">
+        <figure class="rel-mapa" aria-hidden="true">
+          <svg viewBox={`0 0 ${MAPA.w} ${MAPA.h}`} class="mapa">
+            {Object.entries(circ).map(([y, cs]) => (
+              <g class="capa-elec" data-frame={y}>{cs.map((c) => <path d={c.d} class={c.part == null ? "nd" : undefined} style={c.part == null ? undefined : `--t:${tPart(c.part)}`}><title>{c.nombre}, {y}: participación {nf(c.part)}</title></path>)}</g>
+            ))}
+          </svg>
+          <div class="leyenda"><span class="ley-et" data-label>Elecciones de 1931</span><span class="ley-barra part"></span><span class="ley-min">{dom.part[0]} %</span><span class="ley-max">{dom.part[1]} %</span></div>
+          <figcaption class="meta">Participación por circunscripción. Atlas Electoral de la Segunda República (Rodon, Vall-Prat y Martín Álvarez, CC BY-NC-SA 4.0).</figcaption>
+        </figure>
+        <ol class="pasos">
+          {votar.map((s) => (
+            <li class="paso" data-frame={s.frame} data-label={`Elecciones de ${s.frame}`}>
+              <div class="paso-caja">
+                <p class="meta">{s.fecha}</p>
+                <h3>{s.titulo}</h3>
+                <p>{s.claim.text}</p>
+                <p class="meta"><Fuente doc={s.claim.doc} /> {s.atlas && <><a href={url(`/atlas/?${s.atlas}`)}>Ver en el atlas</a> · </>}<a href={url(`/historias/${s.claim.story}/#${s.claim.scene}`)}>Seguir en la historia</a></p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <section class="carrete" aria-labelledby="h-crono">
+      <div class="fijo">
+        <header class="car-cab">
+          <h2 id="h-crono">Ocho años, {events.length} acontecimientos</h2>
+          <p><a href={url("/acontecimientos/")}>Ver la cronología completa</a></p>
+        </header>
+        <div class="pista-marco">
+          <ol class="pista">
+            {crono.map((e, i) => (
+              <li class={`hito ${i % 2 ? "abajo" : "arriba"}`} data-y={e.date.slice(0, 4)}>
+                {(i === 0 || crono[i - 1].date.slice(0, 4) !== e.date.slice(0, 4)) && <span class="hito-anio" aria-hidden="true">{e.date.slice(0, 4)}</span>}
+                <p class="meta"><time datetime={e.date}>{fmtFecha(e.date, e.prec)}</time> · {TYPE_LABEL[e.type] ?? e.type}</p>
+                <a href={url(`/acontecimientos/${e.id}/`)}>{e.title}</a>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="indice" aria-labelledby="h-indice">
+      <h2 id="h-indice">Por dónde seguir</h2>
+      <ul>
+        {indice.map((x) => (
+          <li><a href={url(x.href)}><span class="ind-t">{x.t}</span><span class="ind-d">{x.d}</span><svg class="flecha" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" /></svg></a></li>
+        ))}
+      </ul>
+    </section>
+
+    <div class="cierre" aria-hidden="true">
+      <svg viewBox="0 0 1000 150"><text x="0" y="118" textLength="1000" lengthAdjust="spacingAndGlyphs">Memoria Viva</text></svg>
+    </div>
+  </div>
 </Base>
+
+<script>
+  // Un solo bucle rAF. El scroll marca «sucio»; cada fotograma recalcula solo lo visible.
+  const root = document.querySelector<HTMLElement>(".portada");
+  if (root) {
+    const clamp = (v: number, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+    const tramo = (p: number, a: number, b: number) => clamp((p - a) / (b - a));
+    const ease = (t: number) => 1 - Math.pow(1 - t, 3);
+    const progresoFijado = (el: HTMLElement) => {
+      const r = el.getBoundingClientRect(); const rango = r.height - innerHeight;
+      return { p: rango > 0 ? clamp(-r.top / rango) : 1, visible: r.bottom > 0 && r.top < innerHeight };
+    };
+
+    // Apertura
+    const ap = root.querySelector<HTMLElement>(".apertura")!;
+    const dots = [...ap.querySelectorAll<SVGCircleElement>(".pts circle")];
+    const anioN = ap.querySelector<HTMLElement>(".anio-n")!;
+    let pAp = -1;
+    function apertura() {
+      const { p, visible } = progresoFijado(ap);
+      if (!visible || Math.abs(p - pAp) < 0.0002) return;
+      pAp = p;
+      const y = 1931 + Math.round(8 * tramo(p, 0.05, 0.85));
+      if (anioN.textContent !== String(y)) anioN.textContent = String(y);
+      for (const d of dots) d.classList.toggle("on", Number(d.dataset.y) <= y && p > 0.04);
+    }
+
+    // Relatos: posición continua entre pasos según el centro de la pantalla
+    type Relato = { el: HTMLElement; tipo: string; pasos: HTMLElement[]; label: HTMLElement; last: number; prov?: SVGPathElement[]; capas?: SVGGElement[] };
+    const relatos: Relato[] = [...root.querySelectorAll<HTMLElement>("[data-relato]")].map((el) => ({
+      el, tipo: el.dataset.relato!, pasos: [...el.querySelectorAll<HTMLElement>(".paso")], label: el.querySelector<HTMLElement>("[data-label]")!, last: -1,
+      prov: [...el.querySelectorAll<SVGPathElement>(".coro path")], capas: [...el.querySelectorAll<SVGGElement>(".capa-elec")],
+    }));
+    function posicion(r: Relato) {
+      const c = innerHeight * 0.55;
+      const centros = r.pasos.map((s) => { const b = s.getBoundingClientRect(); return b.top + b.height / 2; });
+      if (c <= centros[0]) return 0;
+      for (let i = 0; i < centros.length - 1; i++) if (c < centros[i + 1]) return i + (c - centros[i]) / (centros[i + 1] - centros[i]);
+      return centros.length - 1;
+    }
+    function relato(r: Relato, forzar = false) {
+      const b = r.el.getBoundingClientRect();
+      if (!forzar && (b.bottom < 0 || b.top > innerHeight)) return;
+      const pos = posicion(r);
+      if (!forzar && Math.abs(pos - r.last) < 0.002) return;
+      r.last = pos;
+      const i = Math.floor(pos), t = ease(clamp(pos - i)), j = Math.min(i + 1, r.pasos.length - 1);
+      const fa = r.pasos[i].dataset.frame!, fb = r.pasos[j].dataset.frame!;
+      const activo = Math.round(pos);
+      r.pasos.forEach((s, k) => s.classList.toggle("activo", k === activo));
+      const et = r.pasos[activo].dataset.label!;
+      if (r.label.textContent !== et) r.label.textContent = et;
+      if (r.tipo === "leer") {
+        for (const p of r.prov!) {
+          const va = p.dataset[fa], vb = p.dataset[fb];
+          const nd = !va || !vb;
+          p.classList.toggle("nd", nd);
+          if (!nd) p.style.setProperty("--t", (Number(va) + (Number(vb) - Number(va)) * t).toFixed(3));
+        }
+      } else {
+        for (const g of r.capas!) {
+          const w = (g.dataset.frame === fa ? 1 - t : 0) + (g.dataset.frame === fb ? t : 0);
+          g.style.opacity = String(fa === fb && g.dataset.frame === fa ? 1 : w);
+        }
+      }
+    }
+
+    // Carrete horizontal: el alto de la sección se ajusta al ancho de la pista
+    const car = root.querySelector<HTMLElement>(".carrete")!;
+    const pista = car.querySelector<HTMLElement>(".pista")!;
+    let recorrido = 0, pCar = -1;
+    const medir = () => {
+      recorrido = Math.max(0, pista.scrollWidth - pista.parentElement!.clientWidth);
+      car.style.height = `calc(100svh + ${recorrido}px)`;
+      pCar = -1;
+    };
+    function carrete() {
+      const { p, visible } = progresoFijado(car);
+      if (!visible || Math.abs(p - pCar) < 0.0002) return;
+      pCar = p;
+      pista.style.transform = `translate3d(${-recorrido * p}px,0,0)`;
+    }
+    // Teclado: al tabular a un hito fuera de vista, el scroll vertical lo trae
+    pista.addEventListener("focusin", (e) => {
+      const li = (e.target as HTMLElement).closest("li"); if (!li || !recorrido) return;
+      const objetivo = clamp((li.offsetLeft - pista.parentElement!.clientWidth * 0.3) / recorrido);
+      const top = car.getBoundingClientRect().top + scrollY + objetivo * (car.offsetHeight - innerHeight);
+      scrollTo({ top, behavior: "instant" as ScrollBehavior });
+    });
+
+    let sucio = true;
+    const marcar = () => { sucio = true; };
+    function fotograma() {
+      if (sucio) { sucio = false; apertura(); relatos.forEach((r) => relato(r)); carrete(); }
+      requestAnimationFrame(fotograma);
+    }
+    const iniciar = () => {
+      relatos.forEach((r) => relato(r, true));
+      requestAnimationFrame(() => root.classList.add("viva"));
+    };
+    addEventListener("scroll", marcar, { passive: true });
+    addEventListener("resize", () => { medir(); marcar(); });
+    medir(); iniciar(); requestAnimationFrame(fotograma);
+  }
+</script>
+
+<style is:global>
+  .portada {
+    --r0: #EADFC6; --r1: #6E8EA3; --r2: #17324A;
+    --q0: #EADFC6; --q1: #C07F6E; --q2: #6B2B27;
+    --nd: color-mix(in srgb, var(--muted) 35%, transparent);
+    --gutter: clamp(16px, 4vw, 48px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .portada { --r0: #263848; --r1: #5E89A3; --r2: #D8E6EE; --q0: #263848; --q1: #A65E55; --q2: #F0C2B8; }
+  }
+  :root[data-theme="dark"] .portada { --r0: #263848; --r1: #5E89A3; --r2: #D8E6EE; --q0: #263848; --q1: #A65E55; --q2: #F0C2B8; }
+
+  .mapa { width: 100%; height: auto; display: block; overflow: visible; }
+
+  /* Apertura */
+  .apertura .fijo { max-width: 1240px; margin: 0 auto; padding: 24px var(--gutter) 48px; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(24px, 4vw, 64px); align-items: center; }
+  html.js .apertura { height: 220svh; }
+  html.js .apertura .fijo { position: sticky; top: 0; min-height: 100svh; }
+  .apertura h1 { font-size: clamp(2.4rem, 1.2rem + 4.4vw, 5rem); line-height: 1.02; letter-spacing: -0.03em; margin: 0 0 24px; font-variation-settings: "opsz" 60; }
+  .apertura h1 em { font-style: italic; font-weight: 500; color: var(--accent); }
+  .ap-lead { font-size: 1.12rem; color: var(--ink); max-width: 46ch; }
+  .ap-cifras { font-variant-numeric: tabular-nums; font-size: .95rem; color: var(--muted); max-width: 46ch; }
+  .ap-acciones { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 28px; }
+  .boton { display: inline-block; background: var(--ink); color: var(--bg); text-decoration: none; font-weight: 600; padding: 12px 22px; border-radius: 999px; transition: transform .3s var(--ease), box-shadow .3s var(--ease); }
+  .boton:hover { transform: translateY(-2px); box-shadow: 0 8px 20px -10px rgb(0 0 0 / .45); }
+  .ap-aviso { margin-top: 28px; }
+  .ap-mapa { margin: 0; position: relative; }
+  .mapa-ap .prov path { fill: var(--surface); stroke: var(--ink); stroke-width: .9; stroke-linejoin: round; }
+  .mapa-ap .recuadro { fill: none; stroke: var(--muted); stroke-width: 1; }
+  html.js .mapa-ap .prov path, html.js .mapa-ap .recuadro { stroke-dasharray: 1; stroke-dashoffset: 1; fill-opacity: 0; transition: stroke-dashoffset 1.6s var(--ease), fill-opacity .8s .9s; }
+  html.js .portada.viva .mapa-ap .prov path, html.js .portada.viva .mapa-ap .recuadro { stroke-dashoffset: 0; fill-opacity: 1; }
+  .mapa-ap .pts circle { fill: var(--accent); stroke: var(--bg); stroke-width: 2; transform-box: fill-box; transform-origin: center; }
+  html.js .portada .mapa-ap .pts circle { transform: scale(0); opacity: 0; transition: transform .6s var(--ease), opacity .3s; }
+  html.js .portada .mapa-ap .pts circle.on { transform: scale(1); opacity: 1; }
+  .anio { position: absolute; left: 0; top: 36%; margin: 0; font-family: var(--serif); font-size: clamp(2.6rem, 1.4rem + 4.4vw, 5.6rem); line-height: 1; font-weight: 300; font-variant-numeric: tabular-nums lining-nums; color: var(--accent); letter-spacing: -0.04em; font-variation-settings: "opsz" 60; }
+  html:not(.js) .anio-n::after { content: "-1939"; }
+  .ap-mapa figcaption { margin-top: 12px; max-width: 56ch; }
+
+  /* Relatos */
+  .relato { max-width: 1240px; margin: 0 auto; padding: 96px var(--gutter) 64px; border-top: 1px solid var(--line); }
+  .rel-cab h2 { font-size: clamp(2.2rem, 1.4rem + 3vw, 4rem); margin: 0 0 8px; letter-spacing: -0.03em; font-variation-settings: "opsz" 60; }
+  .rel-cab p { color: var(--muted); font-size: 1.1rem; margin: 0 0 24px; }
+  .rel-cuerpo { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: clamp(24px, 4vw, 64px); }
+  .rel-mapa { margin: 0; grid-column: 1; grid-row: 1; align-self: start; }
+  html.js .rel-mapa { position: sticky; top: max(16px, calc(50svh - 290px)); }
+  .pasos { grid-column: 2; grid-row: 1; list-style: none; margin: 0; padding: 0; }
+  .paso { max-width: none; }
+  html.js .paso { min-height: 85svh; display: flex; align-items: center; }
+  html.js .paso:first-child { min-height: 60svh; align-items: flex-start; padding-top: 10svh; }
+  .paso-caja { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 20px 24px; margin: 0 0 24px; box-shadow: 0 10px 30px -18px rgb(23 35 47 / .35); }
+  html.js .paso .paso-caja { box-shadow: none; background: color-mix(in srgb, var(--surface) 55%, var(--bg)); transition: box-shadow .5s var(--ease), transform .5s var(--ease), background-color .5s var(--ease); }
+  html.js .paso.activo .paso-caja { background: var(--surface); transform: translateY(-4px); box-shadow: 0 18px 40px -22px rgb(23 35 47 / .45); }
+  .paso h3 { margin: 0 0 8px; font-size: 1.4rem; }
+  .paso-caja > .meta:first-child { margin: 0 0 2px; text-transform: none; }
+  .paso p { margin: 0 0 12px; }
+  .paso p:last-child { margin: 0; }
+  .coro path, .capa-elec path { fill: color-mix(in oklab, var(--r0), var(--r2) calc(var(--t, 0) * 100%)); stroke: var(--bg); stroke-width: .8; stroke-linejoin: round; }
+  .capa-elec path { fill: color-mix(in oklab, var(--q0), var(--q2) calc(var(--t, 0) * 100%)); }
+  .coro path.nd, .capa-elec path.nd { fill: url(#rayado); }
+  .ray-f { fill: var(--bg); } .ray-l { stroke: var(--muted); stroke-width: 1.4; opacity: .5; }
+  .coro path:hover, .capa-elec path:hover { stroke: var(--ink); stroke-width: 1.6; }
+  .capa-elec { transition: opacity .2s linear; }
+  html.js .capa-elec:not([data-frame="1931"]) { opacity: 0; }
+  html:not(.js) .capa-elec:not([data-frame="1936"]) { display: none; }
+  .leyenda { display: grid; grid-template-columns: auto 1fr auto; grid-template-areas: "et et et" "min barra max"; gap: 4px 10px; align-items: center; font-size: .85rem; color: var(--muted); margin-top: 8px; max-width: 420px; font-variant-numeric: tabular-nums; }
+  .ley-et { grid-area: et; color: var(--ink); font-weight: 600; }
+  .ley-barra { grid-area: barra; height: 10px; border-radius: 5px; background: linear-gradient(90deg in oklab, var(--r0), var(--r2)); }
+  .ley-barra.part { background: linear-gradient(90deg in oklab, var(--q0), var(--q2)); }
+  .ley-min { grid-area: min; } .ley-max { grid-area: max; }
+  .rel-mapa figcaption { margin-top: 6px; }
+
+  /* Carrete */
+  .carrete { border-top: 1px solid var(--line); background: var(--surface); }
+  .carrete .fijo { padding: 72px 0 48px; overflow: hidden; }
+  .carrete .pista { margin-top: 24px; }
+  html.js .carrete .fijo { position: sticky; top: 0; height: 100svh; display: flex; flex-direction: column; justify-content: center; }
+  .car-cab { max-width: 1240px; margin: 0 auto; width: 100%; padding: 0 var(--gutter); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px; }
+  .car-cab h2 { font-size: clamp(2.2rem, 1.4rem + 3vw, 4rem); margin: 0; letter-spacing: -0.03em; font-variation-settings: "opsz" 60; }
+  .pista-marco { overflow-x: auto; padding: 0 var(--gutter); }
+  html.js .pista-marco { overflow: visible; }
+  .pista { list-style: none; margin: 0; padding: 40px 0; display: grid; grid-auto-flow: column; grid-auto-columns: clamp(220px, 24vw, 300px); grid-template-rows: 1fr 1fr; column-gap: 0; position: relative; width: max-content; will-change: transform; min-height: 52svh; }
+  .pista::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; background: var(--ink); }
+  .hito { position: relative; padding: 0 20px; max-width: none; grid-row: 1; align-self: end; padding-bottom: 28px; }
+  .hito.abajo { grid-row: 2; align-self: start; padding-top: 28px; padding-bottom: 0; }
+  .hito::before { content: ""; position: absolute; left: 20px; width: 1px; background: var(--line); }
+  .hito.arriba::before { bottom: 0; height: 22px; } .hito.abajo::before { top: 0; height: 22px; }
+  .hito::after { content: ""; position: absolute; left: 15px; width: 11px; height: 11px; border-radius: 50%; background: var(--accent); border: 2px solid var(--surface); }
+  .hito.arriba::after { bottom: -6px; } .hito.abajo::after { top: -6px; }
+  .hito .meta { margin: 0 0 4px; font-size: .82rem; }
+  .hito-anio { position: absolute; left: 34px; z-index: 1; font-family: var(--serif); font-size: 1.5rem; line-height: 1; font-weight: 600; color: var(--accent); background: var(--surface); padding: 0 8px; font-variant-numeric: lining-nums; }
+  .hito.arriba .hito-anio { bottom: -12px; } .hito.abajo .hito-anio { top: -12px; }
+  .hito a { font-family: var(--serif); font-size: 1.12rem; line-height: 1.3; color: var(--ink); text-decoration: none; display: block; }
+  .hito a:hover { color: var(--accent); text-decoration: underline; }
+
+  /* Índice */
+  .indice { max-width: 1240px; margin: 0 auto; padding: 96px var(--gutter) 48px; }
+  .indice h2 { font-size: clamp(2.2rem, 1.4rem + 3vw, 4rem); margin: 0 0 24px; letter-spacing: -0.03em; font-variation-settings: "opsz" 60; }
+  .indice ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
+  .indice li { max-width: none; border-bottom: 1px solid var(--line); }
+  .indice a { display: grid; grid-template-columns: minmax(160px, 3fr) minmax(0, 6fr) 32px; gap: 8px 32px; align-items: baseline; padding: 22px 0; color: var(--ink); text-decoration: none; }
+  .ind-t { font-family: var(--serif); font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.4rem); font-weight: 600; letter-spacing: -0.02em; transition: color .3s var(--ease), transform .4s var(--ease); }
+  .ind-d { color: var(--muted); }
+  .flecha { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.6; align-self: center; transition: transform .4s var(--ease); }
+  .indice a:hover .ind-t, .indice a:focus-visible .ind-t { color: var(--accent); transform: translateX(8px); }
+  .indice a:hover .flecha, .indice a:focus-visible .flecha { transform: translateX(6px); color: var(--accent); }
+
+  .cierre { padding: 32px var(--gutter) 8px; max-width: 1240px; margin: 0 auto; }
+  .cierre svg { width: 100%; height: auto; display: block; }
+  .cierre text { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 140px; fill: var(--accent); font-variation-settings: "opsz" 60; }
+
+  @media (max-width: 860px) {
+    .apertura .fijo { grid-template-columns: 1fr; align-content: start; gap: 8px; padding-top: 8px; }
+    html.js .apertura { height: 220svh; }
+    .ap-mapa { order: -1; max-width: 520px; width: 100%; justify-self: center; }
+    .apertura h1 { font-size: clamp(2.1rem, 1.2rem + 5vw, 3rem); margin-bottom: 12px; }
+    .ap-lead { font-size: 1rem; margin: 0 0 8px; }
+    .ap-acciones { margin-top: 12px; } .ap-aviso { display: none; }
+    .ap-mapa figcaption { display: none; }
+    .anio { font-size: 2.4rem; }
+    .rel-cuerpo { grid-template-columns: 1fr; }
+    .rel-mapa { grid-column: 1; grid-row: 1; background: var(--bg); z-index: 1; padding-bottom: 6px; }
+    html.js .rel-mapa { top: 0; }
+    .rel-mapa figcaption { display: none; }
+    .pasos { grid-column: 1; grid-row: 2; position: relative; z-index: 2; }
+    .rel-mapa .mapa { max-height: 34svh; width: auto; max-width: 100%; margin: 0 auto; }
+    .rel-mapa .leyenda { margin: 4px auto 0; }
+    html.js .paso { min-height: 0; display: block; margin-bottom: 62svh; }
+    html.js .paso:first-child { min-height: 0; padding-top: 4svh; }
+    html.js .paso .paso-caja { background: var(--surface); transform: none; }
+    .indice a { grid-template-columns: 1fr 24px; }
+    .ind-d { grid-column: 1; grid-row: 2; }
+    .flecha { grid-column: 2; grid-row: 1; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html.js .portada .mapa-ap .prov path, html.js .portada .mapa-ap .recuadro, html.js .paso .paso-caja, .capa-elec, .boton, .ind-t, .flecha, html.js .portada .mapa-ap .pts circle { transition: none; }
+  }
+</style>

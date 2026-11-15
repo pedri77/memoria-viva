@@ -22,6 +22,10 @@ Requieren que antes haya al menos un revisor con formación en historia contempo
 | P4 | Georreferenciación de mapas históricos del CNIG | Alto | Aplazado desde F2. |
 | P5 | Enlaces Wikidata de los municipios de 1930 | Medio | Aplazado desde F2. |
 
+## Hecho fuera de la lista
+
+- 15-11-2026: portada «Del documento al mapa» y capa visual común (`docs/F5_portada_visual.md`).
+
 ## Pendientes de David (no técnicos)
 
 - 3 pruebas informales con usuarios (F2).
