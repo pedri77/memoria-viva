@@ -1,0 +1,37 @@
+{
+  "id": "doc-gaceta-1933-07-28",
+  "title": "Gaceta de Madrid n.º 209, 28 de julio de 1933: ley sobre elecciones de diputados a Cortes y de concejales",
+  "title_original": "Gaceta de Madrid. Núm. 209",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 209, 28/07/1933, pág. 635",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1933/07/28/pdfs/GMD-1933-209.pdf",
+  "date": "1933-07-28",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Ley de las Cortes que mantiene para las elecciones de diputados y de concejales el decreto de 8 de mayo de 1931, salvo sus artículos 4 y 5, con modificaciones; entre ellas, solo las capitales de más de 150.000 habitantes forman circunscripción propia.",
+  "context": "Ley aprobada por las Cortes Constituyentes y promulgada por el presidente de la República.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-15",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-15"
+}

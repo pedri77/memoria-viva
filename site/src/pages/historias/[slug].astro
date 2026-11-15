@@ -44,6 +44,7 @@ const draft = s.review.status !== "aprobado";
               </li>
             )))}
           </ol>
+          {sc.atlas_query && <p class="meta"><a href={url(`/atlas/?${sc.atlas_query}`)}>Ver estas elecciones en el atlas</a></p>}
           {sc.event_ids?.length > 0 && <p class="meta">En la cronología: {sc.event_ids.map((id: string, i: number) => <>{i > 0 && " · "}<a href={url(`/acontecimientos/${id}/`)}>ficha</a></>)}</p>}
         </section>
       ))}

@@ -1,0 +1,251 @@
+{
+  "id": "story-votar-republica",
+  "title": "Votar en la República, 1931-1936",
+  "summary": "Cómo cambiaron las reglas del voto entre 1931 y 1936 y qué registran las tres elecciones generales: el decreto electoral de mayo de 1931, la Constitución, la ley de 1933 y los resultados y la participación por circunscripción que recoge el Atlas Electoral de la Segunda República. Es una historia de reglas y de cifras agregadas, no de campañas ni de partidos.",
+  "period": "1931-1936",
+  "scenes": [
+    {
+      "id": "reglas-1931",
+      "heading": "Nuevas reglas antes de votar",
+      "date_label": "Mayo de 1931",
+      "intro": "Tres semanas después de proclamada la República, el Gobierno provisional cambia la ley electoral solo para elegir las Cortes que redactarán la Constitución.",
+      "claims": [
+        {
+          "text": "Un decreto publicado en la Gaceta del 10 de mayo de 1931 sustituye los distritos de un solo diputado por circunscripciones provinciales, con un diputado por cada 50.000 habitantes; Madrid, Barcelona y las demás capitales de más de 100.000 habitantes forman circunscripción propia.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-gaceta-1931-05-10",
+              "locator": "art. 6, pág. 640"
+            }
+          ]
+        },
+        {
+          "text": "Su preámbulo justifica el cambio en que el sistema de pequeños distritos unipersonales «deja abierto ancho cauce a la coacción caciquil, a la compra de votos y a todas las corruptelas conocidas».",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-gaceta-1931-05-10",
+              "locator": "preámbulo, pág. 639"
+            }
+          ]
+        },
+        {
+          "text": "El mismo decreto rebaja de 25 a 23 años la edad para votar y ser elegido, declara elegibles a las mujeres y a los sacerdotes y exige al menos el 20 % de los votos emitidos para ser proclamado diputado; si nadie lo alcanza, la elección se repite el domingo siguiente.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-gaceta-1931-05-10",
+              "locator": "arts. 2, 3 y 11, pág. 640"
+            }
+          ]
+        }
+      ],
+      "editorial_note": "El decreto declara elegibles a las mujeres, pero no cambia quién puede votar: para eso remite a la ley electoral de 1907, cuyo texto no se recoge todavía en este proyecto."
+    },
+    {
+      "id": "constituyentes",
+      "heading": "Las Cortes Constituyentes",
+      "date_label": "28 de junio de 1931",
+      "claims": [
+        {
+          "text": "Un decreto publicado en la Gaceta del 4 de junio de 1931 fija las elecciones a Cortes Constituyentes en toda España para el 28 de junio, con arreglo al decreto de 8 de mayo y a la ley electoral de 1907.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-gaceta-1931-06-04",
+              "locator": "págs. 1174-1175"
+            }
+          ]
+        },
+        {
+          "text": "Según el Atlas Electoral de la Segunda República, en la primera vuelta votó el 70,1 % de los electores registrados en el conjunto de las 63 circunscripciones; la participación más baja fue la de Málaga capital (47,0 %) y la más alta la de Palencia (87,9 %).",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-atlas-electoral",
+              "locator": "circunscripciones, 1931, variables elect, votant y turnout_real (suma propia)"
+            }
+          ]
+        },
+        {
+          "text": "La Conjunción republicano-socialista fue la candidatura más votada en 28 de las 63 circunscripciones y la coalición de republicanos de izquierda y socialistas en otras 12; las derechas lo fueron en 2.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-atlas-electoral",
+              "locator": "circunscripciones, 1931, variable first_platform"
+            }
+          ]
+        }
+      ],
+      "event_ids": [
+        "evt-1931-06-28-elecciones-constituyentes"
+      ],
+      "place_ids": [
+        "plc-prov-29",
+        "plc-prov-34"
+      ],
+      "atlas_query": "capa=circ&eleccion=1931"
+    },
+    {
+      "id": "constitucion",
+      "heading": "La Constitución y el voto de las mujeres",
+      "date_label": "Diciembre de 1931",
+      "claims": [
+        {
+          "text": "El artículo 36 de la Constitución, publicada en la Gaceta del 10 de diciembre de 1931, dispone que los ciudadanos de uno y otro sexo, mayores de veintitrés años, tendrán los mismos derechos electorales conforme determinen las leyes.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-gaceta-1931-12-10",
+              "locator": "art. 36, pág. 1581"
+            }
+          ]
+        },
+        {
+          "text": "El artículo 52 establece que el Congreso se compone de representantes elegidos por sufragio universal, igual, directo y secreto, y el 53, que son elegibles todos los ciudadanos mayores de veintitrés años, sin distinción de sexo ni de estado civil.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-gaceta-1931-12-10",
+              "locator": "arts. 52 y 53, pág. 1582"
+            }
+          ]
+        }
+      ],
+      "event_ids": [
+        "evt-1931-12-09-constitucion"
+      ]
+    },
+    {
+      "id": "ley-1933",
+      "heading": "Reglas para las siguientes elecciones",
+      "date_label": "Julio de 1933",
+      "claims": [
+        {
+          "text": "Una ley publicada en la Gaceta del 28 de julio de 1933 extiende el decreto de 8 de mayo de 1931, salvo sus artículos 4 y 5, a las elecciones de diputados y de concejales, con modificaciones.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-gaceta-1933-07-28",
+              "locator": "artículo único, pág. 635"
+            }
+          ]
+        },
+        {
+          "text": "Entre ellas, solo las capitales de más de 150.000 habitantes, y no ya las de más de 100.000, forman circunscripción propia junto con los pueblos de su partido judicial.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-gaceta-1933-07-28",
+              "locator": "apartado a), pág. 635"
+            },
+            {
+              "document_id": "doc-gaceta-1931-05-10",
+              "locator": "art. 6, pág. 640"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elecciones-1933",
+      "heading": "Noviembre de 1933: el censo se duplica",
+      "date_label": "19 de noviembre de 1933",
+      "claims": [
+        {
+          "text": "La Gaceta del 10 de octubre de 1933 publica el decreto que disuelve las Cortes Constituyentes y otro que fija las elecciones generales para el domingo 19 de noviembre.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-gaceta-1933-10-10",
+              "locator": "págs. 251-252 y sumario"
+            }
+          ]
+        },
+        {
+          "text": "Según el Atlas Electoral, la suma de electores registrados en las circunscripciones pasa de unos 6,2 millones en 1931 a unos 13,1 millones en 1933. En la primera vuelta votó el 66,3 % de ellos; la participación más baja fue la de Cádiz (37,3 %) y la más alta la de Palencia (81,3 %).",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-atlas-electoral",
+              "locator": "circunscripciones, 1931 y 1933, variables elect, votant y turnout_real (suma propia)"
+            }
+          ]
+        },
+        {
+          "text": "Las candidaturas de derechas fueron las más votadas en 33 de las 60 circunscripciones, las republicanas de centro y centro-derecha en 10 y las regionalistas de derecha en 6; las socialistas lo fueron en 5.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-atlas-electoral",
+              "locator": "circunscripciones, 1933, variable first_platform"
+            }
+          ]
+        }
+      ],
+      "editorial_note": "Entre las dos elecciones entró en vigor el artículo 36 de la Constitución. El Atlas no distingue a los electores por sexo, así que con estos datos no se puede medir qué parte del aumento del censo se debe a él ni cómo votaron las mujeres.",
+      "event_ids": [
+        "evt-1933-10-10-disolucion-cortes",
+        "evt-1933-11-19-elecciones-generales"
+      ],
+      "place_ids": [
+        "plc-prov-11",
+        "plc-prov-34"
+      ],
+      "atlas_query": "capa=circ&eleccion=1933"
+    },
+    {
+      "id": "elecciones-1936",
+      "heading": "Febrero de 1936: dos grandes coaliciones",
+      "date_label": "16 de febrero de 1936",
+      "claims": [
+        {
+          "text": "Según el Atlas Electoral, en la primera vuelta del 16 de febrero de 1936 votó el 71,9 % de los electores registrados en las 60 circunscripciones; la participación más baja fue la de Santa Cruz de Tenerife (57,0 %) y la más alta la de Sevilla capital (97,5 %).",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-atlas-electoral",
+              "locator": "circunscripciones, 1936, variables date, elect, votant y turnout_real (suma propia)"
+            }
+          ]
+        },
+        {
+          "text": "La coalición de izquierdas (Frente Popular) fue la candidatura más votada en 34 de las 60 circunscripciones, la coalición de derechas en 23, las candidaturas del PNV en 2 y el centro en 1.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-atlas-electoral",
+              "locator": "circunscripciones, 1936, variable first_platform"
+            }
+          ]
+        }
+      ],
+      "editorial_note": "Una participación del 97,5 % es excepcional y conviene contrastarla con las actas antes de citarla. El Atlas la toma de sus fuentes sin corregirla y este proyecto tampoco la altera.",
+      "event_ids": [
+        "evt-1936-02-16-elecciones-generales"
+      ],
+      "place_ids": [
+        "plc-prov-38",
+        "plc-prov-41"
+      ],
+      "atlas_query": "capa=circ&eleccion=1936"
+    }
+  ],
+  "gaps": [
+    "Las disposiciones de convocatoria de las elecciones de 1936 no están documentadas: los ejemplares de la Gaceta de enero de 1936 no aparecen en la ruta de la sede del BOE que este proyecto puede consultar.",
+    "Solo se usa la primera vuelta. Las segundas vueltas y el reparto final de escaños necesitan las actas o el Diario de Sesiones.",
+    "Las sumas de electores y votantes se han calculado aquí a partir del Atlas; el Atlas solo agrega mesas con ambos datos, así que pueden quedarse cortas respecto a los totales oficiales.",
+    "No hay datos por sexo: ni el censo ni el voto de las mujeres en 1933 y 1936 pueden medirse con esta fuente.",
+    "Faltan el referéndum de los estatutos, las elecciones municipales de 1931 y 1933 y las campañas, la prensa y la violencia política en torno a cada elección."
+  ],
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Borrador. Afirmaciones comprobadas sobre los ejemplares de la Gaceta y sobre los datos del Atlas Electoral (v2.1). Pendiente de dos revisores con formación en historia contemporánea."
+  }
+}

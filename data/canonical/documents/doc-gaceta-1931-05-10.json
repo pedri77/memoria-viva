@@ -1,0 +1,37 @@
+{
+  "id": "doc-gaceta-1931-05-10",
+  "title": "Gaceta de Madrid n.º 130, 10 de mayo de 1931: decreto que modifica la ley electoral para las Cortes Constituyentes",
+  "title_original": "Gaceta de Madrid. Núm. 130",
+  "document_type": "disposicion",
+  "source_ids": [
+    "F015"
+  ],
+  "custodian": "Agencia Estatal Boletín Oficial del Estado (colección histórica Gazeta)",
+  "signature": "Gaceta de Madrid, núm. 130, 10/05/1931, págs. 639-640",
+  "canonical_url": "https://www.boe.es/gazeta/dias/1931/05/10/pdfs/GMD-1931-130.pdf",
+  "date": "1931-05-10",
+  "date_precision": "dia",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Decreto del Ministerio de la Gobernación que modifica la ley electoral de 1907, solo para la elección de las Cortes Constituyentes: circunscripciones provinciales con un diputado por cada 50.000 habitantes, circunscripciones propias para Madrid, Barcelona y las capitales de más de 100.000 habitantes, listas con voto restringido, edad electoral de 23 años, mujeres y sacerdotes elegibles y un mínimo del 20 % de los votos para ser proclamado.",
+  "context": "Disposición del Gobierno provisional. Su preámbulo expone los motivos del propio Gobierno para el cambio.",
+  "text_origin": "ocr_automatico",
+  "rights": {
+    "status": "reuse_conditions",
+    "action": "enlazar",
+    "attribution": "Fuente: Agencia Estatal Boletín Oficial del Estado, www.boe.es",
+    "evidence_url": "https://www.boe.es/informacion/aviso_legal/index.php",
+    "checked_at": "2026-11-15",
+    "note": "Normas oficiales excluidas de propiedad intelectual (art. 13 LPI); se enlaza al ejemplar de la sede del BOE."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Comprobado sobre el PDF del ejemplar (OCR del BOE). Pendiente de segunda revisión humana."
+  },
+  "consulted_at": "2026-11-15"
+}

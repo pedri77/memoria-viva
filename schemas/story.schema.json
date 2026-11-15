@@ -120,6 +120,11 @@
           },
           "editorial_note": {
             "type": "string"
+          },
+          "atlas_query": {
+            "type": "string",
+            "pattern": "^[a-z0-9=&]+$",
+            "description": "parámetros del atlas para ver la escena en el mapa (p. ej. capa=circ&eleccion=1933)"
           }
         }
       }
