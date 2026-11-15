@@ -1,39 +1,97 @@
 ---
 import Base from "../../layouts/Base.astro";
-import { events, url, PRECISION_LABEL } from "../../lib/data";
+import Facsimil from "../../components/Facsimil.astro";
+import man from "../../data/facsimiles.json";
+import { events, documents, url, byId } from "../../lib/data";
 import { TYPE_LABEL } from "../../lib/atlas";
 const years = [...new Set(events.map((e) => e.start_date.slice(0, 4)))].sort();
+const fecha = (d: string, prec: string) => {
+  const [y, m, dd] = d.split("-").map(Number);
+  const mes = new Date(Date.UTC(y, (m || 1) - 1, dd || 1)).toLocaleDateString("es-ES", { month: "long", timeZone: "UTC" });
+  return prec === "dia" ? `${dd} de ${mes}` : prec === "mes" ? mes[0].toUpperCase() + mes.slice(1) : "Fecha del año";
+};
+const resumen = (t: string) => (t.length > 220 ? t.slice(0, t.lastIndexOf(" ", 210)) + "…" : t);
+const facs = (e: any) => e.claims.flatMap((c: any) => c.evidence.map((v: any) => v.document_id)).find((id: string) => (man as any)[id]);
+const fuente = (e: any) => byId(documents, e.claims[0].evidence[0].document_id);
+const porAnio = years.map((y) => ({ y, evs: events.filter((e) => e.start_date.startsWith(y)) }));
+const conFacs = events.filter(facs).length;
 ---
-<Base index={false} title="Cronología" description="Cronología documentada 1931-1939: cada acontecimiento con su fuente.">
-  <h1>Cronología</h1>
-  <p class="meta">Solo aparecen acontecimientos con evidencia documental revisada. La cronología crecerá fase a fase. Las disposiciones de la zona sublevada (BOE de Burgos) se recogen a partir de su título oficial; las de la República, con su texto leído en la Gaceta.</p>
-  <form class="filtros" aria-controls="crono">
-    <label>Año <select id="c-year"><option value="">Todos</option>{years.map((y) => <option>{y}</option>)}</select></label>
-    <label>Tipo <select id="c-type"><option value="">Todos</option>{Object.entries(TYPE_LABEL).map(([k, v]) => <option value={k}>{v}</option>)}</select></label>
-    <output id="c-count" class="meta" aria-live="polite"></output>
-  </form>
-  <ol id="crono" class="crono">
-    {events.map((e) => {
-      const y0 = Number(e.start_date.slice(0, 4)), y1 = Number((e.end_date ?? e.start_date).slice(0, 4));
-      return (
-        <li data-y0={y0} data-y1={y1} data-type={e.event_type}>
-          <span class="meta">{e.start_date}{e.end_date ? ` a ${e.end_date}` : ""} ({PRECISION_LABEL[e.date_precision]}) · {TYPE_LABEL[e.event_type]}</span><br />
-          <a href={url(`/acontecimientos/${e.id}/`)}>{e.title}</a>
-          {e.spatial_precision !== "estatal" && <> · <a class="meta" href={url(`/atlas/?year=${y0}&sel=${e.id}`)}>ver en el mapa</a></>}
-        </li>
-      );
-    })}
-  </ol>
+<Base index={false} wide title="Cronología" description="Cronología documentada 1931-1939: cada acontecimiento con su fuente y, cuando existe, el facsímil del original.">
+  <div class="crono-pagina">
+    <header class="crono-cab">
+      <h1>Cronología <span>1931-1939</span></h1>
+      <p class="crono-lead">{events.length} acontecimientos, cada uno con el documento que lo sostiene. {conFacs} llevan el facsímil de la Gaceta en que se publicaron.</p>
+      <p class="meta">Solo aparecen acontecimientos con evidencia documental revisada; la cronología crece fase a fase. Las disposiciones de la zona sublevada (BOE de Burgos) se recogen a partir de su título oficial; las de la República, con su texto leído en la Gaceta.</p>
+      <form class="filtros" aria-controls="crono">
+        <label>Año <select id="c-year"><option value="">Todos</option>{years.map((y) => <option>{y}</option>)}</select></label>
+        <label>Tipo <select id="c-type"><option value="">Todos</option>{Object.entries(TYPE_LABEL).map(([k, v]) => <option value={k}>{v}</option>)}</select></label>
+        <output id="c-count" class="meta" aria-live="polite"></output>
+      </form>
+    </header>
+
+    <div id="crono">
+      {porAnio.map(({ y, evs }) => (
+        <section class="c-anio" data-anio={y} aria-labelledby={`a-${y}`}>
+          <h2 class="c-num" id={`a-${y}`}>{y}</h2>
+          <ol class="c-lista">
+            {evs.map((e) => {
+              const y0 = Number(e.start_date.slice(0, 4)), y1 = Number((e.end_date ?? e.start_date).slice(0, 4));
+              const f = facs(e), d = fuente(e);
+              return (
+                <li class={`c-ev${f ? " con-facs" : ""}`} data-y0={y0} data-y1={y1} data-type={e.event_type}>
+                  <div class="c-texto">
+                    <p class="c-meta"><time datetime={e.start_date}>{fecha(e.start_date, e.date_precision)}</time>{e.end_date && <> a <time datetime={e.end_date}>{e.end_date}</time></>} <span class="tag">{TYPE_LABEL[e.event_type]}</span></p>
+                    <h3><a href={url(`/acontecimientos/${e.id}/`)}>{e.title}</a></h3>
+                    <p class="c-resumen">{resumen(e.claims[0].text)}</p>
+                    <p class="meta c-fuente">{d?.title}{e.spatial_precision !== "estatal" && <> · <a href={url(`/atlas/?year=${y0}&sel=${e.id}`)}>ver en el mapa</a></>}</p>
+                  </div>
+                  {f && <div class="c-facs"><Facsimil id={f} tam="mini" pie={false} /></div>}
+                </li>
+              );
+            })}
+          </ol>
+        </section>
+      ))}
+    </div>
+    <p class="meta crono-pie">Facsímiles: Fuente de los datos: Agencia Estatal Boletín Oficial del Estado (<a href="https://www.boe.es">boe.es</a>). Al pulsar uno se abre el original.</p>
+  </div>
 </Base>
 <style is:global>
-  .crono li { margin: 10px 0; }
-  .filtros { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: end; margin: 8px 0 16px; }
+  .crono-pagina { max-width: 1120px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+  .crono-cab h1 { font-size: clamp(2.6rem, 1.4rem + 5vw, 5.4rem); letter-spacing: -0.035em; line-height: 1; margin: 40px 0 16px; font-variation-settings: "opsz" 60; }
+  .crono-cab h1 span { color: var(--accent); font-style: italic; font-weight: 400; }
+  .crono-lead { font-size: 1.15rem; max-width: 52ch; }
+  .filtros { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: end; margin: 20px 0 8px; padding: 14px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 4; background: var(--bg); }
   .filtros label { display: grid; gap: 4px; color: var(--muted); font-size: .9rem; }
   .filtros select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 4px 6px; min-height: 36px; max-width: 100%; }
+  .c-anio { display: grid; grid-template-columns: minmax(120px, 2fr) minmax(0, 7fr); gap: 0 clamp(16px, 4vw, 56px); padding: 32px 0; border-bottom: 1px solid var(--line); }
+  .c-num { position: sticky; top: 92px; align-self: start; margin: 0; font-size: clamp(3rem, 2rem + 4vw, 6rem); font-weight: 300; color: var(--accent); letter-spacing: -0.04em; line-height: .9; font-variant-numeric: lining-nums; font-variation-settings: "opsz" 60; }
+  .c-lista { list-style: none; margin: 0; padding: 0; }
+  .c-ev { max-width: none; display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; padding: 22px 0; border-top: 1px solid color-mix(in srgb, var(--line) 60%, transparent); }
+  .c-ev:first-child { border-top: 0; padding-top: 4px; }
+  .c-ev.con-facs { grid-template-columns: minmax(0, 1fr) 132px; }
+  .c-meta { margin: 0 0 4px; color: var(--muted); font-size: .9rem; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; }
+  .c-meta time:first-child { color: var(--ink); font-weight: 600; }
+  .c-ev h3 { margin: 0 0 6px; font-size: clamp(1.2rem, 1.05rem + .5vw, 1.5rem); line-height: 1.2; }
+  .c-ev h3 a { color: var(--ink); text-decoration: none; background: linear-gradient(var(--accent), var(--accent)) 0 100% / 0 1.5px no-repeat; transition: background-size .4s var(--ease); }
+  .c-ev h3 a:hover, .c-ev h3 a:focus-visible { background-size: 100% 1.5px; color: var(--accent); }
+  .c-resumen { margin: 0 0 6px; max-width: 64ch; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .c-fuente { margin: 0; font-size: .82rem; }
+  .c-facs { align-self: start; }
+  .crono-pie { margin: 24px 0 0; }
+  html.js .c-ev.oculto-al-entrar { opacity: 0; transform: translateY(14px); }
+  html.js .c-ev { transition: opacity .6s var(--ease), transform .6s var(--ease); }
+  @media (max-width: 700px) {
+    .c-anio { grid-template-columns: 1fr; }
+    .c-num { position: static; padding: 0 0 8px; font-size: 2.6rem; }
+    .c-ev.con-facs { grid-template-columns: minmax(0, 1fr) 88px; }
+  }
+  @media (prefers-reduced-motion: reduce) { html.js .c-ev { transition: none; } html.js .c-ev.oculto-al-entrar { opacity: 1; transform: none; } }
 </style>
 <script>
   const y = document.getElementById("c-year") as HTMLSelectElement, t = document.getElementById("c-type") as HTMLSelectElement;
-  const items = [...document.querySelectorAll<HTMLLIElement>("#crono li")];
+  const items = [...document.querySelectorAll<HTMLLIElement>(".c-ev")];
+  const secciones = [...document.querySelectorAll<HTMLElement>(".c-anio")];
   const out = document.getElementById("c-count")!;
   const q = new URLSearchParams(location.search);
   if (q.get("year")) y.value = q.get("year")!; if (q.get("tipo")) t.value = q.get("tipo")!;
@@ -44,9 +102,15 @@ const years = [...new Set(events.map((e) => e.start_date.slice(0, 4)))].sort();
       const okT = !t.value || li.dataset.type === t.value;
       li.hidden = !(okY && okT); if (!li.hidden) n++;
     }
+    for (const s of secciones) s.hidden = ![...s.querySelectorAll<HTMLLIElement>(".c-ev")].some((li) => !li.hidden);
     out.textContent = `${n} de ${items.length}`;
     const p = new URLSearchParams(); if (y.value) p.set("year", y.value); if (t.value) p.set("tipo", t.value);
     history.replaceState(null, "", p.toString() ? `?${p}` : location.pathname);
   }
   y.addEventListener("change", apply); t.addEventListener("change", apply); apply();
+  // Aparición al entrar en pantalla (solo con movimiento permitido; sin JS todo se ve)
+  if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver((es) => es.forEach((en) => { if (en.isIntersecting) { en.target.classList.remove("oculto-al-entrar"); io.unobserve(en.target); } }), { rootMargin: "0px 0px -8% 0px" });
+    for (const li of items) { if (li.getBoundingClientRect().top > innerHeight) { li.classList.add("oculto-al-entrar"); io.observe(li); } }
+  }
 </script>

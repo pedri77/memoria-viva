@@ -1,0 +1,27 @@
+---
+// Facsímil de la primera página de un documento (scripts/etl/facsimiles.py). Muestra la cita que exige
+// el custodio y enlaza al original. Si el documento no tiene facsímil, no pinta nada.
+import man from "../data/facsimiles.json";
+import { url } from "../lib/data";
+interface Props { id: string; tam?: "grande" | "mini"; pie?: boolean }
+const { id, tam = "grande", pie = true } = Astro.props;
+const f = (man as Record<string, any>)[id];
+---
+{f && (
+  <figure class={`facsimil ${tam}`}>
+    <a href={f.original} rel="noopener" aria-label="Abrir el original en el sitio del custodio">
+      <img src={url(`/${f.src}`)} width={f.w} height={f.h} loading="lazy" decoding="async" alt="Facsímil de la primera página del documento" />
+    </a>
+    {pie && <figcaption class="meta">Primera página del original. {f.cita}.</figcaption>}
+  </figure>
+)}
+<style is:global>
+  .facsimil { margin: 16px 0; }
+  .facsimil img { display: block; width: 100%; height: auto; background: #fff; border: 1px solid var(--line); box-shadow: 0 18px 40px -24px rgb(23 35 47 / .5); transition: transform .5s var(--ease), box-shadow .5s var(--ease); }
+  .facsimil a:hover img { transform: translateY(-3px) rotate(-.4deg); box-shadow: 0 24px 50px -24px rgb(23 35 47 / .6); }
+  .facsimil.grande { max-width: 360px; }
+  .facsimil.mini { margin: 0; }
+  .facsimil figcaption { margin-top: 6px; font-size: .8rem; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .facsimil img { filter: brightness(.86) sepia(.08); } }
+  @media (prefers-reduced-motion: reduce) { .facsimil img { transition: none; } }
+</style>

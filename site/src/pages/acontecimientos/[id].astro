@@ -1,12 +1,15 @@
 ---
 import Base from "../../layouts/Base.astro";
 import Retirado from "../../components/Retirado.astro";
+import Facsimil from "../../components/Facsimil.astro";
+import man from "../../data/facsimiles.json";
 import { retired } from "../../lib/data";
 import { events, documents, places, byId, url, KIND_LABEL, PRECISION_LABEL } from "../../lib/data";
 export function getStaticPaths() {
   return [...(retired.events ?? []).map((o) => ({ params: { id: o.id }, props: { e: o, retiredObj: true } })), ...events.map((e) => ({ params: { id: e.id }, props: { e: e } }))];
 }
 const { e } = Astro.props;
+const conFacsimil = [...new Set(e.claims?.flatMap((c: any) => c.evidence.map((ev: any) => ev.document_id)) ?? [])].filter((id) => (man as any)[id]);
 ---
 {Astro.props.retiredObj ? <Retirado o={Astro.props.e} /> : <>
 <Base title={e.title}>
@@ -14,6 +17,7 @@ const { e } = Astro.props;
   <p class="meta"><a href={url("/acontecimientos/")}>Cronología</a></p>
   <h1>{e.title}</h1>
   <p class="meta">{e.start_date}{e.end_date ? ` a ${e.end_date}` : ""} ({PRECISION_LABEL[e.date_precision]}) · {e.place_ids.map((p: string, i: number) => <>{i > 0 && ", "}<a href={url(`/lugares/${p}/`)}>{byId(places, p)?.canonical_name}</a></>)}</p>
+  {conFacsimil.length > 0 && <div class="facs-ev">{conFacsimil.map((id) => <Facsimil id={id} />)}</div>}
   <h2>Qué sabemos y cómo lo sabemos</h2>
   {e.claims.map((c: any) => (
     <article class="card">
@@ -29,3 +33,7 @@ const { e } = Astro.props;
   {e.review.note && <p class="meta">Nota de revisión: {e.review.note}</p>}
 </Base>
 </>}
+<style is:global>
+  .facs-ev { display: flex; flex-wrap: wrap; gap: 16px; }
+  .facs-ev .facsimil { flex: 0 1 300px; }
+</style>

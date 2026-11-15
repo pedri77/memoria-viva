@@ -60,6 +60,8 @@ Regla para todas: **los datos oficiales agregados se pueden preparar ya; los rel
 
 A = sin revisores · B = preparar ahora, publicar tras revisión · C = solo con revisores y guía ampliada
 
+- 15-11-2026: facsímiles de la Gaceta, cronología rediseñada y datos al pasar el ratón (`docs/F5_facsimiles_y_cronologia.md`). Pendiente: llevar el mismo estilo a archivo, fichas de lugar, datos y metodología.
+
 ## Pendientes de David (no técnicos)
 
 - 3 pruebas informales con usuarios (F2).
