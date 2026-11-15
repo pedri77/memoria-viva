@@ -32,7 +32,7 @@ const draft = s.review.status !== "aprobado";
           {sc.intro && <p class="intro">{sc.intro}</p>}
           {sc.claims.map((c: any) => (
             <p>
-              {c.kind !== "documento" && <span class="tag">{KIND[c.kind]}</span>}{" "}
+              {c.kind !== "documento" && <span class="tag" data-c={`k-${c.kind}`}>{KIND[c.kind]}</span>}{" "}
               {c.text}{c.attributed_to && <span class="meta"> (según {c.attributed_to})</span>}<sup><a href={`#nota-${c.n}`} id={`ref-${c.n}`} aria-label={`Fuente ${c.n}`}>{c.n}</a></sup>
             </p>
           ))}

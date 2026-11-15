@@ -46,7 +46,7 @@ const anio = (d: any) => d.date.slice(0, 4);
             <p class="ficha-fondo"><span>{GRUPOS[g][0]}</span><span class="ficha-anio">{anio(d)}</span></p>
             <h2><a href={url(`/documentos/${d.id}/`)}>{d.title}</a></h2>
             <p class="meta">{d.custodian}</p>
-            <p class="ficha-pie"><span class="tag" title={RIGHTS_LABEL[d.rights.status]}>{CORTO[d.rights.status] ?? RIGHTS_LABEL[d.rights.status] ?? d.rights.status}</span>{d.review.status !== "aprobado" && <span class="meta">en revisión</span>}</p>
+            <p class="ficha-pie"><span class="tag" data-c={`r-${d.rights.status}`} title={RIGHTS_LABEL[d.rights.status]}>{CORTO[d.rights.status] ?? RIGHTS_LABEL[d.rights.status] ?? d.rights.status}</span>{d.review.status !== "aprobado" && <span class="meta">en revisión</span>}</p>
           </div>
         </li>
       ))}

@@ -130,6 +130,18 @@ const current = (p: string) => here.startsWith(url(p)) ? "page" : undefined;
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 16px 20px; margin: 16px 0; }
   .meta { color: var(--muted); font-size: .9rem; }
   .tag { display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 0 10px; font-size: .8rem; color: var(--muted); }
+  /* Etiquetas con color por categoría: tipo de acontecimiento (t-), tipo de afirmación (k-) y derechos (r-).
+     Fondo teñido + punto + texto oscuro del mismo tono; en oscuro, texto aclarado. Sin colores de bando. */
+  .tag[data-c] { --c: #4F5A63; color: color-mix(in srgb, var(--c) 88%, #000); background: color-mix(in srgb, var(--c) 11%, var(--surface)); border-color: color-mix(in srgb, var(--c) 40%, transparent); font-weight: 500; }
+  .tag[data-c]::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: 1px; }
+  .tag[data-c="t-politico"] { --c: #5B3F99; } .tag[data-c="t-legislativo"] { --c: #1F5F8B; } .tag[data-c="t-electoral"] { --c: #8A5300; }
+  .tag[data-c="t-militar"] { --c: #4D5B1E; } .tag[data-c="t-violencia"] { --c: #A12A2A; } .tag[data-c="t-social"] { --c: #0F6B5C; }
+  .tag[data-c="t-economico"] { --c: #2E6B2A; } .tag[data-c="t-cultural"] { --c: #9A3B6E; } .tag[data-c="t-educativo"] { --c: #0B6587; }
+  .tag[data-c="k-documento"] { --c: #1F5F8B; } .tag[data-c="k-hecho"] { --c: #2E6B2A; } .tag[data-c="k-interpretacion"] { --c: #5B3F99; } .tag[data-c="k-estimacion"] { --c: #8A5300; }
+  .tag[data-c^="r-cc"], .tag[data-c="r-public_domain"], .tag[data-c="r-reuse_open"] { --c: #2E6B2A; }
+  .tag[data-c="r-reuse_conditions"] { --c: #8A5300; } .tag[data-c="r-link_only"] { --c: #4F5A63; } .tag[data-c="r-restricted"] { --c: #A12A2A; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tag[data-c] { color: color-mix(in srgb, var(--c) 40%, #fff); background: color-mix(in srgb, var(--c) 30%, var(--surface)); border-color: color-mix(in srgb, var(--c) 70%, transparent); } :root:not([data-theme="light"]) .tag[data-c]::before { background: color-mix(in srgb, var(--c) 55%, #fff); } }
+  :root[data-theme="dark"] .tag[data-c] { color: color-mix(in srgb, var(--c) 40%, #fff); background: color-mix(in srgb, var(--c) 30%, var(--surface)); border-color: color-mix(in srgb, var(--c) 70%, transparent); }
   table { width: 100%; border-collapse: collapse; font-size: .92rem; font-variant-numeric: tabular-nums; }
   th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
   .table-wrap { overflow-x: auto; }

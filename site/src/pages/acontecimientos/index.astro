@@ -40,7 +40,7 @@ const conFacs = events.filter(facs).length;
               return (
                 <li class={`c-ev${f ? " con-facs" : ""}`} data-y0={y0} data-y1={y1} data-type={e.event_type}>
                   <div class="c-texto">
-                    <p class="c-meta"><time datetime={e.start_date}>{fecha(e.start_date, e.date_precision)}</time>{e.end_date && <> a <time datetime={e.end_date}>{e.end_date}</time></>} <span class="tag">{TYPE_LABEL[e.event_type]}</span></p>
+                    <p class="c-meta"><time datetime={e.start_date}>{fecha(e.start_date, e.date_precision)}</time>{e.end_date && <> a <time datetime={e.end_date}>{e.end_date}</time></>} <span class="tag" data-c={`t-${e.event_type}`}>{TYPE_LABEL[e.event_type]}</span></p>
                     <h3><a href={url(`/acontecimientos/${e.id}/`)}>{e.title}</a></h3>
                     <p class="c-resumen">{resumen(e.claims[0].text)}</p>
                     <p class="meta c-fuente">{d?.title}{e.spatial_precision !== "estatal" && <> · <a href={url(`/atlas/?year=${y0}&sel=${e.id}`)}>ver en el mapa</a></>}</p>

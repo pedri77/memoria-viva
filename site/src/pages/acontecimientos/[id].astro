@@ -5,6 +5,7 @@ import Facsimil from "../../components/Facsimil.astro";
 import man from "../../data/facsimiles.json";
 import { retired } from "../../lib/data";
 import { events, documents, places, byId, url, KIND_LABEL, PRECISION_LABEL } from "../../lib/data";
+import { TYPE_LABEL } from "../../lib/atlas";
 export function getStaticPaths() {
   return [...(retired.events ?? []).map((o) => ({ params: { id: o.id }, props: { e: o, retiredObj: true } })), ...events.map((e) => ({ params: { id: e.id }, props: { e: e } }))];
 }
@@ -16,12 +17,13 @@ const conFacsimil = [...new Set(e.claims?.flatMap((c: any) => c.evidence.map((ev
   <span hidden data-pagefind-filter="tipo">Acontecimiento</span>
   <p class="meta"><a href={url("/acontecimientos/")}>Cronología</a></p>
   <h1>{e.title}</h1>
+  <p><span class="tag" data-c={`t-${e.event_type}`}>{TYPE_LABEL[e.event_type] ?? e.event_type}</span></p>
   <p class="meta">{e.start_date}{e.end_date ? ` a ${e.end_date}` : ""} ({PRECISION_LABEL[e.date_precision]}) · {e.place_ids.map((p: string, i: number) => <>{i > 0 && ", "}<a href={url(`/lugares/${p}/`)}>{byId(places, p)?.canonical_name}</a></>)}</p>
   {conFacsimil.length > 0 && <div class="facs-ev">{conFacsimil.map((id) => <Facsimil id={id} />)}</div>}
   <h2>Qué sabemos y cómo lo sabemos</h2>
   {e.claims.map((c: any) => (
     <article class="card">
-      <p><span class="tag">{KIND_LABEL[c.kind]}</span>{c.attributed_to && <span class="meta"> · según {c.attributed_to}</span>}</p>
+      <p><span class="tag" data-c={`k-${c.kind}`}>{KIND_LABEL[c.kind]}</span>{c.attributed_to && <span class="meta"> · según {c.attributed_to}</span>}</p>
       <p>{c.text}</p>
       <p class="meta">Evidencia: {c.evidence.map((ev: any) => {
         const d = byId(documents, ev.document_id);
