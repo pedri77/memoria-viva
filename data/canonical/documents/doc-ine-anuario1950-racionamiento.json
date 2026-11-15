@@ -1,0 +1,37 @@
+{
+  "id": "doc-ine-anuario1950-racionamiento",
+  "title": "Anuario Estadístico de España 1950: racionamiento por provincias en 1949 y cartillas a 31 de diciembre",
+  "title_original": "Distribución, mediante racionamiento, por provincias en el año 1949; Cartillas de racionamiento inscritas en tiendas, economatos y cooperativas, por provincias",
+  "document_type": "tabla_estadistica",
+  "source_ids": [
+    "F010"
+  ],
+  "custodian": "Instituto Nacional de Estadística, INEbase Historia (fondo documental)",
+  "signature": "Anuario Estadístico de España 1950, «Precios, salarios, racionamiento y consumo» (distribución td=29963; cartillas td=29961)",
+  "canonical_url": "https://www.ine.es/inebaseweb/pdfDispacher.do?td=29963&ext=.pdf",
+  "date": "1949-12-31",
+  "date_precision": "anio",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Kilos de cada artículo distribuidos mediante racionamiento en 1949 en cada provincia, a la población civil y a pequeñas industrias, y número de cartillas de racionamiento inscritas por provincia a 31 de diciembre.",
+  "context": "Estadística oficial de la Comisaría General de Abastecimientos y Transportes recogida por el INE bajo el franquismo. Registra el reparto oficial, no el consumo real: no incluye el mercado negro ni el autoabastecimiento.",
+  "text_origin": "transcripcion_validada",
+  "rights": {
+    "status": "cc_by",
+    "action": "almacenar",
+    "attribution": "Fuente: Instituto Nacional de Estadística (INE), INEbase Historia, Anuario Estadístico de España 1950",
+    "evidence_url": "https://www.ine.es/ine/codigobp/politica_difusion_es.pdf",
+    "checked_at": "2026-11-15",
+    "note": "El INE aplica a la información de su web la licencia CC BY 4.0 salvo indicación contraria (Política de Difusión Estadística, febrero de 2026)."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Transcrita de la imagen del PDF con cuadre por filas y por columnas contra los totales impresos."
+  },
+  "consulted_at": "2026-11-15"
+}

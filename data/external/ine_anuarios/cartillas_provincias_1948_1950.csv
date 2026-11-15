@@ -1,0 +1,154 @@
+cod,anio,td,provincia,tiendas,colectivos,economatos,total,nota
+01,1948,164751,Alava,110018,8300,0,118318,
+02,1948,164751,Albacete,392008,5771,1517,399296,
+03,1948,164751,Alicante,649969,18176,7210,675355,
+04,1948,164751,Almería,359580,11042,7168,377790,
+05,1948,164751,Avila,244841,5560,0,250401,
+06,1948,164751,Badajoz,788003,13388,4112,805503,
+07,1948,164751,Baleares,408992,13195,4794,426981,"total con el dígito de las centenas borroso (426.?81); se lee 9, cuadra con la suma de la fila"
+08,1948,164751,Barcelona,2228190,107587,37466,2373243,
+09,1948,164751,Burgos,376948,12264,1315,390527,
+10,1948,164751,Cáceres,520742,9315,2158,532215,
+11,1948,164751,Cádiz,667728,23911,3118,694757,
+12,1948,164751,Castellón de la Plana,321047,7592,309,328948,
+13,1948,164751,Ciudad Real,510830,7061,45720,563611,
+14,1948,164751,Córdoba,784294,13158,27968,825420,
+15,1948,164751,Coruña (La),923276,18581,8823,950680,
+16,1948,164751,Cuenca,328930,6138,325,335393,
+17,1948,164751,Gerona,322402,11833,3189,337424,
+18,1948,164751,Granada,767383,24278,4009,795670,
+19,1948,164751,Guadalajara,197756,4776,3681,206213,
+20,1948,164751,Guipúzcoa,368524,26122,3936,398582,
+21,1948,164751,Huelva,347791,10366,39328,397485,
+22,1948,164751,Huesca,231845,5140,1998,238983,
+23,1948,164751,Jaén,753918,14897,25113,793928,
+24,1948,164751,León,470665,11865,74264,556794,
+25,1948,164751,Lérida,321584,11551,10804,343939,
+26,1948,164751,Logroño,226753,7767,742,235262,
+27,1948,164751,Lugo,500038,8532,3101,511671,
+28,1948,164751,Madrid,1985257,90001,5999,2081257,
+29,1948,164751,Málaga,776629,21729,1725,800083,
+30,1948,164751,Murcia,753555,14878,14608,783041,
+31,1948,164751,Navarra,373419,26989,3695,404103,
+32,1948,164751,Orense,449548,8046,23461,481055,
+33,1948,164751,Oviedo,713083,39299,190074,942456,
+34,1948,164751,Palencia,209647,8611,14340,232598,
+35,1948,164751,Palmas (Las),356248,16309,0,372557,
+36,1948,164751,Pontevedra,645121,39540,3248,687909,
+37,1948,164751,Salamanca,397199,9701,2186,409086,
+38,1948,164751,Santa Cruz de Tenerife,397172,6415,0,403587,
+39,1948,164751,Santander,395048,20169,19540,434757,
+40,1948,164751,Segovia,195503,6247,977,202727,
+41,1948,164751,Sevilla,1167794,33437,18481,1219712,
+42,1948,164751,Soria,159655,6086,39,165780,
+43,1948,164751,Tarragona,348697,19639,1934,370270,
+44,1948,164751,Teruel,221741,6734,15315,243790,
+45,1948,164751,Toledo,518434,8615,4659,531708,
+46,1948,164751,Valencia,1292104,37271,23274,1352649,
+47,1948,164751,Valladolid,338694,12570,0,351264,
+48,1948,164751,Vizcaya,543851,31076,14810,589737,
+49,1948,164751,Zamora,313052,5023,3851,321926,
+50,1948,164751,Zaragoza,606722,25424,8192,640338,
+TOT,1948,164751,TOTAL,27282228,911975,692576,28886779,
+01,1949,29961,Alava,111444,8179,0,119623,Fecha de referencia: 31 de diciembre de 1949
+02,1949,29961,Albacete,398948,5120,1786,405854,Fecha de referencia: 31 de diciembre de 1949
+03,1949,29961,Alicante,655499,18442,7085,681026,Fecha de referencia: 31 de diciembre de 1949
+04,1949,29961,Almería,364491,10324,7493,382308,Fecha de referencia: 31 de diciembre de 1949
+05,1949,29961,Avila,246540,6070,0,252610,Fecha de referencia: 31 de diciembre de 1949
+06,1949,29961,Badajoz,798021,14553,4165,816739,Fecha de referencia: 31 de diciembre de 1949
+07,1949,29961,Baleares,413456,15067,3995,432518,Fecha de referencia: 31 de diciembre de 1949
+08,1949,29961,Barcelona,2283453,98019,36155,2417627,Fecha de referencia: 31 de diciembre de 1949
+09,1949,29961,Burgos,378404,11897,768,391069,Fecha de referencia: 31 de diciembre de 1949
+10,1949,29961,Cáceres,530092,9699,2364,542155,Fecha de referencia: 31 de diciembre de 1949
+11,1949,29961,Cádiz,673328,23744,2851,699923,Fecha de referencia: 31 de diciembre de 1949
+12,1949,29961,Castellón de la Plana,321323,7785,282,329390,Fecha de referencia: 31 de diciembre de 1949
+13,1949,29961,Ciudad Real,519768,7561,46203,573532,Fecha de referencia: 31 de diciembre de 1949
+14,1949,29961,Córdoba,789064,13606,27114,829784,Fecha de referencia: 31 de diciembre de 1949
+15,1949,29961,Coruña (La),927367,19819,9261,956447,Fecha de referencia: 31 de diciembre de 1949
+16,1949,29961,Cuenca,330522,6288,291,337101,Fecha de referencia: 31 de diciembre de 1949
+17,1949,29961,Gerona,324356,10945,3099,338400,Fecha de referencia: 31 de diciembre de 1949
+18,1949,29961,Granada,774663,20936,4332,799931,Fecha de referencia: 31 de diciembre de 1949
+19,1949,29961,Guadalajara,199162,4978,3474,207614,Fecha de referencia: 31 de diciembre de 1949
+20,1949,29961,Guipúzcoa,375029,25971,3957,404957,Fecha de referencia: 31 de diciembre de 1949
+21,1949,29961,Huelva,552911,10289,40689,403889,Fecha de referencia: 31 de diciembre de 1949; Errata impresa: tiendas se lee claramente 552.911 pero la fila suma 603.889 frente al total impreso 403.889; con 352.911 cuadran fila y columna TOTAL (27.617.834). Se deja la cifra impresa
+22,1949,29961,Huesca,232309,5865,2367,240541,Fecha de referencia: 31 de diciembre de 1949
+23,1949,29961,Jaén,751948,14677,24865,791490,Fecha de referencia: 31 de diciembre de 1949
+24,1949,29961,León,474942,12726,77307,564975,Fecha de referencia: 31 de diciembre de 1949
+25,1949,29961,Lérida,317829,12159,14575,344563,Fecha de referencia: 31 de diciembre de 1949
+26,1949,29961,Logroño,228779,7993,810,237582,Fecha de referencia: 31 de diciembre de 1949
+27,1949,29961,Lugo,499559,8638,2352,510549,Fecha de referencia: 31 de diciembre de 1949
+28,1949,29961,Madrid,2052546,97424,5280,2155250,Fecha de referencia: 31 de diciembre de 1949
+29,1949,29961,Málaga,784379,23290,1654,809323,Fecha de referencia: 31 de diciembre de 1949
+30,1949,29961,Murcia,762299,16878,15578,794755,Fecha de referencia: 31 de diciembre de 1949
+31,1949,29961,Navarra,375799,27441,4357,407597,Fecha de referencia: 31 de diciembre de 1949
+32,1949,29961,Orense,449278,8396,23355,481029,Fecha de referencia: 31 de diciembre de 1949
+33,1949,29961,Oviedo,718756,38298,192942,949996,Fecha de referencia: 31 de diciembre de 1949
+34,1949,29961,Palencia,212864,8451,14718,236033,Fecha de referencia: 31 de diciembre de 1949
+35,1949,29961,Palmas (Las),365361,16760,0,382121,Fecha de referencia: 31 de diciembre de 1949
+36,1949,29961,Pontevedra,645761,32944,3031,681736,Fecha de referencia: 31 de diciembre de 1949
+37,1949,29961,Salamanca,401730,10229,1944,413903,Fecha de referencia: 31 de diciembre de 1949
+38,1949,29961,Santa Cruz de Tenerife,401786,7697,0,409483,Fecha de referencia: 31 de diciembre de 1949
+39,1949,29961,Santander,398698,21985,19749,440432,Fecha de referencia: 31 de diciembre de 1949
+40,1949,29961,Segovia,198750,6013,663,205426,Fecha de referencia: 31 de diciembre de 1949
+41,1949,29961,Sevilla,1183350,31491,18185,1233026,Fecha de referencia: 31 de diciembre de 1949
+42,1949,29961,Soria,161212,4316,39,165567,Fecha de referencia: 31 de diciembre de 1949
+43,1949,29961,Tarragona,349257,21042,3715,374014,Fecha de referencia: 31 de diciembre de 1949
+44,1949,29961,Teruel,222263,7375,15828,245466,Fecha de referencia: 31 de diciembre de 1949
+45,1949,29961,Toledo,522890,8852,4770,536512,Fecha de referencia: 31 de diciembre de 1949
+46,1949,29961,Valencia,1313694,34911,24282,1372887,Fecha de referencia: 31 de diciembre de 1949
+47,1949,29961,Valladolid,343379,12521,0,355900,Fecha de referencia: 31 de diciembre de 1949
+48,1949,29961,Vizcaya,553731,29784,14020,597535,Fecha de referencia: 31 de diciembre de 1949
+49,1949,29961,Zamora,316702,5359,3539,325600,Fecha de referencia: 31 de diciembre de 1949
+50,1949,29961,Zaragoza,610142,27698,7837,645677,Fecha de referencia: 31 de diciembre de 1949
+TOT,1949,29961,TOTAL,27617834,910505,703126,29231465,Fecha de referencia: 31 de diciembre de 1949
+01,1950,165652,Alava,113127,8220,0,121347,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+02,1950,165652,Albacete,404371,5100,2027,411498,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+03,1950,165652,Alicante,660129,16886,6759,683774,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+04,1950,165652,Almería,365143,10631,8273,384047,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+05,1950,165652,Avila,248696,6097,0,254793,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+06,1950,165652,Badajoz,804960,13770,3848,822578,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+07,1950,165652,Baleares,414399,14625,3645,432669,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+08,1950,165652,Barcelona,2314637,93474,34932,2443043,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+09,1950,165652,Burgos,381745,11737,936,394418,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+10,1950,165652,Cáceres,535498,9495,2515,547508,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+11,1950,165652,Cádiz,688831,23684,2675,715190,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+12,1950,165652,Castellón de la Plana,325067,7653,237,332957,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+13,1950,165652,Ciudad Real,520238,7651,47321,575210,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+14,1950,165652,Córdoba,792842,13633,24524,830999,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+15,1950,165652,Coruña (La),925672,19696,7583,952951,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+16,1950,165652,Cuenca,332910,5505,138,338553,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+17,1950,165652,Gerona,327200,11190,2503,340893,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+18,1950,165652,Granada,781238,17300,5313,803851,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+19,1950,165652,Guadalajara,200013,5080,3749,208842,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+20,1950,165652,Guipúzcoa,380439,27479,3850,411768,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+21,1950,165652,Huelva,361433,8986,40013,410432,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+22,1950,165652,Huesca,232178,5888,2212,240278,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+23,1950,165652,Jaén,740557,14903,25529,780989,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+24,1950,165652,León,483322,12636,80649,576607,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+25,1950,165652,Lérida,323150,8804,16503,348457,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+26,1950,165652,Logroño,230416,8115,649,239180,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+27,1950,165652,Lugo,495481,8957,3361,507799,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+28,1950,165652,Madrid,2122919,108024,5319,2236262,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+29,1950,165652,Málaga,785039,23024,1587,809650,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+30,1950,165652,Murcia,766324,16659,16070,799053,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+31,1950,165652,Navarra,374751,26426,5089,406266,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+32,1950,165652,Orense,447229,8393,24952,480574,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+33,1950,165652,Oviedo,729227,38717,191177,959121,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+34,1950,165652,Palencia,215214,8485,15176,238875,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+35,1950,165652,Palmas (Las),370724,16544,0,387268,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+36,1950,165652,Pontevedra,627917,55812,4007,687736,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+37,1950,165652,Salamanca,404380,10773,1897,417050,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+38,1950,165652,Santa Cruz de Tenerife,403078,7728,0,410806,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+39,1950,165652,Santander,389424,21220,19713,430357,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+40,1950,165652,Segovia,200149,6057,774,206980,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+41,1950,165652,Sevilla,1199815,30775,17330,1247920,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+42,1950,165652,Soria,162201,4317,39,166557,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+43,1950,165652,Tarragona,347497,20704,3957,372158,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+44,1950,165652,Teruel,223644,7166,15667,246477,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+45,1950,165652,Toledo,526166,9053,5072,540291,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+46,1950,165652,Valencia,1321079,35875,24987,1381941,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+47,1950,165652,Valladolid,346361,12910,0,359271,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+48,1950,165652,Vizcaya,566539,30585,13383,610507,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+49,1950,165652,Zamora,319938,5421,3493,328852,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+50,1950,165652,Zaragoza,612255,26632,7445,646332,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
+TOT,1950,165652,TOTAL,27845562,928495,706878,29480935,"fecha de referencia: 31 de diciembre de 1950; tiendas = tiendas, economatos no preferentes o cooperativas"
