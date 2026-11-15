@@ -8,5 +8,10 @@
   "access": "catálogo vía PARES; sin API",
   "years": "1936-1939",
   "risks": "autoría desconocida",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "oficial_sublevados"
+  ],
+  "digital": "parcial",
+  "sesgo": "Fotografías de la propaganda oficial: muestran lo que se quería mostrar."
 }

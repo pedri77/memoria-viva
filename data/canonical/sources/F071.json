@@ -1,0 +1,17 @@
+{
+  "id": "F071",
+  "name": "Fundación Nacional Francisco Franco (archivo personal de Franco)",
+  "url": "https://fnff.es/",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "acceso restringido por la fundación; por verificar las condiciones",
+  "years": "1936-1975",
+  "risks": "Fuente por auditar: acceso, derechos y contenido digitalizado sin comprobar.",
+  "checked_at": "2026-11-15",
+  "productores": [
+    "oficial_sublevados"
+  ],
+  "digital": "restringido",
+  "sesgo": "Archivo personal del jefe del bando sublevado custodiado por una fundación privada que defiende su figura: documentación de parte y de acceso no garantizado."
+}

@@ -8,5 +8,10 @@
   "access": "depende del municipio; convenio",
   "years": "variable",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "oficial_republica",
+    "oficial_sublevados"
+  ],
+  "digital": "no"
 }

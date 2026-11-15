@@ -1,0 +1,17 @@
+{
+  "id": "F066",
+  "name": "Fundación Pablo Iglesias (archivo del PSOE)",
+  "url": "https://fpabloiglesias.es/",
+  "priority": "P1",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "por verificar",
+  "years": "1879-actualidad",
+  "risks": "Fuente por auditar: acceso, derechos y contenido digitalizado sin comprobar.",
+  "checked_at": "2026-11-15",
+  "productores": [
+    "partidos_bando_republicano"
+  ],
+  "digital": "parcial",
+  "sesgo": "Archivo de un partido del bando republicano: documentación de parte."
+}

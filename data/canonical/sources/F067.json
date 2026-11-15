@@ -1,0 +1,17 @@
+{
+  "id": "F067",
+  "name": "Fundación Francisco Largo Caballero (archivo de la UGT)",
+  "url": "https://fflc.ugt.org/",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "por verificar",
+  "years": "1888-actualidad",
+  "risks": "Fuente por auditar: acceso, derechos y contenido digitalizado sin comprobar.",
+  "checked_at": "2026-11-15",
+  "productores": [
+    "partidos_bando_republicano"
+  ],
+  "digital": "parcial",
+  "sesgo": "Archivo de un sindicato del bando republicano: documentación de parte."
+}

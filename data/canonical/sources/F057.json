@@ -8,5 +8,9 @@
   "access": "Descarga de ficheros; 503 hoy [X]; Descarga de ficheros; 503 hoy [X]",
   "years": "histórico",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "estadistica_y_administracion"
+  ],
+  "digital": "parcial"
 }

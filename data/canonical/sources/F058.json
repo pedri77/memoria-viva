@@ -8,5 +8,9 @@
   "access": "CSV y R; CSV y R",
   "years": "1930-1942",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "investigacion"
+  ],
+  "digital": "si"
 }

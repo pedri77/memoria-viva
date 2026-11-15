@@ -1,0 +1,17 @@
+{
+  "id": "F065",
+  "name": "Archivo Histórico del Partido Comunista de España",
+  "url": "https://www.archivohistoricopce.org/",
+  "priority": "P1",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "cita previa; fotografías de la guerra en Europeana; su robots.txt no restringe la web, pero Patrimonio Digital Complutense veta /s/patrimonio/item*",
+  "years": "1920-1991",
+  "risks": "Fuente por auditar: acceso, derechos y contenido digitalizado sin comprobar.",
+  "checked_at": "2026-11-15",
+  "productores": [
+    "partidos_bando_republicano"
+  ],
+  "digital": "parcial",
+  "sesgo": "Archivo de un partido del bando republicano: documentación de parte."
+}

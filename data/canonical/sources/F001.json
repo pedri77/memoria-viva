@@ -8,5 +8,10 @@
   "access": "buscador web; micrositio Guerra civil; sin API ni OAI-PMH (/oai 404); metadatos EAD llegan a Archives Portal Europe (API con clave)",
   "years": "multiperiodo",
   "risks": "marca de agua; precios públicos para reproducción",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "oficial_republica",
+    "oficial_sublevados"
+  ],
+  "digital": "parcial"
 }

@@ -1,0 +1,17 @@
+{
+  "id": "F079",
+  "name": "National Archives and Records Administration (Estados Unidos)",
+  "url": "https://www.archives.gov/",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "por verificar; las publicaciones del Gobierno federal de EE. UU. son de dominio público",
+  "years": "1931-1939",
+  "risks": "Fuente por auditar: acceso, derechos y contenido digitalizado sin comprobar.",
+  "checked_at": "2026-11-15",
+  "productores": [
+    "extranjero"
+  ],
+  "digital": "parcial",
+  "sesgo": "Diplomacia de un país neutral; su mirada es la de su servicio exterior."
+}

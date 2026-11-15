@@ -1,0 +1,17 @@
+{
+  "id": "F068",
+  "name": "Fundación Anselmo Lorenzo (archivo de la CNT)",
+  "url": "https://fal.cnt.es/",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "por verificar; fotografías de la guerra digitalizadas según la prensa",
+  "years": "1910-actualidad",
+  "risks": "Fuente por auditar: acceso, derechos y contenido digitalizado sin comprobar.",
+  "checked_at": "2026-11-15",
+  "productores": [
+    "partidos_bando_republicano"
+  ],
+  "digital": "parcial",
+  "sesgo": "Archivo de un sindicato libertario: documentación de parte."
+}

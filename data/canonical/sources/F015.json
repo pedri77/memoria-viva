@@ -8,5 +8,10 @@
   "access": "robots.txt prohíbe /buscar/gazeta.php? y /datos/pdfs/; permitido /gazeta/dias/AAAA/MM/DD/pdfs/ (Gaceta) y /buscar/doc.php?id=BOE-A-AAAA-N (fichas del BOE de Burgos, desde el núm. 1 de 02-10-1936); API de sumarios no cubre el periodo (19360718 → 404)",
   "years": "1661-1959 (texto OCR 1836-1959); API solo desde 09-1960",
   "risks": "OCR automático",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "oficial_republica",
+    "oficial_sublevados"
+  ],
+  "digital": "si"
 }

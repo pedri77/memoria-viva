@@ -8,5 +8,10 @@
   "access": "OAI-PMH 200 [V]; SRU responde (0 resultados para «spain civil war», revisar sintaxis CQL) [V]; OAI-PMH 200 [V]; SRU responde (0 resultados para «spain civil war», revisar sintaxis CQL) [V]",
   "years": "1931-1939",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "partidos_bando_republicano"
+  ],
+  "digital": "parcial",
+  "sesgo": "Archivos de organizaciones libertarias (CNT, FAI y otras): documentación de parte."
 }

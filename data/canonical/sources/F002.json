@@ -8,5 +8,11 @@
   "access": "descripciones vía PARES; sin API",
   "years": "1931-1978",
   "risks": "documentos producidos por la represión: contextualizar",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "partidos_bando_republicano",
+    "oficial_sublevados"
+  ],
+  "digital": "parcial",
+  "sesgo": "Documentación incautada durante la guerra y la posguerra por las autoridades franquistas a partidos, sindicatos, logias y particulares para usarla en la represión: los documentos son de organizaciones del bando republicano, pero el fondo se formó con fines represivos."
 }

@@ -1,0 +1,17 @@
+{
+  "id": "F073",
+  "name": "Real Academia de la Historia (archivos personales)",
+  "url": "https://www.rah.es/",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "por verificar",
+  "years": "siglos XIX-XX",
+  "risks": "Fuente por auditar: acceso, derechos y contenido digitalizado sin comprobar.",
+  "checked_at": "2026-11-15",
+  "productores": [
+    "investigacion"
+  ],
+  "digital": "parcial",
+  "sesgo": "Archivos personales depositados; cada uno refleja a su autor."
+}

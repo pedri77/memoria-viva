@@ -8,5 +8,9 @@
   "access": "API MediaWiki [V]: 570 ficheros y 74 subcategorías en la raíz de Spanish Civil War; 110 y 35 en Second Spanish Republic; API MediaWiki [V]: 570 ficheros y 74 subcategorías en la raíz de Spanish Civil War; 110 y 35 en Second Spanish Republic",
   "years": "1931-1939",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "bibliotecas_y_prensa"
+  ],
+  "digital": "si"
 }

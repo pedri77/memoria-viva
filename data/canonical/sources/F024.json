@@ -8,5 +8,10 @@
   "access": "catálogo vía PARES; sin API",
   "years": "siglo XX",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "oficial_sublevados"
+  ],
+  "digital": "parcial",
+  "sesgo": "Archivo de la Administración del Estado franquista: acredita sus decisiones, no su justicia."
 }

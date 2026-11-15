@@ -8,5 +8,9 @@
   "access": "INEbase Historia (libros escaneados) y aplicación de alteraciones de municipios; PDF/imagen y tablas web; extracción manual",
   "years": "1842-1991",
   "risks": "transcripción manual, población de hecho/derecho",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "estadistica_y_administracion"
+  ],
+  "digital": "si"
 }

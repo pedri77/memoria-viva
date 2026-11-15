@@ -8,5 +8,9 @@
   "access": "CKAN; CKAN",
   "years": "multiperiodo",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "bibliotecas_y_prensa"
+  ],
+  "digital": "si"
 }

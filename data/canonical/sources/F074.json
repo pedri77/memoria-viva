@@ -1,0 +1,17 @@
+{
+  "id": "F074",
+  "name": "Archivos diocesanos y de órdenes religiosas",
+  "url": "https://www.conferenciaepiscopal.es/",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "cada diócesis y orden tiene su archivo; consulta presencial; la dirección es solo un punto de partida",
+  "years": "1936-1939",
+  "risks": "Fuente por auditar: acceso, derechos y contenido digitalizado sin comprobar.",
+  "checked_at": "2026-11-15",
+  "productores": [
+    "iglesia"
+  ],
+  "digital": "no",
+  "sesgo": "Documentación de la Iglesia, víctima de la violencia en la zona republicana y apoyo del bando sublevado: de parte."
+}

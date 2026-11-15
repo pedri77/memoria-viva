@@ -1,0 +1,17 @@
+{
+  "id": "F061",
+  "name": "Causa General (Archivo Histórico Nacional, digitalizada en PARES)",
+  "url": "https://pares.cultura.gob.es/",
+  "priority": "P1",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "consulta digital en PARES; por verificar la descarga",
+  "years": "1936-1939",
+  "risks": "Fuente por auditar: acceso, derechos y contenido digitalizado sin comprobar.",
+  "checked_at": "2026-11-15",
+  "productores": [
+    "oficial_sublevados"
+  ],
+  "digital": "si",
+  "sesgo": "Instruida por el Ministerio Fiscal del Estado franquista desde 1940 para documentar la violencia en la zona republicana. Útil para nombres, lugares y fechas; de parte en atribuciones, cifras y calificaciones. Contiene datos personales."
+}

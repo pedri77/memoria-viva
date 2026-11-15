@@ -1,0 +1,17 @@
+{
+  "id": "F080",
+  "name": "Archivos de la Sociedad de Naciones (ONU, Ginebra)",
+  "url": "https://archives.ungeneva.org/",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "por verificar",
+  "years": "1931-1939",
+  "risks": "Fuente por auditar: acceso, derechos y contenido digitalizado sin comprobar.",
+  "checked_at": "2026-11-15",
+  "productores": [
+    "extranjero"
+  ],
+  "digital": "parcial",
+  "sesgo": "Debates y documentos internacionales sobre la guerra de España."
+}

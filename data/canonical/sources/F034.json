@@ -8,5 +8,9 @@
   "access": "API Socrata CSV/JSON [V]; API Socrata CSV/JSON [V]",
   "years": "1931-1936",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "estadistica_y_administracion"
+  ],
+  "digital": "si"
 }

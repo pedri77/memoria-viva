@@ -8,5 +8,9 @@
   "access": "CSV/XLSX/RDF vía CKAN [V]; CSV/XLSX/RDF vía CKAN [V]",
   "years": "1936-1939 (619)",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "bibliotecas_y_prensa"
+  ],
+  "digital": "si"
 }

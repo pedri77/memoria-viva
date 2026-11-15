@@ -8,5 +8,10 @@
   "access": "CSV [V 200]; CSV [V 200]",
   "years": "1936-1939",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "investigacion",
+    "memoria_actual"
+  ],
+  "digital": "si"
 }

@@ -8,5 +8,9 @@
   "access": "API oficial de Dataverse (dataverse.csuc.cat/api), sin bloqueo; la web de CORA tiene reto antibot; api/access/datafile/<id>; v2.1: circunscripción 1931-1936 y municipio 1933-1936",
   "years": "1931, 1933, 1936 (1936 completo; 1933 y 1931 en curso según README)",
   "risks": "licencia no comercial: los datos derivados heredan NC y SA",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "investigacion"
+  ],
+  "digital": "si"
 }

@@ -8,5 +8,9 @@
   "access": "GeoPackage 103 MB, TopoJSON 6,5 MB, CSV; GeoPackage 103 MB, TopoJSON 6,5 MB, CSV",
   "years": "1900-2001 (incluye 1930)",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "investigacion"
+  ],
+  "digital": "si"
 }

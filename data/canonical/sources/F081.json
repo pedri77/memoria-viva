@@ -1,0 +1,17 @@
+{
+  "id": "F081",
+  "name": "SIDBRINT · Brigadas Internacionales (Universitat de Barcelona)",
+  "url": "https://sidbrint.ub.edu/",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "portal web; datos personales: solo cifras agregadas y con permiso de la UB",
+  "years": "1936-1939",
+  "risks": "Fuente por auditar: acceso, derechos y contenido digitalizado sin comprobar.",
+  "checked_at": "2026-11-15",
+  "productores": [
+    "investigacion"
+  ],
+  "digital": "si",
+  "sesgo": "Base de investigación universitaria sobre los voluntarios internacionales."
+}

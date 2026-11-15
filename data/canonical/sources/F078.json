@@ -1,0 +1,17 @@
+{
+  "id": "F078",
+  "name": "Archivio Centrale dello Stato (Italia)",
+  "url": "https://acs.cultura.gov.it/",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "por verificar",
+  "years": "1922-1945",
+  "risks": "Fuente por auditar: acceso, derechos y contenido digitalizado sin comprobar.",
+  "checked_at": "2026-11-15",
+  "productores": [
+    "extranjero"
+  ],
+  "digital": "parcial",
+  "sesgo": "Documentación del Estado fascista italiano, incluida su intervención en apoyo del bando sublevado: de parte."
+}

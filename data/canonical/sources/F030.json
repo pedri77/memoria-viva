@@ -8,5 +8,9 @@
   "access": "SPARQL y API; sí",
   "years": "multiperiodo",
   "risks": "calidad desigual: solo como identificador, nunca como evidencia",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "investigacion"
+  ],
+  "digital": "si"
 }

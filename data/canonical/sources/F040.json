@@ -8,5 +8,9 @@
   "access": "GeoJSON/CSV; GeoJSON/CSV",
   "years": "1936-1937",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "memoria_actual"
+  ],
+  "digital": "si"
 }

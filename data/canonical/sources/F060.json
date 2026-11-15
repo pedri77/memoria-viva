@@ -8,5 +8,9 @@
   "access": "API JSON del portal (convocatorias/busqueda y concesiones/busqueda); sin robots.txt publicado; una petición por segundo",
   "years": "convocatorias desde 2016; concesiones visibles desde 2022",
   "risks": "datos dinámicos que la fuente puede corregir o retirar; las concesiones solo se publican durante un plazo limitado; títulos con datos personales; búsqueda por palabras clave",
-  "checked_at": "2026-11-15"
+  "checked_at": "2026-11-15",
+  "productores": [
+    "estadistica_y_administracion"
+  ],
+  "digital": "si"
 }

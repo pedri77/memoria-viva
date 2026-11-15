@@ -8,5 +8,10 @@
   "access": "base de datos + PARES por signatura; sin API",
   "years": "1936-1939",
   "risks": "derechos de autor de cartelistas",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "partidos_bando_republicano",
+    "oficial_republica"
+  ],
+  "digital": "parcial"
 }

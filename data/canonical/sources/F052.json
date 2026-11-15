@@ -8,5 +8,9 @@
   "access": "OAI-PMH 200 [V]; SPARQL en `data.cervantesvirtual.com/bvmc-lod/repositories/data` responde [V] (0 obras con fecha 1937 por esa propiedad); OAI-PMH 200 [V]; SPARQL en `data.cervantesvirtual.com/bvmc-lod/repositories/data` responde [V] (0 obras con fecha 1937 por esa propiedad)",
   "years": "1931-1975",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "bibliotecas_y_prensa"
+  ],
+  "digital": "si"
 }

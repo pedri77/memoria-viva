@@ -8,5 +8,9 @@
   "access": "buscador nominal; sin descarga",
   "years": "1940-1945",
   "risks": "como F003; fuera del periodo piloto",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "extranjero"
+  ],
+  "digital": "parcial"
 }

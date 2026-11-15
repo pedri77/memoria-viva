@@ -1,0 +1,206 @@
+[
+ {
+  "id": "thomas-1961",
+  "autor": "Hugh Thomas",
+  "titulo": "La guerra civil española",
+  "anio": 1961,
+  "nota": "Primera edición en inglés (The Spanish Civil War).",
+  "temas": [
+   "general"
+  ]
+ },
+ {
+  "id": "jackson-1965",
+  "autor": "Gabriel Jackson",
+  "titulo": "La República española y la guerra civil",
+  "anio": 1965,
+  "nota": "Primera edición en inglés.",
+  "temas": [
+   "general",
+   "politica"
+  ]
+ },
+ {
+  "id": "malefakis-1970",
+  "autor": "Edward Malefakis",
+  "titulo": "Reforma agraria y revolución campesina en la España del siglo XX",
+  "anio": 1970,
+  "nota": "Primera edición en inglés; en castellano, 1971.",
+  "temas": [
+   "tierra"
+  ]
+ },
+ {
+  "id": "preston-1986",
+  "autor": "Paul Preston",
+  "titulo": "La Guerra Civil española",
+  "anio": 1986,
+  "nota": "Primera edición en inglés; ampliada en ediciones posteriores.",
+  "temas": [
+   "general"
+  ]
+ },
+ {
+  "id": "bolloten-1989",
+  "autor": "Burnett Bolloten",
+  "titulo": "La Guerra Civil española: revolución y contrarrevolución",
+  "anio": 1989,
+  "nota": "Edición española; obra iniciada en inglés en 1961.",
+  "temas": [
+   "politica",
+   "zona_republicana"
+  ]
+ },
+ {
+  "id": "cervera-1998",
+  "autor": "Javier Cervera Gil",
+  "titulo": "Madrid en guerra. La ciudad clandestina, 1936-1939",
+  "anio": 1998,
+  "temas": [
+   "violencia_zona_republicana",
+   "ciudades"
+  ]
+ },
+ {
+  "id": "julia-1999",
+  "autor": "Santos Juliá (coord.)",
+  "titulo": "Víctimas de la guerra civil",
+  "anio": 1999,
+  "temas": [
+   "violencia_zona_republicana",
+   "violencia_zona_sublevada"
+  ]
+ },
+ {
+  "id": "moradiellos-2001",
+  "autor": "Enrique Moradiellos",
+  "titulo": "El reñidero de Europa. Las dimensiones internacionales de la guerra civil española",
+  "anio": 2001,
+  "temas": [
+   "internacional"
+  ]
+ },
+ {
+  "id": "seidman-2002",
+  "autor": "Michael Seidman",
+  "titulo": "A ras de suelo. Historia social de la República durante la guerra civil",
+  "anio": 2002,
+  "nota": "Primera edición en inglés (Republic of Egos).",
+  "temas": [
+   "zona_republicana",
+   "social"
+  ]
+ },
+ {
+  "id": "ledesma-2003",
+  "autor": "José Luis Ledesma",
+  "titulo": "Los días de llamas de la revolución. Violencia y política en la retaguardia republicana de Zaragoza durante la guerra civil",
+  "anio": 2003,
+  "temas": [
+   "violencia_zona_republicana"
+  ]
+ },
+ {
+  "id": "espinosa-2003",
+  "autor": "Francisco Espinosa Maestre",
+  "titulo": "La columna de la muerte. El avance del ejército franquista de Sevilla a Badajoz",
+  "anio": 2003,
+  "temas": [
+   "violencia_zona_sublevada"
+  ]
+ },
+ {
+  "id": "payne-2005",
+  "autor": "Stanley G. Payne",
+  "titulo": "El colapso de la República. Los orígenes de la Guerra Civil (1933-1936)",
+  "anio": 2005,
+  "temas": [
+   "politica"
+  ]
+ },
+ {
+  "id": "rodrigo-2005",
+  "autor": "Javier Rodrigo",
+  "titulo": "Cautivos. Campos de concentración en la España franquista, 1936-1947",
+  "anio": 2005,
+  "temas": [
+   "campos"
+  ]
+ },
+ {
+  "id": "beevor-2005",
+  "autor": "Antony Beevor",
+  "titulo": "La guerra civil española",
+  "anio": 2005,
+  "temas": [
+   "general",
+   "militar"
+  ]
+ },
+ {
+  "id": "vinas-2006",
+  "autor": "Ángel Viñas",
+  "titulo": "La soledad de la República",
+  "anio": 2006,
+  "temas": [
+   "internacional"
+  ]
+ },
+ {
+  "id": "casanova-2007",
+  "autor": "Julián Casanova",
+  "titulo": "República y guerra civil",
+  "anio": 2007,
+  "nota": "Volumen 8 de la Historia de España dirigida por Josep Fontana y Ramón Villares.",
+  "temas": [
+   "general"
+  ]
+ },
+ {
+  "id": "preston-2011",
+  "autor": "Paul Preston",
+  "titulo": "El holocausto español. Odio y exterminio en la Guerra Civil y después",
+  "anio": 2011,
+  "temas": [
+   "violencia_zona_sublevada",
+   "violencia_zona_republicana"
+  ]
+ },
+ {
+  "id": "ruiz-2012",
+  "autor": "Julius Ruiz",
+  "titulo": "El terror rojo. Madrid, 1936",
+  "anio": 2012,
+  "temas": [
+   "violencia_zona_republicana",
+   "ciudades"
+  ]
+ },
+ {
+  "id": "alvarez-villa-2017",
+  "autor": "Manuel Álvarez Tardío y Roberto Villa García",
+  "titulo": "1936. Fraude y violencia en las elecciones del Frente Popular",
+  "anio": 2017,
+  "temas": [
+   "elecciones"
+  ]
+ },
+ {
+  "id": "reig-1984",
+  "autor": "Alberto Reig Tapia",
+  "titulo": "Ideología e historia: sobre la represión franquista y la guerra civil",
+  "anio": 1984,
+  "temas": [
+   "violencia_zona_sublevada"
+  ]
+ },
+ {
+  "id": "casanova-2002",
+  "autor": "Julián Casanova (coord.)",
+  "titulo": "Morir, matar, sobrevivir. La violencia en la dictadura de Franco",
+  "anio": 2002,
+  "temas": [
+   "violencia_zona_sublevada"
+  ]
+ }
+]

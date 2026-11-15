@@ -8,5 +8,9 @@
   "access": "varios; varios",
   "years": "variable",
   "risks": "URL genérica",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "bibliotecas_y_prensa"
+  ],
+  "digital": "parcial"
 }

@@ -8,5 +8,9 @@
   "access": "JSON/XML/XLSX [V 200]; JSON/XML/XLSX [V 200]",
   "years": "1936-...",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "memoria_actual"
+  ],
+  "digital": "si"
 }

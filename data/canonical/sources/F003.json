@@ -8,5 +8,10 @@
   "access": "buscador nominal; sin descarga",
   "years": "1936-1975",
   "risks": "homónimos, LOPDGDD art.3, Ley 16/1985 art.57",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "oficial_sublevados"
+  ],
+  "digital": "parcial",
+  "sesgo": "Registros producidos por la represión franquista (fichas, expedientes); dicen lo que anotaron sus autores."
 }

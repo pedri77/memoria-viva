@@ -1,0 +1,17 @@
+{
+  "id": "F064",
+  "name": "Archivo General de la Administración: fondos de FET y de las JONS",
+  "url": "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/aga/portada.html",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "descripciones en PARES; consulta presencial",
+  "years": "1937-1977",
+  "risks": "Fuente por auditar: acceso, derechos y contenido digitalizado sin comprobar.",
+  "checked_at": "2026-11-15",
+  "productores": [
+    "organizaciones_bando_sublevado"
+  ],
+  "digital": "no",
+  "sesgo": "Documentación del partido único del franquismo: de parte."
+}

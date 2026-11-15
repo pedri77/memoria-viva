@@ -8,5 +8,9 @@
   "access": "catálogo; por verificar",
   "years": "Restauración y Transición",
   "risks": "sin Senado 1931-1939",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "estadistica_y_administracion"
+  ],
+  "digital": "parcial"
 }

@@ -1,0 +1,17 @@
+{
+  "id": "F063",
+  "name": "Consejos de guerra (sumarios de los tribunales militares)",
+  "url": "https://www.defensa.gob.es/",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "consulta presencial en los archivos de los tribunales militares territoriales y de Defensa; datos personales protegidos",
+  "years": "1936-1950",
+  "risks": "Fuente por auditar: acceso, derechos y contenido digitalizado sin comprobar.",
+  "checked_at": "2026-11-15",
+  "productores": [
+    "oficial_sublevados"
+  ],
+  "digital": "restringido",
+  "sesgo": "Procedimientos de la justicia militar franquista: documentan acusaciones y condenas según quienes las dictaron."
+}

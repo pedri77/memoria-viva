@@ -1,0 +1,17 @@
+{
+  "id": "F076",
+  "name": "Archivo Estatal Ruso de Historia Sociopolítica (RGASPI: Komintern y Brigadas Internacionales)",
+  "url": "http://rgaspi.org/",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "por verificar; acceso internacional variable",
+  "years": "1919-1943",
+  "risks": "Fuente por auditar: acceso, derechos y contenido digitalizado sin comprobar.",
+  "checked_at": "2026-11-15",
+  "productores": [
+    "extranjero"
+  ],
+  "digital": "parcial",
+  "sesgo": "Documentación de la Internacional Comunista y de la URSS sobre la intervención en España: de parte."
+}

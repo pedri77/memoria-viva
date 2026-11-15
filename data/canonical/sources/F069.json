@@ -1,0 +1,17 @@
+{
+  "id": "F069",
+  "name": "Fundación Sabino Arana (archivo del nacionalismo vasco)",
+  "url": "https://www.sabinoarana.eus/",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "por verificar",
+  "years": "1895-actualidad",
+  "risks": "Fuente por auditar: acceso, derechos y contenido digitalizado sin comprobar.",
+  "checked_at": "2026-11-15",
+  "productores": [
+    "partidos_bando_republicano"
+  ],
+  "digital": "parcial",
+  "sesgo": "Archivo del nacionalismo vasco, alineado con la República en la guerra: documentación de parte."
+}

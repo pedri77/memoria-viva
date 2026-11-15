@@ -1,0 +1,42 @@
+---
+import Base from "../layouts/Base.astro";
+import bib from "../../../data/bibliografia.json";
+import { url } from "../lib/data";
+const TEMAS: Record<string, string> = {
+  general: "Visiones generales", politica: "Política", elecciones: "Elecciones", tierra: "La tierra y la reforma agraria",
+  zona_republicana: "La zona republicana", social: "Historia social", ciudades: "Ciudades en guerra",
+  violencia_zona_republicana: "Violencia en la retaguardia republicana", violencia_zona_sublevada: "Violencia en la retaguardia sublevada",
+  campos: "Campos de concentración", internacional: "Dimensión internacional", militar: "Historia militar",
+};
+const orden = Object.keys(TEMAS);
+const libros = [...bib].sort((a: any, b: any) => a.anio - b.anio);
+const enTema = (t: string) => libros.filter((b: any) => b.temas.includes(t));
+---
+<Base title="Bibliografía" description="Selección inicial de obras académicas sobre la Segunda República y la Guerra Civil, con las distintas líneas de investigación.">
+  <h1>Bibliografía</h1>
+  <p class="bib-lead">Una selección inicial de obras académicas, ordenada por temas. Busca que estén representadas las principales líneas de investigación, también las que discrepan entre sí. Incluir una obra no supone suscribir su interpretación, y la violencia de cada retaguardia tiene sus propios estudios.</p>
+  <p class="meta">Selección pendiente de revisión por especialistas; las fechas son las de la primera edición, en la lengua original cuando se indica. Los libros se pueden localizar en el <a href="https://catalogo.bne.es/">catálogo de la Biblioteca Nacional</a>. Las fuentes primarias están en <a href={url("/fuentes/")}>Fuentes</a> y lo que aún no se ha documentado, en <a href={url("/lagunas/")}>Lagunas</a>. ¿Falta una obra importante? <a href="https://github.com/pedri77/memoria-viva/issues/new?template=correccion.yml">Propónla</a>.</p>
+  <nav class="bib-temas" aria-label="Temas">{orden.filter((t) => enTema(t).length).map((t) => <a href={`#t-${t}`}>{TEMAS[t]} <span>{enTema(t).length}</span></a>)}</nav>
+  {orden.filter((t) => enTema(t).length).map((t) => (
+    <section id={`t-${t}`} class="bib-sec">
+      <h2>{TEMAS[t]}</h2>
+      <ul class="bib-lista">
+        {enTema(t).map((b: any) => (
+          <li><span class="bib-anio">{b.anio}</span><span><strong>{b.autor}</strong>, <cite>{b.titulo}</cite>.{b.nota && <span class="meta"> {b.nota}</span>}</span></li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</Base>
+<style is:global>
+  .bib-lead { font-size: 1.12rem; }
+  .bib-temas { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0; }
+  .bib-temas a { text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; font-size: .9rem; }
+  .bib-temas a:hover { border-color: var(--accent); color: var(--accent); }
+  .bib-temas span { color: var(--muted); margin-left: 4px; }
+  .bib-sec h2 { border-bottom: 1px solid var(--ink); padding-bottom: 6px; }
+  .bib-lista { list-style: none; padding: 0; }
+  .bib-lista li { display: grid; grid-template-columns: 4em 1fr; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); max-width: none; }
+  .bib-anio { font-family: var(--serif); font-size: 1.2rem; color: var(--accent); font-variant-numeric: lining-nums; }
+  .bib-lista cite { font-family: var(--serif); font-style: italic; }
+</style>

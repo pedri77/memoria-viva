@@ -8,5 +8,9 @@
   "access": "mapa y buscador web; registro datos.gob.es sin actualizar desde 17-12-2015; solo distribución HTML",
   "years": "1936-1975",
   "risks": "precisión espacial, revictimización",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "memoria_actual"
+  ],
+  "digital": "parcial"
 }

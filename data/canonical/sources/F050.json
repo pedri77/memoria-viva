@@ -8,5 +8,9 @@
   "access": "OAI-PMH 200 [V]; set Hispana `bvdefensa` (194.160 registros) [V]; OAI-PMH 200 [V]; set Hispana `bvdefensa` (194.160 registros) [V]",
   "years": "1888-1978",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "bibliotecas_y_prensa"
+  ],
+  "digital": "si"
 }

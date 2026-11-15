@@ -3,18 +3,92 @@
   "$id": "https://memoria-viva/schemas/source.schema.json",
   "title": "Fuente (institución o conjunto)",
   "type": "object",
-  "required": ["id", "name", "url", "priority", "status", "license", "access", "checked_at"],
+  "required": [
+    "id",
+    "name",
+    "url",
+    "priority",
+    "status",
+    "license",
+    "access",
+    "checked_at"
+  ],
   "additionalProperties": false,
   "properties": {
-    "id": { "type": "string", "pattern": "^F\\d{3}$" },
-    "name": { "type": "string" },
-    "url": { "type": "string", "format": "uri" },
-    "priority": { "enum": ["P0", "P1", "P2"] },
-    "status": { "enum": ["candidate", "researched", "permission_pending", "pilot", "production", "blocked"] },
-    "license": { "type": "string" },
-    "access": { "type": "string" },
-    "years": { "type": "string" },
-    "risks": { "type": "string" },
-    "checked_at": { "$ref": "common.schema.json#/$defs/fecha_iso" }
+    "id": {
+      "type": "string",
+      "pattern": "^F\\d{3}$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "priority": {
+      "enum": [
+        "P0",
+        "P1",
+        "P2"
+      ]
+    },
+    "status": {
+      "enum": [
+        "candidate",
+        "researched",
+        "permission_pending",
+        "pilot",
+        "production",
+        "blocked"
+      ]
+    },
+    "license": {
+      "type": "string"
+    },
+    "access": {
+      "type": "string"
+    },
+    "years": {
+      "type": "string"
+    },
+    "risks": {
+      "type": "string"
+    },
+    "checked_at": {
+      "$ref": "common.schema.json#/$defs/fecha_iso"
+    },
+    "productores": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "oficial_republica",
+          "oficial_sublevados",
+          "partidos_bando_republicano",
+          "organizaciones_bando_sublevado",
+          "iglesia",
+          "extranjero",
+          "estadistica_y_administracion",
+          "investigacion",
+          "bibliotecas_y_prensa",
+          "memoria_actual"
+        ]
+      },
+      "description": "Quién produjo los documentos del fondo (no quién los custodia). Sirve para comprobar el equilibrio entre fuentes de los dos bandos."
+    },
+    "digital": {
+      "enum": [
+        "si",
+        "parcial",
+        "no",
+        "restringido"
+      ],
+      "description": "Consulta en línea: sí, en parte, solo presencial, o acceso restringido."
+    },
+    "sesgo": {
+      "type": "string",
+      "description": "Quién y para qué produjo los documentos, y qué sesgo previsible tienen (guía editorial §1.2)."
+    }
   }
 }

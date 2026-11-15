@@ -1,26 +1,67 @@
 ---
 import Base from "../layouts/Base.astro";
-import { sources } from "../lib/data";
-const ESTADO: Record<string, string> = { candidate: "candidata", researched: "auditada", permission_pending: "permiso pendiente", pilot: "en piloto", production: "en uso", blocked: "bloqueada" };
+import { sources, url } from "../lib/data";
+const ESTADO: Record<string, string> = { candidate: "por auditar", researched: "auditada", permission_pending: "permiso pendiente", pilot: "en uso (piloto)", production: "en uso", blocked: "bloqueada" };
+const DIGITAL: Record<string, [string, string]> = { si: ["En línea", "r-cc_by"], parcial: ["En parte en línea", "r-reuse_conditions"], no: ["Presencial", "r-link_only"], restringido: ["Acceso restringido", "r-restricted"] };
+const GRUPOS: [string, string, string][] = [
+  ["oficial_republica", "Instituciones de la República", "Gobierno, Cortes, Gaceta y administraciones republicanas."],
+  ["oficial_sublevados", "Autoridades del bando sublevado y del franquismo", "BOE de Burgos, administración, justicia militar y Causa General."],
+  ["partidos_bando_republicano", "Partidos y sindicatos del bando republicano", "Archivos de organizaciones: documentación de parte."],
+  ["organizaciones_bando_sublevado", "Organizaciones del bando sublevado", "Partido único y movimientos que apoyaron la sublevación."],
+  ["iglesia", "Iglesia", "Archivos diocesanos, de órdenes y de la Santa Sede."],
+  ["extranjero", "Archivos extranjeros", "Estados que intervinieron, neutrales y organismos internacionales."],
+  ["estadistica_y_administracion", "Estadística y administración", "INE, cartografía oficial y datos públicos actuales."],
+  ["memoria_actual", "Memoria democrática hoy", "Censos de víctimas, fosas y datos de las administraciones actuales."],
+  ["investigacion", "Investigación", "Bases de datos y repositorios académicos."],
+  ["bibliotecas_y_prensa", "Bibliotecas y prensa", "Hemerotecas, bibliotecas digitales y agregadores."],
+];
+const en = (g: string) => sources.filter((s: any) => (s.productores ?? []).includes(g));
+const n = (g: string) => en(g).length;
+const digitales = (g: string) => en(g).filter((s: any) => s.digital === "si").length;
 ---
-<Base index={false} title="Fuentes" description="Registro de fuentes de España: Memoria Viva, con prioridad, estado y licencia.">
-  <h1>Fuentes</h1>
-  <p class="meta">Auditoría del 14-11-2026. «Prioridad» indica el orden de trabajo del piloto 1931-1939, no la importancia histórica de la institución.</p>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>ID</th><th>Fuente</th><th>Prioridad</th><th>Estado</th><th>Licencia</th><th>Acceso</th></tr></thead>
-      <tbody>
-        {sources.map((s) => (
-          <tr>
-            <td>{s.id}</td>
-            <td><a href={s.url} rel="noopener">{s.name}</a><br /><span class="meta">{s.years}</span></td>
-            <td>{s.priority}</td>
-            <td>{ESTADO[s.status] ?? s.status}</td>
-            <td>{s.license}</td>
-            <td class="meta">{s.access}</td>
-          </tr>
-        ))}
-      </tbody>
+<Base index={false} title="Fuentes" description={`Registro de ${sources.length} fuentes y archivos de España: Memoria Viva, por quién produjo los documentos, con su acceso, su estado y su sesgo previsible.`}>
+  <h1>Fuentes y archivos</h1>
+  <p class="f-lead">{sources.length} fuentes y archivos, agrupados por quién produjo los documentos, no por quién los guarda. Están los que se consultan en línea y los que solo se pueden ver en persona: lo que no está digitalizado también cuenta, aunque hoy no se pueda usar.</p>
+
+  <section class="card f-equilibrio" aria-labelledby="h-eq">
+    <h2 id="h-eq">Equilibrio entre bandos</h2>
+    <p>Ser ecuánimes no es igualar artificialmente (guía editorial, §1.4), sino no dejar fuera las fuentes de ningún lado y decir de cada una quién la produjo y para qué. El registro tiene hoy:</p>
+    <table class="f-tabla">
+      <thead><tr><th scope="col">Productor</th><th scope="col" style="text-align:right">Fuentes</th><th scope="col" style="text-align:right">En línea</th></tr></thead>
+      <tbody>{GRUPOS.map(([g, t]) => <tr><th scope="row" style="font-weight:400"><a href={`#g-${g}`}>{t}</a></th><td style="text-align:right">{n(g)}</td><td style="text-align:right">{digitales(g)}</td></tr>)}</tbody>
     </table>
-  </div>
+    <p class="meta">Hay {n("partidos_bando_republicano")} archivos de partidos y sindicatos del bando republicano y {n("organizaciones_bando_sublevado")} de organizaciones del bando sublevado. Los de la derecha de la época (CEDA, monárquicos, Falange antes de 1937) están más dispersos o se integraron en la administración franquista; su búsqueda está en <a href={url("/lagunas/#laguna-archivos-derecha")}>lagunas</a>. Una fuente puede contar en más de un grupo.</p>
+  </section>
+
+  {GRUPOS.filter(([g]) => n(g)).map(([g, t, d]) => (
+    <section class="f-grupo" id={`g-${g}`}>
+      <h2>{t} <span class="f-n">{n(g)}</span></h2>
+      <p class="meta">{d}</p>
+      <ul class="f-lista">
+        {en(g).map((s: any) => (
+          <li>
+            <p class="f-nombre"><a href={s.url} rel="noopener">{s.name}</a> <span class="meta">{s.id}{s.years ? ` · ${s.years}` : ""}</span></p>
+            <p class="f-etq">{s.digital && <span class="tag" data-c={DIGITAL[s.digital][1]}>{DIGITAL[s.digital][0]}</span>}<span class="meta">{ESTADO[s.status] ?? s.status} · {s.license}</span></p>
+            {s.sesgo && <p class="f-sesgo"><strong>Quién y para qué.</strong> {s.sesgo}</p>}
+            <p class="meta">Acceso: {s.access}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+  <p class="meta">Registro en <a href="https://github.com/pedri77/memoria-viva/tree/main/data/canonical/sources">data/canonical/sources</a>. «Por auditar»: la dirección responde, pero el acceso, los derechos y lo digitalizado están sin comprobar. Ver también la <a href={url("/bibliografia/")}>bibliografía</a>.</p>
 </Base>
+<style is:global>
+  .f-lead { font-size: 1.12rem; }
+  .f-equilibrio h2 { margin-top: 4px; }
+  .f-tabla { margin: 8px 0 12px; }
+  .f-grupo { padding-top: 16px; }
+  .f-grupo h2 { border-bottom: 1px solid var(--ink); padding-bottom: 6px; display: flex; align-items: baseline; gap: 12px; }
+  .f-n { font-size: 1rem; color: var(--muted); font-weight: 400; }
+  .f-lista { list-style: none; padding: 0; }
+  .f-lista li { padding: 12px 0; border-top: 1px solid var(--line); max-width: none; }
+  .f-lista p { margin: 0 0 4px; }
+  .f-nombre a { font-family: var(--serif); font-size: 1.08rem; font-weight: 600; color: var(--ink); }
+  .f-etq { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .f-sesgo { font-size: .95rem; }
+</style>

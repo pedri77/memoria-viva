@@ -8,5 +8,9 @@
   "access": "Search API + manifiesto IIIF [V]; Search API + manifiesto IIIF [V]",
   "years": "1931-1939: 21.693",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "bibliotecas_y_prensa"
+  ],
+  "digital": "si"
 }

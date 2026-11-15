@@ -1,0 +1,18 @@
+{
+  "id": "F062",
+  "name": "Archivo General Militar de Ávila (documentación de los ejércitos de las dos zonas)",
+  "url": "https://www.defensa.gob.es/",
+  "priority": "P1",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "consulta presencial; por verificar qué está descrito en línea",
+  "years": "1936-1939",
+  "risks": "Fuente por auditar: acceso, derechos y contenido digitalizado sin comprobar.",
+  "checked_at": "2026-11-15",
+  "productores": [
+    "oficial_republica",
+    "oficial_sublevados"
+  ],
+  "digital": "no",
+  "sesgo": "Documentación militar de los dos ejércitos: órdenes, partes y organización; cada parte refleja la visión de quien lo redactó."
+}

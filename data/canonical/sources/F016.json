@@ -8,5 +8,9 @@
   "access": "catálogo web; por verificar",
   "years": "1810-1977",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "oficial_republica"
+  ],
+  "digital": "parcial"
 }

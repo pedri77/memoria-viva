@@ -8,5 +8,9 @@
   "access": "GeoTIFF/GPKG; GeoTIFF/GPKG",
   "years": "1900-2021 (incluye 1930 y 1940)",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "investigacion"
+  ],
+  "digital": "si"
 }

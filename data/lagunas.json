@@ -314,5 +314,117 @@
       }
     ],
     "afecta": []
+  },
+  {
+    "id": "laguna-archivos-derecha",
+    "tema": "Archivos de las organizaciones de la derecha de la época",
+    "periodo": "1931-1939",
+    "falta": "Archivos propios de la CEDA y la derecha católica, de los monárquicos (Renovación Española), de Falange antes de su unificación en 1937 y de las organizaciones carlistas regionales. El registro tiene 2 fuentes de organizaciones del bando sublevado frente a 9 de partidos y sindicatos del bando republicano.",
+    "buscado": "Revisión del registro de fuentes (15-11-2026). No se ha localizado un archivo central de esas organizaciones: parte de su documentación pasó al partido único (FET y de las JONS) y a la administración franquista, y otra parte está en archivos personales o se perdió.",
+    "probar": [
+      {
+        "fuente": "Archivo General de la Administración: fondos de FET y de las JONS (F064)",
+        "url": "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/aga/portada.html"
+      },
+      {
+        "fuente": "Real Academia de la Historia (archivos personales) (F073)",
+        "url": "https://www.rah.es/"
+      },
+      {
+        "fuente": "Biblioteca Virtual Larramendi (carlismo y pensamiento tradicionalista) (F072)",
+        "url": "https://www.larramendi.es/"
+      },
+      {
+        "fuente": "Prensa de la época (El Debate, ABC, órganos de Falange) en la Hemeroteca Digital de la BNE, consulta manual",
+        "url": "https://hemerotecadigital.bne.es/"
+      }
+    ],
+    "afecta": []
+  },
+  {
+    "id": "laguna-violencia-retaguardias",
+    "tema": "Violencia en las dos retaguardias (1936-1939)",
+    "periodo": "1936-1939",
+    "falta": "Documentación y cifras de la violencia ejercida en la zona republicana y en la zona sublevada: agentes, mecanismos, periodos y escala. Pendiente de revisores (R1): se tratará según la evidencia, sin simetrías artificiales (guía editorial §1.4) y sin nombrar víctimas ni responsables (§3).",
+    "buscado": "Nada todavía: el tema espera a los revisores. Fuentes identificadas, cada una con su sesgo, en el registro y en la bibliografía (Juliá 1999, Cervera 1998, Ledesma 2003, Espinosa 2003, Preston 2011, Ruiz 2012).",
+    "probar": [
+      {
+        "fuente": "Causa General (Archivo Histórico Nacional, digitalizada en PARES), fuente franquista sobre la zona republicana (F061)",
+        "url": "https://pares.cultura.gob.es/"
+      },
+      {
+        "fuente": "Consejos de guerra (sumarios de los tribunales militares), fuente sobre la represión franquista (F063)",
+        "url": "https://www.defensa.gob.es/"
+      },
+      {
+        "fuente": "CDMH portal víctimas y represaliados (F003)",
+        "url": "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/cdmh/bases-de-datos.html"
+      },
+      {
+        "fuente": "Archivos diocesanos y de órdenes religiosas (F074)",
+        "url": "https://www.conferenciaepiscopal.es/"
+      },
+      {
+        "fuente": "Víctimas mortales de la guerra civil en Euskadi (Gogora) (F041)",
+        "url": "https://opendata.euskadi.eus/contenidos/ds_general/victimas_guerra_civil/"
+      },
+      {
+        "fuente": "Fosas comunes de la Guerra Civil (Junta de Andalucía) (F044)",
+        "url": "https://juntadeandalucia.es/datosabiertos/portal/dataset/fosas-comunes-de-la-guerra-civil"
+      }
+    ],
+    "afecta": []
+  },
+  {
+    "id": "laguna-campos-concentracion",
+    "tema": "Campos de concentración (1936-1947)",
+    "periodo": "1936-1947",
+    "falta": "Localización, funcionamiento y número de internos de los campos de concentración del bando sublevado y del franquismo, de los campos de trabajo y de los campos de refugiados españoles en Francia y de deportados en Alemania.",
+    "buscado": "Nada todavía. Bibliografía de referencia: Rodrigo 2005 (Cautivos). Pendiente de revisores (R1).",
+    "probar": [
+      {
+        "fuente": "Archivo General Militar de Ávila (documentación de los ejércitos de las dos zonas), por verificar si conserva la documentación de la Inspección de Campos de Concentración (F062)",
+        "url": "https://www.defensa.gob.es/"
+      },
+      {
+        "fuente": "Camps i refugis amb refugiats espanyols a França (1939) (F048)",
+        "url": "https://analisi.transparenciacatalunya.cat/d/r2n5-8zfj"
+      },
+      {
+        "fuente": "Arolsen Archives (F029)",
+        "url": "https://arolsen-archives.org/"
+      },
+      {
+        "fuente": "CDMH deportados a campos nazis (F004)",
+        "url": "https://www.cultura.gob.es/cultura/areas/archivos/mc/archivos/cdmh/bases-de-datos.html"
+      }
+    ],
+    "afecta": []
+  },
+  {
+    "id": "laguna-criptografia",
+    "tema": "Criptografía y comunicaciones durante la guerra",
+    "periodo": "1936-1939",
+    "falta": "Cómo cifraban y descifraban sus comunicaciones los dos ejércitos, qué sistemas usaban y qué papel tuvo la ayuda extranjera.",
+    "buscado": "Nada todavía. No se ha localizado ninguna fuente primaria publicada y abierta.",
+    "probar": [
+      {
+        "fuente": "Archivo General Militar de Ávila (documentación de los ejércitos de las dos zonas) (F062)",
+        "url": "https://www.defensa.gob.es/"
+      },
+      {
+        "fuente": "Biblioteca Virtual de Defensa (F050)",
+        "url": "https://bibliotecavirtual.defensa.gob.es"
+      },
+      {
+        "fuente": "Bundesarchiv (Alemania) (F077)",
+        "url": "https://www.bundesarchiv.de/"
+      },
+      {
+        "fuente": "Archivio Centrale dello Stato (Italia) (F078)",
+        "url": "https://acs.cultura.gov.it/"
+      }
+    ],
+    "afecta": []
   }
 ]

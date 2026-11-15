@@ -8,5 +8,9 @@
   "access": "por verificar; por verificar",
   "years": "1945-1978",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "extranjero"
+  ],
+  "digital": "parcial"
 }

@@ -8,5 +8,9 @@
   "access": "SHP, GPKG, CSV; SHP, GPKG, CSV",
   "years": "1936-1951",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "memoria_actual"
+  ],
+  "digital": "si"
 }

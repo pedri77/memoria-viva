@@ -8,5 +8,9 @@
   "access": "sin URL propia en el doc",
   "years": "posterior",
   "risks": "copia de vídeo prohibida",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "memoria_actual"
+  ],
+  "digital": "parcial"
 }

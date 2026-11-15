@@ -8,5 +8,9 @@
   "access": "descarga web por documento; JPG 250 ppp y PDF, sin georreferenciar; 1.752 ficheros",
   "years": "1500-1900 (CartoAntigua); MTN y minutas aparte",
   "risks": "georreferenciación propia con error declarado",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "estadistica_y_administracion"
+  ],
+  "digital": "si"
 }

@@ -8,5 +8,9 @@
   "access": "Socrata [V]; Socrata [V]",
   "years": "1939",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "memoria_actual"
+  ],
+  "digital": "si"
 }

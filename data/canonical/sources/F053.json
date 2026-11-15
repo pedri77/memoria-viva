@@ -8,5 +8,9 @@
   "access": "PDF; Excel solo en el CD-ROM original; PDF; Excel solo en el CD-ROM original",
   "years": "1800-2000",
   "risks": "",
-  "checked_at": "2026-11-14"
+  "checked_at": "2026-11-14",
+  "productores": [
+    "investigacion"
+  ],
+  "digital": "parcial"
 }

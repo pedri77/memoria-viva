@@ -1,0 +1,18 @@
+{
+  "id": "F072",
+  "name": "Biblioteca Virtual Larramendi (carlismo y pensamiento tradicionalista)",
+  "url": "https://www.larramendi.es/",
+  "priority": "P2",
+  "status": "candidate",
+  "license": "por verificar",
+  "access": "biblioteca digital; por verificar licencias",
+  "years": "siglos XIX-XX",
+  "risks": "Fuente por auditar: acceso, derechos y contenido digitalizado sin comprobar.",
+  "checked_at": "2026-11-15",
+  "productores": [
+    "organizaciones_bando_sublevado",
+    "investigacion"
+  ],
+  "digital": "si",
+  "sesgo": "Publicaciones del carlismo y del pensamiento tradicionalista, integrado en el bando sublevado: de parte."
+}
