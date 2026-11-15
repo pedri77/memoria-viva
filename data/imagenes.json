@@ -86,6 +86,94 @@
   "alto": 966
  },
  {
+  "id": "img-soldados-puerta-del-sol",
+  "pareja": "frente",
+  "bando": "republicano",
+  "bvm": {
+   "registro": 24518,
+   "imagen": 12131692
+  },
+  "titulo": "Soldados aclamados en la Puerta del Sol camino del frente",
+  "pie": "Soldados en un carro tirado por caballos pasan por la Puerta del Sol de Madrid hacia el frente, entre vecinos que los saludan con el puño en alto.",
+  "autor": "Fotógrafo anónimo, distribuida por The Associated Press of Great Britain (Londres)",
+  "fecha": "1936",
+  "custodio": "Biblioteca Regional de Madrid, Mg.XXVIII/1448",
+  "licencia": "Dominio público (declarado por la Biblioteca Regional de Madrid)",
+  "licencia_url": "https://creativecommons.org/publicdomain/mark/1.0/deed.es",
+  "verificacion": "Ficha de la Biblioteca Virtual de Madrid, registro 24518: «Derechos: Obra de dominio público». Lleva al verso el sello «Copyright Associated Press Photo»; como mera fotografía de 1936, su protección en España (25 años, art. 128 LPI) está extinguida.",
+  "ficha_url": "https://bibliotecavirtualmadrid.comunidad.madrid/bvmadrid_publicacion/es/consulta/registro.do?id=24518",
+  "src": "img/archivo/img-soldados-puerta-del-sol.jpg",
+  "consultado": "2026-11-15",
+  "ancho": 1200,
+  "alto": 912
+ },
+ {
+  "id": "img-soldados-burgos",
+  "pareja": "frente",
+  "bando": "sublevado",
+  "bvm": {
+   "registro": 24608,
+   "imagen": 12131458
+  },
+  "titulo": "Soldados aclamados a su paso por Burgos",
+  "pie": "Una columna de soldados avanza por una calle principal de Burgos entre civiles que la saludan con el brazo en alto.",
+  "autor": "Fotógrafo anónimo, distribuida por The Associated Press of Great Britain (Londres)",
+  "fecha": "1936",
+  "custodio": "Biblioteca Regional de Madrid, Mg.XXVIII/1330",
+  "licencia": "Dominio público (declarado por la Biblioteca Regional de Madrid)",
+  "licencia_url": "https://creativecommons.org/publicdomain/mark/1.0/deed.es",
+  "verificacion": "Ficha de la Biblioteca Virtual de Madrid, registro 24608: «Derechos: Obra de dominio público». Lleva al verso el sello «Copyright Associated Press Photo»; como mera fotografía de 1936, su protección en España (25 años, art. 128 LPI) está extinguida.",
+  "ficha_url": "https://bibliotecavirtualmadrid.comunidad.madrid/bvmadrid_publicacion/es/consulta/registro.do?id=24608",
+  "src": "img/archivo/img-soldados-burgos.jpg",
+  "consultado": "2026-11-15",
+  "ancho": 1200,
+  "alto": 1013
+ },
+ {
+  "id": "img-retrato-durruti",
+  "pareja": "retratos",
+  "bando": "republicano",
+  "bvm": {
+   "registro": 24508,
+   "imagen": 12131426
+  },
+  "titulo": "«Durruti. 20 noviembre 1936»",
+  "pie": "Dibujo para cartel, a la acuarela: retrato del sindicalista anarquista Buenaventura Durruti con motivo de su muerte, según la ficha de la biblioteca.",
+  "autor": "Autor anónimo",
+  "fecha": "hacia 1937",
+  "custodio": "Biblioteca Regional de Madrid, Mg.XXVI/74,2",
+  "licencia": "Dominio público (declarado por la Biblioteca Regional de Madrid: obra anónima sin derechos de autor localizados)",
+  "licencia_url": "https://creativecommons.org/publicdomain/mark/1.0/deed.es",
+  "verificacion": "Ficha de la Biblioteca Virtual de Madrid, registro 24508: «Derechos: Obra de dominio público».",
+  "ficha_url": "https://bibliotecavirtualmadrid.comunidad.madrid/bvmadrid_publicacion/es/consulta/registro.do?id=24508",
+  "src": "img/archivo/img-retrato-durruti.jpg",
+  "consultado": "2026-11-15",
+  "ancho": 846,
+  "alto": 1200
+ },
+ {
+  "id": "img-retrato-jose-antonio",
+  "pareja": "retratos",
+  "bando": "sublevado",
+  "bvm": {
+   "registro": 24507,
+   "imagen": 12131427
+  },
+  "titulo": "Retrato de José Antonio Primo de Rivera",
+  "pie": "Dibujo para cartel, a la acuarela: retrato del fundador de Falange Española, con camisa azul.",
+  "autor": "Autor anónimo",
+  "fecha": "hacia 1937",
+  "custodio": "Biblioteca Regional de Madrid, Mg.XXVI/74,3",
+  "licencia": "Dominio público (declarado por la Biblioteca Regional de Madrid: obra anónima sin derechos de autor localizados)",
+  "licencia_url": "https://creativecommons.org/publicdomain/mark/1.0/deed.es",
+  "verificacion": "Ficha de la Biblioteca Virtual de Madrid, registro 24507: «Derechos: Obra de dominio público».",
+  "ficha_url": "https://bibliotecavirtualmadrid.comunidad.madrid/bvmadrid_publicacion/es/consulta/registro.do?id=24507",
+  "src": "img/archivo/img-retrato-jose-antonio.jpg",
+  "consultado": "2026-11-15",
+  "ancho": 848,
+  "alto": 1200
+ },
+ {
   "id": "img-batallon-etkar-andre",
   "pareja": "extranjeros",
   "bando": "republicano",
