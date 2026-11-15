@@ -1,23 +1,389 @@
 {
   "id": "ind-alfab-mujeres-prov",
-  "concept": "Mujeres que saben leer, 1930",
-  "definition": "Porcentaje de las mujeres de hecho de cada provincia que, según el censo de 1930, sabía leer (solo leer, o leer y escribir).",
+  "concept": "Mujeres que saben leer, 1920 y 1930",
+  "definition": "Porcentaje de las mujeres de hecho de cada provincia que, según el censo, sabía leer (solo leer, o leer y escribir).",
   "unit": "% de la población de hecho",
   "denominator": "población de hecho de todas las edades",
-  "method": "(saben solo leer + saben leer y escribir) / total de la población de hecho, sobre la tabla oficial del censo de 1930 transcrita a mano con comprobación aritmética (scripts/etl/ine_alfabetizacion.py).",
+  "method": "(saben solo leer + saben leer y escribir) / total de la población de hecho, sobre las tablas oficiales de los censos de 1920 y 1930 transcritas a mano con comprobación aritmética (scripts/etl/ine_alfabetizacion.py).",
   "source_ids": [
     "F010"
   ],
-  "comparability_notes": "El denominador incluye a toda la población, también a los menores que aún no estaban en edad de aprender a leer, así que la cifra es más baja que las tasas de alfabetización calculadas sobre mayores de 10 años que usa la historiografía. Es una declaración censal, no una prueba de lectura. No comparable directamente con las series de 1920 y 1940 del atlas, que son de población.",
+  "comparability_notes": "El denominador incluye a toda la población, también a los menores que aún no estaban en edad de aprender a leer, así que la cifra es más baja que las tasas de alfabetización calculadas sobre mayores de 10 años que usa la historiografía. Es una declaración censal, no una prueba de lectura. 1920 y 1930 usan la misma clasificación y son comparables entre sí; en 1920 Canarias era una sola provincia y Cádiz incluía Ceuta.",
   "review": {
     "status": "revision",
     "date": "2026-11-15",
     "by": [
       "autor"
     ],
-    "note": "Generado por scripts/etl/ine_alfabetizacion.py desde la transcripción comprobada. Pendiente de segunda revisión humana."
+    "note": "Generado por scripts/etl/ine_alfabetizacion.py desde las transcripciones comprobadas. Pendiente de segunda revisión humana."
   },
   "observations": [
+    {
+      "place_id": "plc-prov-01",
+      "period": "1920",
+      "value": 69.3,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 01, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1920",
+      "value": 22.2,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 02, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1920",
+      "value": 32.7,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 03, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1920",
+      "value": 24.1,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 04, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1920",
+      "value": 47.2,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 05, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1920",
+      "value": 28.1,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 06, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1920",
+      "value": 36.1,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 07, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1920",
+      "value": 63.1,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 08, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1920",
+      "value": 60.7,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 09, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1920",
+      "value": 30.2,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 10, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1920",
+      "value": 37.6,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 11, columnas «saben leer» y «saben leer y escribir»",
+      "uncertainty": "En 1920 la provincia de Cádiz incluye Ceuta (35.219 habitantes según mapSpainHist)."
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1920",
+      "value": 29.5,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 12, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1920",
+      "value": 24.8,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 13, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1920",
+      "value": 26.7,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 14, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1920",
+      "value": 34.1,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 15, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1920",
+      "value": 28.5,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 16, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1920",
+      "value": 52.3,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 17, columnas «saben leer» y «saben leer y escribir»",
+      "uncertainty": "El total de la tabla supera en 60 habitantes la suma municipal de mapSpainHist; diferencia sin explicar, sin efecto apreciable en el porcentaje."
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1920",
+      "value": 23.1,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 18, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1920",
+      "value": 43.5,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 19, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1920",
+      "value": 64.2,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 20, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1920",
+      "value": 37.5,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 21, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1920",
+      "value": 44.2,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 22, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1920",
+      "value": 19.8,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 23, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1920",
+      "value": 53.6,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 24, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1920",
+      "value": 48.2,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 25, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1920",
+      "value": 55.2,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 26, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1920",
+      "value": 33.7,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 27, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1920",
+      "value": 63.9,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 28, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1920",
+      "value": 22.1,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 29, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1920",
+      "value": 23.8,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 30, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1920",
+      "value": 60.5,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 31, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1920",
+      "value": 34.3,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 32, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1920",
+      "value": 48.9,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 33, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1920",
+      "value": 65.9,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 34, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1920",
+      "value": 37.7,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 36, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1920",
+      "value": 54.6,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 37, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1920",
+      "value": 70.3,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 39, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1920",
+      "value": 61.2,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 40, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1920",
+      "value": 39.1,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 41, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1920",
+      "value": 53.9,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 42, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1920",
+      "value": 47.9,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 43, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1920",
+      "value": 33.6,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 44, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1920",
+      "value": 29.5,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 45, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1920",
+      "value": 38.8,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 46, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1920",
+      "value": 57.2,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 47, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1920",
+      "value": 62.2,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 48, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1920",
+      "value": 47.9,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 49, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1920",
+      "value": 42.5,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "locator": "fila de la provincia 50, columnas «saben leer» y «saben leer y escribir»"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1920",
+      "value": null,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "missingness_reason": "En 1920 Canarias era una sola provincia; el censo da 29,8 % para el conjunto del archipiélago."
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1920",
+      "value": null,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "missingness_reason": "En 1920 Canarias era una sola provincia; el censo da 29,8 % para el conjunto del archipiélago."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1920",
+      "value": null,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "missingness_reason": "En 1920 el censo incluye Ceuta en la provincia de Cádiz."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1920",
+      "value": null,
+      "document_id": "doc-ine-censo1920-instruccion",
+      "missingness_reason": "La tabla agrupa Melilla con el resto de posesiones del norte y costa occidental de África."
+    },
     {
       "place_id": "plc-prov-01",
       "period": "1930",
@@ -304,7 +670,7 @@
       "value": 48.5,
       "document_id": "doc-ine-censo1930-instruccion",
       "locator": "fila de la provincia 41, columnas «saben leer» y «saben leer y escribir»",
-      "uncertainty": "Errata corregida en la tabla impresa: Impreso 159.486 en saben leer y escribir; corregido a 195.486 porque la fila (405.796) y el total nacional de mujeres (6.070.609) solo cuadran con ese valor."
+      "uncertainty": "Impreso 159.486 en saben leer y escribir; corregido a 195.486 porque la fila (405.796) y el total nacional de mujeres (6.070.609) solo cuadran con ese valor."
     },
     {
       "place_id": "plc-prov-42",

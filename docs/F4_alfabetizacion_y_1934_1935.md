@@ -55,3 +55,36 @@ Seis acontecimientos nuevos (la cronología pasa de 31 a 37):
 - Build OK: 220 páginas indexadas.
 - `test:retirada` OK.
 - Prueba del atlas con un navegador sin interfaz: carga la capa, salta de 1920 a 1930 y no da errores propios.
+
+## 3. Ampliación: alfabetización de 1920 (15-11-2026)
+
+**Fuente:** Censo de 1920, Tomo II, «Clasificación de la población de Hecho por sexo, estado civil e instrucción elemental», «Resumen general por provincias» (INEbase Historia, `td=86929`). Licencia CC BY 4.0.
+
+**Transcripción:** a mano, en `data/external/ine1920/instruccion_1920_provincias.csv` (100 filas). Pasa las mismas comprobaciones que la de 1930:
+- Todas las filas cuadran a la primera.
+- Los totales nacionales impresos se reproducen columna a columna.
+
+**Contraste con mapSpainHist (suma municipal de 1920):**
+- **Canarias:** era una sola provincia en 1920. Su total coincide exactamente con la suma de Las Palmas y Santa Cruz de Tenerife.
+- **Cádiz:** supera la suma municipal en 35.219 habitantes, que es exactamente la población de Ceuta. En 1920 el censo incluía Ceuta en Cádiz.
+- **Gerona:** 60 habitantes de diferencia, sin explicar. Queda anotado en la observación.
+
+**Resultado:**
+- En España saben leer el 47,3 % en 1920 y el 56,5 % en 1930.
+- Varones: del 53,2 % al 62,0 %. Mujeres: del 41,7 % al 51,2 %.
+- Mayores subidas: Málaga (+18,1 puntos), Granada (+16,1) y Almería (+15,0).
+- Palencia y Santander bajan ligeramente, desde niveles altos.
+- Sin dato provincial en 1920:
+  - Las Palmas y Santa Cruz de Tenerife: la observación da la cifra del archipiélago.
+  - Ceuta: incluida en Cádiz.
+  - Melilla: agrupada con las posesiones.
+
+**Cambios:** los tres indicadores `ind-alfab-*` tienen ahora observaciones de 1920 y 1930. La narrativa de las escuelas da las dos cifras.
+
+## 4. Convocatoria de las elecciones de 1936: no localizable
+
+La Gaceta de enero de 1936 no está en ninguna de las dos vías permitidas por el `robots.txt` del BOE:
+- **Ruta de PDF** `/gazeta/dias/`: no aparece.
+- **Fichas `doc.php`:** en 1936 no hay ninguna ficha antes de `BOE-A-1936-9134`, el núm. 1 del BOE de Burgos. Se probaron identificadores repartidos entre 1 y 9133.
+
+La laguna de la narrativa del voto lo explica con este detalle. Para cerrarla hay que consultar la Gaceta en otra hemeroteca.

@@ -32,12 +32,16 @@
           ]
         },
         {
-          "text": "El censo de 31 de diciembre de 1930 declara que sabía leer el 62,0 % de los varones y el 51,2 % de las mujeres de la población de hecho, contando todas las edades e incluidas las posesiones del norte y costa occidental de África; por provincias, la proporción iba del 37,1 % de Albacete al 76,8 % de Álava.",
+          "text": "El censo de 31 de diciembre de 1930 declara que sabía leer el 62,0 % de los varones y el 51,2 % de las mujeres de la población de hecho, contando todas las edades e incluidas las posesiones del norte y costa occidental de África; en el censo de 1920 eran el 53,2 % y el 41,7 %. En 1930 la proporción provincial iba del 37,1 % de Albacete al 76,8 % de Álava.",
           "kind": "documento",
           "evidence": [
             {
               "document_id": "doc-ine-censo1930-instruccion",
               "locator": "totales nacionales y filas provinciales, columnas «saben leer» y «saben leer y escribir»"
+            },
+            {
+              "document_id": "doc-ine-censo1920-instruccion",
+              "locator": "totales generales, columnas «saben leer» y «saben leer y escribir»"
             }
           ]
         }
