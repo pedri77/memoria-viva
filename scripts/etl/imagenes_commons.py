@@ -9,7 +9,9 @@ no un cartel sublevado; se descarta. La pareja de «Aixafem el feixisme» (BnF) 
 de Madrid), localizado con la API de Europeana (clave pública de pruebas api2demo).
 
 Biblioteca Virtual de Madrid (bibliotecavirtualmadrid.comunidad.madrid): sin robots.txt (404, comprobado 15-11-2026);
-cada ficha declara «Derechos: Obra de dominio público». BiValDi (bivaldi.gva.es) veta en robots.txt a claudebot y
+cada ficha declara «Derechos: Obra de dominio público». Memòria Digital de Catalunya (mdc.csuc.cat): robots.txt solo veta las rutas /search/ (comprobado 15-11-2026); imagen por
+IIIF y ficha por su API de CONTENTdm. Se descartó un resguardo de 1939 de esa colección por llevar el nombre de un particular.
+BiValDi (bivaldi.gva.es) veta en robots.txt a claudebot y
 anthropic-ai: no se consulta.
 
 Cada imagen guarda autor, fecha, custodio, licencia, enlace a su ficha y, si existe, el pie original del
@@ -98,6 +100,24 @@ IMAGENES = [
      "custodio": "Biblioteca Regional de Madrid, Mg.XXVI/74,3",
      "licencia": "Dominio público (declarado por la Biblioteca Regional de Madrid: obra anónima sin derechos de autor localizados)", "licencia_url": PDM,
      "verificacion": "Ficha de la Biblioteca Virtual de Madrid, registro 24507: «Derechos: Obra de dominio público»."},
+    {"id": "img-billete-republica-1937", "pareja": "moneda", "bando": "republicano",
+     "directa": {"imagen": "https://mdc.csuc.cat/iiif/2/papermoneda:269/full/full/0/default.jpg",
+                 "ficha": "https://mdc.csuc.cat/digital/collection/papermoneda/id/269"},
+     "titulo": "Una peseta de la República, emisión de 1937",
+     "pie": "Certificado provisional de moneda divisionaria del Ministerio de Hacienda de la República: en el anverso, la Victoria de Samotracia y el escudo; en el reverso, la Cibeles de Madrid.",
+     "autor": "Ministerio de Hacienda de la República (emisor)", "fecha": "1937",
+     "custodio": "Universitat de Barcelona, Biblioteca Pavelló de la República (Memòria Digital de Catalunya, papermoneda 269)",
+     "licencia": "Dominio público (declarado por el repositorio)", "licencia_url": PDM,
+     "verificacion": "Ficha de Memòria Digital de Catalunya (API CONTENTdm, item 269): emisor, fecha y gestión de derechos «publicdomain/mark/1.0»."},
+    {"id": "img-billete-burgos-1938", "pareja": "moneda", "bando": "sublevado",
+     "directa": {"imagen": "https://mdc.csuc.cat/iiif/2/papermoneda:278/full/full/0/default.jpg",
+                 "ficha": "https://mdc.csuc.cat/digital/collection/papermoneda/id/278"},
+     "titulo": "Cinco pesetas del Banco de España, Burgos, 10 de agosto de 1938",
+     "pie": "Billete del Banco de España emitido en Burgos por las autoridades de la zona sublevada e impreso en Leipzig (Alemania) por Giesecke & Devrient.",
+     "autor": "Banco de España, Burgos (emisor)", "fecha": "1938",
+     "custodio": "Universitat de Barcelona, Biblioteca Pavelló de la República (Memòria Digital de Catalunya, papermoneda 278)",
+     "licencia": "Dominio público (declarado por el repositorio)", "licencia_url": PDM,
+     "verificacion": "Ficha de Memòria Digital de Catalunya (API CONTENTdm, item 278): emisor, lugar de impresión, fecha y gestión de derechos «publicdomain/mark/1.0»."},
     {"id": "img-batallon-etkar-andre", "pareja": "extranjeros", "bando": "republicano",
      "fichero": "File:Bundesarchiv Bild 183-H28510, Spanien, Gefechtsstand des Etkar André Bataillons.jpg",
      "titulo": "El batallón «Etkar André» de las Brigadas Internacionales, en reposo tras el frente",
@@ -143,6 +163,13 @@ def main() -> None:
         img["ficha_url"] = f"{BVM}/es/consulta/registro.do?id={img['bvm']['registro']}"
         img["src"] = f"img/archivo/{img['id']}.jpg"
         img["consultado"] = "2026-11-15"
+    for img in [i for i in IMAGENES if "directa" in i]:
+        dst = DEST / f"{img['id']}.jpg"
+        if not dst.exists():
+            with urllib.request.urlopen(urllib.request.Request(img["directa"]["imagen"], headers=UA), timeout=90) as r:
+                dst.write_bytes(r.read())
+            time.sleep(2)
+        img.update({"ficha_url": img["directa"]["ficha"], "src": f"img/archivo/{img['id']}.jpg", "consultado": "2026-11-15"})
     q = urllib.parse.urlencode({"action": "query", "titles": "|".join(i["fichero"] for i in com), "prop": "imageinfo",
                                 "iiprop": "url|size", "iiurlwidth": "1000", "format": "json"})
     with urllib.request.urlopen(urllib.request.Request("https://commons.wikimedia.org/w/api.php?" + q, headers=UA), timeout=90) as r:

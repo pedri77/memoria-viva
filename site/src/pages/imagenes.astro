@@ -9,6 +9,7 @@ const GRUPOS: [string, string, string][] = [
   ["movilizacion", "Movilización en las dos retaguardias", "Dos fotografías de 1936 de la misma agencia de prensa británica: milicianos en Barcelona y niños de las Flechas en Burgos."],
   ["frente", "Camino del frente", "Dos fotografías de 1936 de la misma agencia: soldados aclamados por la población en Madrid y en Burgos."],
   ["retratos", "Retratos", "Dos dibujos para cartel de la misma serie y de la misma biblioteca: el anarquista Buenaventura Durruti y el fundador de Falange, José Antonio Primo de Rivera."],
+  ["moneda", "Dinero en las dos zonas", "Cada zona emitió su propio dinero. Anverso y reverso de dos billetes de uso diario, de la misma colección universitaria."],
   ["extranjeros", "Intervención extranjera", "Voluntarios y tropas de otros países en los dos ejércitos: una imagen de cada bando, del mismo archivo."],
   ["efectos", "Efectos de la guerra", "Lo que dejó la guerra sobre las ciudades."],
 ];
@@ -22,7 +23,7 @@ const lag = lagunas.find((l: any) => l.id === "laguna-imagenes-carteles");
     <section class="im-grupo">
       <h2>{t}</h2>
       <p class="meta">{d}</p>
-      <div class="im-rejilla" data-n={imgs.filter((i: any) => i.pareja === g).length} style={`--ar:${imgs.filter((i: any) => i.pareja === g).every((i: any) => i.alto > i.ancho) ? "4 / 5" : "3 / 2"}`}>
+      <div class="im-rejilla" data-n={imgs.filter((i: any) => i.pareja === g).length} data-ancha={imgs.filter((i: any) => i.pareja === g).every((i: any) => i.ancho > 2.5 * i.alto) ? "si" : undefined} style={`--ar:${imgs.filter((i: any) => i.pareja === g).every((i: any) => i.alto > i.ancho) ? "4 / 5" : "3 / 2"}`}>
         {imgs.filter((i: any) => i.pareja === g).map((i: any) => (
           <figure class="im-fig" id={i.id}>
             <a href={i.ficha_url} rel="noopener"><img src={url(`/${i.src}`)} width={i.ancho} height={i.alto} alt={i.titulo} loading="lazy" decoding="async" /></a>
@@ -52,5 +53,7 @@ const lag = lagunas.find((l: any) => l.id === "laguna-imagenes-carteles");
   .im-etq { display: flex; gap: 10px; align-items: center; }
   .im-tit { font-family: var(--serif); font-size: 1.15rem !important; font-weight: 600; }
   .im-orig { color: var(--muted); }
+  .im-rejilla[data-ancha] { grid-template-columns: 1fr !important; }
+  .im-rejilla[data-ancha] .im-fig img { aspect-ratio: auto !important; }
   @media (max-width: 720px) { .im-rejilla[data-n="2"] { grid-template-columns: 1fr; } }
 </style>
