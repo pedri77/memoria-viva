@@ -1,0 +1,37 @@
+{
+  "id": "doc-ine-anuario1934-reforma-agraria",
+  "title": "Anuario Estadístico de España 1934: reforma agraria (propiedad catastrada por categoría de propietarios y fincas de la extinguida Grandeza de España)",
+  "title_original": "Reforma agraria. IV. Distribución, por la categoría de los propietarios, de la riqueza catastrada en cada provincia; V. Extensión expropiable perteneciente a la extinguida Grandeza de España, por provincias; VI. Fincas de la extinguida Grandeza de España que han sido expropiadas para los fines de la Reforma agraria, por provincias",
+  "document_type": "tabla_estadistica",
+  "source_ids": [
+    "F010"
+  ],
+  "custodian": "Instituto Nacional de Estadística, INEbase Historia (fondo documental)",
+  "signature": "Anuario Estadístico de España 1934, Agricultura, «Reforma agraria», págs. 213-214 (tablas IV td=102040, V td=102041, VI td=102042)",
+  "canonical_url": "https://www.ine.es/inebaseweb/treeNavigation.do?tn=102811",
+  "date": "1934-12-31",
+  "date_precision": "anio",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Tablas oficiales sobre la propiedad rústica y la Reforma agraria en las provincias de latifundio: número de propietarios y riqueza catastrada (líquido imponible) de los pequeños, medianos y grandes propietarios; extensión expropiable de la extinguida Grandeza de España, y fincas de la Grandeza expropiadas, con su superficie y los obreros asentados.",
+  "context": "Cifras oficiales publicadas en el Anuario de 1934 a partir de datos del catastro y del Instituto de Reforma Agraria; el Anuario no indica la fecha de referencia de cada tabla. Las fincas expropiadas son solo las de la extinguida Grandeza (base 20 de la ley de 1932), no el conjunto de la reforma. Según la nota de la tabla V, los 99 miembros de la extinguida Grandeza declararon 577 359 hectáreas en todo el territorio.",
+  "text_origin": "transcripcion_validada",
+  "rights": {
+    "status": "cc_by",
+    "action": "almacenar",
+    "attribution": "Fuente: Instituto Nacional de Estadística (INE), INEbase Historia, Anuario Estadístico de España 1934",
+    "evidence_url": "https://www.ine.es/ine/codigobp/politica_difusion_es.pdf",
+    "checked_at": "2026-11-15",
+    "note": "El INE aplica a la información de su web la licencia CC BY 4.0 salvo indicación contraria (Política de Difusión Estadística, febrero de 2026)."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Transcritas a mano; los 48 porcentajes de la tabla IV coinciden con los recalculados desde las cifras absolutas, y las tablas V y VI suman sus totales impresos."
+  },
+  "consulted_at": "2026-11-15"
+}

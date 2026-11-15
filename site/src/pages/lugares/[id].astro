@@ -71,15 +71,16 @@ const fecha = (e: any) => new Date(e.start_date + "T00:00:00Z").toLocaleDateStri
 
   {anuales.length > 0 && (
     <section>
-      <h2>Series anuales</h2>
+      <h2>Series anuales y otros datos</h2>
       <div class="series-grid">
-        {anuales.map((r) => (
+        {anuales.filter((r) => r.obs.length > 2).map((r) => (
           <div>
             <h3><a href={url(`/datos/#${r.i.id}`)}>{r.i.concept}</a></h3>
             <SerieLinea ind={r.i} placeId={p.id} />
           </div>
         ))}
       </div>
+      {anuales.some((r) => r.obs.length <= 2) && <dl class="otros-datos">{anuales.filter((r) => r.obs.length <= 2).map((r) => <><dt><a href={url(`/datos/#${r.i.id}`)}>{r.i.concept}</a></dt><dd>{r.obs.filter((o: any) => o.value != null).map((o: any) => `${o.value.toLocaleString("es-ES")} ${r.i.unit}`).join(" · ")}</dd></>)}</dl>}
       <details><summary>Ver las cifras</summary>
         <dl>{anuales.map((r) => <><dt>{r.i.concept}</dt><dd>{r.obs.map((o: any) => `${o.period}: ${o.value != null ? o.value.toLocaleString("es-ES") : "sin dato"}`).join(" · ")}</dd></>)}</dl>
       </details>

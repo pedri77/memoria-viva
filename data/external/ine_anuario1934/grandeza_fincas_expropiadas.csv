@@ -1,0 +1,13 @@
+provincia_impresa,cod_prov,fincas,superficie_ha,obreros_asentados,nota
+Badajoz,06,43,12673,1755,
+Cáceres,10,52,19406,733,
+Cádiz,11,65,19299,177,Superficie con un dígito dañado en el escaneo («19?299»); fijada en 19 299 por la suma de la columna (total impreso 89 127).
+Córdoba,14,16,6611,2564,
+Granada,18,52,713,50,
+Ciudad Real,13,2,4243,180,
+Jaén,23,3,1278,1123,
+Málaga,29,49,2071,177,
+Salamanca,37,14,7292,807,
+Sevilla,41,9,2869,160,
+Toledo,45,65,12672,833,
+TOTAL,TOTAL,370,89127,8559,

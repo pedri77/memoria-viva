@@ -1,0 +1,25 @@
+provincia_impresa,cod_prov,categoria,propietarios,pct_propietarios,liquido_imponible,pct_liquido
+Badajoz,06,pequenos,81843,90.56,13355673,19.37
+Badajoz,06,medianos,6039,6.68,14025618,20.34
+Badajoz,06,grandes,2495,2.76,41559512,60.29
+Cáceres,10,pequenos,39806,90.19,5251504,16.65
+Cáceres,10,medianos,3599,8.15,8250491,26.16
+Cáceres,10,grandes,729,1.66,18041700,57.19
+Ciudad Real,13,pequenos,82453,95.20,13371221,42.44
+Ciudad Real,13,medianos,3496,4.04,8324570,26.42
+Ciudad Real,13,grandes,658,0.76,9815496,31.14
+Córdoba,14,pequenos,68741,92.29,9610991,22.85
+Córdoba,14,medianos,4292,5.76,10463813,24.87
+Córdoba,14,grandes,1455,1.96,21992652,52.28
+Huelva,21,pequenos,36628,97.68,7244434,38.60
+Huelva,21,medianos,713,1.90,4699922,25.04
+Huelva,21,grandes,157,0.42,6822872,36.36
+Jaén,23,pequenos,95582,93.17,13372943,34.00
+Jaén,23,medianos,5754,5.61,12293002,31.26
+Jaén,23,grandes,1257,1.22,13660409,34.74
+Sevilla,41,pequenos,39302,83.57,8406057,11.83
+Sevilla,41,medianos,5381,11.44,11641212,16.38
+Sevilla,41,grandes,2344,4.99,51009060,71.79
+Toledo,45,pequenos,106048,94.72,12687165,35.87
+Toledo,45,medianos,5019,4.48,9254892,26.16
+Toledo,45,grandes,895,0.80,13431626,37.97

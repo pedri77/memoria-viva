@@ -13,7 +13,8 @@ Saber leer · relato con pasos (mapa fijo, textos en flujo normal)
 Votar · relato con pasos
   1931 · Constitución (art. 36) · 1933 · 1936; los mapas de circunscripciones se funden
 La tierra · relato con pasos
-  censo de 1930 (grupo II) · fila «Diversas» · términos municipales 1931 · Reforma Agraria 1932 · 1935;
+  censo de 1930 (grupo II) · fila «Diversas» · términos municipales 1931 · riqueza de los grandes propietarios ·
+  Reforma Agraria 1932 · fincas expropiadas a la Grandeza y asentados · 1935;
   dos mapas con escalas distintas que se funden (no se interpolan) y leyenda que cambia con el paso
 Cronología · carrete horizontal fijado, alto calculado en JS según el ancho de la pista
 Índice · flujo normal · Cierre · wordmark
@@ -22,6 +23,7 @@ Movimiento reducido: sin transiciones autónomas; lo ligado al scroll se mantien
 */
 import Base from "../layouts/Base.astro";
 import Fuente from "../components/Fuente.astro";
+import fincasRaw from "../../../data/external/ine_anuario1934/grandeza_fincas_expropiadas.csv?raw";
 import { events, documents, sources, stories, places, indicators, url, byId } from "../lib/data";
 import { TYPE_LABEL } from "../lib/atlas";
 import { MAPA, provincias, circunscripciones, puntos, afirmacion, docIndicador, cronologia } from "../lib/portada";
@@ -64,6 +66,14 @@ const agr = v30(indAgr), div = v30(indDiv);
 const rango = (m: Record<string, number | null>) => { const xs = Object.values(m).filter((v): v is number => v != null); return [Math.floor(Math.min(...xs)), Math.ceil(Math.max(...xs))]; };
 const domAgr = rango(agr), domDiv = rango(div);
 const docProf = byId(documents, "doc-ine-censo1930-profesiones");
+const docRA = byId(documents, "doc-ine-anuario1934-reforma-agraria");
+const vPer = (id: string, per: string) => Object.fromEntries((byId(indicators, id)?.observations ?? []).filter((o: any) => o.period === per && o.value != null).map((o: any) => [o.place_id.slice(-2), o.value]));
+const rq = vPer("ind-ra-riqueza-grandes-prov", "1934"), asent = vPer("ind-ra-asentados-prov", "1934"), sup = vPer("ind-ra-superficie-expropiada-prov", "1934");
+const domRq = rango(rq), domAs = rango(asent);
+const sumaV = (m: Record<string, number>) => Object.values(m).reduce((a, b) => a + b, 0);
+const n0 = (v: number) => v.toLocaleString("es-ES");
+const fincasTotal = Number(fincasRaw.trim().split(/\r?\n/).find((l) => l.startsWith("TOTAL,"))!.split(",")[2]);
+const maxAs = (() => { const [c, v] = Object.entries(asent).sort((x: any, y: any) => y[1] - x[1])[0] as [string, number]; return { nombre: provs.find((p) => p.code === c)?.name ?? c, v }; })();
 const claimEv = (eid: string, i: number) => { const e = byId(events, eid); const c = e.claims[i]; const d = byId(documents, c.evidence[0].document_id); return { text: c.text, doc: { id: d.id, title: d.title, locator: c.evidence[0].locator ?? "" }, ev: eid }; };
 const extremo = (m: Record<string, number | null>, signo: number) => {
   const [c, v] = Object.entries(m).filter(([, v]) => v != null).sort((x: any, y: any) => signo * (y[1] - x[1]))[0] as [string, number];
@@ -82,9 +92,18 @@ const tierra = [
     textos: ["El mismo censo pone a mucha gente en una fila de «Diversas» que no dice a qué se dedicaba; parte serían jornaleros del campo. Donde esa fila es grande, el peso real de la agricultura puede ser mayor que el del mapa anterior. A las tablas de algunas provincias les faltan páginas: en el mapa anterior, Gerona y Vizcaya quedan sin dato; en este, Cádiz."],
     doc: docProf && { id: docProf.id, title: docProf.title, locator: "" }, atlas: "capa=censo&ind=ind-prof-diversas-prov&censo=1930" },
   { frame: "agr", fecha: "Abril de 1931", titulo: "Los braceros del término", min: domAgr[0], max: domAgr[1], pasos: [claimEv("evt-1931-04-30-terminos-municipales", 0), claimEv("evt-1931-04-30-terminos-municipales", 1)] },
+  { frame: "rq", fecha: "Anuario de 1934", titulo: "Quién tenía la tierra", min: domRq[0], max: domRq[1], unidad: "%",
+    textos: [`En las ocho provincias de latifundio que estudia el Anuario de 1934, los grandes propietarios (los que pagaban más de 5.000 pesetas de cuota) tenían entre el ${extremo(rq, -1)} y el ${extremo(rq, 1)} de la riqueza rústica catastrada.`,
+             "El mapa solo colorea esas ocho provincias: las demás no figuran en la tabla."],
+    doc: docRA && { id: docRA.id, title: docRA.title, locator: "tabla IV" }, atlas: "capa=censo&ind=ind-ra-riqueza-grandes-prov&censo=1934" },
   { frame: "agr", fecha: "Septiembre de 1932", titulo: "La Ley de Reforma Agraria", min: domAgr[0], max: domAgr[1], pasos: [claimEv("evt-1932-09-15-reforma-agraria", 0), claimEv("evt-1932-09-15-reforma-agraria", 1)] },
+  { frame: "as", fecha: "Anuario de 1934", titulo: "Lo que se expropió a la Grandeza", min: domAs[0], max: domAs[1], unidad: "obreros asentados",
+    textos: [`Según el Anuario de 1934, se habían expropiado ${n0(fincasTotal)} fincas de la extinguida Grandeza de España en ${Object.keys(asent).length} provincias, con ${n0(sumaV(sup))} hectáreas, y se habían asentado en ellas ${n0(sumaV(asent))} obreros. Donde más, en ${maxAs.nombre}: ${n0(maxAs.v)}.`,
+             "Son solo las fincas de la Grandeza, no el conjunto de la reforma, y el Anuario no da la fecha de corte."],
+    doc: docRA && { id: docRA.id, title: docRA.title, locator: "tablas V y VI" }, atlas: "capa=censo&ind=ind-ra-asentados-prov&censo=1934" },
   { frame: "agr", fecha: "1935", titulo: "Arrendamientos y «reforma de la reforma»", min: domAgr[0], max: domAgr[1], pasos: [claimEv("evt-1935-03-24-arrendamientos-rusticos", 0), claimEv("evt-1935-08-10-reforma-reforma-agraria", 0), claimEv("evt-1935-08-10-reforma-reforma-agraria", 1)] },
 ];
+const ETQ: Record<string, string> = { agr: "El campo en 1930", div: "«Diversas», 1930", rq: "Riqueza de los grandes propietarios", as: "Obreros asentados en fincas de la Grandeza" };
 const tT = (v: number | null | undefined, d: number[]) => v == null ? null : ((v - d[0]) / (d[1] - d[0])).toFixed(3);
 
 // Dominios de color: de los propios datos, no fijados a mano.
@@ -202,17 +221,17 @@ const indice = [
         <figure class="rel-mapa" aria-hidden="true">
           <svg viewBox={`0 0 ${MAPA.w} ${MAPA.h}`} class="mapa">
             <defs><pattern id="rayado-t" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="ray-f" /><line x1="0" y1="0" x2="0" y2="6" class="ray-l" /></pattern></defs>
-            {[["agr", agr, domAgr, "trabaja en el campo"], ["div", div, domDiv, "en la fila «Diversas»"]].map(([fr, m, d, txt]: any) => (
+            {[["agr", agr, domAgr, "% trabaja en el campo"], ["div", div, domDiv, "% en la fila «Diversas»"], ["rq", rq, domRq, "% de la riqueza, de grandes propietarios"], ["as", asent, domAs, "obreros asentados"]].map(([fr, m, d, txt]: any) => (
               <g class="capa-elec capa-tierra" data-frame={fr}>{provs.map((p) => { const v = m[p.code]; return (
-                <path d={p.d} class={v == null ? "nd" : undefined} style={v == null ? undefined : `--t:${tT(v, d)}`} data-tip={`${p.name}: ${v == null ? "sin dato" : `${String(v).replace(".", ",")} % ${txt}`}`} />); })}</g>
+                <path d={p.d} class={v == null ? "nd" : undefined} style={v == null ? undefined : `--t:${tT(v, d)}`} data-tip={`${p.name}: ${v == null ? "sin dato" : `${Number(v).toLocaleString("es-ES")} ${txt}`}`} />); })}</g>
             ))}
           </svg>
           <div class="leyenda"><span class="ley-et" data-label>El campo en 1930</span><span class="ley-barra"></span><span class="ley-min" data-ley-min>{domAgr[0]} %</span><span class="ley-max" data-ley-max>{domAgr[1]} %</span></div>
-          <figcaption class="meta">% de la población con profesión. INE, censo de 1930, tomo III (CC BY 4.0). Sin dato: rayado.</figcaption>
+          <figcaption class="meta">INE: censo de 1930, tomo III, y Anuario Estadístico de 1934, «Reforma agraria» (CC BY 4.0). Sin dato: rayado.</figcaption>
         </figure>
         <ol class="pasos">
           {tierra.map((s) => (
-            <li class="paso" data-frame={s.frame} data-label={s.frame === "div" ? "«Diversas», 1930" : "El campo en 1930"} data-min={s.min} data-max={s.max}>
+            <li class="paso" data-frame={s.frame} data-label={ETQ[s.frame]} data-min={s.min} data-max={s.max} data-unidad={s.unidad ?? "%"}>
               <div class="paso-caja">
                 <p class="meta">{s.fecha}</p>
                 <h3>{s.titulo}</h3>
@@ -319,7 +338,7 @@ const indice = [
       if (r.label.textContent !== et) {
         r.label.textContent = et;
         const pa = r.pasos[activo], mn = r.el.querySelector("[data-ley-min]"), mx = r.el.querySelector("[data-ley-max]");
-        if (pa.dataset.min && mn && mx) { mn.textContent = `${pa.dataset.min} %`; mx.textContent = `${pa.dataset.max} %`; }
+        if (pa.dataset.min && mn && mx) { const u = pa.dataset.unidad === "%" ? " %" : ""; mn.textContent = `${Number(pa.dataset.min).toLocaleString("es-ES")}${u}`; mx.textContent = `${Number(pa.dataset.max).toLocaleString("es-ES")}${u}`; }
       }
       if (r.tipo === "leer") {
         for (const p of r.prov!) {
@@ -440,7 +459,7 @@ const indice = [
   html.js .capa-elec:not([data-frame="1931"]) { opacity: 0; }
   html:not(.js) .capa-elec:not([data-frame="1936"]):not(.capa-tierra) { display: none; }
   html:not(.js) .capa-tierra:not([data-frame="agr"]) { display: none; }
-  html.js .capa-tierra[data-frame="div"] { opacity: 0; }
+  html.js .capa-tierra:not([data-frame="agr"]) { opacity: 0; }
   html.js .capa-tierra[data-frame="agr"] { opacity: 1; }
   .capa-tierra path { fill: color-mix(in oklab, var(--r0), var(--r2) calc(var(--t, 0) * 100%)); }
   .capa-tierra path.nd { fill: url(#rayado-t); }

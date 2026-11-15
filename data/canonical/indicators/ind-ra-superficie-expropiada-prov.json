@@ -1,0 +1,387 @@
+{
+  "id": "ind-ra-superficie-expropiada-prov",
+  "concept": "Superficie expropiada a la Grandeza (Anuario de 1934)",
+  "definition": "Hectáreas de las fincas de la extinguida Grandeza de España expropiadas para los fines de la Reforma agraria.",
+  "unit": "hectáreas",
+  "denominator": "ver definición",
+  "method": "Cifra impresa en la tabla VI.",
+  "source_ids": [
+    "F010"
+  ],
+  "comparability_notes": "Solo las fincas de la extinguida Grandeza de España expropiadas hasta la fecha del Anuario, no el conjunto de la reforma; el Anuario no indica la fecha de corte.",
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Generado por scripts/etl/ine_reforma_agraria_1934.py."
+  },
+  "observations": [
+    {
+      "place_id": "plc-prov-01",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1934",
+      "value": 12673,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "locator": "tabla VI, «Superficie, en hectáreas»"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1934",
+      "value": 19406,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "locator": "tabla VI, «Superficie, en hectáreas»"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1934",
+      "value": 19299,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "locator": "tabla VI, «Superficie, en hectáreas»",
+      "uncertainty": "Superficie con un dígito dañado en el escaneo («19?299»); fijada en 19 299 por la suma de la columna (total impreso 89 127)."
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1934",
+      "value": 4243,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "locator": "tabla VI, «Superficie, en hectáreas»"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1934",
+      "value": 6611,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "locator": "tabla VI, «Superficie, en hectáreas»"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1934",
+      "value": 713,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "locator": "tabla VI, «Superficie, en hectáreas»"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1934",
+      "value": 1278,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "locator": "tabla VI, «Superficie, en hectáreas»"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1934",
+      "value": 2071,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "locator": "tabla VI, «Superficie, en hectáreas»"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1934",
+      "value": 7292,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "locator": "tabla VI, «Superficie, en hectáreas»"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1934",
+      "value": 2869,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "locator": "tabla VI, «Superficie, en hectáreas»"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1934",
+      "value": 12672,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "locator": "tabla VI, «Superficie, en hectáreas»"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1934",
+      "value": null,
+      "document_id": "doc-ine-anuario1934-reforma-agraria",
+      "missingness_reason": "La tabla del Anuario de 1934 no incluye esta provincia: solo recoge las provincias de la zona estudiada por la Reforma agraria."
+    }
+  ]
+}
