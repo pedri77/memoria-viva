@@ -1,27 +1,117 @@
 ---
 import Base from "../layouts/Base.astro";
-import { url } from "../lib/data";
+import { url, events, stories, documents, indicators } from "../lib/data";
+const claims = [...events.flatMap((e) => e.claims), ...stories.flatMap((s) => s.scenes.flatMap((sc: any) => sc.claims))];
+const n = (k: string) => claims.filter((c: any) => c.kind === k).length;
+const ejemplo = (k: string) => claims.find((c: any) => c.kind === k);
+const TIPOS: [string, string, string][] = [
+  ["documento", "Según el documento", "Lo que dice un documento concreto, con su localización exacta. Acredita que el documento lo dice, no que sea verdad."],
+  ["hecho", "Hecho documentado", "Lo que acreditan al menos dos fuentes independientes o el consenso historiográfico."],
+  ["interpretacion", "Interpretación", "Una lectura historiográfica. Siempre atribuida a su autor y su obra."],
+  ["estimacion", "Estimación", "Una cifra no observada directamente. Siempre atribuida, con su rango y su método."],
+];
 ---
-<Base title="Metodología" description="Cómo se documenta, qué se publica y qué no en España: Memoria Viva.">
-  <h1>Metodología</h1>
-  <h2>Principios</h2>
-  <ol>
-    <li>Cada objeto publicado identifica su fuente, su custodio, su fecha con la precisión real y sus condiciones de reutilización.</li>
-    <li>Un documento acredita lo que dice, no que lo que dice sea cierto. Cada documento se contextualiza: quién lo produjo y para qué.</li>
-    <li>Se distingue entre lo que dice un documento, un hecho contrastado, una interpretación (siempre atribuida) y una estimación.</li>
-    <li>La violencia y la represión ejercidas por los distintos actores se describen según la evidencia, distinguiendo periodos, agentes, mecanismos y carácter institucional, sin simetrías artificiales.</li>
-    <li>La ausencia de documentos no prueba la ausencia de hechos. Las lagunas se muestran.</li>
-    <li>Los datos estadísticos se publican con unidad, denominador, método y advertencias de comparabilidad. No se interpolan valores en silencio.</li>
-  </ol>
-  <h2>Qué no se publica</h2>
-  <ul>
-    <li>Nombres de víctimas, de familiares o de responsables de actos de represión. Sí se nombra a cargos públicos en el ejercicio de su cargo cuando consta en una fuente oficial.</li>
-    <li>Coordenadas exactas de fosas o de otros lugares sensibles: como mucho, el municipio.</li>
-    <li>Imágenes o textos con derechos sin autorización: se enlaza al custodio.</li>
-    <li>Contenidos generados por IA presentados como documentos, testimonios o fotografías.</li>
-  </ul>
-  <h2 id="correcciones">Correcciones</h2>
-  <p>Cualquier error puede notificarse en <a href="https://github.com/pedri77/memoria-viva/issues/new?template=correccion.yml">el formulario de correcciones</a>. Cada corrección queda registrada en el historial público del repositorio.</p>
-  <h2>Fuentes</h2>
-  <p>El registro de fuentes, con su estado de auditoría y su licencia, está en <a href={url("/fuentes/")}>Fuentes</a>.</p>
+<Base title="Metodología" description="Cómo se documenta, cómo se comprueba cada cifra, qué se publica y qué no, y cómo se ha usado la IA en España: Memoria Viva.">
+  <article class="metodo">
+    <header>
+      <h1>Cómo está hecho</h1>
+      <p class="m-lead">Cada afirmación de este proyecto enlaza al documento que la sostiene. Esta página explica qué significa eso, cómo se comprueban las cifras, qué no se publica y quién ha hecho el trabajo.</p>
+    </header>
+
+    <section aria-labelledby="h-tipos">
+      <h2 id="h-tipos">Cuatro tipos de afirmación</h2>
+      <p>No todo lo que se afirma tiene el mismo respaldo. Cada afirmación lleva su tipo, y la web lo muestra.</p>
+      <div class="tipos">
+        {TIPOS.map(([k, t, d]) => {
+          const e = ejemplo(k);
+          return (
+            <div class={`tipo t-${k}`}>
+              <p class="tipo-n">{n(k)}</p>
+              <h3>{t}</h3>
+              <p>{d}</p>
+              {e ? <blockquote>{e.text.length > 170 ? e.text.slice(0, e.text.lastIndexOf(" ", 165)) + "…" : e.text}</blockquote> : <p class="meta">Aún no hay ninguna en el proyecto.</p>}
+            </div>
+          );
+        })}
+      </div>
+    </section>
+
+    <section aria-labelledby="h-cifras">
+      <h2 id="h-cifras">Cómo se comprueba una cifra</h2>
+      <p>Las tablas antiguas del INE y de los anuarios están escaneadas y el reconocimiento automático de texto no sirve para los números. Por eso se transcriben a mano y cada transcripción tiene que pasar comprobaciones aritméticas antes de publicarse.</p>
+      <ol class="pasos-m">
+        <li><strong>Transcribir</strong> cada cifra desde la imagen del original.</li>
+        <li><strong>Cuadrar las filas.</strong> Varones más mujeres dan el total; nacidos menos fallecidos dan la diferencia impresa.</li>
+        <li><strong>Cuadrar las columnas.</strong> Las provincias suman el total de España impreso en la misma tabla.</li>
+        <li><strong>Cruzar con otra fuente.</strong> Por ejemplo, los grupos de profesiones de Huesca en 1930 suman 242.958 personas, exactamente la población de hecho que da otra fuente independiente.</li>
+        <li><strong>Publicar las dudas.</strong> Las erratas de la propia tabla, los dígitos dañados y las páginas que faltan quedan anotados en el dato, no corregidos en silencio.</li>
+      </ol>
+      <p class="meta">Los scripts que hacen estas comprobaciones están en el <a href="https://github.com/pedri77/memoria-viva/tree/main/scripts">repositorio</a>, con las transcripciones y sus notas.</p>
+    </section>
+
+    <section aria-labelledby="h-principios">
+      <h2 id="h-principios">Principios</h2>
+      <ol class="principios">
+        <li>Cada objeto publicado identifica su fuente, su custodio, su fecha con la precisión real y sus condiciones de reutilización.</li>
+        <li>Un documento acredita lo que dice, no que lo que dice sea cierto. Cada documento se contextualiza: quién lo produjo y para qué.</li>
+        <li>La violencia y la represión ejercidas por los distintos actores se describen según la evidencia, distinguiendo periodos, agentes, mecanismos y carácter institucional, sin simetrías artificiales.</li>
+        <li>La ausencia de documentos no prueba la ausencia de hechos. Las <a href={url("/lagunas/")}>lagunas</a> se muestran: qué se buscó, dónde y qué fuentes probar.</li>
+        <li>Los datos estadísticos se publican con unidad, denominador, método y advertencias de comparabilidad. No se interpolan valores en silencio.</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="h-no">
+      <h2 id="h-no">Qué no se publica</h2>
+      <ul>
+        <li>Nombres de víctimas, de familiares o de responsables de actos de represión. Sí se nombra a cargos públicos en el ejercicio de su cargo cuando consta en una fuente oficial.</li>
+        <li>Coordenadas exactas de fosas o de otros lugares sensibles: como mucho, el municipio.</li>
+        <li>Imágenes o textos con derechos sin autorización: se enlaza al custodio. Las únicas imágenes son facsímiles de los propios documentos, con la cita que exige cada custodio.</li>
+        <li>Contenidos generados por IA presentados como documentos, testimonios o fotografías.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="h-ia" class="m-ia">
+      <h2 id="h-ia">Quién ha hecho el trabajo, y con qué</h2>
+      <p>Es un proyecto personal. Buena parte del trabajo se ha hecho con asistentes de IA, como permite la <a href="https://github.com/pedri77/memoria-viva/blob/main/docs/guia_editorial.md">guía editorial</a> (§6):</p>
+      <ul>
+        <li>la búsqueda y la auditoría de fuentes;</li>
+        <li>la transcripción de las tablas;</li>
+        <li>la redacción de fichas y narrativas;</li>
+        <li>el código de la web.</li>
+      </ul>
+      <p>Por eso:</p>
+      <ul>
+        <li>ninguna cifra se publica sin pasar las comprobaciones aritméticas de arriba;</li>
+        <li>cada afirmación enlaza al original para que cualquiera la verifique;</li>
+        <li>todo el contenido está «en revisión» hasta que lo revisen personas con formación en historia contemporánea.</li>
+      </ul>
+      <p>Hoy no hay ninguna ficha marcada como aprobada: {documents.length} documentos, {events.length} acontecimientos, {indicators.length} indicadores y {stories.length} narrativas siguen en revisión.</p>
+    </section>
+
+    <section aria-labelledby="correcciones">
+      <h2 id="correcciones">Correcciones</h2>
+      <p>Cualquier error puede notificarse en <a href="https://github.com/pedri77/memoria-viva/issues/new?template=correccion.yml">el formulario de correcciones</a>. Cada corrección queda en el <a href={url("/cambios/")}>registro de cambios</a> y en el historial público del repositorio.</p>
+      <h2>Fuentes</h2>
+      <p>El registro de fuentes, con su estado de auditoría y su licencia, está en <a href={url("/fuentes/")}>Fuentes</a>.</p>
+    </section>
+  </article>
 </Base>
+<style is:global>
+  .metodo h1 { font-size: clamp(2.6rem, 1.6rem + 4vw, 4.6rem); letter-spacing: -0.03em; margin: .6em 0 .2em; font-variation-settings: "opsz" 60; }
+  .m-lead { font-size: 1.2rem; }
+  .metodo section { padding: 16px 0 8px; border-top: 1px solid var(--line); margin-top: 32px; }
+  .tipos { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0; border-top: 1px solid var(--ink); margin-top: 16px; }
+  .tipo { padding: 16px 16px 20px 0; border-bottom: 1px solid var(--line); }
+  .tipo + .tipo { padding-left: 16px; border-left: 1px solid var(--line); }
+  .tipo .tipo-n { font-family: var(--serif); font-size: 2.6rem; line-height: 1; margin: 0 0 8px; color: var(--accent); font-variant-numeric: lining-nums; }
+  .t-hecho .tipo-n, .t-interpretacion .tipo-n { color: var(--muted); }
+  .tipo h3 { margin: 0 0 6px; font-size: 1.15rem; }
+  .tipo p { font-size: .95rem; margin: 0 0 8px; }
+  .tipo blockquote { margin: 8px 0 0; padding: 0; font-family: var(--serif); font-style: italic; font-size: .95rem; color: var(--muted); }
+  .pasos-m { counter-reset: paso; list-style: none; padding: 0; }
+  .pasos-m li { counter-increment: paso; position: relative; padding: 10px 0 10px 56px; border-top: 1px solid color-mix(in srgb, var(--line) 60%, transparent); }
+  .pasos-m li::before { content: counter(paso); position: absolute; left: 0; top: 4px; font-family: var(--serif); font-size: 2rem; color: var(--accent); font-variant-numeric: lining-nums; }
+  .principios li { margin: 8px 0; }
+  .m-ia { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px 24px 16px !important; }
+  @media (max-width: 760px) { .tipo + .tipo { border-left: 0; padding-left: 0; } }
+</style>

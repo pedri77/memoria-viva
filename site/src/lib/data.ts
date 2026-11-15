@@ -24,6 +24,8 @@ export const RIGHTS_LABEL: Record<string, string> = {
   cc0: "CC0",
   cc_by: "CC BY",
   cc_by_sa: "CC BY-SA",
+  cc_by_nc: "CC BY-NC",
+  cc_by_nc_sa: "CC BY-NC-SA",
   reuse_conditions: "Reutilizable con condiciones del custodio",
   reuse_open: "Reutilización abierta con cita (Ley 37/2007)",
   link_only: "Solo enlace",

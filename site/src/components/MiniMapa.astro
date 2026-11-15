@@ -1,0 +1,39 @@
+---
+// Mapa provincial pequeño en SVG (límites de 1930). Dos usos:
+//  - valores: colorea por quintiles un indicador en un periodo (datos de data/canonical);
+//  - resalta: marca una provincia (mapa de situación).
+// Cada provincia lleva data-tip para la etiqueta flotante de Base.astro.
+import { svgProvincias } from "../lib/atlas";
+import { places } from "../lib/data";
+interface Props { ancho?: number; ind?: any; periodo?: string; resalta?: string; etiqueta?: string }
+const { ancho = 240, ind, periodo, resalta, etiqueta } = Astro.props;
+const svg = svgProvincias(ancho);
+const nombre = (c: string) => places.find((p) => p.id === `plc-prov-${c}`)?.canonical_name ?? c;
+const val: Record<string, number | null> = {};
+if (ind && periodo) for (const o of ind.observations) if (o.period === periodo) val[o.place_id.slice(-2)] = o.value;
+const vs = Object.values(val).filter((v): v is number => v != null).sort((a, b) => a - b);
+const cortes = [0.2, 0.4, 0.6, 0.8].map((q) => vs[Math.floor(q * (vs.length - 1))]);
+const clase = (v: number | null | undefined) => v == null ? "nd" : `q${cortes.filter((c) => v >= c).length}`;
+const fmt = (v: number | null | undefined) => v == null ? "sin dato" : v.toLocaleString("es-ES", { maximumFractionDigits: 1 });
+---
+<svg viewBox={`0 0 ${svg.width} ${svg.height}`} class="minimapa" role="img" aria-label={etiqueta ?? (resalta ? `Situación de ${nombre(resalta)} en el mapa de España` : `Mapa de ${ind?.concept ?? ""}, ${periodo ?? ""}`)}>
+  {svg.paths.map((p) => ind
+    ? <path d={p.d} class={clase(val[p.code])} data-tip={`${nombre(p.code)}: ${fmt(val[p.code])} ${ind.unit}`} />
+    : <path d={p.d} class={p.code === resalta ? "sel" : ""} data-tip={nombre(p.code)} />)}
+</svg>
+<style is:global>
+  .minimapa { width: 100%; height: auto; display: block; overflow: visible; }
+  .minimapa path { stroke: var(--bg); stroke-width: .6; fill: var(--line); }
+  .minimapa path.nd { fill: color-mix(in srgb, var(--muted) 25%, transparent); }
+  .minimapa path.q0 { fill: color-mix(in oklab, #EADFC6, #17324A 6%); }
+  .minimapa path.q1 { fill: color-mix(in oklab, #EADFC6, #17324A 28%); }
+  .minimapa path.q2 { fill: color-mix(in oklab, #EADFC6, #17324A 50%); }
+  .minimapa path.q3 { fill: color-mix(in oklab, #EADFC6, #17324A 72%); }
+  .minimapa path.q4 { fill: #17324A; }
+  .minimapa path.sel { fill: var(--accent); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .minimapa path.q0 { fill: #263848; } :root:not([data-theme="light"]) .minimapa path.q1 { fill: #3B5568; }
+    :root:not([data-theme="light"]) .minimapa path.q2 { fill: #5E89A3; } :root:not([data-theme="light"]) .minimapa path.q3 { fill: #9DBDD0; }
+    :root:not([data-theme="light"]) .minimapa path.q4 { fill: #D8E6EE; }
+  }
+</style>

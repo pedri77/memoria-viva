@@ -1,6 +1,8 @@
 ---
 import Base from "../../layouts/Base.astro";
 import Retirado from "../../components/Retirado.astro";
+import MiniMapa from "../../components/MiniMapa.astro";
+import SerieLinea from "../../components/SerieLinea.astro";
 import { retired } from "../../lib/data";
 import { places, events, documents, indicators, byId, url, PRECISION_LABEL } from "../../lib/data";
 export function getStaticPaths() {
@@ -8,9 +10,10 @@ export function getStaticPaths() {
 }
 const { p } = Astro.props;
 const code = p.ine_code ?? "";
+const esProv = p.place_type === "provincia";
 const inProv = (pid: string) => {
   const q = byId(places, pid);
-  return pid === p.id || (p.place_type === "provincia" && q?.parent_id === p.id);
+  return pid === p.id || (esProv && q?.parent_id === p.id);
 };
 const evs = events.filter((e) => e.place_ids.some(inProv) && !(p.id === "plc-espana"));
 const evsAll = p.id === "plc-espana" ? events : evs;
@@ -22,21 +25,67 @@ const rows = indicators.filter((i) => !esAnual(i)).map((i) => ({
 })).filter((r) => r.obs.some(Boolean));
 const anuales = indicators.filter(esAnual).map((i) => ({
   i, obs: i.observations.filter((o: any) => o.place_id === p.id).sort((a: any, b: any) => a.period.localeCompare(b.period)),
-})).filter((r) => r.obs.length);
+})).filter((r) => r.obs.some((o: any) => o.value != null));
 const parent = p.parent_id ? byId(places, p.parent_id) : null;
+
+// Perfil escrito a partir de los datos: valor y posición entre las provincias (1 = el más alto)
+const dato = (id: string, per: string) => {
+  const ind = byId(indicators, id); if (!ind) return null;
+  const o = ind.observations.find((x: any) => x.place_id === p.id && x.period === per); if (o?.value == null) return null;
+  const vals = ind.observations.filter((x: any) => x.period === per && x.value != null).map((x: any) => x.value).sort((a: number, b: number) => b - a);
+  return { v: o.value as number, pos: vals.indexOf(o.value) + 1, n: vals.length, id };
+};
+const nf = (v: number, d = 1) => v.toLocaleString("es-ES", { maximumFractionDigits: d });
+const puesto = (x: any) => x.pos === 1 ? "la más alta de todas las provincias" : x.pos === x.n ? "la más baja de todas las provincias"
+  : x.pos <= x.n / 2 ? `la ${x.pos}.ª más alta de ${x.n} provincias` : `la ${x.n - x.pos + 1}.ª más baja de ${x.n} provincias`;
+const pob = dato("ind-pob-hecho-prov", "1930"), lee = dato("ind-alfab-total-prov", "1930"), agr = dato("ind-prof-agraria-prov", "1930");
+const inf = dato("ind-mortalidad-infantil-prov", "1941"), sob = dato("ind-sobremortalidad-prov", "1941");
+const fecha = (e: any) => new Date(e.start_date + "T00:00:00Z").toLocaleDateString("es-ES", { day: e.date_precision === "dia" ? "numeric" : undefined, month: e.date_precision === "anio" ? undefined : "long", year: "numeric", timeZone: "UTC" });
 ---
 {Astro.props.retiredObj ? <Retirado o={Astro.props.p} /> : <>
-<Base title={p.canonical_name} description={`Ficha de ${p.canonical_name}: datos censales, acontecimientos y documentos.`}>
+<Base title={p.canonical_name} description={`Ficha de ${p.canonical_name}: datos censales, series anuales, acontecimientos y documentos.`}>
   <span hidden data-pagefind-filter="tipo">Lugar</span>
-  <p class="meta">{parent && <><a href={url(`/lugares/${parent.id}/`)}>{parent.canonical_name}</a> › </>}{p.place_type}</p>
-  <h1>{p.canonical_name}</h1>
-  {p.historical_names?.length > 0 && <p class="meta">Denominación en 1930: {p.historical_names.map((h: any) => h.name).join(", ")}</p>}
-  <dl class="card">
+  <div class={`lugar-cab${esProv ? " con-mapa" : ""}`}>
+    <div>
+      <p class="meta">{parent && <><a href={url(`/lugares/${parent.id}/`)}>{parent.canonical_name}</a> › </>}{p.place_type}</p>
+      <h1>{p.canonical_name}</h1>
+      {p.historical_names?.length > 0 && <p class="meta">Denominación en 1930: {p.historical_names.map((h: any) => h.name).join(", ")}</p>}
+      {esProv && (pob || lee || agr || inf) && (
+        <div class="perfil">
+          {pob && <p>En 1930 tenía <strong>{nf(pob.v, 0)}</strong> habitantes de hecho.</p>}
+          {lee && <p>Sabía leer el <strong>{nf(lee.v)} %</strong> de su población, {puesto(lee)}.</p>}
+          {agr && <p>El <strong>{nf(agr.v)} %</strong> de la población con profesión trabajaba en montes, agricultura o ganadería: {puesto(agr)}.</p>}
+          {inf && <p>En 1941 murieron <strong>{nf(inf.v)}</strong> de cada 1.000 niños antes de cumplir un año{sob ? <>, y las defunciones fueron el {nf(sob.v)} % de las de 1934-1935</> : ""}.</p>}
+          <p class="meta">Datos del INE; método y cautelas de cada cifra en <a href={url("/datos/")}>Datos</a>.</p>
+        </div>
+      )}
+    </div>
+    {esProv && <figure class="lugar-mapa"><MiniMapa resalta={code} ancho={300} /><figcaption class="meta"><a href={url(`/atlas/?sel=${p.id}`)}>Ver en el atlas</a></figcaption></figure>}
+  </div>
+
+  <dl class="card lugar-ficha">
     {code && <><dt>Código INE</dt><dd>{code}</dd></>}
     {p.wikidata && <><dt>Wikidata</dt><dd><a href={`https://www.wikidata.org/wiki/${p.wikidata}`}>{p.wikidata}</a></dd></>}
     <dt>Geometría</dt><dd>{p.geometry_precision === "exacta" ? "límites de 1930 (mapSpainHist)" : p.geometry_precision === "centroide" ? "solo punto central del municipio" : "sin geometría"}</dd>
-    {p.place_type === "provincia" && <><dt>Mapa</dt><dd><a href={url(`/atlas/?sel=${p.id}`)}>Ver en el atlas</a></dd></>}
   </dl>
+
+  {anuales.length > 0 && (
+    <section>
+      <h2>Series anuales</h2>
+      <div class="series-grid">
+        {anuales.map((r) => (
+          <div>
+            <h3><a href={url(`/datos/#${r.i.id}`)}>{r.i.concept}</a></h3>
+            <SerieLinea ind={r.i} placeId={p.id} />
+          </div>
+        ))}
+      </div>
+      <details><summary>Ver las cifras</summary>
+        <dl>{anuales.map((r) => <><dt>{r.i.concept}</dt><dd>{r.obs.map((o: any) => `${o.period}: ${o.value != null ? o.value.toLocaleString("es-ES") : "sin dato"}`).join(" · ")}</dd></>)}</dl>
+      </details>
+    </section>
+  )}
+
   {rows.length > 0 && (
     <section>
       <h2>Datos censales</h2>
@@ -47,15 +96,10 @@ const parent = p.parent_id ? byId(places, p.parent_id) : null;
       <p class="meta">Fuentes: población y densidad, mapSpainHist (CC BY 4.0) a partir de los censos del INE; alfabetización y profesiones, tablas de los censos de 1920 y 1930 del INE; series anuales, movimiento natural de la población de los Anuarios Estadísticos del INE (CC BY 4.0). Ver advertencias de comparabilidad en <a href={url("/datos/")}>Datos</a>.</p>
     </section>
   )}
-  {anuales.length > 0 && (
-    <section>
-      <h2>Series anuales</h2>
-      <dl>{anuales.map((r) => <><dt><a href={url(`/datos/#${r.i.id}`)}>{r.i.concept}</a></dt><dd>{r.obs.map((o: any) => `${o.period}: ${o.value != null ? o.value.toLocaleString("es-ES") : "sin dato"}`).join(" · ")}</dd></>)}</dl>
-</section>
-  )}
+
   <section>
     <h2>Acontecimientos</h2>
-    {evsAll.length ? <ul>{evsAll.map((e) => <li><span class="meta">{e.start_date} ({PRECISION_LABEL[e.date_precision]})</span> · <a href={url(`/acontecimientos/${e.id}/`)}>{e.title}</a></li>)}</ul>
+    {evsAll.length ? <ol class="lugar-evs">{evsAll.map((e) => <li><span class="meta">{fecha(e)}</span><a href={url(`/acontecimientos/${e.id}/`)}>{e.title}</a></li>)}</ol>
       : <p class="meta">Ningún acontecimiento documentado todavía con este lugar. Eso no significa que no ocurriera nada.</p>}
   </section>
   <section>
@@ -65,3 +109,25 @@ const parent = p.parent_id ? byId(places, p.parent_id) : null;
   </section>
 </Base>
 </>}
+<style is:global>
+  .lugar-cab { display: grid; gap: 24px 48px; align-items: start; }
+  .lugar-cab.con-mapa { grid-template-columns: minmax(0, 1fr) 300px; }
+  .lugar-cab h1 { font-size: clamp(2.6rem, 1.6rem + 4vw, 4.6rem); letter-spacing: -0.03em; margin: .3em 0 .2em; font-variation-settings: "opsz" 60; }
+  .perfil { margin-top: 20px; }
+  .perfil p { font-size: 1.12rem; margin: 0 0 8px; }
+  .perfil p.meta { font-size: .88rem; margin-top: 12px; }
+  .perfil strong { font-family: var(--serif); font-size: 1.25em; color: var(--accent); font-variant-numeric: lining-nums; }
+  .lugar-mapa { margin: 24px 0 0; position: sticky; top: 16px; }
+  .lugar-mapa figcaption { margin-top: 8px; }
+  .lugar-ficha { margin-top: 32px; }
+  .series-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 8px 32px; }
+  .series-grid h3 { font-size: 1rem; margin: 8px 0 0; }
+  .series-grid h3 a { color: var(--ink); }
+  .lugar-evs { list-style: none; padding: 0; }
+  .lugar-evs li { display: grid; grid-template-columns: 11em 1fr; gap: 12px; padding: 8px 0; border-top: 1px solid var(--line); max-width: none; }
+  @media (max-width: 760px) {
+    .lugar-cab.con-mapa { grid-template-columns: 1fr; }
+    .lugar-mapa { position: static; max-width: 260px; order: -1; margin: 0; }
+    .lugar-evs li { grid-template-columns: 1fr; gap: 0; }
+  }
+</style>

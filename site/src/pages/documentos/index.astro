@@ -1,13 +1,104 @@
 ---
 import Base from "../../layouts/Base.astro";
+import Facsimil from "../../components/Facsimil.astro";
+import man from "../../data/facsimiles.json";
 import { documents, url, RIGHTS_LABEL } from "../../lib/data";
+const grupo = (d: any) =>
+  d.document_type === "prensa" ? "prensa"
+  : /^Gaceta de Madrid/.test(d.title) ? "gaceta"
+  : /Boletín Oficial del Estado|BOE/.test(d.title) && d.date >= "1936-07-18" ? "boe"
+  : d.document_type === "tabla_estadistica" ? "datos" : "otros";
+const GRUPOS: Record<string, [string, string]> = {
+  gaceta: ["Gaceta de Madrid", "Diario oficial de la República: leyes, decretos y órdenes."],
+  boe: ["BOE de la zona sublevada", "Boletín Oficial del Estado editado en Burgos desde octubre de 1936."],
+  prensa: ["Cabeceras de prensa", "Periódicos y revistas de la Hemeroteca Digital de la BNE."],
+  datos: ["Estadísticas y bases de datos", "Censos y anuarios del INE, atlas electoral y otras bases."],
+  otros: ["Otros", ""],
+};
+const ORDEN = ["gaceta", "boe", "datos", "prensa", "otros"];
+const docs = documents.map((d) => ({ d, g: grupo(d), f: (man as any)[d.id] }))
+  .sort((a, b) => ORDEN.indexOf(a.g) - ORDEN.indexOf(b.g) || a.d.date.localeCompare(b.d.date));
+const CORTO: Record<string, string> = { reuse_conditions: "Condiciones del custodio", reuse_open: "Reutilización con cita" };
+const cuenta = (g: string) => docs.filter((x) => x.g === g).length;
+const derechos = [...new Set(documents.map((d) => d.rights.status))];
+const anio = (d: any) => d.date.slice(0, 4);
 ---
-<Base index={false} title="Archivo">
-  <h1>Archivo</h1>
-  {documents.map((d) => (
-    <article class="card">
-      <h2><a href={url(`/documentos/${d.id}/`)}>{d.title}</a></h2>
-      <p class="meta">{d.date} · {d.custodian} · <span class="tag">{RIGHTS_LABEL[d.rights.status]}</span></p>
-    </article>
-  ))}
+<Base index={false} wide title="Archivo" description={`Archivo de ${documents.length} fichas documentales: Gaceta de Madrid, BOE de Burgos, prensa, censos y bases de datos, con custodio, signatura y derechos.`}>
+  <div class="arch">
+    <header class="arch-cab">
+      <h1>Archivo</h1>
+      <p class="arch-lead">{documents.length} fichas documentales. Cada una dice quién custodia el original, cómo citarlo y qué se puede hacer con él. Las que tienen facsímil muestran su primera página.</p>
+      <div class="arch-filtros" role="group" aria-label="Filtrar el archivo">
+        <div class="chips" role="group" aria-label="Fondo">
+          <button type="button" class="chip" aria-pressed="true" data-g="">Todo <span>{documents.length}</span></button>
+          {Object.keys(GRUPOS).filter(cuenta).map((g) => <button type="button" class="chip" aria-pressed="false" data-g={g} title={GRUPOS[g][1]}>{GRUPOS[g][0]} <span>{cuenta(g)}</span></button>)}
+        </div>
+        <label class="buscar">Buscar en el título <input type="search" id="a-q" placeholder="p. ej. divorcio, Burgos, censo" /></label>
+        <label>Derechos <select id="a-r"><option value="">Todos</option>{derechos.map((r) => <option value={r}>{RIGHTS_LABEL[r] ?? r}</option>)}</select></label>
+        <output id="a-n" class="meta" aria-live="polite"></output>
+      </div>
+    </header>
+    <ol class="fichas">
+      {docs.map(({ d, g, f }) => (
+        <li class={`ficha g-${g}${f ? " con-facs" : ""}`} data-g={g} data-r={d.rights.status} data-t={d.title.toLowerCase()}>
+          {f && <div class="ficha-facs"><Facsimil id={d.id} tam="mini" pie={false} /></div>}
+          <div class="ficha-txt">
+            <p class="ficha-fondo"><span>{GRUPOS[g][0]}</span><span class="ficha-anio">{anio(d)}</span></p>
+            <h2><a href={url(`/documentos/${d.id}/`)}>{d.title}</a></h2>
+            <p class="meta">{d.custodian}</p>
+            <p class="ficha-pie"><span class="tag" title={RIGHTS_LABEL[d.rights.status]}>{CORTO[d.rights.status] ?? RIGHTS_LABEL[d.rights.status] ?? d.rights.status}</span>{d.review.status !== "aprobado" && <span class="meta">en revisión</span>}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+    <p class="meta arch-vacio" id="a-vacio" hidden>Ninguna ficha cumple los filtros.</p>
+  </div>
 </Base>
+<style is:global>
+  .arch { max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+  .arch-cab h1 { font-size: clamp(2.6rem, 1.4rem + 5vw, 5.4rem); letter-spacing: -0.035em; line-height: 1; margin: 40px 0 16px; font-variation-settings: "opsz" 60; }
+  .arch-lead { font-size: 1.15rem; max-width: 56ch; }
+  .arch-filtros { position: sticky; top: 0; z-index: 4; background: var(--bg); display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: end; padding: 14px 0; margin: 16px 0 24px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; flex-basis: 100%; }
+  .chip { font: 500 .9rem var(--sans); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; cursor: pointer; transition: background-color .25s var(--ease), color .25s var(--ease), border-color .25s; }
+  .chip span { color: var(--muted); font-variant-numeric: tabular-nums; margin-left: 4px; }
+  .chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .chip[aria-pressed="true"] span { color: inherit; opacity: .8; }
+  .arch-filtros label { display: grid; gap: 4px; color: var(--muted); font-size: .9rem; }
+  .arch-filtros input, .arch-filtros select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 6px 8px; min-height: 38px; }
+  .buscar input { width: min(320px, 70vw); }
+  .fichas { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 0 32px; }
+  .ficha { max-width: none; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 20px 0; border-top: 1px solid var(--line); }
+  .ficha.con-facs { grid-template-columns: 96px minmax(0, 1fr); }
+  .ficha-fondo { display: flex; justify-content: space-between; gap: 8px; margin: 0 0 4px; font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  .g-gaceta .ficha-fondo span:first-child { color: var(--accent); }
+  .ficha-anio { font-family: var(--serif); font-size: 1.1rem; letter-spacing: 0; text-transform: none; color: var(--ink); font-variant-numeric: lining-nums; }
+  .ficha h2 { font-size: 1.08rem; line-height: 1.3; margin: 0 0 6px; }
+  .ficha h2 a { color: var(--ink); text-decoration: none; }
+  .ficha h2 a:hover, .ficha h2 a:focus-visible { color: var(--accent); text-decoration: underline; }
+  .ficha .meta { margin: 0 0 6px; font-size: .82rem; }
+  .ficha-pie { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0; }
+  .ficha-pie > * { white-space: nowrap; }
+  .arch-vacio { padding: 24px 0; }
+</style>
+<script>
+  const chips = [...document.querySelectorAll<HTMLButtonElement>(".chip")];
+  const q = document.getElementById("a-q") as HTMLInputElement, r = document.getElementById("a-r") as HTMLSelectElement;
+  const fichas = [...document.querySelectorAll<HTMLLIElement>(".ficha")];
+  const n = document.getElementById("a-n")!, vacio = document.getElementById("a-vacio")!;
+  const norm = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  let g = new URLSearchParams(location.search).get("fondo") ?? "";
+  function aplicar() {
+    chips.forEach((c) => c.setAttribute("aria-pressed", String(c.dataset.g === g)));
+    const t = norm(q.value.trim()); let k = 0;
+    for (const f of fichas) {
+      const ok = (!g || f.dataset.g === g) && (!r.value || f.dataset.r === r.value) && (!t || norm(f.dataset.t!).includes(t));
+      f.hidden = !ok; if (ok) k++;
+    }
+    n.textContent = `${k} de ${fichas.length}`; vacio.hidden = k > 0;
+    const p = new URLSearchParams(); if (g) p.set("fondo", g);
+    history.replaceState(null, "", p.toString() ? `?${p}` : location.pathname);
+  }
+  chips.forEach((c) => c.addEventListener("click", () => { g = c.dataset.g!; aplicar(); }));
+  q.addEventListener("input", aplicar); r.addEventListener("change", aplicar); aplicar();
+</script>

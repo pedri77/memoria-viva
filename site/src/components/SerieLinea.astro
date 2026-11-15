@@ -1,0 +1,44 @@
+---
+// Línea de una serie anual de una provincia frente a la mediana provincial de cada año.
+// SVG propio, sin dependencias; los valores también van en texto (aria-label y tabla plegada).
+interface Props { ind: any; placeId: string; alto?: number }
+const { ind, placeId, alto = 150 } = Astro.props;
+const anios = [...new Set(ind.observations.map((o: any) => o.period as string))].sort() as string[];
+const v = (pid: string, y: string) => ind.observations.find((o: any) => o.place_id === pid && o.period === y)?.value ?? null;
+const prov = anios.map((y) => v(placeId, y));
+const mediana = anios.map((y) => {
+  const xs = ind.observations.filter((o: any) => o.period === y && o.value != null).map((o: any) => o.value).sort((a: number, b: number) => a - b);
+  return xs.length ? xs[Math.floor(xs.length / 2)] : null;
+});
+const todos = [...prov, ...mediana].filter((x): x is number => x != null);
+const W = 520, H = alto, L = 44, R = 10, T = 10, B = 22;
+const min = Math.min(0, ...todos), max = Math.max(...todos) * 1.05;
+const x = (i: number) => L + (i * (W - L - R)) / Math.max(1, anios.length - 1);
+const y = (val: number) => T + (H - T - B) * (1 - (val - min) / (max - min || 1));
+const linea = (s: (number | null)[]) => s.map((val, i) => val == null ? null : `${x(i).toFixed(1)},${y(val).toFixed(1)}`).filter(Boolean).join(" ");
+const nf = (n: number | null) => n == null ? "sin dato" : n.toLocaleString("es-ES", { maximumFractionDigits: 1 });
+const marcas = anios.length > 9 ? anios.filter((_, i) => i % 2 === 0) : anios;
+const ticks = [min, (min + max) / 2, max].map((t) => Math.round(t));
+---
+<figure class="serie">
+  <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`${ind.concept}: ${anios.map((a, i) => `${a}, ${nf(prov[i])}`).join("; ")}`}>
+    {ticks.map((t) => <><line x1={L} x2={W - R} y1={y(t)} y2={y(t)} class="s-rej" /><text x={L - 6} y={y(t) + 4} text-anchor="end" class="s-eje">{t.toLocaleString("es-ES")}</text></>)}
+    {anios.map((a, i) => marcas.includes(a) && <text x={x(i)} y={H - 6} text-anchor="middle" class="s-eje">{a}</text>)}
+    <polyline points={linea(mediana)} class="s-med" />
+    <polyline points={linea(prov)} class="s-prov" />
+    {prov.map((val, i) => val != null && <circle cx={x(i)} cy={y(val)} r="3.2" class="s-pt" data-tip={`${anios[i]}: ${nf(val)} (mediana provincial ${nf(mediana[i])})`} />)}
+  </svg>
+  <figcaption class="meta"><span class="s-ley prov"></span>Esta provincia <span class="s-ley med"></span>Mediana de las provincias · {ind.unit}</figcaption>
+</figure>
+<style is:global>
+  .serie { margin: 8px 0 16px; }
+  .serie svg { width: 100%; height: auto; display: block; overflow: visible; }
+  .s-rej { stroke: var(--line); stroke-width: 1; }
+  .s-eje { font: 11px var(--sans); fill: var(--muted); font-variant-numeric: tabular-nums; }
+  .s-med { fill: none; stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 4 3; }
+  .s-prov { fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; }
+  .s-pt { fill: var(--accent); stroke: var(--bg); stroke-width: 1.5; }
+  .s-pt:hover { r: 5; }
+  .s-ley { display: inline-block; width: 18px; height: 0; border-top: 2.5px solid var(--accent); vertical-align: middle; margin: 0 6px 0 0; }
+  .s-ley.med { border-top: 1.5px dashed var(--muted); margin-left: 12px; }
+</style>

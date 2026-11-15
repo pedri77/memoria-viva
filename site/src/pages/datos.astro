@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
+import MiniMapa from "../components/MiniMapa.astro";
 import { indicators, places, byId, url } from "../lib/data";
 const fmt = (v: number | null, unit: string) =>
   v === null ? "sin dato" : unit.startsWith("habitantes") ? v.toLocaleString("es-ES", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : v.toLocaleString("es-ES");
@@ -7,12 +8,32 @@ const ordered = [...indicators].sort((a, b) => a.id.localeCompare(b.id));
 const provs = places.filter((p) => p.id.startsWith("plc-prov-")).sort((a, b) => a.canonical_name.localeCompare(b.canonical_name, "es"));
 const PER = (i: any) => [...new Set(i.observations.map((o: any) => o.period as string))].sort() as string[];
 const val = (i: any, pid: string, y: string) => i.observations.find((o: any) => o.place_id === pid && o.period === y)?.value ?? null;
+const TEMAS: [string, string, string[]][] = [
+  ["poblacion", "Población", ["ind-pob-hecho-prov", "ind-pob-derecho-prov", "ind-densidad-prov"]],
+  ["educacion", "Saber leer", ["ind-alfab-total-prov", "ind-alfab-varones-prov", "ind-alfab-mujeres-prov"]],
+  ["trabajo", "Trabajo", ["ind-prof-agraria-prov", "ind-prof-agraria-varones-prov", "ind-prof-diversas-prov"]],
+  ["mortalidad", "Mortalidad y hambre", ["ind-sobremortalidad-prov", "ind-mortalidad-infantil-prov", "ind-mortalidad-prov"]],
+  ["hoy", "Memoria democrática hoy", ["ind-subv-memoria-local-prov"]],
+];
+const enTema = new Set(TEMAS.flatMap(([, , ids]) => ids));
+const resto = ordered.filter((i) => !enTema.has(i.id)).map((i) => i.id);
+if (resto.length) TEMAS.push(["otros", "Otros", resto]);
+// Periodo que se muestra en el minimapa: 1930 si existe; si no, el de más observaciones con valor (el último en empate)
+const periodoMapa = (i: any) => {
+  const per = PER(i); if (per.includes("1930")) return "1930";
+  const n = (y: string) => i.observations.filter((o: any) => o.period === y && o.value != null).length;
+  return [...per].sort((a, b) => n(b) - n(a) || b.localeCompare(a))[0];
+};
 const series = Object.fromEntries(ordered.map((i) => [i.id, { concept: i.concept, unit: i.unit, per: PER(i),
   data: Object.fromEntries(provs.map((p) => [p.id, PER(i).map((y) => val(i, p.id, y))])) }]));
 ---
 <Base index={false} title="Datos" description="Series por provincia: censos de 1920, 1930 y 1940 y series anuales, con método, advertencias de comparabilidad y descarga CSV.">
-  <h1>Datos</h1>
-  <p>Series por provincia: las de los censos de 1920, 1930 y 1940 y las anuales del movimiento natural de la población. Cada tabla indica de dónde sale cada cifra y qué limita la comparación. Todo el conjunto en <a href={url("/data/v1/indicators.json")}>JSON</a>.</p>
+  <header class="datos-cab">
+    <h1>Datos</h1>
+    <p class="datos-lead">{ordered.length} indicadores por provincia: censos de 1920, 1930 y 1940, series anuales del movimiento natural de la población y las ayudas públicas de memoria de hoy. Cada uno dice de dónde sale, cómo se calcula y qué limita la comparación.</p>
+    <nav class="temas" aria-label="Temas">{TEMAS.map(([id, t, ids]) => <a href={`#tema-${id}`}>{t} <span>{ids.length}</span></a>)}</nav>
+    <p class="meta">Descarga: todo en <a href={url("/data/v1/indicators.json")}>JSON</a>, o cada indicador en CSV con su licencia y su atribución. Pasa el ratón por los mapas para ver cada provincia.</p>
+  </header>
 
   <section class="card" aria-labelledby="graf-h">
     <h2 id="graf-h">Comparar provincias</h2>
@@ -24,31 +45,62 @@ const series = Object.fromEntries(ordered.map((i) => [i.id, { concept: i.concept
     <p class="meta">El eje horizontal respeta la distancia entre años. El censo de 1940 se hizo tras la guerra: desplazamientos, exilio y mortalidad afectan a la comparación con 1930, y el tramo entre censos no es una tendencia observada.</p>
   </section>
 
-  {ordered.map((ind) => {
-    const per = PER(ind);
-    const rows = provs.map((p) => ({ p, vals: per.map((y) => val(ind, p.id, y)) }));
-    return (
-      <section class="card" id={ind.id}>
-        <h2>{ind.concept}</h2>
-        <p>{ind.definition} Unidad: {ind.unit}. <a href={url(`/data/v1/${ind.id}.csv`)} download>Descargar CSV</a></p>
-        <details>
-          <summary>Método y advertencias</summary>
-          <p><strong>Método:</strong> {ind.method}</p>
-          <p><strong>Comparabilidad:</strong> {ind.comparability_notes}</p>
-        </details>
-        <div class="table-wrap">
-          <table>
-            <caption class="meta">{ind.concept} ({ind.unit})</caption>
-            <thead><tr><th scope="col">Provincia</th>{per.map((y) => <th scope="col" style="text-align:right">{y}</th>)}</tr></thead>
-            <tbody>{rows.map((r) => <tr><th scope="row" style="font-weight:400"><a href={url(`/lugares/${r.p.id}/`)}>{r.p.canonical_name}</a></th>{r.vals.map((v) => <td style="text-align:right">{fmt(v, ind.unit)}</td>)}</tr>)}</tbody>
-          </table>
-        </div>
-      </section>
-    );
-  })}
+  {TEMAS.map(([tid, titulo, ids]) => (
+    <section class="tema" id={`tema-${tid}`} aria-labelledby={`h-${tid}`}>
+      <h2 id={`h-${tid}`}>{titulo}</h2>
+      {ids.map((id) => byId(indicators, id)).filter(Boolean).map((ind: any) => {
+        const per = PER(ind), pm = periodoMapa(ind);
+        const rows = provs.map((p) => ({ p, vals: per.map((y) => val(ind, p.id, y)) }));
+        return (
+          <article class="ind" id={ind.id}>
+            <div class="ind-txt">
+              <h3>{ind.concept}</h3>
+              <p>{ind.definition}</p>
+              <p class="meta">Unidad: {ind.unit} · {per.length === 1 ? per[0] : `${per[0]}-${per[per.length - 1]}`} ({per.length} {per.length === 1 ? "periodo" : "periodos"}) · <a href={url(`/data/v1/${ind.id}.csv`)} download>Descargar CSV</a> · <a href={url(`/atlas/?capa=censo&ind=${ind.id}&censo=${pm}`)}>Ver en el atlas</a></p>
+              <details>
+                <summary>Método y advertencias</summary>
+                <p><strong>Método:</strong> {ind.method}</p>
+                <p><strong>Comparabilidad:</strong> {ind.comparability_notes}</p>
+              </details>
+              <details>
+                <summary>Tabla por provincia</summary>
+                <div class="table-wrap">
+                  <table>
+                    <caption class="meta">{ind.concept} ({ind.unit})</caption>
+                    <thead><tr><th scope="col">Provincia</th>{per.map((y) => <th scope="col" style="text-align:right">{y}</th>)}</tr></thead>
+                    <tbody>{rows.map((r) => <tr><th scope="row" style="font-weight:400"><a href={url(`/lugares/${r.p.id}/`)}>{r.p.canonical_name}</a></th>{r.vals.map((v) => <td style="text-align:right">{fmt(v, ind.unit)}</td>)}</tr>)}</tbody>
+                  </table>
+                </div>
+              </details>
+            </div>
+            <figure class="ind-mapa">
+              <MiniMapa ind={ind} periodo={pm} ancho={260} />
+              <figcaption class="meta">{pm} · cinco tramos del valor más bajo (claro) al más alto (oscuro)</figcaption>
+            </figure>
+          </article>
+        );
+      })}
+    </section>
+  ))}
   <script type="application/json" id="series" set:html={JSON.stringify(series)} />
 </Base>
 <style is:global>
+  .datos-cab h1 { font-size: clamp(2.6rem, 1.6rem + 4vw, 4.6rem); letter-spacing: -0.03em; margin: .6em 0 .2em; font-variation-settings: "opsz" 60; }
+  .datos-lead { font-size: 1.12rem; }
+  .temas { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+  .temas a { text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; font-size: .92rem; transition: border-color .25s var(--ease), color .25s var(--ease); }
+  .temas a:hover { border-color: var(--accent); color: var(--accent); }
+  .temas span { color: var(--muted); margin-left: 4px; font-variant-numeric: tabular-nums; }
+  .tema { padding-top: 24px; }
+  .tema > h2 { font-size: clamp(1.8rem, 1.3rem + 1.6vw, 2.6rem); letter-spacing: -0.02em; border-bottom: 1px solid var(--ink); padding-bottom: 8px; }
+  .ind { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 16px 40px; padding: 20px 0 28px; border-bottom: 1px solid var(--line); }
+  .ind h3 { margin: 0 0 6px; font-size: 1.3rem; }
+  .ind-txt p { margin: 0 0 8px; }
+  .ind details { margin: 6px 0; }
+  .ind summary { cursor: pointer; color: var(--accent); }
+  .ind-mapa { margin: 0; }
+  .ind-mapa figcaption { margin-top: 4px; font-size: .78rem; }
+  @media (max-width: 760px) { .ind { grid-template-columns: 1fr; } .ind-mapa { max-width: 280px; order: -1; } }
   .filtros { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: start; margin: 8px 0 16px; }
   .filtros label { display: grid; gap: 4px; color: var(--muted); font-size: .9rem; }
   .leyenda-g { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: .9rem; margin: 0 0 4px; }

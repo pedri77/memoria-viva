@@ -31,3 +31,11 @@ Siguen pendientes las imágenes de otros archivos (Europeana, AHPCE, Archivo Gen
 - axe sin incidencias en la cronología (modo claro y oscuro), la ficha de la Constitución y `/memoria-hoy/`.
 - Capturas a 1440 y 390 px.
 - Prueba del ratón en un navegador sin interfaz, en el atlas y en la portada.
+
+## Segunda tanda (15-11-2026): archivo, fichas de provincia, datos y metodología
+
+- **Archivo (`/documentos/`):** catálogo con filtros por fondo (Gaceta, BOE de la zona sublevada, prensa, estadísticas), búsqueda en el título y filtro por derechos, con facsímiles en miniatura. Va ordenado por fondo y fecha. Se añaden las etiquetas de licencia CC BY-NC y CC BY-NC-SA, que faltaban.
+- **Fichas de provincia:** mapa de situación y un perfil escrito a partir de los datos (población, alfabetización, peso agrario y mortalidad infantil de 1941, con la posición entre provincias). Las series anuales se dibujan en un gráfico de la provincia frente a la mediana provincial (componente `SerieLinea`).
+- **Datos:** indicadores agrupados por tema, cada uno con su minimapa por quintiles (componente `MiniMapa`, con etiqueta al pasar el ratón), enlace al atlas y tabla plegada. La página baja de unos 27.000 a 5.000 px.
+- **Metodología:** los cuatro tipos de afirmación con su recuento real y un ejemplo, cómo se comprueba una cifra, y una sección nueva, «Quién ha hecho el trabajo, y con qué», que declara el uso de asistentes de IA (guía §6) y que todo sigue en revisión.
+- **Verificación:** axe sin incidencias en las cuatro páginas, en claro y en oscuro.
