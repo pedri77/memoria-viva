@@ -1,0 +1,37 @@
+{
+  "id": "doc-ine-anuario1950-coste-vida",
+  "title": "Anuario Estadístico de España 1950: índice del coste de la vida en las capitales, 1949-1949",
+  "title_original": "Índice del coste de la vida en las capitales. Promedios mensuales, por capitales (Base: julio de 1936 = 100)",
+  "document_type": "tabla_estadistica",
+  "source_ids": [
+    "F010"
+  ],
+  "custodian": "Instituto Nacional de Estadística, INEbase Historia (fondo documental)",
+  "signature": "Anuario Estadístico de España 1950, «Precios, salarios, racionamiento y consumo», coste de la vida en las capitales (td=29950)",
+  "canonical_url": "https://www.ine.es/inebaseweb/pdfDispacher.do?td=29950&ext=.pdf",
+  "date": "1949-12-31",
+  "date_precision": "anio",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Índices del coste de la vida en cada capital de provincia y en el conjunto, por grupos (alimentación, vestido, vivienda, gastos de casa, gastos generales) e índice general, base julio de 1936 = 100, años 1949 a 1949.",
+  "context": "Estadística oficial de la Dirección General de Estadística bajo el franquismo. Según la nota de las propias tablas, los índices miden la variación del coste de la vida en cada capital respecto a julio de 1936 y no permiten deducir que la vida fuera más cara en una capital que en otra. Son índices de precios de un presupuesto tipo: no miden la escasez, el racionamiento ni el mercado negro.",
+  "text_origin": "transcripcion_validada",
+  "rights": {
+    "status": "cc_by",
+    "action": "almacenar",
+    "attribution": "Fuente: Instituto Nacional de Estadística (INE), INEbase Historia, Anuario Estadístico de España 1950",
+    "evidence_url": "https://www.ine.es/ine/codigobp/politica_difusion_es.pdf",
+    "checked_at": "2026-11-15",
+    "note": "El INE aplica a la información de su web la licencia CC BY 4.0 salvo indicación contraria (Política de Difusión Estadística, febrero de 2026)."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Transcrita de la imagen del PDF; cada cifra leída al menos dos veces (dos ediciones o dos transcriptores independientes)."
+  },
+  "consulted_at": "2026-11-15"
+}

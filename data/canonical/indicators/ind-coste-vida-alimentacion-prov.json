@@ -1,0 +1,4441 @@
+{
+  "id": "ind-coste-vida-alimentacion-prov",
+  "concept": "Coste de la alimentación, 1939-1950",
+  "definition": "Índice del coste de la alimentación en la capital de cada provincia, julio de 1936 = 100.",
+  "unit": "índice, julio de 1936 = 100",
+  "denominator": "nivel de precios de julio de 1936 en la misma capital",
+  "method": "Promedio anual del índice publicado por el INE para la capital de cada provincia, tal como se imprime. Para cada año se usa la edición más reciente del Anuario que lo publica; cada cifra se leyó al menos dos veces (scripts/etl/ine_coste_vida_1939_1950.py).",
+  "source_ids": [
+    "F010"
+  ],
+  "comparability_notes": "Mide la capital, no la provincia. Según la nota de las propias tablas, los índices miden la variación del coste de la vida en cada capital respecto a julio de 1936 y no permiten deducir que la vida fuera más cara en una capital que en otra. Es un índice de precios oficiales de un presupuesto tipo: no recoge el mercado negro (estraperlo), muy extendido en esos años, ni la escasez. El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla).",
+  "review": {
+    "status": "revision",
+    "date": "2026-11-15",
+    "by": [
+      "autor"
+    ],
+    "note": "Generado por scripts/etl/ine_coste_vida_1939_1950.py. Pendiente de segunda revisión humana."
+  },
+  "observations": [
+    {
+      "place_id": "plc-prov-01",
+      "period": "1939",
+      "value": 168.9,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1940",
+      "value": 209.1,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1941",
+      "value": 292.8,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1942",
+      "value": 306.0,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1943",
+      "value": 298.0,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1944",
+      "value": 307.4,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1945",
+      "value": 332.7,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1946",
+      "value": 437.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1947",
+      "value": 541.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1948",
+      "value": 556.6,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1949",
+      "value": 593.6,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-01",
+      "period": "1950",
+      "value": 668.2,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1939",
+      "value": 193.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1940",
+      "value": 216.6,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1941",
+      "value": 301.9,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1942",
+      "value": 307.8,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1943",
+      "value": 304.4,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1944",
+      "value": 327.4,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1945",
+      "value": 358.2,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1946",
+      "value": 498.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1947",
+      "value": 560.1,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1948",
+      "value": 557.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1949",
+      "value": 593.3,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-02",
+      "period": "1950",
+      "value": 667.4,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1939",
+      "value": 184.8,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1940",
+      "value": 231.6,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1941",
+      "value": 345.1,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1942",
+      "value": 374.5,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1943",
+      "value": 346.4,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1944",
+      "value": 351.3,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1945",
+      "value": 363.7,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1946",
+      "value": 499.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1947",
+      "value": 583.6,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1948",
+      "value": 603.1,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1949",
+      "value": 617.7,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-03",
+      "period": "1950",
+      "value": 685.2,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1939",
+      "value": 201.9,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1940",
+      "value": 226.5,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1941",
+      "value": 298.2,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1942",
+      "value": 346.2,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1943",
+      "value": 352.3,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1944",
+      "value": 343.9,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1945",
+      "value": 363.0,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1946",
+      "value": 499.9,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1947",
+      "value": 546.3,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1948",
+      "value": 591.8,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1949",
+      "value": 633.1,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-04",
+      "period": "1950",
+      "value": 703.3,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1939",
+      "value": 159.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1940",
+      "value": 192.0,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1941",
+      "value": 269.0,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1942",
+      "value": 272.5,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1943",
+      "value": 275.6,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1944",
+      "value": 289.0,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1945",
+      "value": 331.1,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1946",
+      "value": 437.8,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1947",
+      "value": 510.7,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1948",
+      "value": 540.7,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1949",
+      "value": 585.8,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-05",
+      "period": "1950",
+      "value": 668.1,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1939",
+      "value": 167.4,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1940",
+      "value": 205.8,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1941",
+      "value": 280.6,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1942",
+      "value": 291.3,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1943",
+      "value": 291.0,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1944",
+      "value": 326.4,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1945",
+      "value": 371.1,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1946",
+      "value": 498.8,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1947",
+      "value": 576.3,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1948",
+      "value": 558.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1949",
+      "value": 605.1,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-06",
+      "period": "1950",
+      "value": 664.3,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1939",
+      "value": 154.9,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1940",
+      "value": 191.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1941",
+      "value": 278.4,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1942",
+      "value": 314.1,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1943",
+      "value": 326.0,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1944",
+      "value": 334.1,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1945",
+      "value": 364.9,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1946",
+      "value": 510.1,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1947",
+      "value": 573.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1948",
+      "value": 612.7,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1949",
+      "value": 632.0,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-07",
+      "period": "1950",
+      "value": 698.9,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1939",
+      "value": 184.0,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1940",
+      "value": 221.8,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1941",
+      "value": 309.0,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1942",
+      "value": 340.2,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1943",
+      "value": 317.3,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1944",
+      "value": 331.3,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1945",
+      "value": 346.4,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1946",
+      "value": 512.0,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1947",
+      "value": 608.5,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1948",
+      "value": 623.9,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1949",
+      "value": 638.5,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-08",
+      "period": "1950",
+      "value": 732.7,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1939",
+      "value": 174.7,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1940",
+      "value": 202.0,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1941",
+      "value": 272.9,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1942",
+      "value": 270.3,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1943",
+      "value": 273.4,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1944",
+      "value": 298.7,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1945",
+      "value": 331.3,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1946",
+      "value": 459.8,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1947",
+      "value": 506.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1948",
+      "value": 523.1,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1949",
+      "value": 561.1,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-09",
+      "period": "1950",
+      "value": 653.4,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1939",
+      "value": 170.2,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1940",
+      "value": 204.9,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1941",
+      "value": 293.7,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1942",
+      "value": 296.5,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1943",
+      "value": 303.3,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1944",
+      "value": 329.8,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1945",
+      "value": 380.4,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1946",
+      "value": 504.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1947",
+      "value": 571.7,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1948",
+      "value": 579.3,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1949",
+      "value": 585.2,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-10",
+      "period": "1950",
+      "value": 647.6,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1939",
+      "value": 161.2,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1940",
+      "value": 208.0,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1941",
+      "value": 293.8,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1942",
+      "value": 316.0,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1943",
+      "value": 330.1,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1944",
+      "value": 346.7,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1945",
+      "value": 370.0,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1946",
+      "value": 512.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1947",
+      "value": 614.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1948",
+      "value": 613.0,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1949",
+      "value": 643.3,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-11",
+      "period": "1950",
+      "value": 710.5,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1939",
+      "value": 163.7,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1940",
+      "value": 199.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1941",
+      "value": 275.5,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1942",
+      "value": 291.4,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1943",
+      "value": 292.5,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1944",
+      "value": 306.6,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1945",
+      "value": 322.7,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1946",
+      "value": 423.3,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1947",
+      "value": 504.9,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital",
+      "uncertainty": "Castellón de la Plana, 1947, alimentación: el Anuario de 1948 imprime 505,9 y el de 1949, 504,9 (la capa de texto de los dos PDF lo confirma); se usa la edición más reciente."
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1948",
+      "value": 538.3,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1949",
+      "value": 560.7,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-12",
+      "period": "1950",
+      "value": 588.7,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1939",
+      "value": 190.7,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1940",
+      "value": 212.8,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1941",
+      "value": 278.0,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1942",
+      "value": 282.0,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1943",
+      "value": 289.5,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1944",
+      "value": 302.5,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1945",
+      "value": 334.7,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1946",
+      "value": 462.5,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1947",
+      "value": 533.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1948",
+      "value": 550.0,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1949",
+      "value": 575.9,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-13",
+      "period": "1950",
+      "value": 657.2,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1939",
+      "value": 207.2,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1940",
+      "value": 246.0,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1941",
+      "value": 339.7,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1942",
+      "value": 360.8,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1943",
+      "value": 324.5,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1944",
+      "value": 347.4,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1945",
+      "value": 384.5,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1946",
+      "value": 568.8,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1947",
+      "value": 620.0,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1948",
+      "value": 642.7,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1949",
+      "value": 648.9,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-14",
+      "period": "1950",
+      "value": 723.6,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1939",
+      "value": 177.9,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1940",
+      "value": 219.5,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1941",
+      "value": 316.5,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1942",
+      "value": 349.6,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1943",
+      "value": 324.5,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1944",
+      "value": 330.8,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1945",
+      "value": 360.8,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1946",
+      "value": 527.8,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1947",
+      "value": 623.6,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1948",
+      "value": 605.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1949",
+      "value": 618.8,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-15",
+      "period": "1950",
+      "value": 699.3,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1939",
+      "value": 154.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1940",
+      "value": 191.0,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1941",
+      "value": 256.7,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1942",
+      "value": 285.6,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1943",
+      "value": 288.7,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1944",
+      "value": 308.1,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1945",
+      "value": 325.5,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1946",
+      "value": 417.5,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1947",
+      "value": 520.5,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1948",
+      "value": 558.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1949",
+      "value": 607.5,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-16",
+      "period": "1950",
+      "value": 649.6,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1939",
+      "value": 181.4,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1940",
+      "value": 232.8,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1941",
+      "value": 327.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1942",
+      "value": 344.7,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1943",
+      "value": 336.8,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1944",
+      "value": 353.4,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1945",
+      "value": 385.5,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1946",
+      "value": 537.5,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1947",
+      "value": 662.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1948",
+      "value": 703.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1949",
+      "value": 679.3,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-17",
+      "period": "1950",
+      "value": 747.3,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1939",
+      "value": 203.6,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1940",
+      "value": 237.1,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1941",
+      "value": 317.9,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1942",
+      "value": 354.4,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1943",
+      "value": 369.4,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1944",
+      "value": 370.1,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1945",
+      "value": 430.3,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1946",
+      "value": 584.8,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1947",
+      "value": 681.0,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1948",
+      "value": 710.0,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1949",
+      "value": 718.9,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-18",
+      "period": "1950",
+      "value": 773.4,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1939",
+      "value": 169.4,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1940",
+      "value": 195.2,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1941",
+      "value": 261.0,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1942",
+      "value": 276.3,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1943",
+      "value": 270.0,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1944",
+      "value": 271.5,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1945",
+      "value": 309.5,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1946",
+      "value": 392.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1947",
+      "value": 492.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1948",
+      "value": 534.1,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1949",
+      "value": 551.3,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-19",
+      "period": "1950",
+      "value": 592.6,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1939",
+      "value": 167.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1940",
+      "value": 207.6,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1941",
+      "value": 300.8,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1942",
+      "value": 327.6,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1943",
+      "value": 320.0,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1944",
+      "value": 328.8,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1945",
+      "value": 354.2,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1946",
+      "value": 506.0,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1947",
+      "value": 633.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1948",
+      "value": 646.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1949",
+      "value": 650.6,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-20",
+      "period": "1950",
+      "value": 726.2,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1939",
+      "value": 184.2,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1940",
+      "value": 227.2,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1941",
+      "value": 330.8,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1942",
+      "value": 359.6,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1943",
+      "value": 370.2,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1944",
+      "value": 393.1,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1945",
+      "value": 452.3,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1946",
+      "value": 607.3,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1947",
+      "value": 652.5,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1948",
+      "value": 684.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1949",
+      "value": 748.5,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-21",
+      "period": "1950",
+      "value": 815.3,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1939",
+      "value": 165.4,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1940",
+      "value": 183.1,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1941",
+      "value": 259.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1942",
+      "value": 286.9,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1943",
+      "value": 284.8,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1944",
+      "value": 311.6,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1945",
+      "value": 333.7,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1946",
+      "value": 451.7,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1947",
+      "value": 519.9,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1948",
+      "value": 555.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1949",
+      "value": 564.7,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-22",
+      "period": "1950",
+      "value": 609.8,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1939",
+      "value": 176.1,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1940",
+      "value": 204.7,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1941",
+      "value": 281.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1942",
+      "value": 298.3,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1943",
+      "value": 292.6,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1944",
+      "value": 298.9,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1945",
+      "value": 330.5,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1946",
+      "value": 445.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1947",
+      "value": 519.9,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1948",
+      "value": 566.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1949",
+      "value": 618.6,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-23",
+      "period": "1950",
+      "value": 668.6,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1939",
+      "value": 157.6,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1940",
+      "value": 186.4,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1941",
+      "value": 248.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1942",
+      "value": 269.6,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1943",
+      "value": 272.0,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1944",
+      "value": 289.2,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1945",
+      "value": 337.3,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1946",
+      "value": 482.9,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1947",
+      "value": 539.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1948",
+      "value": 539.9,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1949",
+      "value": 585.1,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-24",
+      "period": "1950",
+      "value": 650.5,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1939",
+      "value": 161.9,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1940",
+      "value": 192.8,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1941",
+      "value": 268.5,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1942",
+      "value": 300.6,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1943",
+      "value": 311.0,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1944",
+      "value": 318.3,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1945",
+      "value": 345.3,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1946",
+      "value": 477.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1947",
+      "value": 559.8,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1948",
+      "value": 594.8,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1949",
+      "value": 621.7,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-25",
+      "period": "1950",
+      "value": 680.9,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1939",
+      "value": 163.7,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1940",
+      "value": 195.9,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1941",
+      "value": 266.2,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1942",
+      "value": 285.2,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1943",
+      "value": 287.1,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1944",
+      "value": 301.4,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1945",
+      "value": 329.1,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1946",
+      "value": 442.8,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1947",
+      "value": 515.9,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1948",
+      "value": 534.6,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1949",
+      "value": 570.1,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-26",
+      "period": "1950",
+      "value": 635.1,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1939",
+      "value": 183.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1940",
+      "value": 223.4,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1941",
+      "value": 342.1,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1942",
+      "value": 363.9,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1943",
+      "value": 346.7,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1944",
+      "value": 343.5,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1945",
+      "value": 360.4,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1946",
+      "value": 433.3,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1947",
+      "value": 526.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1948",
+      "value": 591.1,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1949",
+      "value": 626.7,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-27",
+      "period": "1950",
+      "value": 699.4,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1939",
+      "value": 173.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1940",
+      "value": 211.6,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1941",
+      "value": 303.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1942",
+      "value": 290.9,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1943",
+      "value": 282.1,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1944",
+      "value": 298.3,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1945",
+      "value": 315.1,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1946",
+      "value": 444.3,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1947",
+      "value": 530.9,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1948",
+      "value": 557.6,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1949",
+      "value": 596.6,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-28",
+      "period": "1950",
+      "value": 663.5,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1939",
+      "value": 162.5,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1940",
+      "value": 202.9,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1941",
+      "value": 295.5,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1942",
+      "value": 314.9,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1943",
+      "value": 311.8,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1944",
+      "value": 317.5,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1945",
+      "value": 346.3,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1946",
+      "value": 494.0,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1947",
+      "value": 554.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1948",
+      "value": 554.0,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1949",
+      "value": 581.5,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-29",
+      "period": "1950",
+      "value": 632.7,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1939",
+      "value": 210.0,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1940",
+      "value": 230.9,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1941",
+      "value": 319.6,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1942",
+      "value": 337.0,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1943",
+      "value": 342.4,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1944",
+      "value": 331.9,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1945",
+      "value": 349.5,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1946",
+      "value": 499.1,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1947",
+      "value": 574.5,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1948",
+      "value": 564.8,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1949",
+      "value": 634.4,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-30",
+      "period": "1950",
+      "value": 714.5,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1939",
+      "value": 167.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1940",
+      "value": 207.2,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1941",
+      "value": 276.1,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1942",
+      "value": 283.5,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1943",
+      "value": 288.2,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1944",
+      "value": 305.1,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1945",
+      "value": 327.8,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1946",
+      "value": 428.0,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1947",
+      "value": 529.1,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1948",
+      "value": 574.1,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1949",
+      "value": 585.9,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-31",
+      "period": "1950",
+      "value": 653.0,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1939",
+      "value": 180.2,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1940",
+      "value": 217.1,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1941",
+      "value": 293.1,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1942",
+      "value": 347.6,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1943",
+      "value": 346.0,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1944",
+      "value": 350.1,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1945",
+      "value": 393.9,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1946",
+      "value": 598.3,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1947",
+      "value": 679.3,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1948",
+      "value": 646.1,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1949",
+      "value": 690.6,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-32",
+      "period": "1950",
+      "value": 753.7,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1939",
+      "value": 159.4,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1940",
+      "value": 203.5,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1941",
+      "value": 298.2,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1942",
+      "value": 300.9,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1943",
+      "value": 301.9,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1944",
+      "value": 308.6,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1945",
+      "value": 329.1,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1946",
+      "value": 431.0,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1947",
+      "value": 550.1,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1948",
+      "value": 563.5,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1949",
+      "value": 549.6,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-33",
+      "period": "1950",
+      "value": 601.2,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1939",
+      "value": 162.6,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1940",
+      "value": 188.7,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1941",
+      "value": 266.6,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1942",
+      "value": 299.3,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1943",
+      "value": 284.8,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1944",
+      "value": 307.2,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1945",
+      "value": 340.3,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1946",
+      "value": 443.5,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1947",
+      "value": 516.1,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1948",
+      "value": 536.7,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1949",
+      "value": 581.5,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-34",
+      "period": "1950",
+      "value": 650.5,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1939",
+      "value": 190.1,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1940",
+      "value": 209.2,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1941",
+      "value": 275.0,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1942",
+      "value": 309.3,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1943",
+      "value": 331.2,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1944",
+      "value": 358.6,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1945",
+      "value": 389.3,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1946",
+      "value": 523.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1947",
+      "value": 654.8,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1948",
+      "value": 718.0,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1949",
+      "value": 741.6,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-35",
+      "period": "1950",
+      "value": 733.3,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1939",
+      "value": 172.1,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1940",
+      "value": 216.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1941",
+      "value": 306.5,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1942",
+      "value": 352.5,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1943",
+      "value": 353.0,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1944",
+      "value": 377.6,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1945",
+      "value": 437.1,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1946",
+      "value": 625.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1947",
+      "value": 762.8,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1948",
+      "value": 718.0,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1949",
+      "value": 765.9,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-36",
+      "period": "1950",
+      "value": 799.3,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1939",
+      "value": 184.8,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1940",
+      "value": 211.1,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1941",
+      "value": 287.2,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1942",
+      "value": 299.8,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1943",
+      "value": 292.8,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1944",
+      "value": 299.2,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1945",
+      "value": 332.0,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1946",
+      "value": 458.8,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1947",
+      "value": 530.0,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1948",
+      "value": 565.8,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1949",
+      "value": 591.8,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-37",
+      "period": "1950",
+      "value": 651.5,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1939",
+      "value": 147.1,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1940",
+      "value": 190.7,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1941",
+      "value": 236.0,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1942",
+      "value": 270.3,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1943",
+      "value": 303.0,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1944",
+      "value": 339.1,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1945",
+      "value": 369.2,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1946",
+      "value": 501.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1947",
+      "value": 571.7,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1948",
+      "value": 626.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1949",
+      "value": 642.2,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-38",
+      "period": "1950",
+      "value": 686.5,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1939",
+      "value": 178.9,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1940",
+      "value": 209.1,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1941",
+      "value": 295.4,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1942",
+      "value": 321.6,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1943",
+      "value": 319.3,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1944",
+      "value": 337.7,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1945",
+      "value": 361.4,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1946",
+      "value": 538.7,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1947",
+      "value": 681.0,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1948",
+      "value": 655.3,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1949",
+      "value": 675.2,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-39",
+      "period": "1950",
+      "value": 745.0,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1939",
+      "value": 161.1,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1940",
+      "value": 199.1,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1941",
+      "value": 263.8,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1942",
+      "value": 301.9,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1943",
+      "value": 316.8,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1944",
+      "value": 327.4,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1945",
+      "value": 355.6,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1946",
+      "value": 491.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1947",
+      "value": 533.7,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1948",
+      "value": 556.3,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1949",
+      "value": 595.7,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-40",
+      "period": "1950",
+      "value": 671.5,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1939",
+      "value": 184.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1940",
+      "value": 221.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1941",
+      "value": 306.9,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1942",
+      "value": 334.3,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1943",
+      "value": 316.9,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1944",
+      "value": 323.0,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1945",
+      "value": 358.4,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1946",
+      "value": 489.1,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1947",
+      "value": 560.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1948",
+      "value": 587.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1949",
+      "value": 595.6,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-41",
+      "period": "1950",
+      "value": 658.2,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1939",
+      "value": 201.4,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1940",
+      "value": 221.9,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1941",
+      "value": 302.6,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1942",
+      "value": 319.6,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1943",
+      "value": 311.3,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1944",
+      "value": 324.9,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1945",
+      "value": 380.5,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1946",
+      "value": 488.5,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1947",
+      "value": 596.0,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1948",
+      "value": 621.9,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1949",
+      "value": 659.6,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-42",
+      "period": "1950",
+      "value": 729.1,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1939",
+      "value": 165.5,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1940",
+      "value": 219.2,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1941",
+      "value": 273.0,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1942",
+      "value": 300.7,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1943",
+      "value": 312.1,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1944",
+      "value": 330.7,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1945",
+      "value": 365.3,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1946",
+      "value": 518.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1947",
+      "value": 615.6,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1948",
+      "value": 608.9,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1949",
+      "value": 617.1,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-43",
+      "period": "1950",
+      "value": 722.5,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1939",
+      "value": 183.7,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1940",
+      "value": 214.2,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1941",
+      "value": 295.6,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1942",
+      "value": 320.3,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1943",
+      "value": 309.7,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1944",
+      "value": 329.3,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1945",
+      "value": 360.4,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1946",
+      "value": 475.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1947",
+      "value": 584.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1948",
+      "value": 609.9,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1949",
+      "value": 623.5,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-44",
+      "period": "1950",
+      "value": 685.0,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1939",
+      "value": 162.8,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1940",
+      "value": 199.1,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1941",
+      "value": 251.0,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1942",
+      "value": 269.2,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1943",
+      "value": 264.4,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1944",
+      "value": 272.4,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1945",
+      "value": 300.9,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1946",
+      "value": 412.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1947",
+      "value": 474.9,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1948",
+      "value": 514.9,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1949",
+      "value": 566.9,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-45",
+      "period": "1950",
+      "value": 640.8,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1939",
+      "value": 188.0,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1940",
+      "value": 219.5,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1941",
+      "value": 293.0,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1942",
+      "value": 325.5,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1943",
+      "value": 310.0,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1944",
+      "value": 314.1,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1945",
+      "value": 331.0,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1946",
+      "value": 460.8,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1947",
+      "value": 578.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1948",
+      "value": 627.7,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1949",
+      "value": 643.2,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-46",
+      "period": "1950",
+      "value": 716.3,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1939",
+      "value": 161.4,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1940",
+      "value": 192.8,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1941",
+      "value": 272.6,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1942",
+      "value": 290.6,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1943",
+      "value": 295.1,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1944",
+      "value": 316.9,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1945",
+      "value": 358.4,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1946",
+      "value": 502.0,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1947",
+      "value": 586.9,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1948",
+      "value": 585.9,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1949",
+      "value": 608.4,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-47",
+      "period": "1950",
+      "value": 649.7,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1939",
+      "value": 166.5,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1940",
+      "value": 204.4,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1941",
+      "value": 295.9,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1942",
+      "value": 310.9,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1943",
+      "value": 308.6,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1944",
+      "value": 323.0,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1945",
+      "value": 356.5,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1946",
+      "value": 503.5,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1947",
+      "value": 586.6,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1948",
+      "value": 607.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1949",
+      "value": 629.8,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-48",
+      "period": "1950",
+      "value": 693.6,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1939",
+      "value": 164.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1940",
+      "value": 192.3,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1941",
+      "value": 273.6,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1942",
+      "value": 290.5,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1943",
+      "value": 293.7,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1944",
+      "value": 304.3,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1945",
+      "value": 349.2,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1946",
+      "value": 524.3,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1947",
+      "value": 597.4,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1948",
+      "value": 557.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1949",
+      "value": 586.7,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-49",
+      "period": "1950",
+      "value": 650.2,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1939",
+      "value": 174.1,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1939 (td=160628), fila de la capital",
+      "uncertainty": "El dato de 1939 es el promedio del segundo semestre, no del año completo (nota «(a) 2.º semestre» de la tabla)."
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1940",
+      "value": 205.6,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1940 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1941",
+      "value": 297.5,
+      "document_id": "doc-ine-anuario1943-coste-vida",
+      "locator": "Anuario 1943, coste de la vida por capitales, año 1941 (td=160628), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1942",
+      "value": 315.6,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1942 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1943",
+      "value": 323.3,
+      "document_id": "doc-ine-anuario1944-1945-coste-vida",
+      "locator": "Anuario 1944-1945, coste de la vida por capitales, año 1943 (td=162162), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1944",
+      "value": 345.7,
+      "document_id": "doc-ine-anuario1946-1947-coste-vida",
+      "locator": "Anuario 1946-1947, coste de la vida por capitales, año 1944 (td=162863), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1945",
+      "value": 359.4,
+      "document_id": "doc-ine-anuario1948-coste-vida",
+      "locator": "Anuario 1948, coste de la vida por capitales, año 1945 (td=163586), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1946",
+      "value": 530.8,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1946 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1947",
+      "value": 640.2,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1947 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1948",
+      "value": 606.9,
+      "document_id": "doc-ine-anuario1949-coste-vida",
+      "locator": "Anuario 1949, coste de la vida por capitales, año 1948 (td=164740), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1949",
+      "value": 601.8,
+      "document_id": "doc-ine-anuario1950-coste-vida",
+      "locator": "Anuario 1950, coste de la vida por capitales, año 1949 (td=29950), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-50",
+      "period": "1950",
+      "value": 676.7,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "locator": "Anuario 1951, coste de la vida por capitales, año 1950 (td=165640), fila de la capital"
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1939",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Ceuta."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1940",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Ceuta."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1941",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Ceuta."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1942",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Ceuta."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1943",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Ceuta."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1944",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Ceuta."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1945",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Ceuta."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1946",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Ceuta."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1947",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Ceuta."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1948",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Ceuta."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1949",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Ceuta."
+    },
+    {
+      "place_id": "plc-prov-51",
+      "period": "1950",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Ceuta."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1939",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Melilla."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1940",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Melilla."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1941",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Melilla."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1942",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Melilla."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1943",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Melilla."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1944",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Melilla."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1945",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Melilla."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1946",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Melilla."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1947",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Melilla."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1948",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Melilla."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1949",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Melilla."
+    },
+    {
+      "place_id": "plc-prov-52",
+      "period": "1950",
+      "value": null,
+      "document_id": "doc-ine-anuario1951-coste-vida",
+      "missingness_reason": "Los Anuarios no publican índice de Melilla."
+    }
+  ]
+}
