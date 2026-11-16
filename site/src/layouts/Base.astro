@@ -6,7 +6,7 @@ import { url } from "../lib/data";
 interface Props { title: string; description?: string; index?: boolean; wide?: boolean }
 const { title, index = true, wide = false, description = "Atlas y archivo documental de la historia contemporánea de España. Cada afirmación enlaza a su fuente." } = Astro.props;
 const NAV = [
-  ["/atlas/", "Atlas"], ["/acontecimientos/", "Cronología"], ["/historias/", "Historias"], ["/documentos/", "Archivo"],
+  ["/atlas/", "Atlas"], ["/acontecimientos/", "Cronología"], ["/historias/", "Historias"], ["/documentos/", "Archivo"], ["/imagenes/", "Imágenes"],
   ["/datos/", "Datos"], ["/fuentes/", "Fuentes"], ["/metodologia/", "Metodología"], ["/buscar/", "Buscar"],
 ];
 const here = Astro.url.pathname;
