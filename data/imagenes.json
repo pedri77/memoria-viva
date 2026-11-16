@@ -260,7 +260,7 @@
  {
   "id": "img-guernica-ruinas",
   "pareja": "efectos",
-  "bando": "poblacion_civil",
+  "bando": "zona_republicana",
   "fichero": "File:Bundesarchiv Bild 183-H25224, Guernica, Ruinen.jpg",
   "titulo": "Ruinas de Guernica",
   "pie": "Edificios destruidos en Guernica en 1937. El título del archivo atribuye la destrucción al ataque aéreo de la Legión Cóndor.",
@@ -276,6 +276,29 @@
   "consultado": "2026-11-15",
   "ancho": 798,
   "alto": 584
+ },
+ {
+  "id": "img-bombardeo-cabra",
+  "pareja": "efectos",
+  "bando": "zona_sublevada",
+  "directa": {
+   "imagen": "https://api.europeana.eu/thumbnail/v3/400/489841b90ae17ad25ad8899eb6570d46",
+   "ficha": "https://www.europeana.eu/item/2022717/bnesearch_detalle_bdh0000071363"
+  },
+  "consultado": "2026-11-16",
+  "titulo": "Cabra después del bombardeo",
+  "pie": "Una mujer y una niña en Cabra (Córdoba) tras el bombardeo de la aviación republicana del 7 de noviembre de 1938. Tres bombarderos atacaron el centro de la ciudad, en la retaguardia sublevada, y murieron más de cien personas, en su mayoría civiles; el motivo del ataque sigue discutido. La foto la hicieron los servicios del Gobierno de Burgos, que difundieron el bombardeo como propaganda.",
+  "pie_original": "Título del archivo: «Cabra (Córdoba). Efectos de los bombardeos». Al verso: «Cabra, 7 de noviembre de 1938» y el sello «Ministerio del Interior / Sección Técnica».",
+  "autor": "Cris Velasco, para el Ministerio del Interior del Gobierno de Burgos (Sección Técnica)",
+  "fecha": "1938",
+  "custodio": "Biblioteca Nacional de España, Fondo fotográfico de la Guerra Civil (Córdoba)",
+  "licencia": "CC BY-NC-SA 4.0",
+  "licencia_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es",
+  "verificacion": "Ficha de Europeana del registro bdh0000071363 de la Biblioteca Digital Hispánica (BNE), con derechos «CC BY-NC-SA 4.0» en el objeto y en la imagen. La web no tiene fines comerciales y la imagen se republica con la misma licencia. La misma serie incluye fotos de víctimas, que no se publican (R1).",
+  "ficha_url": "https://www.europeana.eu/item/2022717/bnesearch_detalle_bdh0000071363",
+  "src": "img/archivo/img-bombardeo-cabra.jpg",
+  "ancho": 400,
+  "alto": 559
  },
  {
   "id": "img-ziryanin-barcelona",

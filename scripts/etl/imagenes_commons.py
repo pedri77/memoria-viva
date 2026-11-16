@@ -29,7 +29,7 @@ import urllib.request
 RAIZ = pathlib.Path(__file__).resolve().parents[2]
 DEST = RAIZ / "site/public/img/archivo"
 OUT = RAIZ / "data/imagenes.json"
-UA = {"User-Agent": "memoria-viva/0.1 (https://github.com/pedri77/memoria-viva; proyecto de investigación sin ánimo de lucro)"}
+UA = {"User-Agent": "memoria-viva/0.1 (https://github.com/pedri77/memoria-viva)"}
 
 BVM = "https://bibliotecavirtualmadrid.comunidad.madrid/bvmadrid_publicacion"
 PDM = "https://creativecommons.org/publicdomain/mark/1.0/deed.es"
@@ -136,7 +136,7 @@ IMAGENES = [
      "custodio": "Bundesarchiv, Bild 183-E20569-21",
      "licencia": "CC BY-SA 3.0 DE", "licencia_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.es",
      "verificacion": "Donación del Bundesarchiv a Commons (proyecto de cooperación) con su signatura."},
-    {"id": "img-guernica-ruinas", "pareja": "efectos", "bando": "poblacion_civil",
+    {"id": "img-guernica-ruinas", "pareja": "efectos", "bando": "zona_republicana",
      "fichero": "File:Bundesarchiv Bild 183-H25224, Guernica, Ruinen.jpg",
      "titulo": "Ruinas de Guernica",
      "pie": "Edificios destruidos en Guernica en 1937. El título del archivo atribuye la destrucción al ataque aéreo de la Legión Cóndor.",
@@ -145,6 +145,19 @@ IMAGENES = [
      "custodio": "Bundesarchiv, Bild 183-H25224",
      "licencia": "CC BY-SA 3.0 DE", "licencia_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.es",
      "verificacion": "Donación del Bundesarchiv a Commons (proyecto de cooperación) con su signatura."},
+    # Pareja de Guernica: bombardeo republicano sobre la retaguardia sublevada. Metadatos por la API de Europeana; la imagen
+    # es la miniatura que guarda Europeana en su servidor (bdh-rd.bne.es bloquea clientes automáticos, no se consulta).
+    {"id": "img-bombardeo-cabra", "pareja": "efectos", "bando": "zona_sublevada",
+     "directa": {"imagen": "https://api.europeana.eu/thumbnail/v3/400/489841b90ae17ad25ad8899eb6570d46",
+                 "ficha": "https://www.europeana.eu/item/2022717/bnesearch_detalle_bdh0000071363"},
+     "consultado": "2026-11-16",
+     "titulo": "Cabra después del bombardeo",
+     "pie": "Una mujer y una niña en Cabra (Córdoba) tras el bombardeo de la aviación republicana del 7 de noviembre de 1938. Tres bombarderos atacaron el centro de la ciudad, en la retaguardia sublevada, y murieron más de cien personas, en su mayoría civiles; el motivo del ataque sigue discutido. La foto la hicieron los servicios del Gobierno de Burgos, que difundieron el bombardeo como propaganda.",
+     "pie_original": "Título del archivo: «Cabra (Córdoba). Efectos de los bombardeos». Al verso: «Cabra, 7 de noviembre de 1938» y el sello «Ministerio del Interior / Sección Técnica».",
+     "autor": "Cris Velasco, para el Ministerio del Interior del Gobierno de Burgos (Sección Técnica)", "fecha": "1938",
+     "custodio": "Biblioteca Nacional de España, Fondo fotográfico de la Guerra Civil (Córdoba)",
+     "licencia": "CC BY-NC-SA 4.0", "licencia_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es",
+     "verificacion": "Ficha de Europeana del registro bdh0000071363 de la Biblioteca Digital Hispánica (BNE), con derechos «CC BY-NC-SA 4.0» en el objeto y en la imagen. La web no tiene fines comerciales y la imagen se republica con la misma licencia. La misma serie incluye fotos de víctimas, que no se publican (R1)."},
     # Vida civil (revisión del fondo Mg.XXVIII de la Biblioteca Regional de Madrid, fichas 24470-24719, 16-11-2026).
     {"id": "img-ziryanin-barcelona", "pareja": "abastecimiento", "bando": "zona_republicana",
      "bvm": {"registro": 24590, "imagen": 12131440}, "consultado": "2026-11-16",
@@ -203,7 +216,8 @@ def main() -> None:
             with urllib.request.urlopen(urllib.request.Request(img["directa"]["imagen"], headers=UA), timeout=90) as r:
                 dst.write_bytes(r.read())
             time.sleep(2)
-        img.update({"ficha_url": img["directa"]["ficha"], "src": f"img/archivo/{img['id']}.jpg", "consultado": "2026-11-15"})
+        img.update({"ficha_url": img["directa"]["ficha"], "src": f"img/archivo/{img['id']}.jpg"})
+        img.setdefault("consultado", "2026-11-15")
     q = urllib.parse.urlencode({"action": "query", "titles": "|".join(i["fichero"] for i in com), "prop": "imageinfo",
                                 "iiprop": "url|size", "iiurlwidth": "1000", "format": "json"})
     with urllib.request.urlopen(urllib.request.Request("https://commons.wikimedia.org/w/api.php?" + q, headers=UA), timeout=90) as r:

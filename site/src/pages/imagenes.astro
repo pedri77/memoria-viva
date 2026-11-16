@@ -13,7 +13,7 @@ const GRUPOS: [string, string, string][] = [
   ["extranjeros", "Intervención extranjera", "Voluntarios y tropas de otros países en los dos ejércitos: una imagen de cada bando, del mismo archivo."],
   ["abastecimiento", "Comida en las dos zonas", "Dos repartos de comida fotografiados por agencias británicas: la ayuda soviética que llegó a Barcelona en 1936 y un reparto de las tropas de Franco en 1939. Los dos se difundieron como propaganda."],
   ["refugio", "Huir del otro bando", "Gente que huye: personas perseguidas en el Madrid republicano que se refugian en una embajada en 1936 y la retirada hacia Francia en 1939."],
-  ["efectos", "Efectos de la guerra", "Lo que dejó la guerra sobre las ciudades."],
+  ["efectos", "Bombardeos sobre la retaguardia", "Los dos bandos bombardearon ciudades lejos del frente: la Legión Cóndor arrasó Guernica en abril de 1937 y la aviación republicana bombardeó Cabra en noviembre de 1938. Cada foto procede de un archivo distinto."],
 ];
 const lag = lagunas.find((l: any) => l.id === "laguna-imagenes-carteles");
 ---
@@ -34,7 +34,7 @@ const lag = lagunas.find((l: any) => l.id === "laguna-imagenes-carteles");
               <p class="im-tit">{i.titulo}</p>
               <p>{i.pie}</p>
               {i.pie_original && <p class="im-orig"><strong>Pie del archivo.</strong> {i.pie_original}</p>}
-              <p class="meta">{i.autor} · {i.custodio} · <a href={i.licencia_url} rel="license noopener">{i.licencia}</a> · <a href={i.ficha_url} rel="noopener">{i.ficha_url.includes("wikimedia") ? "ficha en Wikimedia Commons" : "ficha de la biblioteca"}</a></p>
+              <p class="meta">{i.autor} · {i.custodio} · <a href={i.licencia_url} rel="license noopener">{i.licencia}</a> · <a href={i.ficha_url} rel="noopener">{i.ficha_url.includes("wikimedia") ? "ficha en Wikimedia Commons" : i.ficha_url.includes("europeana") ? "ficha en Europeana" : "ficha de la biblioteca"}</a></p>
             </figcaption>
           </figure>
         ))}
