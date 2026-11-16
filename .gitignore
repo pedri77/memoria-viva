@@ -3,3 +3,4 @@ dist/
 data/raw/
 site/.astro/
 .DS_Store
+__pycache__/
