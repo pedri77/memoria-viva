@@ -1,0 +1,37 @@
+{
+  "id": "doc-ine-anuario1934-censo-electoral",
+  "title": "Anuario Estadístico de España 1934: electores inscritos en el censo electoral por sexo, 1923-1933",
+  "title_original": "Política. I. Número de electores inscritos en el Censo electoral",
+  "document_type": "tabla_estadistica",
+  "source_ids": [
+    "F010"
+  ],
+  "custodian": "Instituto Nacional de Estadística, INEbase Historia (fondo documental)",
+  "signature": "Anuario Estadístico de España 1934, Política y Fuerza Armada, «Política», tabla I (td=102644)",
+  "canonical_url": "https://www.ine.es/inebaseweb/pdfDispacher.do?td=102644&ext=.pdf",
+  "date": "1934-12-31",
+  "date_precision": "anio",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Número de electores inscritos, varones y mujeres, en los censos electorales de 1923, 1924, 1928, 1930, 1931, 1932 y 1933. Los censos de 1931 y anteriores a 1924 no tienen mujeres; el de 1932, el primero tras la Constitución, duplica el número de electores.",
+  "context": "Cifras oficiales del conjunto de España. El Anuario no da votantes por sexo, solo electores inscritos. En el censo de 1931 la última cifra del total está dañada en el escaneo; se lee 6 199 750, igual que la columna de varones. La tabla II de la misma página da el censo de 1933 por provincias con un total distinto (13 140 976), sin explicar la diferencia.",
+  "text_origin": "transcripcion_validada",
+  "rights": {
+    "status": "cc_by",
+    "action": "almacenar",
+    "attribution": "Fuente: Instituto Nacional de Estadística (INE), INEbase Historia, Anuario Estadístico de España 1934",
+    "evidence_url": "https://www.ine.es/ine/codigobp/politica_difusion_es.pdf",
+    "checked_at": "2026-11-16",
+    "note": "El INE aplica a la información de su web la licencia CC BY 4.0 salvo indicación contraria (Política de Difusión Estadística, febrero de 2026)."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-16",
+    "by": [
+      "autor"
+    ],
+    "note": "Transcrita a mano en data/external/ine_anuario1934/censo_electoral_1923_1933.csv; en cada fila varones + mujeres coincide con el total impreso."
+  },
+  "consulted_at": "2026-11-16"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "doc-ine-anuario1934-elecciones-1933-segunda-vuelta",
+  "title": "Anuario Estadístico de España 1934: elecciones complementarias (segunda vuelta) de 3 de diciembre de 1933, por circunscripciones",
+  "title_original": "XII. Datos estadísticos relativos a las elecciones celebradas en 3 de diciembre del año de 1933, complementarias de las del día 19 de noviembre del mismo año, por provincias",
+  "document_type": "tabla_estadistica",
+  "source_ids": [
+    "F010"
+  ],
+  "custodian": "Instituto Nacional de Estadística, INEbase Historia (fondo documental)",
+  "signature": "Anuario Estadístico de España 1934, Política y Fuerza Armada, «Política», tabla XII (td=102640)",
+  "canonical_url": "https://www.ine.es/inebaseweb/pdfDispacher.do?td=102640&ext=.pdf",
+  "date": "1934-12-31",
+  "date_precision": "anio",
+  "place_ids": [
+    "plc-espana"
+  ],
+  "summary": "Electores (censo de 1932), candidatos que pasaron a la segunda vuelta por haber obtenido más del 8 % de los votos en la primera, votantes y diputados elegidos en las 14 circunscripciones de la Península y Baleares y en Ceuta y Melilla donde hubo que repetir la elección el 3 de diciembre de 1933.",
+  "context": "Cifras oficiales agregadas por circunscripción; no da los votos de cada candidatura. Los diputados a elegir de Ceuta y Melilla solo figuran en el total (2), y los candidatos de Melilla no se imprimen (el total, 4, deja 1).",
+  "text_origin": "transcripcion_validada",
+  "rights": {
+    "status": "cc_by",
+    "action": "almacenar",
+    "attribution": "Fuente: Instituto Nacional de Estadística (INE), INEbase Historia, Anuario Estadístico de España 1934",
+    "evidence_url": "https://www.ine.es/ine/codigobp/politica_difusion_es.pdf",
+    "checked_at": "2026-11-16",
+    "note": "El INE aplica a la información de su web la licencia CC BY 4.0 salvo indicación contraria (Política de Difusión Estadística, febrero de 2026)."
+  },
+  "review": {
+    "status": "revision",
+    "date": "2026-11-16",
+    "by": [
+      "autor"
+    ],
+    "note": "Transcrita a mano en data/external/ine_anuario1934/elecciones_1933_12_03.csv; electores, candidatos, votantes y diputados suman los totales impresos y los 16 porcentajes coinciden con los recalculados."
+  },
+  "consulted_at": "2026-11-16"
+}

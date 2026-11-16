@@ -139,8 +139,8 @@
   "id": "laguna-segundas-vueltas",
   "tema": "Segundas vueltas y reparto final de escaños",
   "periodo": "1931-1936",
-  "falta": "Resultados de las segundas vueltas y composición final de las Cortes; el atlas solo usa la primera vuelta.",
-  "buscado": "Atlas Electoral de la Segunda República (solo primera vuelta en los datos usados).",
+  "falta": "Resultados de las segundas vueltas de 1931 y 1936 y composición final de las Cortes. La de 1933 solo se conoce en totales por circunscripción (Anuario de 1934), sin votos por candidatura.",
+  "buscado": "Atlas Electoral de la Segunda República (solo primera vuelta en los datos usados). El 16-11-2026, Anuario Estadístico de 1934, tabla XII (td=102640): participación y diputados de la segunda vuelta de 3 de diciembre de 1933, ya usados en la narrativa.",
   "probar": [
    {
     "fuente": "Diario de Sesiones de las Cortes (actas y credenciales)",
@@ -159,8 +159,8 @@
   "id": "laguna-voto-por-sexo",
   "tema": "Censo electoral y voto por sexo",
   "periodo": "1933-1936",
-  "falta": "Electores y votantes por sexo para medir el efecto del artículo 36 de la Constitución.",
-  "buscado": "Atlas Electoral (no distingue por sexo).",
+  "falta": "Votantes por sexo, y electores por sexo por provincia o circunscripción, para medir el efecto del artículo 36 de la Constitución.",
+  "buscado": "Atlas Electoral (no distingue por sexo). El 16-11-2026 se revisó el capítulo «Política» del Anuario Estadístico de 1934 (INEbase Historia): da electores por sexo solo para el conjunto de España (censos de 1923 a 1933, ya usados en la narrativa); el censo de 1933 por provincias y las tablas de las elecciones de 1933 no distinguen sexo.",
   "probar": [
    {
     "fuente": "Anuarios estadísticos de 1934-1936 en INEbase Historia",

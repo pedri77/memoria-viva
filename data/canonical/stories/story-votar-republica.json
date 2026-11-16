@@ -188,6 +188,26 @@
           ]
         },
         {
+          "text": "El Anuario Estadístico de 1934 explica el salto: el censo de 1931 solo tenía varones (6.199.750); el de 1932, el primero tras la Constitución, suma 6.716.557 mujeres, y en el rectificado de 1933 ellas son 6.849.426 de 13.187.311 electores, el 51,9 %. El Anuario no da cuántas votaron.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-ine-anuario1934-censo-electoral",
+              "locator": "tabla I, td=102644"
+            }
+          ]
+        },
+        {
+          "text": "Donde ninguna candidatura alcanzó el mínimo exigido hubo segunda vuelta el 3 de diciembre: según el Anuario, en 14 circunscripciones de la Península y Baleares, con 91 diputados en juego, más Ceuta y Melilla. En esas 14 votó el 63,8 % de los electores.",
+          "kind": "documento",
+          "evidence": [
+            {
+              "document_id": "doc-ine-anuario1934-elecciones-1933-segunda-vuelta",
+              "locator": "tabla XII, td=102640"
+            }
+          ]
+        },
+        {
           "text": "Las candidaturas de derechas fueron las más votadas en 33 de las 60 circunscripciones, las republicanas de centro y centro-derecha en 10 y las regionalistas de derecha en 6; las socialistas lo fueron en 5.",
           "kind": "documento",
           "evidence": [
@@ -248,9 +268,9 @@
   ],
   "gaps": [
     "Las disposiciones de convocatoria de las elecciones de 1936 no están documentadas: la Gaceta de enero de 1936 no está ni en la ruta de PDF de la sede del BOE que este proyecto puede consultar ni en sus fichas por disposición, que para 1936 empiezan en octubre, con el BOE de Burgos. Habría que consultarla en otra hemeroteca.",
-    "Solo se usa la primera vuelta. Las segundas vueltas y el reparto final de escaños necesitan las actas o el Diario de Sesiones.",
+    "Del Atlas solo se usa la primera vuelta. La segunda vuelta de 1933 se cuenta con los totales del Anuario Estadístico de 1934 (participación y diputados por circunscripción, sin votos por candidatura); las de 1931 y 1936 y el reparto final de escaños necesitan las actas o el Diario de Sesiones.",
     "Las sumas de electores y votantes se han calculado aquí a partir del Atlas; el Atlas solo agrega mesas con ambos datos, así que pueden quedarse cortas respecto a los totales oficiales.",
-    "No hay datos por sexo: ni el censo ni el voto de las mujeres en 1933 y 1936 pueden medirse con esta fuente.",
+    "El censo electoral por sexo solo se conoce para el conjunto de España (Anuario de 1934); no hay electores por sexo por circunscripción ni votantes por sexo, así que no puede medirse cuántas mujeres votaron en 1933 y 1936.",
     "Faltan el referéndum de los estatutos, las elecciones municipales de 1931 y 1933 y las campañas, la prensa y la violencia política en torno a cada elección."
   ],
   "review": {
