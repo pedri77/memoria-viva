@@ -145,6 +145,40 @@ IMAGENES = [
      "custodio": "Bundesarchiv, Bild 183-H25224",
      "licencia": "CC BY-SA 3.0 DE", "licencia_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.es",
      "verificacion": "Donación del Bundesarchiv a Commons (proyecto de cooperación) con su signatura."},
+    # Vida civil (revisión del fondo Mg.XXVIII de la Biblioteca Regional de Madrid, fichas 24470-24719, 16-11-2026).
+    {"id": "img-ziryanin-barcelona", "pareja": "abastecimiento", "bando": "zona_republicana",
+     "bvm": {"registro": 24590, "imagen": 12131440}, "consultado": "2026-11-16",
+     "titulo": "Llegada del Ziryanin al puerto de Barcelona",
+     "pie": "Una multitud con banderas y pancartas recibe en el muelle de Barcelona al Ziryanin, el primer buque soviético con víveres para la zona republicana (octubre de 1936). La llegada se organizó como acto de propaganda. La copia está retocada a mano en el barco y las banderas.",
+     "autor": "Fotógrafo anónimo, distribuida por Keystone View Company (Londres)", "fecha": "1936",
+     "custodio": "Biblioteca Regional de Madrid, Mg.XXVIII/1321",
+     "licencia": "Dominio público (declarado por la Biblioteca Regional de Madrid)", "licencia_url": PDM,
+     "verificacion": "Ficha de la Biblioteca Virtual de Madrid, registro 24590: «Derechos: Obra de dominio público». Lleva al verso el sello «Copyright Keystone View Company»; como mera fotografía de 1936, su protección en España (25 años, art. 128 LPI) está extinguida."},
+    {"id": "img-reparto-comida-1939", "pareja": "abastecimiento", "bando": "zona_sublevada",
+     "bvm": {"registro": 24601, "imagen": 12131510}, "consultado": "2026-11-16",
+     "titulo": "Reparto de comida desde camiones",
+     "pie": "Hombres y mujeres alzan los brazos para alcanzar la comida que se reparte desde camiones. Según la nota de la agencia al verso, es ayuda organizada por las tropas de Franco; no dice el lugar. Los repartos en las ciudades recién ocupadas se difundieron como propaganda del nuevo poder.",
+     "pie_original": "Nota de la agencia al verso, resumida en la ficha de la biblioteca: comida repartida desde camiones como ayuda social organizada por las tropas del general Franco.",
+     "autor": "Fotógrafo anónimo, distribuida por The Associated Press of Great Britain (Londres)", "fecha": "1939",
+     "custodio": "Biblioteca Regional de Madrid, Mg.XXVIII/1356",
+     "licencia": "Dominio público (declarado por la Biblioteca Regional de Madrid)", "licencia_url": PDM,
+     "verificacion": "Ficha de la Biblioteca Virtual de Madrid, registro 24601: «Derechos: Obra de dominio público». Lleva al verso el sello «Copyright Associated Press Photo»; como mera fotografía de 1939, su protección en España (25 años, art. 128 LPI) está extinguida."},
+    {"id": "img-embajada-britanica-madrid", "pareja": "refugio", "bando": "poblacion_civil",
+     "bvm": {"registro": 24529, "imagen": 12131448}, "consultado": "2026-11-16",
+     "titulo": "Refugiados entrando en la embajada británica de Madrid",
+     "pie": "Tres hombres y dos mujeres entran con sus maletas en la embajada británica de Madrid, con guardias armados a la puerta. En los primeros meses de la guerra miles de personas perseguidas en la zona republicana se refugiaron en embajadas y legaciones extranjeras.",
+     "autor": "Fotógrafo anónimo, distribuida por Fox Photos (Londres)", "fecha": "1936",
+     "custodio": "Biblioteca Regional de Madrid, Mg.XXVIII/1325",
+     "licencia": "Dominio público (declarado por la Biblioteca Regional de Madrid)", "licencia_url": PDM,
+     "verificacion": "Ficha de la Biblioteca Virtual de Madrid, registro 24529: «Derechos: Obra de dominio público»."},
+    {"id": "img-refugiados-le-perthus", "pareja": "refugio", "bando": "poblacion_civil",
+     "bvm": {"registro": 24535, "imagen": 12131598}, "consultado": "2026-11-16",
+     "titulo": "Refugiados en Le Perthus tras cruzar la frontera",
+     "pie": "Un hombre con muletas y una mujer con un niño en brazos atraviesan Le Perthus (Francia) tras cruzar la frontera en 1939, en la retirada de cerca de medio millón de personas después de la caída de Cataluña. La copia está retocada a mano.",
+     "autor": "Fotógrafo anónimo, distribuida por Fox Photos (Londres)", "fecha": "1939",
+     "custodio": "Biblioteca Regional de Madrid, Mg.XXVIII/1400",
+     "licencia": "Dominio público (declarado por la Biblioteca Regional de Madrid)", "licencia_url": PDM,
+     "verificacion": "Ficha de la Biblioteca Virtual de Madrid, registro 24535: «Derechos: Obra de dominio público». Lleva al verso el sello «Copyright Fox Photos Ltd.»; como mera fotografía de 1939, su protección en España (25 años, art. 128 LPI) está extinguida."},
 ]
 
 
@@ -162,7 +196,7 @@ def main() -> None:
             time.sleep(2)
         img["ficha_url"] = f"{BVM}/es/consulta/registro.do?id={img['bvm']['registro']}"
         img["src"] = f"img/archivo/{img['id']}.jpg"
-        img["consultado"] = "2026-11-15"
+        img.setdefault("consultado", "2026-11-15")
     for img in [i for i in IMAGENES if "directa" in i]:
         dst = DEST / f"{img['id']}.jpg"
         if not dst.exists():

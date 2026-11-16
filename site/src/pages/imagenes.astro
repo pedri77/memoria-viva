@@ -3,7 +3,7 @@ import Base from "../layouts/Base.astro";
 import imgs from "../../../data/imagenes.json";
 import lagunas from "../../../data/lagunas.json";
 import { url } from "../lib/data";
-const BANDO: Record<string, string> = { republicano: "Bando republicano", sublevado: "Bando sublevado", poblacion_civil: "Población civil" };
+const BANDO: Record<string, string> = { republicano: "Bando republicano", sublevado: "Bando sublevado", poblacion_civil: "Población civil", zona_republicana: "Zona republicana", zona_sublevada: "Zona sublevada" };
 const GRUPOS: [string, string, string][] = [
   ["propaganda", "Propaganda", "Un cartel de cada bando. Los dos son de parte por definición: muestran lo que quería mostrar quien los encargó."],
   ["movilizacion", "Movilización en las dos retaguardias", "Dos fotografías de 1936 de la misma agencia de prensa británica: milicianos en Barcelona y niños de las Flechas en Burgos."],
@@ -11,6 +11,8 @@ const GRUPOS: [string, string, string][] = [
   ["retratos", "Retratos", "Dos dibujos para cartel de la misma serie y de la misma biblioteca: el anarquista Buenaventura Durruti y el fundador de Falange, José Antonio Primo de Rivera."],
   ["moneda", "Dinero en las dos zonas", "Cada zona emitió su propio dinero. Anverso y reverso de dos billetes de uso diario, de la misma colección universitaria."],
   ["extranjeros", "Intervención extranjera", "Voluntarios y tropas de otros países en los dos ejércitos: una imagen de cada bando, del mismo archivo."],
+  ["abastecimiento", "Comida en las dos zonas", "Dos repartos de comida fotografiados por agencias británicas: la ayuda soviética que llegó a Barcelona en 1936 y un reparto de las tropas de Franco en 1939. Los dos se difundieron como propaganda."],
+  ["refugio", "Huir del otro bando", "Gente que huye: personas perseguidas en el Madrid republicano que se refugian en una embajada en 1936 y la retirada hacia Francia en 1939."],
   ["efectos", "Efectos de la guerra", "Lo que dejó la guerra sobre las ciudades."],
 ];
 const lag = lagunas.find((l: any) => l.id === "laguna-imagenes-carteles");
