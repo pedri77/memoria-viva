@@ -14,7 +14,7 @@ Si algo no está en la página citada pero sí en otra del mismo PDF, avisa de l
 
 El OCR del 0.8B tiene ~2 % de cifras mal en tablas: un aviso es para mirar el facsímil,
 no prueba de error. Años (1900-1999) y artículos no se comprueban como cifras.
-Falsos avisos conocidos (revisión del 16-11-2026, 9 avisos en 104 comprobaciones, ninguno era
+Falsos avisos conocidos (revisión del 16-11-2026, 7 avisos en 104 comprobaciones, ninguno era
 error de la web):
   - cifras que el impreso da en letra: «cincuenta mil», «cien mil» (GMD-1931-130), votos de
     Azaña «setecientos cincuenta y cuatro…» (GMD-1936-132);
