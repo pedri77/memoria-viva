@@ -13,13 +13,12 @@ un PDF de la Gaceta (canonical_url en /gazeta/dias/), busca en data/raw/ocr/gace
 Si algo no está en la página citada pero sí en otra del mismo PDF, avisa de la página real.
 
 El OCR del 0.8B tiene ~2 % de cifras mal en tablas: un aviso es para mirar el facsímil,
-no prueba de error. Años (1900-1999) y artículos no se comprueban como cifras.
-Falsos avisos conocidos (revisión del 16-11-2026, 7 avisos en 104 comprobaciones, ninguno era
-error de la web):
-  - cifras que el impreso da en letra: «cincuenta mil», «cien mil» (GMD-1931-130), votos de
-    Azaña «setecientos cincuenta y cuatro…» (GMD-1936-132);
-  - errores del OCR: 5.500 por 5.300 plazas de maestros en la pág. 234 (GMD-1936-282; la capa
-    de texto del BOE y el sumario dicen 5.300).
+no prueba de error. Años (1800-1999) no se comprueban como cifras. Las cifras en letra del
+impreso («cincuenta mil», «setecientos cincuenta y cuatro», «diez y seis mil») se pasan a
+dígitos antes de comparar (solo importes de 100 o más).
+Falso aviso conocido (revisión del 17-11-2026, 3 avisos en 104 comprobaciones, ninguno es
+error de la web): 5.500 por 5.300 plazas de maestros en la pág. 234 (GMD-1936-282), error del
+OCR; la capa de texto del BOE y el sumario dicen 5.300. Sale en tres claims.
 
 Uso: uv run scripts/etl/verificar_citas_ocr.py [--todo]   (--todo lista también los OK)
 """
@@ -41,6 +40,42 @@ preparar = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(preparar)
 
 
+_UNI = {w: i for i, w in enumerate(
+    "cero uno dos tres cuatro cinco seis siete ocho nueve diez once doce trece catorce quince "
+    "dieciseis diecisiete dieciocho diecinueve veinte veintiuno veintidos veintitres "
+    "veinticuatro veinticinco veintiseis veintisiete veintiocho veintinueve".split())}
+_UNI |= {"un": 1, "una": 1, "veintiun": 21, "veintiuna": 21, "cien": 100, "ciento": 100,
+         "quinientos": 500, "quinientas": 500, "setecientos": 700, "setecientas": 700,
+         "novecientos": 900, "novecientas": 900}
+_UNI |= {w: 10 * i for i, w in enumerate(
+    "_ _ _ treinta cuarenta cincuenta sesenta setenta ochenta noventa".split()) if w != "_"}
+for _i, _w in ((2, "dos"), (3, "tres"), (4, "cuatro"), (6, "seis"), (8, "ocho")):
+    _UNI[f"{_w}cientos"] = _UNI[f"{_w}cientas"] = 100 * _i
+_GRANDE = {"mil": 1000, "millon": 10**6, "millones": 10**6}
+_PAL = re.compile(r"\b(?:" + "|".join(sorted({*_UNI, *_GRANDE}, key=len, reverse=True))
+                  + r")(?:\s+(?:y\s+)?(?:" + "|".join(sorted({*_UNI, *_GRANDE}, key=len,
+                  reverse=True)) + r"))*\b")
+
+
+def _cifra(m: re.Match) -> str:
+    """«setecientos cincuenta y cuatro» → 754; «diez y seis mil» → 16000.
+    Solo sustituye importes de 100 o más: «un», «una», «dos» sueltos quedan como texto."""
+    total = cur = 0
+    for w in m[0].split():
+        if w == "y":
+            continue
+        if w in _GRANDE:
+            if _GRANDE[w] == 1000:
+                total += (cur or 1) * 1000
+            else:
+                total = (total + (cur or 1)) * 10**6
+            cur = 0
+        else:
+            cur += _UNI[w]
+    n = total + cur
+    return str(n) if n >= 100 else m[0]
+
+
 def norm(t: str) -> str:
     t = re.sub(r"<[^>]+>", " ", t)
     t = re.sub(r"[#*_`|]", " ", t)
@@ -48,6 +83,7 @@ def norm(t: str) -> str:
     t = unicodedata.normalize("NFKD", t.lower())
     t = "".join(c for c in t if not unicodedata.combining(c))  # «á» de 1907 = «a»
     t = re.sub(r"(?<=\d)[.,'’ ](?=\d{3}\b)", "", t)             # 35.716 → 35716
+    t = _PAL.sub(_cifra, t)                                    # cifras en letra → dígitos
     return re.sub(r"\s+", " ", t).strip()
 
 
